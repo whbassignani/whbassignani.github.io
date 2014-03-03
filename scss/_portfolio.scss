@@ -1,0 +1,42 @@
+#portfolio-Item--bostonia {
+	background-color: #263436;
+}
+
+#portfolio-Item--bostonia {
+	.portfolio-Item-text h1,
+	.portfolio-Item-text h3, { color: #e4eeef; }
+	.portfolio-Item-text h2 { color: #ed3926; }
+	.portfolio-Item-text { color: #dde3e7; }
+}
+
+#portfolio-Item-screenshot--bostonia_homepage {
+	background-image: url(../images/feature-img-bostonia-sample.jpg);
+	padding-bottom: 67.258064516%;
+}
+
+#portfolio-Item-screenshot--bostonia_something {
+	background-image: url(../images/feature-img-bostonia-sample.jpg);
+	padding-bottom: 67.258064516%;
+}
+
+#portfolio-Item-screenshot--bostonia_else {
+	background-image: url(../images/feature-img-bostonia-sample.jpg);
+	padding-bottom: 67.258064516%;
+}
+	
+@media only screen and (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5),
+	   only screen and (min-width: 1024px) and (min--moz-device-pixel-ratio: 1.5),
+	   only screen and (min-width: 1024px) and (min-device-pixel-ratio: 1.5) {
+	   
+	#portfolio-Item-screenshot--bostonia_homepage {
+		background-image: url(../images/feature-img-bostonia-sample@2x.jpg);
+	}
+	
+	#portfolio-Item-screenshot--bostonia_something {
+		background-image: url(../images/feature-img-bostonia-sample@2x.jpg);
+	}
+
+	#portfolio-Item-screenshot--bostonia_else {
+		background-image: url(../images/feature-img-bostonia-sample@2x.jpg);
+	}
+}

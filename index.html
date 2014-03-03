@@ -1,0 +1,32 @@
+---
+title: 
+---
+
+{% include header.html %}
+	
+	<section id="intro" class="section">
+		<div class="torso">
+			<p>My name is <strong>William Hawke Bassignani</strong>, and I am a graphic and web designer living in Boston. Currently at <a href="http://www.bu.edu/interactive-design/">BU Interactive Design</a>.</p>
+		</div>
+	</section>
+
+	<section id="portfolio">
+	{% for post in site.categories['portfolio'] %}
+		<div id="portfolio-Item--{{ post.slug }}" class="portfolio-Item cf">
+			<div class="torso">
+				<div class="portfolio-Item-text">
+					{{ post.content }}
+				</div>
+				
+				<div class="portfolio-Item-images">			
+					{% for id in post.screenshot_ids %}
+					<div id="portfolio-Item-screenshot--{{ post.slug }}_{{ id }}" class="portfolio-Item-screenshot"></div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		
+	{% endfor %}
+	</section>
+
+{% include footer.html %}

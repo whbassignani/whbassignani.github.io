@@ -1,0 +1,24 @@
+		<div id="portfolio-Item--{{ page.slug }}" class="section portfolio-Item cf">
+			<div class="torso">
+				<div class="portfolio-Item-text">
+					<h1>{{ page.title }}</h1>
+					<h2>{{ page.subtitle }}</h2>
+				
+					{{ page.content | markdownify }}
+					
+					<div class="portfolio-Item-inlineButtonWrapper">
+						<a href="{{ page.workurl }}" class="portfolio-Item-inlineButton button">Visit Live Site</a>
+					</div>
+					
+					<a href="#" class="portfolio-Item-mobileOpener button">Read More</a>
+				</div>
+				
+				<div class="portfolio-Item-images">			
+					{% for id in page.screenshot_ids %}
+					<a href="/images/feature-img-{{ page.slug }}-{{ id }}@2x.jpg" class="portfolio-Item-screenshot fluidbox">
+						<img src="/images/feature-img-{{ page.slug }}-{{ id }}.jpg" alt="{{ title }} {{ id }}">
+					</a>
+					{% endfor %}
+				</div>
+			</div>
+		</div>

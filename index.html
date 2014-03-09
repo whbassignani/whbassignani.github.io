@@ -11,21 +11,10 @@ title:
 	</section>
 
 	<section id="portfolio">
-	{% for post in site.categories['portfolio'] %}
-		<div id="portfolio-Item--{{ post.slug }}" class="portfolio-Item cf">
-			<div class="torso">
-				<div class="portfolio-Item-text">
-					{{ post.content }}
-				</div>
-				
-				<div class="portfolio-Item-images">			
-					{% for id in post.screenshot_ids %}
-					<div id="portfolio-Item-screenshot--{{ post.slug }}_{{ id }}" class="portfolio-Item-screenshot"></div>
-					{% endfor %}
-				</div>
-			</div>
-		</div>
-		
+	{% for page in site.categories['portfolio'] %}
+		{% if page.featured == true %}
+{% include portfolio.html %}
+		{% endif %}
 	{% endfor %}
 	</section>
 

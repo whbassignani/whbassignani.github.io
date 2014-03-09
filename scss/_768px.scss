@@ -1,9 +1,139 @@
+/* ----------------------------------- */
+/* ----------[ BASE/MOBILE ]---------- */
+/* ----------------------------------- */
+
+/* -----[ Base/mobile | GENERAL ]----- */
+
+.section {
+	padding: 40px;
+}
+
+.portfolio-Item-text {
+	float: left;
+	margin: 0;
+	max-height: none;
+	padding-left: 0;
+	padding-right: 40px;
+	width: 34.042%;
+	
+	&:after {
+		display: none;
+	}
+	
+	#portfolio-list & {
+		float: none;
+		padding-right: 0;
+		width: 65.957%;
+	}
+}
+
+.portfolio-Item-mobileOpener {
+	display: none;
+}
+
+.portfolio-Item-inlineButtonWrapper {
+	margin-top: 40px;
+	text-align: left;
+	
+	#portfolio-list & {
+		text-align: center;
+	}
+}
+
+.portfolio-Item-images {
+	float: right;
+	width: 65.957%;
+}
+
+.portfolio-Item-screenshot + .portfolio-Item-screenshot {
+	margin-top: 40px;
+}
+
 /* ------------------------------ */
 /* ----------[ HEADER ]---------- */
 /* ------------------------------ */
+
+/* -----[ Header | NAVBAR ]----- */
+
+#header-Nav {
+	clear: none;
+	display: block;
+	float: right;
+	height: 40px;
+	margin: 0 -10px 0 0;
+	position: relative;
+	top: -2px;
+	background-color: transparent;
+}
+
+.header-Nav-link {
+	display: inline-block;
+	height: 100%;
+	margin-top: 10px;
+	padding: 0;
+	position: relative;
+	line-height: 20px;
+	vertical-align: middle;
+	
+	& + .header-Nav-link {
+		margin-left: 4px;
+	}
+	
+	& + & {
+		border-top: 0;
+	}
+	
+	a {
+		@include border-radius(6px);
+		@include transition(color 0.2s, background-color 0.2s);
+		
+		display: block;
+		padding: 5px 10px;
+		color: $dark-grey;
+
+		&:hover {
+			background-color: $blue-black;
+			color: $white;
+		}
+	}
+	
+	a.header-Nav-link--email:hover {
+		color: $bright-blue;
+	}
+	
+	a.header-Nav-link--twitter:hover {
+		color: $twitter-blue;
+	}
+}
+
+#header-MobileNavOpener {
+	display: none;
+}
 
 /* -----[ Header | INTRO ]----- */
 
 #intro p {
 	width: 65.957%;
+}
+
+#intro-GoBackLink {
+	font-size: 1em;
+}
+
+/* ------------------------------ */
+/* ----------[ FOOTER ]---------- */
+/* ------------------------------ */
+
+#footer {
+	text-align: left;
+	
+	.copyright {
+		float: right;
+		line-height: 45px;
+	}
+}
+
+.footer-buttonWrapper {
+	float: left;
+	margin-bottom: 0;
 }

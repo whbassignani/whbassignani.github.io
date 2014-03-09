@@ -5,12 +5,15 @@
 /* -----[ Base/mobile | GENERAL ]----- */
 
 body {
+	// Prevents webkit faux-bolding in Safari
+	@include transform(translateZ(0));
+	
 	font-family: $sans-serif;
 	font-size: 62.5%;
 }
 
-a:link, a:visited { color: $link-color; }
-a:hover { color: $link-hover; }
+a { color: $link-color; }
+a:hover { color: $link-hover; text-decoration: none; }
 a:active { color: $link-color; }
 
 h1, 
@@ -27,6 +30,29 @@ p {
 	padding: 20px;
 }
 
+button,
+.button {
+	@include border-radius(6px);
+	
+	display: inline-block;
+	padding: 15px 40px 16px;
+	background-color: $bright-blue;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 800;
+	line-height: 1;
+	text-decoration: none;
+	text-transform: uppercase;
+	
+	-webkit-appearance: none;
+	        appearance: none;
+	        
+	&:hover {
+		background-color: darken($bright-blue, 8%);
+		color: #fff;
+	}
+}
+
 .torso {
 	margin: 0 auto;
 	max-width: 1160px;
@@ -39,7 +65,7 @@ p {
 /* -----[ Header | NAVBAR ]----- */
 
 #header {
-	border-bottom: 1px solid $light-grey;
+	position: relative;
 	font-size: 1.8em;
 }
 
@@ -65,8 +91,14 @@ p {
 }
 
 #header-Nav {
-	float: right;
-	height: 40px;
+	clear: both;
+	display: none;
+	margin: 60px -20px -20px;
+	background-color: darken($blue-black, 10%);
+	
+	&.js-opened {
+		display: block;
+	}
 }
 
 .header-Nav-list {
@@ -77,33 +109,44 @@ p {
 }
 
 .header-Nav-link {
-	display: inline-block;
-	height: 100%;
-	position: relative;
-	top: 2px;
-	line-height: 40px;
-	vertical-align: middle;
+	padding: 10px 20px 11px;
 	
-	& + .header-Nav-link {
-		padding-left: 24px;
+	& + & {
+		border-top: 1px solid lighten(desaturate($blue-black, 20%), 10%);
 	}
-	
+
 	a {
-		color: $dark-grey;
+		display: block;
+		color: $light-grey;
+		text-decoration: none;
+	}	
+
+	a:before {
+		padding-right: 10px;
+		position: relative;
+		top: 1px;
+		color: $blue-light-grey;
+		font-size: .85em;
 	}
-	
-	a.header-Nav-link--email:hover {
-		color: $bright-blue;
-	}
-	
-	a.header-Nav-link--twitter:hover {
-		color: $twitter-blue;
-	}
+}
+
+#header-MobileNavOpener {
+	margin: 0;
+	padding: 3px 6px;
+	position: absolute;
+	right: 20px;
+	top: 29px;
+	border: 1px solid $blue-light-grey;
+	color: $blue-medium-grey;
+	font-size: .67em;
+	text-decoration: none;
+	text-transform: uppercase;
 }
 
 /* -----[ Header | INTRO ]----- */
 
 #intro {
+	border-top: 1px solid $border-color;
 	font-size: 2.2em;
 	line-height: 1.4;
 	
@@ -112,19 +155,40 @@ p {
 	}
 }
 
+#intro-GoBackLink {
+	display: block;
+	color: $blue-black;
+	font-size: .75em;
+	line-height: 1;
+	text-decoration: none;
+	
+	&:before {
+		padding-right: 10px;
+		color: $blue-light-grey;
+		font-size: .67em;
+	}
+	
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
 /* --------------------------------- */
 /* ----------[ PORTFOLIO ]---------- */
 /* --------------------------------- */
 
-#portfolio {
+#portfolio,
+#portfolio-list {
 	font-size: 2em;
 }
 
 /* -----[ Portfolio | ITEM ]----- */
 
 .portfolio-Item {
-	padding: 20px;
-
+	background-repeat: repeat;
+	background-position: center center;
+	text-align: center;
+	
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
 	     -o-background-size: cover;
@@ -132,9 +196,13 @@ p {
 }
 
 .portfolio-Item-text {
-	float: left;
+	margin: 0 -20px 20px;
+	max-height: 300px;
+	padding-left: 20px;
 	padding-right: 20px;
-	width: 34.042%;
+	position: relative;
+	overflow: hidden;
+	text-align: left;
 	
 	h1,
 	h2,
@@ -144,6 +212,7 @@ p {
 	}
 
 	h1 {
+		margin-bottom: 0.312857143em;
 		font-size: 1.4em;
 		line-height: 1.1;
 	}
@@ -154,26 +223,94 @@ p {
 	}
 	
 	h3 {
+		margin-top: 3em;
 		font-size: 0.7em;
 		letter-spacing: 0.125em;
 		line-height: 1.4;
 	}
+	
+	&.js-opened {
+		max-height: none;
+		padding-bottom: 85px;
+	}
+	
+	&:after {
+		@include box-shadow-with-spread(0, 0, 50px, 50px, rgba(0, 0, 0, .67));
+		
+		content: '';
+		display: block;
+		height: 1px;
+		width: 100%;
+		position: absolute;
+		bottom: -1px;
+		left: 0;
+		z-index: 10;
+	}
+	
+	#portfolio-list & {
+		margin: 0 auto;
+		max-height: none;
+		overflow: visible;
+		text-align: center;
+		
+		&:after {
+			display: none;
+		}
+	}
 }
 
-.portfolio-Item-images {
-	float: right;
-	width: 65.957%;
+.portfolio-Item-mobileOpener {
+	@include box-shadow-with-spread(0, 0, 10px, 5px, rgba(0, 0, 0, .33));
+	@include transform(translateX(-50%));
+	
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	z-index: 20;
+	
+	.js-opened & {
+		@include box-shadow-with-spread(0, 0, 0, 0, transparent);
+		
+		background-color: $white !important;
+		color: $dark-grey !important;
+		
+		&:hover {
+			background-color: darken($white, 10%) !important;
+		}
+	}
+}
+
+.portfolio-Item-inlineButtonWrapper {
+	margin-top: 20px;
+	text-align: center;
 }
 
 .portfolio-Item-screenshot {
-	width: 100%;
+	display: block;
 	
-	-webkit-background-size: cover;
-	   -moz-background-size: cover;
-	     -o-background-size: cover;
-	        background-size: cover;
-	        
 	& + .portfolio-Item-screenshot {
 		margin-top: 20px;
 	}
+	
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+
+/* ------------------------------ */
+/* ----------[ FOOTER ]---------- */
+/* ------------------------------ */
+
+#footer {
+	font-size: 1.4em;
+	text-align: center;
+	
+	.copyright {
+		margin: 0;
+	}
+}
+
+.footer-buttonWrapper {
+	margin-bottom: 20px;
 }

@@ -31,22 +31,23 @@ $dark-grey:								#444;
 $off-white:								#eee;
 $white:                 				#fff;
 
-$light-grey:		#dde2e7;
+$light-grey:							#dde2e7;
 
-$blue-light-grey:	#b0bac5;
-$blue-medium-grey:	#838397;
-$blue-black:		#27324b;
-
-$bright-pink:		#ff5757;
-$bright-green:		#73ff57;
-$bright-blue:		#57b3ff;
-
-$link-color:        darken($bright-blue, 20%);
-$link-hover:        darken($link-color, 10%);
-
-$twitter-blue:      #55acee;
-$facebook-blue:     #3b5998;
-$instagram-blue:    #3f729b;
+$blue-light-grey:  						#b0bac5;
+$blue-medium-grey: 						#838397;
+$blue-black:	   						#27324b;
+				   					
+$bright-pink:	   						#ff5757;
+$bright-green:	   						#73ff57;
+$bright-blue:	   						#0083f0;
+				   					
+$link-color:       						$bright-blue;
+$link-hover:       						darken($link-color, 10%);
+$border-color:							$light-grey;
+				   					
+$twitter-blue:     						#55acee;
+$facebook-blue:    						#3b5998;
+$instagram-blue:   						#3f729b;
 
 /* -----[ Mixins | TYPOGRAPHY ]----- */
 
@@ -90,13 +91,16 @@ span.amp {
 
 /* -----[ Mixins | EFFECTS ]----- */
 
-@mixin css-gradient($from: #dfdfdf, $to: #f8f8f8) {
-	background-color: $to;
-	background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
-	background-image: -webkit-linear-gradient(top, $from, $to);
-	background-image: -moz-linear-gradient(top, $from, $to);
-	background-image: -o-linear-gradient(top, $from, $to);
-	background-image: linear-gradient(to bottom, $from, $to);
+@mixin background-size($bgsize: cover) {
+	-webkit-background-size: $bgsize;
+	   -moz-background-size: $bgsize;
+	     -o-background-size: $bgsize;
+	        background-size: $bgsize;
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	        border-radius: $radius;
 }
 
 @mixin box-shadow($top, $left, $blur, $color: #000, $inset: false) {
@@ -121,6 +125,15 @@ span.amp {
 		   -moz-box-shadow: $top $left $blur $spread $color;
 		        box-shadow: $top $left $blur $spread $color;
 	}
+}
+
+@mixin css-gradient($from: #dfdfdf, $to: #f8f8f8) {
+	background-color: $to;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+	background-image: -webkit-linear-gradient(top, $from, $to);
+	background-image: -moz-linear-gradient(top, $from, $to);
+	background-image: -o-linear-gradient(top, $from, $to);
+	background-image: linear-gradient(to bottom, $from, $to);
 }
 
 /* -----[ Mixins | LAYOUT ]----- */

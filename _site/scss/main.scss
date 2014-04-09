@@ -12,6 +12,10 @@
 	@import "768px";
 }
 
+@media (min-width: 1030px) {
+	@import "1030px";
+}
+
 /* Content-specific styles */
 
 @import "portfolio";

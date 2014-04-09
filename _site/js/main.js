@@ -19,5 +19,7 @@ $(document).ready(function() {
 		}
 	});
 	
-	$('.fluidbox').fluidbox();
+	if (!$('html').hasClass('lt-ie9')) {
+		$('.fluidbox').fluidbox();
+	}
 });

@@ -8,22 +8,31 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>
 		
-		Faculty Experts &lsaquo; Hawkeward.com &lsaquo; A Portfolio by W. Hawke Bassignani
+		Faculty Experts &lsaquo; Hawkeward.com
 		
 	</title>
-	<meta name="description" content="">
+	
+	
+	<meta name="description" content="A responsive directory of specialists at BU">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="icon" type="image/png" href="/favicon.png" />
 
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,800,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="/css/main.css">
-	<script src="http://localhost:4000/js/vendor/modernizr-2.6.2.min.js"></script>
+	<link rel="stylesheet" href="/css/main.css">	
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" href="/css/ie.css">
+	<![endif]-->
+	
+	<script src="/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
 	<header id="header" class="section">
 		<div class="torso clearfix">
-			<div id="header-Logo" class="ir"><a href="http://localhost:4000" class="image-replacement">Hawkeward</a></div>
+			<div id="header-Logo" class="ir"><a href="http://www.hawkeward.com" class="image-replacement">Hawkeward</a></div>
 			
 			<a href="#" id="header-MobileNavOpener">Menu</a>
 
@@ -50,25 +59,24 @@
 					<h1>Faculty Experts</h1>
 					<h2>BU Interactive Design</h2>
 				
-					<h3 id="project_summary">Project Summary</h3>
+					<h3>Project Summary</h3>
 
-<p>Vestibulum in dui a nisi tincidunt eleifend. Sed eu diam ac nunc tempor bibendum. Aenean tortor dui, congue in iaculis a, pharetra sed neque.</p>
+<p><a href="http://www.bu.edu/experts">Faculty Experts</a> are BU professors who make themselves available to the media as specialists in certain fields. BU Public Relations oversees this program.</p>
 
-<p>Etiam quis metus vel quam placerat laoreet eu porta dui. Etiam pulvinar, nulla eget volutpat aliquam, urna neque aliquam mauris, ut molestie lacus ligula.</p>
+<p>We expanded the original, barebones database of contact information into a searchable resource for journalists.</p>
 
-<h3 id="role">Role</h3>
+<h3>Role</h3>
 
-<p>Sed vitae tristique velit. Mauris egestas sed sem ut faucibus. Quisque lobortis laoreet massa eu tincidunt. Sed ligula lorem, ultricies ac metus vitae, ultricies convallis neque. Nam massa.</p>
+<p>Designed and built the site from scratch. Inherited (and updated) the visual styles from the current <a href="http://www.bu.edu/news">BU Public Relations</a> site.</p>
 
-<h3 id="highlights">Highlights</h3>
+<h3>Highlights</h3>
 
 <ol>
-<li>Suspendisse pulvinar nibh non nibh tincidunt, ut dignissim urna ultrices. In commodo.</li>
-
-<li>Nullam vitae odio sodales, ullamcorper tortor a, imperdiet.</li>
-
-<li>In id eleifend lorem. Praesent sed interdum mi, eget fringilla.</li>
+  <li>A typeahead search box on the homepage that filters professor names, fields, and specialties.</li>
+  <li>The <a href="http://www.bu.edu/experts/fields/">Fields</a> and <a href="http://www.bu.edu/experts/expertise/">Topics</a> pages that let visitors browse the many experts working at Boston University.</li>
+  <li>The profiles pages, which pull <a href="http://www.bu.edu/news/the-newsmakers/">“Newsmakers”</a> content (BU Professors who are interviewed or featured in the media).</li>
 </ol>
+
 					
 					<div class="portfolio-Item-inlineButtonWrapper">
 						<a href="http://www.bu.edu/experts" class="portfolio-Item-inlineButton button">Visit Live Site</a>
@@ -79,16 +87,16 @@
 				
 				<div class="portfolio-Item-images">			
 					
-					<a href="/images/feature-img-experts-home@2x.jpg" class="portfolio-Item-screenshot fluidbox">
-						<img src="/images/feature-img-experts-home.jpg" alt=" home">
+					<a href="/images/work/experts/feature-img-experts-homepage@2x.jpg" class="portfolio-Item-screenshot fluidbox">
+						<img src="/images/work/experts/feature-img-experts-homepage.jpg" alt=" homepage">
 					</a>
 					
-					<a href="/images/feature-img-experts-profile@2x.jpg" class="portfolio-Item-screenshot fluidbox">
-						<img src="/images/feature-img-experts-profile.jpg" alt=" profile">
+					<a href="/images/work/experts/feature-img-experts-profile@2x.jpg" class="portfolio-Item-screenshot fluidbox">
+						<img src="/images/work/experts/feature-img-experts-profile.jpg" alt=" profile">
 					</a>
 					
-					<a href="/images/feature-img-experts-details@2x.jpg" class="portfolio-Item-screenshot fluidbox">
-						<img src="/images/feature-img-experts-details.jpg" alt=" details">
+					<a href="/images/work/experts/feature-img-experts-detail@2x.jpg" class="portfolio-Item-screenshot fluidbox">
+						<img src="/images/work/experts/feature-img-experts-detail.jpg" alt=" detail">
 					</a>
 					
 				</div>
@@ -96,13 +104,16 @@
 		</div>
 	</section>
 
-	<footer id="footer" class="section cf">
+	<footer id="footer" class="section footer-has-button cf">
 		<div class="torso">
 			<div class="footer-buttonWrapper">
 				<a href="/work" class="button">View More Work</a>
 			</div>
 			
-			<p class="copyright">Copyright © 2014 William Hawke Bassignani</p>
+			<p class="copyright">
+				Copyright © 2014 William Hawke Bassignani<br>
+				<span class="credits">Credits: <a href="http://www.jekyllrb.com">Jekyll</a>, <a href="http://terrymun.github.io/Fluidbox/">Fluidbox</a>, and <a href="http://www.google.com/fonts/specimen/Open+Sans">Open Sans</a></span>
+			</p>
 		</div>
 	</footer>
 

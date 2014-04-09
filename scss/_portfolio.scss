@@ -1,7 +1,8 @@
 #portfolio-Item--bostonia {
 	background-color: #263436;
-	background-image: url(../images/feature-bg-bostonia.jpg);
+	background-image: url(../images/work/bostonia/feature-bg-bostonia.jpg);
 	
+	a { color: $white; }
 	.portfolio-Item-text h1,
 	.portfolio-Item-text h3, { color: #e4eeef; }
 	.portfolio-Item-text h2 { color: #ed3926; }
@@ -12,15 +13,44 @@
 
 #portfolio-Item--experts {
 	background-color: #263436;
-	background-image: url(../images/feature-bg-experts.jpg);
+	background-image: url(../images/work/experts/feature-bg-experts.jpg);
 	
 	/* NEED TO REDO THESE WITH CORRECT COLORS */
+	a { color: $white; }
 	.portfolio-Item-text h1,
 	.portfolio-Item-text h3, { color: #fff; }
 	.portfolio-Item-text h2 { color: #ec3738; }
 	.portfolio-Item-text { color: #e5d7d7; }
 	.button { background-color: #ed3926; color: #fff; }
 	.button:hover { background-color: darken(#ed3926, 10%); color: #fff; }
+}
+
+#portfolio-Item--everett {
+	background-color: #a7c846;
+	background-image: url(../images/work/everett/feature-bg-everett.jpg);
+	
+	/* NEED TO REDO THESE WITH CORRECT COLORS */
+	a { color: $white; }
+	.portfolio-Item-text h1,
+	.portfolio-Item-text h3, { color: #fff; }
+	.portfolio-Item-text h2 { color: #d9f199; }
+	.portfolio-Item-text { color: #dfe6d8; }
+	.button { background-color: #b7db55; color: #3e4e12; }
+	.button:hover { background-color: darken(#b7db55, 10%); color: #3e4e12; }
+}
+
+#portfolio-Item--massnow {
+	background-color: #542068;
+	background-image: url(../images/work/massnow/feature-bg-massnow.jpg);
+	
+	/* NEED TO REDO THESE WITH CORRECT COLORS */
+	a { color: $white; }
+	.portfolio-Item-text h1,
+	.portfolio-Item-text h3, { color: #fff; }
+	.portfolio-Item-text h2 { color: #d5a6f2; }
+	.portfolio-Item-text { color: #e5d8e6; }
+	.button { background-color: #a836ee; color: #fff; }
+	.button:hover { background-color: darken(#a836ee, 10%); color: #fff; }
 }
 
 

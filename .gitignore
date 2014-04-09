@@ -1,22 +1,2 @@
-
-*.scssc
-
-*.scssc
-
-*.scssc
-
-*.scssc
-
-.sass-cache/276614acb1234db5c8b96b067fd997f84c7c388a/_mixins.scssc
-
-*.scssc
-
-*.scssc
-
-*.scssc
-
-*.scssc
-
-*.scssc
-
-*.scssc
+# Ignore sass-cache files.
+*.sass-cache*

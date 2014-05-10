@@ -1,3 +1,5 @@
+---
+---
 /* General/setup partials */
 
 @import "normalize";
@@ -7,7 +9,10 @@
 /* Author stylesheets: mobile-first */
 
 @import "base";
-@import "768px";
+
+@media (min-width: 768px) {
+	@import "768px";
+}
 
 @media (min-width: 1030px) {
 	@import "1030px";

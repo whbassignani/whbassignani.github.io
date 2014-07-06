@@ -256,6 +256,22 @@ button,
 			display: none;
 		}
 	}
+
+	.em-role {
+		@include border-radius (5px);
+
+		display: inline-block;
+		padding: 3px 6px 4px;
+		position: relative;
+		top: -4px;
+		border-color: transparentize($white, .6);
+		border-style: solid;
+		border-width: 1px;
+		font-size: .5em;
+		font-weight: 800;
+		line-height: 1.1;
+		text-transform: uppercase;
+	}
 }
 
 .portfolio-Item-mobileOpener {

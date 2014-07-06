@@ -11,9 +11,15 @@ title:
 	</section>
 
 	<section id="portfolio">
-	{% for page in site.categories['portfolio'] %}
-		{% if page.featured == true %}
-{% include portfolio.html %}
+	{% for page in site.posts %}
+		{% if page.featured %}
+			{% if page.categories contains 'portfolio' %}
+			{% include portfolio.html %}
+			{% endif; %}
+			
+			{% if page.categories contains 'blog' %}
+			{% include blog-list.html %}
+			{% endif %}
 		{% endif %}
 	{% endfor %}
 	</section>

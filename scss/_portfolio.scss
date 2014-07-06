@@ -1,7 +1,23 @@
+#portfolio-Item--fitrec {
+	background-color: #028C9E;
+	background-image: url(../images/work/fitrec/feature-bg-fitrec.jpg);
+
+	a { color: #fff; }
+	.portfolio-Item-text h1,
+	.portfolio-Item-text h3, { color: #fff; }
+	.portfolio-Item-text h2 { color: #fd5; }
+	.portfolio-Item-text { color: #deeef0; }
+	.button { background-color: #fd5; color: #028C9E; }
+	.button:hover { background-color: darken(#fd5, 10%); color: #028C9E; }
+
+	// Overrides Work page list view background image
+	#portfolio-list & { background-position: center 55%; }
+}
+
 #portfolio-Item--bostonia {
 	background-color: #263436;
 	background-image: url(../images/work/bostonia/feature-bg-bostonia.jpg);
-	
+
 	a { color: $white; }
 	.portfolio-Item-text h1,
 	.portfolio-Item-text h3, { color: #e4eeef; }
@@ -14,8 +30,7 @@
 #portfolio-Item--experts {
 	background-color: #263436;
 	background-image: url(../images/work/experts/feature-bg-experts.jpg);
-	
-	/* NEED TO REDO THESE WITH CORRECT COLORS */
+
 	a { color: $white; }
 	.portfolio-Item-text h1,
 	.portfolio-Item-text h3, { color: #fff; }
@@ -28,8 +43,7 @@
 #portfolio-Item--everett {
 	background-color: #a7c846;
 	background-image: url(../images/work/everett/feature-bg-everett.jpg);
-	
-	/* NEED TO REDO THESE WITH CORRECT COLORS */
+
 	a { color: $white; }
 	.portfolio-Item-text h1,
 	.portfolio-Item-text h3, { color: #fff; }
@@ -42,8 +56,7 @@
 #portfolio-Item--massnow {
 	background-color: #542068;
 	background-image: url(../images/work/massnow/feature-bg-massnow.jpg);
-	
-	/* NEED TO REDO THESE WITH CORRECT COLORS */
+
 	a { color: $white; }
 	.portfolio-Item-text h1,
 	.portfolio-Item-text h3, { color: #fff; }
@@ -58,6 +71,6 @@
 @media only screen and (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5),
 	   only screen and (min-width: 1024px) and (min--moz-device-pixel-ratio: 1.5),
 	   only screen and (min-width: 1024px) and (min-device-pixel-ratio: 1.5) {
-	   
+
 }
 */

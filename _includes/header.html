@@ -30,6 +30,14 @@
 	<!--[if lt IE 9]>
 	<link rel="stylesheet" href="/css/ie.css">
 	<![endif]-->
+	{% if page.customcss %}
+	<link rel="stylesheet" href="/css/{{ page.slug }}.css">
+	{% endif %}
+	{% if page.customcssie %}
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" href="/css/{{ page.slug }}-ie.css">
+	<![endif]-->
+	{% endif %}
 	
 	<script src="/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>

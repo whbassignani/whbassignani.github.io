@@ -12,3 +12,6 @@ excerpt_separator: <!--more-->
 sass:
   sass_dir: scss
   style: :compressed
+
+
+exclude:    [_psd]

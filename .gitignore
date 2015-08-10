@@ -4,3 +4,6 @@
 # Ignore Adobe Photoshop files
 *.psd*
 *.psb*
+
+# Ignore OS X ds_store files
+.DS_Store

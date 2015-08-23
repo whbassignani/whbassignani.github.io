@@ -1,20 +1,40 @@
-/* ----------------------------------- */
-/* ----------[ BASE/MOBILE ]---------- */
-/* ----------------------------------- */
-
-/* -----[ Base/mobile | GENERAL ]----- */
+// Layout styles
 
 body {
-	// Prevents webkit faux-bolding in Safari
-	@include transform(translateZ(0));
-	
-	font-family: $sans-serif;
-	font-size: 62.5%;
+  // Prevents webkit faux-bolding in Safari
+  @include transform(translateZ(0));
+  
+  font-family: $sans-serif;
+  font-size: $type-size-base;
 }
 
-a { color: $link-color; }
-a:hover { color: $link-hover; text-decoration: none; }
-a:active { color: $link-color; }
+.torso {
+  margin: 0 auto;
+  max-width: $content-max-width;
+}
+
+.section {
+  padding: $gutter-small;
+  
+  @mq($bp-medium) {
+    padding: $gutter-large;
+  }
+}
+
+// Typography
+
+a {
+  color: $link-color;
+
+  &:hover {
+    color: $link-hover;
+    text-decoration: none;
+  }
+  
+  &:active {
+    color: $link-color;
+  }
+}
 
 h1, 
 h2, 
@@ -23,319 +43,28 @@ h4,
 h5, 
 h6, 
 p {
-	margin-top: 0;	
-}
-
-.section {
-	padding: 20px;
+  margin-top: 0;  
 }
 
 button,
 .button {
-	@include border-radius(6px);
-	
-	display: inline-block;
-	padding: 15px 40px 16px;
-	background-color: $bright-blue;
-	color: #fff;
-	font-size: 14px;
-	font-weight: 800;
-	line-height: 1;
-	text-decoration: none;
-	text-transform: uppercase;
-	
-	-webkit-appearance: none;
-	        appearance: none;
-	        
-	&:hover {
-		background-color: darken($bright-blue, 8%);
-		color: #fff;
-	}
-}
-
-.torso {
-	margin: 0 auto;
-	max-width: 1160px;
-}
-
-/* ------------------------------ */
-/* ----------[ HEADER ]---------- */
-/* ------------------------------ */
-
-/* -----[ Header | NAVBAR ]----- */
-
-#header {
-	position: relative;
-	font-size: 1.8em;
-}
-
-#header-Logo {
-	float: left;
-	
-	a {
-		display: block;
-		height: 40px;
-		width: 50px;
-		background: url(../images/main-logo.jpg) no-repeat 0 0;
-	
-		@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-			   only screen and (min--moz-device-pixel-ratio: 1.5),
-			   only screen and (min-device-pixel-ratio: 1.5) {
-				   background-image: url(../images/main-logo@2x.jpg);
-				   -webkit-background-size: 50px 40px;
-				      -moz-background-size: 50px 40px;
-				        -o-background-size: 50px 40px;
-				           background-size: 50px 40px;
-	   }
-	}	
-}
-
-#header-Nav {
-	clear: both;
-	display: none;
-	margin: 60px -20px -20px;
-	background-color: darken($blue-black, 10%);
-	
-	&.js-opened {
-		display: block;
-	}
-}
-
-.header-Nav-list {
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-.header-Nav-link {
-	padding: 10px 20px 11px;
-	
-	& + & {
-		border-top: 1px solid lighten(desaturate($blue-black, 20%), 10%);
-	}
-
-	a {
-		display: block;
-		color: $light-grey;
-		text-decoration: none;
-	}	
-
-	a:before {
-		padding-right: 10px;
-		position: relative;
-		top: 1px;
-		color: $blue-light-grey;
-		font-size: .85em;
-	}
-}
-
-#header-MobileNavOpener {
-	margin: 0;
-	padding: 3px 6px;
-	position: absolute;
-	right: 20px;
-	top: 29px;
-	border: 1px solid $blue-light-grey;
-	color: $blue-medium-grey;
-	font-size: .67em;
-	text-decoration: none;
-	text-transform: uppercase;
-}
-
-/* -----[ Header | INTRO ]----- */
-
-#intro {
-	border-top: 1px solid $border-color;
-	font-size: 2.2em;
-	line-height: 1.4;
-	
-	p {
-		margin: 0;
-	}
-}
-
-#intro-GoBackLink {
-	display: block;
-	color: $blue-black;
-	font-size: .75em;
-	line-height: 1;
-	text-decoration: none;
-	
-	&:before {
-		padding-right: 10px;
-		color: $blue-light-grey;
-		font-size: .67em;
-	}
-	
-	&:hover {
-		text-decoration: underline;
-	}
-}
-
-/* --------------------------------- */
-/* ----------[ PORTFOLIO ]---------- */
-/* --------------------------------- */
-
-#portfolio,
-#portfolio-list {
-	font-size: 2em;
-}
-
-/* -----[ Portfolio | ITEM ]----- */
-
-.portfolio-Item {
-	background-repeat: repeat;
-	background-position: center center;
-	text-align: center;
-	
-	-webkit-background-size: cover;
-	   -moz-background-size: cover;
-	     -o-background-size: cover;
-	        background-size: cover;
-}
-
-.portfolio-Item-text {
-	margin: 0 -20px 20px;
-	max-height: 300px;
-	padding-left: 20px;
-	padding-right: 20px;
-	position: relative;
-	overflow: hidden;
-	text-align: left;
-	
-	h1,
-	h2,
-	h3 {
-		font-weight: 900;
-		text-transform: uppercase;
-	}
-
-	h1 {
-		margin-bottom: 0.312857143em;
-		font-size: 1.4em;
-		line-height: 1.1;
-	}
-	
-	h2 {
-		font-size: 1.05em;
-		line-height: 1.1;
-	}
-	
-	h3 {
-		font-size: 0.7em;
-		letter-spacing: 0.125em;
-		line-height: 1.4;
-	}
-	
-	&.js-opened {
-		max-height: none;
-		padding-bottom: 85px;
-	}
-	
-	&:after {
-		@include box-shadow-with-spread(0, 0, 50px, 50px, rgba(0, 0, 0, .67));
-		
-		content: '';
-		display: block;
-		height: 1px;
-		width: 100%;
-		position: absolute;
-		bottom: -1px;
-		left: 0;
-		z-index: 10;
-	}
-	
-	#portfolio-list & {
-		margin: 0 auto;
-		max-height: none;
-		overflow: visible;
-		text-align: center;
-		
-		&:after {
-			display: none;
-		}
-	}
-
-	.em-role {
-		@include border-radius (5px);
-
-		display: inline-block;
-		padding: 3px 6px 4px;
-		position: relative;
-		top: -4px;
-		border-color: transparentize($white, .6);
-		border-style: solid;
-		border-width: 1px;
-		font-size: .5em;
-		font-weight: 800;
-		line-height: 1.1;
-		text-transform: uppercase;
-	}
-}
-
-.portfolio-Item-mobileOpener {
-	@include box-shadow-with-spread(0, 0, 5px, 5px, rgba(0, 0, 0, .15));
-	
-	margin-left: -90px;
-	width: 180px;	
-	position: absolute;
-	bottom: 20px;
-	left: 50%;
-	z-index: 20;
-	text-align: center;
-	
-	.js-opened & {
-		@include box-shadow-with-spread(0, 0, 0, 0, transparent);
-		
-		background-color: $white !important;
-		color: $dark-grey !important;
-		
-		&:hover {
-			background-color: darken($white, 10%) !important;
-		}
-	}
-}
-
-.portfolio-Item-inlineButtonWrapper {
-	margin-top: 20px;
-	text-align: center;
-}
-
-.portfolio-Item-screenshot {
-	display: block;
-	
-	& + .portfolio-Item-screenshot {
-		margin-top: 20px;
-	}
-	
-	img {
-		display: block;
-		width: 100%;
-	}
-}
-
-/* ------------------------------ */
-/* ----------[ FOOTER ]---------- */
-/* ------------------------------ */
-
-#footer {
-	font-size: 1.4em;
-	text-align: center;
-	
-	.copyright {
-		margin: 0;
-	}
-
-	.copyright .credits {
-		color: $medium-grey;
-		
-		a {
-			color: lighten($link-color, 20%);
-		}
-	}
-}
-
-.footer-buttonWrapper {
-	margin-bottom: 20px;
+  @include border-radius(6px);
+  
+  display: inline-block;
+  padding: ($gutter-large/2) $gutter-large ($gutter-large/2 - 1px);
+  background-color: $bright-blue;
+  color: $white;
+  font-size: $type-size-small;
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  
+  -webkit-appearance: none;
+          appearance: none;
+          
+  &:hover {
+    background-color: darken($bright-blue, 8%);
+    color: $white;
+  }
 }

@@ -4,23 +4,17 @@
 
 @import "normalize";
 @import "webfonts";
+
+@import "variables";
 @import "mixins";
 
 /* Author stylesheets: mobile-first */
 
 @import "base";
 
-@media (min-width: 768px) {
-	@import "768px";
-}
-
-@media (min-width: 1030px) {
-	@import "1030px";
-}
-
-/* Content-specific styles */
-
-/* TBD? */
+@import "header";
+@import "intro";
+@import "footer";
 
 /* Vendor styles */
 

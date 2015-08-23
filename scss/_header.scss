@@ -1,0 +1,81 @@
+/* ------------------------------ */
+/* ----------[ HEADER ]---------- */
+/* ------------------------------ */
+
+#header {
+  position: relative;
+}
+
+#header-Logo {
+  float: left;
+  
+  a {
+    display: block;
+    height: 40px;
+    width: 50px;
+    background: url(../images/main-logo.jpg) no-repeat 0 0;
+  
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+         only screen and (min--moz-device-pixel-ratio: 1.5),
+         only screen and (min-device-pixel-ratio: 1.5) {
+           background-image: url(../images/main-logo@2x.jpg);
+           -webkit-background-size: 50px 40px;
+              -moz-background-size: 50px 40px;
+                -o-background-size: 50px 40px;
+                   background-size: 50px 40px;
+     }
+  } 
+}
+
+#header-Nav {
+  clear: both;
+  display: none;
+  margin: 60px -20px -20px;
+  background-color: darken($blue-black, 10%);
+  
+  &.js-opened {
+    display: block;
+  }
+}
+
+.header-Nav-list {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header-Nav-link {
+  padding: 10px 20px 11px;
+  
+  & + & {
+    border-top: 1px solid lighten(desaturate($blue-black, 20%), 10%);
+  }
+
+  a {
+    display: block;
+    color: $light-grey;
+    text-decoration: none;
+  } 
+
+  a:before {
+    padding-right: 10px;
+    position: relative;
+    top: 1px;
+    color: $blue-light-grey;
+    font-size: .85em;
+  }
+}
+
+#header-MobileNavOpener {
+  margin: 0;
+  padding: 3px 6px;
+  position: absolute;
+  right: 20px;
+  top: 29px;
+  border: 1px solid $blue-light-grey;
+  color: $blue-medium-grey;
+  font-size: .67em;
+  text-decoration: none;
+  text-transform: uppercase;
+}

@@ -1,0 +1,56 @@
+/* --------------------------------- */
+/* ----------[ VARIABLES ]---------- */
+/* --------------------------------- */
+
+/* -----[ Variables | COLORS ]----- */
+
+$black:             	#000;
+$dark-grey:				#444;
+$off-white:				#eee;
+$white:             	#fff;
+
+$light-grey:			#dde2e7;
+$medium-grey:			darken(#dde2e7, 30%);
+
+$blue-light-grey:  		#b0bac5;
+$blue-medium-grey: 		#838397;
+$blue-black:	   		#27324b;
+				   					
+$bright-pink:	   		#ff5757;
+$bright-green:	   		#73ff57;
+$bright-blue:	   		#0083f0;
+				   					
+$link-color:       		$bright-blue;
+$link-hover:       		darken($link-color, 10%);
+$border-color:			$light-grey;
+				   					
+$twitter-blue:     		#55acee;
+$facebook-blue:    		#3b5998;
+$instagram-blue:   		#3f729b;
+
+/* -----[ Variables | TYPOGRAPHY ]----- */
+
+$sans-serif:    	    "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif:             	"Georgia", Cambria, Times New Roman, Times, serif;
+
+$type-size-base:		16px;
+
+$type-size-small:		14px;
+
+/* -----[ Variables | LAYOUT ]----- */
+
+// Gutters
+$gutter-huge:			60px;
+$gutter-large:			40px;
+$gutter-medium:			30px;
+$gutter-small:			20px;
+$gutter-tiny:			10px;
+
+// Content widths
+$content-max-width:		1160px;
+
+/* -----[ Variables | BREAKPOINTS ]----- */
+
+$bp-small:				'min-width: 480px';
+$bp-medium:				'min-width: 768px';
+$bp-large:				'min-width: 1030px';

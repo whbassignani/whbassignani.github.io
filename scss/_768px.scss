@@ -88,63 +88,6 @@
 	font-size: 1em;
 }
 
-/* --------------------------------- */
-/* ----------[ PORTFOLIO ]---------- */
-/* --------------------------------- */
-
-/* -----[ Portfolio | ITEM ]----- */
-
-.portfolio-Item-text {
-	float: left;
-	margin: 0;
-	max-height: none;
-	padding-left: 0;
-	padding-right: 40px;
-	width: 50%;
-	
-	&:after {
-		display: none;
-	}
-	
-	#portfolio-list & {
-		float: none;
-		padding-right: 0;
-		width: 65.957%;
-	}
-	
-	.lt-ie9 & {
-		margin-right: 4%;
-		padding-right: 0;
-		width: 46%;
-	}
-	
-	h3 {
-		margin-top: 3em;
-	}
-}
-
-.portfolio-Item-mobileOpener {
-	display: none;
-}
-
-.portfolio-Item-inlineButtonWrapper {
-	margin-top: 40px;
-	text-align: left;
-	
-	#portfolio-list & {
-		text-align: center;
-	}
-}
-
-.portfolio-Item-images {
-	float: right;
-	width: 50%;
-}
-
-.portfolio-Item-screenshot + .portfolio-Item-screenshot {
-	margin-top: 40px;
-}
-
 /* ------------------------------ */
 /* ----------[ FOOTER ]---------- */
 /* ------------------------------ */

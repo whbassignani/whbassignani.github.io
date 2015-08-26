@@ -1,24 +1,30 @@
-/* ------------------------------ */
-/* ----------[ FOOTER ]---------- */
-/* ------------------------------ */
-
 #footer {
-	font-size: 1.4em;
-	text-align: center;
-	
-	.copyright {
-		margin: 0;
-	}
+  text-align: center;
 
-	.copyright .credits {
-		color: $medium-grey;
-		
-		a {
-			color: lighten($link-color, 20%);
-		}
-	}
+  .copyright {
+    margin: 0;
+  }
+
+  .copyright .credits {
+    color: $medium-grey;
+
+    a {
+      color: lighten($link-color, 20%);
+    }
+  }
+  
+  @include mq($bp-medium) {
+  	text-align: left;
+  }
 }
 
 .footer-buttonWrapper {
-	margin-bottom: 20px;
+  margin-bottom: $gutter-small;
+  
+  @include mq($bp-medium) {
+    .footer-buttonWrapper {
+    	float: left;
+    	margin-bottom: 0;
+    }
+  }
 }

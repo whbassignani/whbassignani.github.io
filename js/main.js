@@ -1,24 +1,37 @@
 $(document).ready(function() {
-	// CLICK: Header navigation
-	$('#header-MobileNavOpener').click(function(event) {
-		event.preventDefault();
-		
-		$('#header-Nav').toggleClass('js-opened');
-	})
+  // Variables
+  $window = $(window);
+  winHeight = $window.height();
+  winWidth = $window.width();
 
-	// CLICK: Portfolio item, read more link
-	$('.portfolio-Item-mobileOpener').click(function(event) {
+  $body = $("body");
+  
+  $MainNav = $("#MainNav");
+  $MobileNavOpener = $('#MobileNavOpener')
+  
+  $body.height(winHeight);
+
+  $window.resize(function() {
+    winHeight = $window.height();
+    winWidth = $window.width();
+    
+    $body.height(winHeight);
+  });
+  
+	// CLICK: Header navigation
+	$MobileNavOpener.click(function(event) {
 		event.preventDefault();
 		
-		if ($(this).parent().hasClass('js-opened')) {
-			$(this).parent().removeClass('js-opened');
-			$(this).html("Read More");
+		$MainNav.toggleClass('js-opened');
+		
+		if ($MainNav.hasClass('js-opened')) {
+  		$MobileNavOpener.html("Close");
 		} else {
-			$(this).parent().addClass('js-opened');
-			$(this).html("Read Less");
+  		$MobileNavOpener.html("Menu");
 		}
-	});
+	})
 	
+	// Initialize Fluidbox photo viewer on modern browsers (IE9+)
 	if (!$('html').hasClass('lt-ie9')) {
 		$('.fluidbox').fluidbox();
 	}

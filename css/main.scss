@@ -1,5 +1,8 @@
 ---
 ---
+
+$MQs: true;
+
 /* General/setup partials */
 
 @import "normalize";
@@ -13,6 +16,7 @@
 @import "base";
 
 @import "header";
+@import "nav";
 @import "intro";
 @import "footer";
 

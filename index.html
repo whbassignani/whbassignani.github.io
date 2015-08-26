@@ -1,27 +1,12 @@
 ---
-title: 
 ---
 
 {% include header.html %}
-	
-	<section id="intro" class="section">
-		<div class="torso">
-			<p>My name is <strong>William Hawke Bassignani</strong>, and I am a graphic and web designer living in Boston. Currently at <a href="http://www.bu.edu/interactive-design/">BU Interactive Design</a>.</p>
-		</div>
-	</section>
 
-	<section id="portfolio">
-	{% for page in site.posts %}
-		{% if page.featured %}
-			{% if page.categories contains 'portfolio' %}
-			{% include portfolio.html %}
-			{% endif; %}
-			
-			{% if page.categories contains 'blog' %}
-			{% include blog-list.html %}
-			{% endif %}
-		{% endif %}
-	{% endfor %}
-	</section>
+  <section id="intro" class="section">
+    <div class="torso">
+      <p>My name is <strong>William Hawke Bassignani</strong>, and I am a graphic and web designer living in Boston. Currently at <a href="http://www.bu.edu/interactive-design/">BU Interactive Design</a>.</p>
+    </div>
+  </section>
 
 {% include footer.html %}

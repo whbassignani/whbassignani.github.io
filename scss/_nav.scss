@@ -1,0 +1,126 @@
+// Variables
+$headerHeight:      80px;
+
+// Styles
+#MainNav {
+  @include transition(all 0.3s cubic-bezier(0.19, 1, 0.22, 1));
+  @include transform(translateX(100%));
+  
+  clear: both;
+//   display: none;
+  padding-top: $headerHeight;
+  width: 75%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  visibility: hidden;
+  background-color: darken($blue-black, 10%);
+  
+  &.js-opened {
+    @include box-shadow(-10px, 0, 10px, rgba(#000, .25));
+    @include transform(translateX(0));
+    
+    visibility: visible;
+//     display: block;
+  }
+
+  @include mq($bp-medium) {
+  	clear: none;
+//   	display: block;
+  	float: right;
+  	height: 40px;
+  	margin: 0 -10px 0 0;
+  	position: relative;
+  	top: -2px;
+  	background-color: transparent;
+  	
+  	.lt-ie9 & {
+  		width: 500px;
+  	}
+  }
+}
+
+#MainNav-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.MainNav-link {
+  padding: $gutter-tiny $gutter-small;
+  
+  & + & {
+    border-top: 1px solid lighten(desaturate($blue-black, 20%), 10%);
+  }
+
+  a {
+    display: block;
+    color: $light-grey;
+    text-decoration: none;
+  }
+
+  @include mq($bp-medium) {
+  	display: inline-block;
+  	padding: 0;
+  	position: relative;
+  	line-height: 1;
+  	vertical-align: middle;
+  	
+  	& + .header-Nav-link {
+  		margin-left: 4px;
+  	}
+  	
+  	& + & {
+  		border-top: 0;
+  	}
+  	
+  	a {
+  		@include border-radius(6px);
+  		@include transition(color 0.2s, background-color 0.2s);
+  		
+  		display: block;
+  		padding: 5px 10px;
+  		color: $dark-grey;
+  
+  		&:hover {
+  			background-color: $blue-black;
+  			color: $white;
+  		}
+  	}
+  	
+  	a.header-Nav-link--email:hover {
+  		color: $bright-blue;
+  	}
+  	
+  	a.header-Nav-link--twitter:hover {
+  		color: $twitter-blue;
+  	}
+  
+  	.lt-ie9 & {
+  		float: left;
+  		width: 150px;
+  	}
+  }
+}
+
+#MobileNavOpener {
+  @include transform(translateY(-50%));
+  
+  margin: 0;
+  padding: 2px 6px 3px;
+  position: absolute;
+  right: $gutter-small;
+  top: 50%;
+  z-index: 2;
+  border: 1px solid $blue-light-grey;
+  color: $blue-medium-grey;
+  font-size: .67em;
+  text-decoration: none;
+  text-transform: uppercase;
+  
+  @include mq($bp-medium) {
+    display: none;
+  }
+}

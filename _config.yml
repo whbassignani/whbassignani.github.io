@@ -1,9 +1,9 @@
-baseurl:    /
-url:        http://www.hawkeward.com
+baseurl: /
+url: http://www.hawkeward.com
 
-permalink:  /:categories/:title
+permalink: /:categories/:title
 
-markdown:   kramdown
+markdown: kramdown
 kramdown:
   auto_ids: false
 
@@ -13,5 +13,11 @@ sass:
   sass_dir: scss
   style: :compressed
 
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
 
-exclude:    [_psd]
+exclude: [_psd]

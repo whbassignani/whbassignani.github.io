@@ -1,3 +1,11 @@
+// Box sizing
+
+* {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
 // Layout styles
 
 body {
@@ -5,7 +13,7 @@ body {
   @include transform(translateZ(0));
   
   font-family: $sans-serif;
-  font-size: $type-size-base;
+  font-size: $type-base;
 }
 
 .torso {
@@ -54,7 +62,7 @@ button,
   padding: ($gutter-large/2) $gutter-large ($gutter-large/2 - 1px);
   background-color: $bright-blue;
   color: $white;
-  font-size: $type-size-small;
+  font-size: $type-small;
   font-weight: 800;
   line-height: 1;
   text-decoration: none;
@@ -67,4 +75,27 @@ button,
     background-color: darken($bright-blue, 8%);
     color: $white;
   }
+}
+
+// Clearfix
+.clearfix, .cf {
+  zoom: 1;
+	&:before, &:after { content: ""; display: table; }
+	&:after { clear: both; }
+}
+
+// Hide
+.display-none {
+  display: none;
+}
+
+// Image Replacement
+.image-replacement, .hide-text, .ir {
+	text-indent: -9999px;
+}
+
+/* Use the best ampersand: http://simplebits.com/notebook/2008/08/14/ampersands-2/ */
+span.amp {
+  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
+  font-style: italic;
 }

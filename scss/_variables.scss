@@ -1,32 +1,23 @@
-/* --------------------------------- */
-/* ----------[ VARIABLES ]---------- */
-/* --------------------------------- */
+// Colors
 
-/* -----[ Variables | COLORS ]----- */
-
-// Neutrals
-$black:             #000;
+$black:             #27324b;
 $white:             #fff;
 
-$off-white:         #eee;
-$light-grey:        #b0bac5;
-$medium-grey:       #9aa4ae;
-$dark-grey:         #444;
-$near-black:        #27324b;
+$off-white:         mix($white, $black, 90%);
+$light-grey:        mix($white, $black, 70%);
+$medium-grey:       mix($white, $black, 50%);
+$dark-grey:         mix($white, $black, 30%);
                     
-$bright-pink:       #ff5757;
-$bright-green:      #73ff57;
 $bright-blue:       #0083f0;
                     
 $link-color:        $bright-blue;
 $link-hover:        darken($link-color, 10%);
-$border-color:      $light-grey;
                     
 $twitter-blue:      #55acee;
 $facebook-blue:     #3b5998;
 $instagram-blue:    #3f729b;
 
-/* -----[ Variables | TYPOGRAPHY ]----- */
+// Typography
 
 $sans-serif:        "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif:             "Georgia", Cambria, Times New Roman, Times, serif;
@@ -40,9 +31,10 @@ $type-larger:       30px;
 $type-largest:      36px;
 $type-huge:         44px;
 
-/* -----[ Variables | LAYOUT ]----- */
+// Animations
+$animation-time:    0.2s;
 
-// Gutters
+// Gutters/Margins/Padding
 $gutter-huge:       60px;
 $gutter-large:      40px;
 $gutter-medium:     30px;
@@ -52,7 +44,7 @@ $gutter-tiny:       10px;
 // Content widths
 $content-max-width:   1160px;
 
-/* -----[ Variables | BREAKPOINTS ]----- */
+// Breakpoints
 
 $bp-small:          'min-width: 440px';
 $bp-medium:         'min-width: 768px';

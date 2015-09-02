@@ -12,6 +12,8 @@ body {
   // Prevents webkit faux-bolding in Safari
   @include transform(translateZ(0));
   
+  position: relative;
+  background-color: $off-white;
   font-family: $sans-serif;
   font-size: $type-base;
 }
@@ -94,8 +96,62 @@ button,
 	text-indent: -9999px;
 }
 
-/* Use the best ampersand: http://simplebits.com/notebook/2008/08/14/ampersands-2/ */
+// Use the best ampersand: http://simplebits.com/notebook/2008/08/14/ampersands-2/
 span.amp {
   font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
   font-style: italic;
+}
+
+// No-break (to new lines)
+.no-break {
+  white-space: nowrap;
+}
+
+// Hide/show content based on viewport
+.show-small-up,
+.show-medium-up,
+.show-large-up {
+  display: none;
+}
+
+@include mq($bp-small) {
+  .show-small-up {
+    display: inline;
+  }
+
+  .show-small-up.inline-block {
+    display: inline-block;
+  }
+
+  .show-small-up.block {
+    display: block;
+  }
+}
+
+@include mq($bp-medium) {
+  .show-medium-up {
+    display: inline;
+  }
+
+  .show-medium-up.inline-block {
+    display: inline-block;
+  }
+
+  .show-medium-up.block {
+    display: block;
+  }
+}
+
+@include mq($bp-large) {
+  .show-large-up {
+    display: inline;
+  }
+
+  .show-large-up.inline-block {
+    display: inline-block;
+  }
+
+  .show-large-up.block {
+    display: block;
+  }
 }

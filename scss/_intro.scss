@@ -1,12 +1,16 @@
 #intro {
-	font-size: $type-large;
-	line-height: 1.4;
-	
-	p {
-		margin: 0;
-		
-		@include mq($bp-medium) {
-  		width: 75%;
-		}
-	}
+  font-size: $type-medium;
+  line-height: 1.4;
+
+  p {
+    margin: 0;
+
+    @include mq($bp-medium) {
+      width: 75%;
+    }
+  }
+
+  @include mq($bp-small) {
+    font-size: $type-large;
+  }
 }

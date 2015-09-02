@@ -8,5 +8,5 @@
 # Ignore OS X ds_store files
 .DS_Store
 
-# Ignore compiled stylesheets
-_site/css/*.css
+# Ignore compiled _site
+_site/**

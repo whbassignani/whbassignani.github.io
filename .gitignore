@@ -1,3 +1,9 @@
 # Ignore sass-cache files.
 *.sass-cache*
 *.psd*
+
+# Ignore /_site
+_site/**
+
+.DS_Store
+*/.DS_Store

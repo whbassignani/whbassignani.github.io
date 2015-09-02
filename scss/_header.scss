@@ -1,9 +1,11 @@
-#Header {
+#Header-topbar {
   position: relative;
 }
 
 #Header-logo {
   display: block;
+  margin-bottom: $gutter-small;
+  font-size: $type-medium;
   line-height: 1;
   color: $black;
   text-decoration: none;

@@ -10,7 +10,7 @@ $dark-grey:         mix($white, $black, 30%);
                     
 $bright-blue:       #0083f0;
                     
-$link-color:        $bright-blue;
+$link-color:        darken($bright-blue, 5%);
 $link-hover:        darken($link-color, 10%);
                     
 $twitter-blue:      #55acee;
@@ -24,7 +24,8 @@ $serif:             "Georgia", Cambria, Times New Roman, Times, serif;
 
 $type-base:         16px;
 
-$type-small:        13px;
+$type-tiny:         13px;
+$type-small:        16px;
 $type-medium:       20px;
 $type-large:        24px;
 $type-larger:       30px;
@@ -43,7 +44,6 @@ $gutter-tiny:       10px;
 
 // Content widths
 $content-max-width: 1160px;
-$nav-width:         250px;
 
 // Breakpoints
 

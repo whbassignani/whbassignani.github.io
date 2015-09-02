@@ -1,53 +1,12 @@
-// Variables
-$headerHeight:      80px;
+#MainNav {  
+  @include box-shadow(0, 0, 10px, rgba($black, 0.4), true);
+  @include css-gradient(darken($bright-blue, 5%), $bright-blue);
 
-// Styles
-body {
-  @include transition(all $animation-time);
-
-  &:after {
-    @include transition(all $animation-time);
-
-    content: "";
-    display: block;
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: 2;
-    background-color: rgba($bright-blue, 0.66667);
-  }
-
-  &.is-nav-opened {
-    @include transform(translateX(-$nav-width));
-
-    &:after {
-      display: block;
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-}
-
-#MainNav {
-//   @include transition(all 0.3s cubic-bezier(0.19, 1, 0.22, 1));
-//   @include transform(translateX(100%));
-//   @include box-shadow(-500px, 0, 0, rgba(red, 0.5));
-  
-  clear: both;
-  padding-top: $headerHeight;
-  width: $nav-width;
-  position: fixed;
-  bottom: 0;
-  left: 100%;
-  top: 0;
-  z-index: 1;
-  background-color: $bright-blue;
+  margin: 0 (-$gutter-small);
+  padding: 0 $gutter-tiny;
 
   @include mq($bp-medium) {
+/*
   	clear: none;
   	float: right;
   	height: 40px;
@@ -59,29 +18,35 @@ body {
   	.lt-ie9 & {
   		width: 500px;
   	}
+*/
   }
 }
 
 #MainNav-links {
+  display: block;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .MainNav-link {
-  padding: $gutter-tiny $gutter-small;
-  
-  & + & {
-    border-top: 1px solid lighten(desaturate($black, 20%), 10%);
-  }
+  display: inline-block;
 
   a {
-    display: block;
-    color: $light-grey;
+    color: $white;
+    display: inline-block;
+    padding: $gutter-tiny $gutter-tiny ($gutter-tiny - 1px);
+    font-size: $type-small;
+    font-weight: 700;
     text-decoration: none;
+
+    &:hover {
+      background-color: rgba(mix($bright-blue, $white, 50%), 0.25);
+    }
   }
 
   @include mq($bp-medium) {
+/*
   	display: inline-block;
   	padding: 0;
   	position: relative;
@@ -122,6 +87,7 @@ body {
   		float: left;
   		width: 150px;
   	}
+*/
   }
 }
 
@@ -134,21 +100,16 @@ body {
   margin: 0;
   padding: 3px 6px;
   position: absolute;
-  right: $gutter-small;
+  right: 0;
   top: 50%;
   z-index: 3;
   border: 1px solid $light-grey;
   outline: none;
   color: $black;
-  font-size: .67em;
+  font-size: $type-tiny;
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
-
-  .is-nav-opened & {
-    background-color: $white;
-    border-color: $bright-blue;
-  }
 
   &:hover {
     @include box-shadow (0, 1px, 2px, rgba($black, 0.15));
@@ -159,7 +120,7 @@ body {
   &:active {
     @include box-shadow (0, 0, 2px, rgba($black, 0.15));
 
-    margin-top: 1px;
+//     margin-top: 1px;
   }
   
   @include mq($bp-medium) {

@@ -4,6 +4,7 @@ $(document).ready(function() {
   $MainNav = $("#MainNav");
   $MobileNavOpener = $('#MobileNavOpener');
 
+/*
   var body = document.body,
       html = document.documentElement,
       resizeTimer;
@@ -47,16 +48,19 @@ $(document).ready(function() {
   var refreshBodyWindowSizes = function() {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function() {
-      body.style.height = "auto";
-
       bodyObj.refreshSizes();
       windowObj.refreshSizes();
       
-      body.style.height = Math.max(bodyObj.height, windowObj.height) + "px";
+      var proposedNewHeight = Math.max(bodyObj.height, windowObj.height) + "px"
+      
+      // If the new height is less than the old height, use the new height
+      body.style.height = (proposedNewHeight < bodyObj.height) ? proposedNewHeight : bodyObj.height;
     }, 50);    
   }
+*/
   
   function init() {
+/*
     bodyObj.init();
     windowObj.init();
     
@@ -65,6 +69,7 @@ $(document).ready(function() {
     
     // Define event listeners
     window.addEventListener("resize", refreshBodyWindowSizes);
+*/
   };
   
   init();

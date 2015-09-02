@@ -7,10 +7,6 @@
 
   .copyright .credits {
     color: $medium-grey;
-
-    a {
-      color: lighten($link-color, 20%);
-    }
   }
   
   @include mq($bp-medium) {

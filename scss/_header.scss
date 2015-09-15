@@ -1,24 +1,29 @@
+#Header {
+  padding-bottom: 0;
+}
+
 #Header-topbar {
+  @include transform(translateY($nav-height-mobile));
+  @include transition-with-prefixes(
+    transform $animation-time,
+    border-color $animation-time
+  );
+  
   position: relative;
+  background-color: $off-white;
+  border-bottom: 1px solid $light-grey;
+
+  .is-nav-opened & {
+    @include transform(translateY(0));
+
+    border-bottom-color: transparent;
+  }
 }
 
 #Header-logo {
   display: block;
-  margin-bottom: $gutter-small;
   font-size: $type-medium;
   line-height: 1;
   color: $black;
   text-decoration: none;
-
-//   height: 20px;
-//   width: 25px;
-//   position: relative;
 }
-
-// #Header-logo svg {
-//   height: 100%; 
-//   width: 100%; 
-//   position: absolute; 
-//   left: 0; 
-//   top: 0;
-// }

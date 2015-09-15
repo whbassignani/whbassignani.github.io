@@ -1,94 +1,67 @@
-/* ------------------------------ */
-/* ----------[ MIXINS ]---------- */
-/* ------------------------------ */
-
-/* -----[ Mixins | UTILITIES ]----- */
-
-@mixin mq($point) {
-	/* If primary stylesheet indicates media query support (e.g. style.scss), output media queries.
-	 *     If not (e.g. ie.scss), output the block WITHOUT @media wrapper. */
-	@if ($MQs) {
-		 @media ($point) {
-			 @content;
-		 }
-	} @else {
-		@content;
-	}
-}
-
-/* Same as @mixin mq($point), except allows a longer string of media query conditions
- *     e.g. min-width and max-width, or multiple DPI checkers */
-@mixin mq-multiple($points) {
-	/* If primary stylesheet indicates media query support (e.g. style.scss), output media queries.
-	 *     If not (e.g. ie.scss), output the block WITHOUT @media wrapper. */
-	@if ($MQs) {
-		 @media #{$points} {
-			 @content;
-		 }
-	} @else {
-		@content;
-	}
-}
-
-/* -----[ Mixins | ANIMATIONS ]----- */
-
-@mixin transition($transition...) {
-	// defining prefixes so we can use them in mixins below
-	$prefixes:      ("-webkit",  "-moz", "-o");
-	
-	@each $prefix in $prefixes {
-		#{$prefix}-transition: $transition;
-	}
-	
-	transition: $transition;
-}
-
-@mixin transform($transform...) {
-	// defining prefixes so we can use them in mixins below
-	$prefixes:      ("-webkit",  "-moz", "-ms", "-o");
-	
-	@each $prefix in $prefixes {
-		#{$prefix}-transform: $transform;
-	}
-	
-	transform: $transform;
-}
-
-/* -----[ Mixins | EFFECTS ]----- */
-
 @mixin background-size($bgsize: cover) {
-	-webkit-background-size: $bgsize;
-	   -moz-background-size: $bgsize;
-	     -o-background-size: $bgsize;
-	        background-size: $bgsize;
+	// Vendor prefixes
+	$prefixes:      ("-webkit-",  "-moz-", "-0-", "");
+	
+	@each $prefix in $prefixes {
+		#{$prefix}background-size: $bgsize;
+	}
 }
 
 @mixin border-radius($radius) {
-	-webkit-border-radius: $radius;
-	        border-radius: $radius;
+	// Vendor prefixes
+	$prefixes:      ("-webkit-", "");
+	
+	@each $prefix in $prefixes {
+		#{$prefix}border-radius: $radius;
+	}
 }
 
 @mixin box-shadow($top, $left, $blur, $color: #000, $inset: false) {
+	// Vendor prefixes
+	$prefixes:      ("-webkit-",  "-moz-", "");
+
 	@if $inset {
-		-webkit-box-shadow: inset $top $left $blur $color;
-		   -moz-box-shadow: inset $top $left $blur $color;
-		        box-shadow: inset $top $left $blur $color;
+  	@each $prefix in $prefixes {
+  		#{$prefix}box-shadow: inset $top $left $blur $color;
+  	}
 	} @else {
-		-webkit-box-shadow: $top $left $blur $color;
-		   -moz-box-shadow: $top $left $blur $color;
-		        box-shadow: $top $left $blur $color;
+  	@each $prefix in $prefixes {
+  		#{$prefix}box-shadow: $top $left $blur $color;
+  	}
 	}
 }
 
 @mixin box-shadow-with-spread($top, $left, $blur, $spread, $color: #000, $inset: false) {
+	// Vendor prefixes
+	$prefixes:      ("-webkit-",  "-moz-", "");
+
 	@if $inset {
-		-webkit-box-shadow: inset $top $left $blur $spread $color;
-		   -moz-box-shadow: inset $top $left $blur $spread $color;
-		        box-shadow: inset $top $left $blur $spread $color;
+  	@each $prefix in $prefixes {
+  		#{$prefix}box-shadow: inset $top $left $blur $spread $color;
+  	}
 	} @else {
-		-webkit-box-shadow: $top $left $blur $spread $color;
-		   -moz-box-shadow: $top $left $blur $spread $color;
-		        box-shadow: $top $left $blur $spread $color;
+  	@each $prefix in $prefixes {
+  		#{$prefix}box-shadow: $top $left $blur $spread $color;
+  	}
+	}
+}
+
+@mixin box-sizing($type: border-box) {
+	// Vendor prefixes
+	$prefixes:      ("-webkit-",  "-moz-", "-ms-", "");
+	
+	@each $prefix in $prefixes {
+		#{$prefix}box-sizing: $type;
+	}
+}
+
+@mixin columns($count, $gap: 20px) {
+	// Vendor prefixes
+	$prefixes:      ("-webkit-",  "-moz-", "");
+	
+	@each $prefix in $prefixes {
+		#{$prefix}column-count: $count;
+		#{$prefix}column-gap: $gap;
 	}
 }
 
@@ -101,17 +74,61 @@
 	background-image: linear-gradient(to bottom, $from, $to);
 }
 
-/* -----[ Mixins | LAYOUT ]----- */
-
-@mixin box-sizing($type: border-box) {
-	-webkit-box-sizing: $type;
-	   -moz-box-sizing: $type;
-	    -ms-box-sizing: $type;
-	        box-sizing: $type;
+@mixin css-gradient-horizontal($from: #dfdfdf, $to: #f8f8f8) {
+	background-color: $to;
+	background-image: -webkit-gradient(linear, left top, right top, from($from), to($to));
+	background-image: -webkit-linear-gradient(left, $from, $to);
+	background-image: -moz-linear-gradient(left, $from, $to);
+	background-image: -o-linear-gradient(left, $from, $to);
+	background-image: linear-gradient(to right, $from, $to);
 }
 
-@mixin columns($count, $gap: 20px) {
-  -webkit-column-count: $count;  -webkit-column-gap: $gap;
-     -moz-column-count: $count;     -moz-column-gap: $gap;
-          column-count: $count;          column-gap: $gap;
+@mixin mq($point) {
+	// If primary stylesheet indicates media query support (e.g. style.scss), output media queries.
+	// If not (e.g. ie.scss), output the block WITHOUT @media wrapper... for IE.
+	@if ($MQs) {
+		 @media ($point) {
+			 @content;
+		 }
+	} @else {
+		@content;
+	}
+}
+
+// Same as @mixin mq($point), except allows a longer string of media query conditions. E.g. min-width and max-width, or multiple DPI checkers.
+@mixin mq-multiple($points) {
+	@if ($MQs) {
+		 @media #{$points} {
+			 @content;
+		 }
+	} @else {
+		@content;
+	}
+}
+
+@mixin transform($transform...) {
+	// Vendor prefixes
+	$prefixes:      ("-webkit-",  "-moz-", "-ms-", "-o-", "");
+	
+	@each $prefix in $prefixes {
+		#{$prefix}transform: $transform;
+	}
+}
+
+@mixin transition($transition...) {
+	// Vendor prefixes
+	$prefixes:      ("-webkit-",  "-moz-", "-o-", "");
+	
+	@each $prefix in $prefixes {
+		#{$prefix}transition: $transition;
+	}
+}
+
+@mixin transition-with-prefixes($transition...) {
+	// Vendor prefixes
+	$prefixes:      ("-webkit-",  "-moz-", "-o-", "");
+
+	@each $prefix in $prefixes {
+		#{$prefix}transition: #{$prefix}$transition;
+	}
 }

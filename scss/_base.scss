@@ -9,13 +9,17 @@
 // Layout styles
 
 body {
-  // Prevents webkit faux-bolding in Safari
-  @include transform(translateZ(0));
+  @include transform(translateY(-$nav-height-mobile));
+  @include transition-with-prefixes(transform $animation-time);
   
   position: relative;
   background-color: $off-white;
   font-family: $sans-serif;
   font-size: $type-base;
+
+  &.is-nav-opened {
+    @include transform(translateY(0));
+  }
 }
 
 .torso {

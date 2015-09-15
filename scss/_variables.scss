@@ -1,52 +1,55 @@
 // Colors
 
-$black:             #27324b;
-$white:             #fff;
+$black:                 #27324b;
+$white:                 #fff;
 
-$off-white:         mix($white, $black, 90%);
-$light-grey:        mix($white, $black, 70%);
-$medium-grey:       mix($white, $black, 50%);
-$dark-grey:         mix($white, $black, 30%);
+$off-white:             mix($white, $black, 90%);
+$light-grey:            mix($white, $black, 70%);
+$medium-grey:           mix($white, $black, 50%);
+$dark-grey:             mix($white, $black, 30%);
                     
-$bright-blue:       #0083f0;
+$bright-blue:           #0083f0;
                     
-$link-color:        darken($bright-blue, 5%);
-$link-hover:        darken($link-color, 10%);
+$link-color:            darken($bright-blue, 5%);
+$link-hover:            darken($link-color, 10%);
                     
-$twitter-blue:      #55acee;
-$facebook-blue:     #3b5998;
-$instagram-blue:    #3f729b;
+$twitter-blue:          #55acee;
+$facebook-blue:         #3b5998;
+$instagram-blue:        #3f729b;
 
 // Typography
 
-$sans-serif:        "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+$sans-serif:            "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif:                 "Georgia", Cambria, Times New Roman, Times, serif;
 
-$type-base:         16px;
+$type-base:             16px;
 
-$type-tiny:         13px;
-$type-small:        16px;
-$type-medium:       20px;
-$type-large:        24px;
-$type-larger:       30px;
-$type-largest:      36px;
-$type-huge:         44px;
+$type-tiny:             13px;
+$type-small:            16px;
+$type-medium:           20px;
+$type-large:            24px;
+$type-larger:           30px;
+$type-largest:          36px;
+$type-huge:             44px;
 
 // Animations
-$animation-time:    0.2s;
+$animation-time:        0.2s;
 
 // Gutters/Margins/Padding
-$gutter-huge:       60px;
-$gutter-large:      40px;
-$gutter-medium:     30px;
-$gutter-small:      20px;
-$gutter-tiny:       10px;
+$gutter-huge:           60px;
+$gutter-large:          40px;
+$gutter-medium:         30px;
+$gutter-small:          20px;
+$gutter-tiny:           10px;
 
-// Content widths
-$content-max-width: 1160px;
+// Layout
+$content-max-width:     1160px;
+
+$header-height-mobile:  100px;
+$nav-height-mobile:     40px;
 
 // Breakpoints
 
-$bp-small:          'min-width: 440px';
-$bp-medium:         'min-width: 768px';
-$bp-large:          'min-width: 1030px';
+$bp-small:              'min-width: 440px';
+$bp-medium:             'min-width: 768px';
+$bp-large:              'min-width: 1030px';

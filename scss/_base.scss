@@ -1,161 +1,261 @@
 // Box sizing
 
 * {
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;
+	@include box-sizing(border-box);
 }
 
 // Layout styles
+html, body {
+  font-size: $type-base;
+}
 
 body {
-  @include transform(translateY(-$nav-height-mobile));
-  @include transition-with-prefixes(transform $animation-time);
-  
-  position: relative;
-  background-color: $off-white;
-  font-family: $sans-serif;
+  background-color: $background-color;
+  font-family: $serif;
   font-size: $type-base;
+  line-height: 1.4;
 
-  &.is-nav-opened {
-    @include transform(translateY(0));
+  @media ($bp-smaller) {
+    font-size: $type-large;
   }
 }
 
-.torso {
+.container {
   margin: 0 auto;
-  max-width: $content-max-width;
-}
-
-.section {
-  padding: $gutter-small;
-  
-  @mq($bp-medium) {
-    padding: $gutter-large;
-  }
+  max-width: $container-max-width;
+  padding: 1rem 0.75rem;
 }
 
 // Typography
 
 a {
+  @include transition(color $animation-time, border-color $animation-time);
+
+  border-bottom: 2px solid rgba($link-color, 0.2);
   color: $link-color;
+  text-decoration: none;
+
+  &:visited {
+    border-color: rgba($link-visited-color, 0.2);
+    color: $link-visited-color;
+  }
 
   &:hover {
-    color: $link-hover;
+    border-color: rgba($link-hover-color, 0.4);
+    color: $link-hover-color;
     text-decoration: none;
   }
-  
+
+  &:visited:hover {
+    border-color: rgba($link-visited-hover-color, 0.4);
+    color: $link-visited-hover-color;
+  }
+
   &:active {
     color: $link-color;
   }
 }
 
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
-h6, 
-p {
-  margin-top: 0;  
+.action-link {
+  border: 0;
 }
 
-button,
-.button {
-  @include border-radius(6px);
-  
-  display: inline-block;
-  padding: ($gutter-large/2) $gutter-large ($gutter-large/2 - 1px);
-  background-color: $bright-blue;
-  color: $white;
+blockquote {
+  margin: 0 0 $gutter-medium;
+  padding-left: $gutter-smaller;
+  border-left: ($gutter-smallest / 2) solid $off-white;
+  color: $medium-grey;
   font-size: $type-small;
-  font-weight: 800;
-  line-height: 1;
-  text-decoration: none;
-  text-transform: uppercase;
-  
-  -webkit-appearance: none;
-          appearance: none;
-          
-  &:hover {
-    background-color: darken($bright-blue, 8%);
-    color: $white;
+
+  @media ($bp-smaller) {
+    margin-left: 2rem;
   }
 }
 
-// Clearfix
+code {
+  background-color: $off-white;
+  font-size: $type-smaller;
+}
+
+%h1, %h2, %h3,
+%h4, %h5, %h6 {
+  font-family: $sans-serif;
+  line-height: 1.1;
+
+  & + & {
+    margin-top: 0;
+  }
+}
+
+%h1 {
+  margin: $gutter-larger 0 $gutter-medium;
+  font-size: $type-largest;
+  font-weight: 700;
+
+  @media ($bp-smaller) {
+    font-size: $type-huge;
+  }
+}
+
+%h2 {
+  margin: $gutter-large 0 $gutter-medium;
+  font-size: $type-larger;
+  font-weight: 700;
+
+  @media ($bp-smaller) {
+    font-size: $type-largest;
+  }
+}
+
+%h3 {
+  margin: $gutter-medium 0 $gutter-small;
+  color: $medium-grey;
+  font-size: $type-large;
+  font-weight: normal;
+
+  @media ($bp-smaller) {
+    font-size: $type-larger;
+  }
+}
+
+%h4 {
+  margin: $gutter-medium 0 $gutter-smaller;
+  color: $medium-grey;
+  font-size: $type-medium;
+  font-weight: normal;
+
+  @media ($bp-smaller) {
+    font-size: $type-large;
+  }
+}
+
+%h5,
+%h6 {
+  margin: $gutter-medium 0 $gutter-smallest;
+  font-size: $type-smaller;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  @media ($bp-smaller) {
+    font-size: $type-small;
+  }
+}
+
+h1, .h1 { @extend %h1; }
+h2, .h2 { @extend %h2; }
+h3, .h3 { @extend %h3; }
+h4, .h4 { @extend %h4; }
+h5, .h5 { @extend %h5; }
+h6, .h6 { @extend %h6; }
+
+p {
+  margin: 0 0 $gutter-medium;
+}
+
+pre {
+  margin: 0 (-$gutter-smaller) $gutter-medium;
+  padding: $gutter-small;
+  width: auto;
+  background-color: $off-white;
+}
+
+
+
+
+
+
+
+
+
+
+button, button:visited,
+.button, .button:visited {
+  @include border-radius(6px);
+  @include transition(background-color $animation-time/2);
+
+  display: block;
+  margin-bottom: $gutter-medium;
+  padding: ($gutter-medium/2) $gutter-medium;
+  background-color: $link-color;
+  border: 0;
+  color: $white;
+  font-family: $sans-serif;
+  font-size: $type-smaller;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  -webkit-appearance: none;
+          appearance: none;
+
+  &.is-hover,
+  &:hover {
+    background-color: $link-hover-color;
+    color: $white;
+  }
+
+  &.is-active,
+  &:active {
+    background-color: $link-active-color;
+    color: $white;
+  }
+
+  &.is-disabled, &.is-disabled:hover, &.is-disabled:active,
+  &:disabled, &:disabled:hover, &:disabled:active {
+    background-color: $off-white;
+    border: 1px solid $light-grey;
+    color: $light-grey;
+  }
+
+  @media ($bp-smaller) {
+    display: inline-block;
+    margin-left: $gutter-smallest;
+  }
+}
+
+.button-secondary, .button-secondary:visited {
+  background-color: transparentize($link-color, 0.9);
+  border: 1px solid $link-color;
+  color: $link-color;
+
+  &.is-hover,
+  &:hover {
+    background-color: transparentize($link-hover-color, 0.9);
+    border: 1px solid $link-hover-color;
+    color: $link-hover-color;
+  }
+
+  &.is-active,
+  &:active {
+    background-color: transparentize($link-active-color, 0.9);
+    border: 1px solid $link-active-color;
+    color: $link-active-color;
+  }
+}
+
+
+
+
+
+// Utility classes
+
+// -- Clearfix
 .clearfix, .cf {
   zoom: 1;
 	&:before, &:after { content: ""; display: table; }
 	&:after { clear: both; }
 }
 
-// Hide
-.display-none {
-  display: none;
-}
-
-// Image Replacement
+// -- Image Replacement
 .image-replacement, .hide-text, .ir {
 	text-indent: -9999px;
 }
 
-// Use the best ampersand: http://simplebits.com/notebook/2008/08/14/ampersands-2/
-span.amp {
-  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
-  font-style: italic;
-}
-
-// No-break (to new lines)
-.no-break {
+// -- No-break (to new lines)
+.no-wrap {
   white-space: nowrap;
-}
-
-// Hide/show content based on viewport
-.show-small-up,
-.show-medium-up,
-.show-large-up {
-  display: none;
-}
-
-@include mq($bp-small) {
-  .show-small-up {
-    display: inline;
-  }
-
-  .show-small-up.inline-block {
-    display: inline-block;
-  }
-
-  .show-small-up.block {
-    display: block;
-  }
-}
-
-@include mq($bp-medium) {
-  .show-medium-up {
-    display: inline;
-  }
-
-  .show-medium-up.inline-block {
-    display: inline-block;
-  }
-
-  .show-medium-up.block {
-    display: block;
-  }
-}
-
-@include mq($bp-large) {
-  .show-large-up {
-    display: inline;
-  }
-
-  .show-large-up.inline-block {
-    display: inline-block;
-  }
-
-  .show-large-up.block {
-    display: block;
-  }
 }

@@ -1,55 +1,77 @@
-// Colors
-
-$black:                 #27324b;
+// Raw colors
+$black:                 #000;
 $white:                 #fff;
 
-$off-white:             mix($white, $black, 90%);
-$light-grey:            mix($white, $black, 70%);
-$medium-grey:           mix($white, $black, 50%);
-$dark-grey:             mix($white, $black, 30%);
-                    
-$bright-blue:           #0083f0;
-                    
-$link-color:            darken($bright-blue, 5%);
-$link-hover:            darken($link-color, 10%);
+$bright-red:            #fb3640;
+$bright-green:          #1a936f;
+
+$dark-grey:             #18231d;
+$medium-grey:           #6d6c6b;
+$off-white:             #f2edef;
+
+$light-grey:            mix($medium-grey, $off-white, 50%);
+
+// Theme colors
+$text-color:            $dark-grey;
+
+$link-color:            darken($bright-green, 5%);
+$link-hover-color:      lighten($link-color, 10%);
+$link-active-color:     darken($link-color, 10%);
+$link-visited-color:    lighten(
+                          adjust-hue($link-color, 60deg),
+                        10%);
+$link-visited-hover-color:
+                        lighten(
+                          adjust-hue($link-hover-color, 60deg),
+                        10%);
+
+$background-color:      $white;
+$divider-color:         $medium-grey;
                     
 $twitter-blue:          #55acee;
 $facebook-blue:         #3b5998;
 $instagram-blue:        #3f729b;
 
+
 // Typography
+$sans-serif:            "Concourse", sans-serif;
+$serif:                 "Equity", serif;
 
-$sans-serif:            "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serif:                 "Georgia", Cambria, Times New Roman, Times, serif;
+$type-base:             20px;
+$type-ratio:            1.2;
 
-$type-base:             16px;
+$type-smallest:         1rem / power($type-ratio, 3);     // 12px
+$type-smaller:          1rem / power($type-ratio, 2);     // 14px
+$type-small:            1rem / power($type-ratio, 1);     // 17px
+$type-medium:           1rem;                             // 20px
+$type-large:            1rem * power($type-ratio, 1);     // 24px
+$type-larger:           1rem * power($type-ratio, 2);     // 29px
+$type-largest:          1rem * power($type-ratio, 3);     // 35px
+$type-huge:             1rem * power($type-ratio, 4);     // 41px
+$type-huger:            1rem * power($type-ratio, 5);     // 50px
 
-$type-tiny:             13px;
-$type-small:            16px;
-$type-medium:           20px;
-$type-large:            24px;
-$type-larger:           30px;
-$type-largest:          36px;
-$type-huge:             44px;
 
 // Animations
 $animation-time:        0.2s;
 
+
 // Gutters/Margins/Padding
-$gutter-huge:           60px;
-$gutter-large:          40px;
-$gutter-medium:         30px;
-$gutter-small:          20px;
-$gutter-tiny:           10px;
+$gutter-largest:        6rem;     // 120px
+$gutter-larger:         3rem;     // 60px
+$gutter-large:          2rem;     // 40px
+$gutter-medium:         1.5rem;   // 30px
+$gutter-small:          1rem;     // 20px
+$gutter-smaller:        0.75rem;  // 15px
+$gutter-smallest:       0.5rem;   // 10px
+
 
 // Layout
-$content-max-width:     1160px;
+$container-max-width:   1160px;
 
-$header-height-mobile:  100px;
-$nav-height-mobile:     40px;
 
 // Breakpoints
-
-$bp-small:              'min-width: 440px';
-$bp-medium:             'min-width: 768px';
-$bp-large:              'min-width: 1030px';
+$bp-smaller:            'min-width: 480px';
+$bp-small:              'min-width: 640px';
+$bp-medium:             'min-width: 800px';
+$bp-large:              'min-width: 960px';
+$bp-larger:             'min-width: 1120px';

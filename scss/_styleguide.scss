@@ -1,0 +1,90 @@
+// Document-level styles
+.styleGuide-section {
+  margin: 4rem 0;
+
+  &.intro {
+    margin-top: 2rem;
+  }
+}
+
+.styleGuide-section-header {
+  @extend %h6;
+
+  border-bottom: 1px solid currentcolor;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  color: $off-white;
+}
+
+// Swatches
+.swatch-list {
+  padding: 0;
+}
+
+.swatch {
+  float: left;
+  margin-bottom: 1rem;
+  padding: 2.5rem 1rem;
+  width: calc((100% - 1rem) / 2);
+  color: $white;
+  font-family: $sans-serif;
+  font-size: $type-small;
+  letter-spacing: 0.1em;
+  line-height: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  
+  & + & {
+    margin-left: 1rem;
+  }
+
+  &:nth-child(2n + 3) {
+    margin-left: 0;
+  }
+
+  @media ($bp-small) {
+    width: calc((100% - 2rem) / 3);
+    
+    & + & {
+      margin-left: 1rem;
+    }
+  
+    &:nth-child(3n + 1) {
+      margin-left: 0;
+    }
+  }
+
+  @media ($bp-medium) {
+    width: calc((100% - 4rem) / 5);
+    
+    & + & {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.swatch-label--dark {
+  color: $dark-grey;
+}
+
+// Anchor tag-specific
+a.is-unvisited {
+  border-color: rgba($link-color, 0.2);
+  color: $link-color;
+  
+  &:hover {
+    border-color: rgba($link-hover-color, 0.4);
+    color: $link-hover-color;
+    text-decoration: none;
+  }
+}
+
+a.is-visited {
+  border-color: rgba($link-visited-color, 0.2);
+  color: $link-visited-color;
+}
+
+a.is-visited:hover {
+  border-color: rgba($link-visited-hover-color, 0.4);
+  color: $link-visited-hover-color;
+}

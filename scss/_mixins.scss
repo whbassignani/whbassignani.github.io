@@ -48,7 +48,7 @@
 
 @mixin box-sizing($type: border-box) {
 	// Vendor prefixes
-	$prefixes:      ("-webkit-",  "-moz-", "-ms-", "");
+	$prefixes:      ("-webkit-",  "-moz-", "");
 	
 	@each $prefix in $prefixes {
 		#{$prefix}box-sizing: $type;
@@ -81,29 +81,6 @@
 	background-image: -moz-linear-gradient(left, $from, $to);
 	background-image: -o-linear-gradient(left, $from, $to);
 	background-image: linear-gradient(to right, $from, $to);
-}
-
-@mixin mq($point) {
-	// If primary stylesheet indicates media query support (e.g. style.scss), output media queries.
-	// If not (e.g. ie.scss), output the block WITHOUT @media wrapper... for IE.
-	@if ($MQs) {
-		 @media ($point) {
-			 @content;
-		 }
-	} @else {
-		@content;
-	}
-}
-
-// Same as @mixin mq($point), except allows a longer string of media query conditions. E.g. min-width and max-width, or multiple DPI checkers.
-@mixin mq-multiple($points) {
-	@if ($MQs) {
-		 @media #{$points} {
-			 @content;
-		 }
-	} @else {
-		@content;
-	}
 }
 
 @mixin transform($transform...) {

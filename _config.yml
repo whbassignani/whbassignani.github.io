@@ -1,7 +1,4 @@
-baseurl: /
-url: http://www.hawkeward.com
-
-permalink: /:categories/:title
+permalink: /:year/:title/
 
 markdown: kramdown
 kramdown:

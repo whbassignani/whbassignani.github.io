@@ -1,26 +1,13 @@
 #footer {
-  text-align: center;
+  background-color: $off-white;
+  font-family: $sans-serif;
+  font-size: $type-small;
 
-  .copyright {
+  p {
     margin: 0;
   }
 
-  .copyright .credits {
-    color: $medium-grey;
-  }
-  
-  @include mq($bp-medium) {
-  	text-align: left;
-  }
-}
-
-.footer-buttonWrapper {
-  margin-bottom: $gutter-small;
-  
-  @include mq($bp-medium) {
-    .footer-buttonWrapper {
-    	float: left;
-    	margin-bottom: 0;
-    }
+  .credits {
+    font-size: $type-smaller;
   }
 }

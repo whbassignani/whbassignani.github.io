@@ -1,4 +1,4 @@
-// Document-level styles
+// Style guide styles
 .styleGuide-section {
   margin: 4rem 0;
 
@@ -87,4 +87,10 @@ a.is-visited {
 a.is-visited:hover {
   border-color: rgba($link-visited-hover-color, 0.4);
   color: $link-visited-hover-color;
+}
+
+
+// Sample article styles
+.sampleArticle-divider {
+  margin: 4rem 0;
 }

@@ -9,5 +9,13 @@
 
   .credits {
     font-size: $type-smaller;
+
+    @media ($bp-smaller) {
+      font-size: $type-small;
+    }
+  }
+
+  @media ($bp-smaller) {
+    font-size: $type-medium;
   }
 }

@@ -38,17 +38,19 @@ $sans-serif:            "Concourse", sans-serif;
 $serif:                 "Equity", serif;
 
 $type-base:             20px;
-$type-ratio:            1.2;
+$type-ratio:            1.22474487139;
+$letter-spacing:        0.1em;
+$line-height:           1.5;
 
-$type-smallest:         1rem / power($type-ratio, 3);     // 12px
-$type-smaller:          1rem / power($type-ratio, 2);     // 14px
-$type-small:            1rem / power($type-ratio, 1);     // 17px
-$type-medium:           1rem;                             // 20px
-$type-large:            1rem * power($type-ratio, 1);     // 24px
-$type-larger:           1rem * power($type-ratio, 2);     // 29px
-$type-largest:          1rem * power($type-ratio, 3);     // 35px
-$type-huge:             1rem * power($type-ratio, 4);     // 41px
-$type-huger:            1rem * power($type-ratio, 5);     // 50px
+$type-smallest:         1rem / power($type-ratio, 3);
+$type-smaller:          1rem / power($type-ratio, 2);
+$type-small:            1rem / power($type-ratio, 1);
+$type-medium:           1rem;                        
+$type-large:            1rem * power($type-ratio, 1);
+$type-larger:           1rem * power($type-ratio, 2);
+$type-largest:          1rem * power($type-ratio, 3);
+$type-huge:             1rem * power($type-ratio, 4);
+$type-huger:            1rem * power($type-ratio, 5);
 
 
 // Animations
@@ -67,6 +69,7 @@ $gutter-smallest:       0.5rem;   // 10px
 
 // Layout
 $container-max-width:   1160px;
+$border-radius:         6px;
 
 
 // Breakpoints

@@ -21,3 +21,12 @@
 .post-meta + .post-title {
   margin-top: 0;
 }
+
+.lede {
+  font-family: $sans-serif;
+  font-size: $type-large;
+
+  @media ($bp-smaller) {
+    font-size: $type-larger;
+  }
+}

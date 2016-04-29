@@ -72,10 +72,6 @@ code {
 %h4, %h5, %h6 {
   font-family: $sans-serif;
   line-height: 1.1;
-
-  & + & {
-    margin-top: 0;
-  }
 }
 
 %h1 {
@@ -100,9 +96,8 @@ code {
 
 %h3 {
   margin: $gutter-medium 0 $gutter-small;
-  color: $medium-grey;
   font-size: $type-large;
-  font-weight: normal;
+  font-weight: 700;
 
   @media ($bp-smaller) {
     font-size: $type-larger;
@@ -111,9 +106,8 @@ code {
 
 %h4 {
   margin: $gutter-medium 0 $gutter-smaller;
-  color: $medium-grey;
   font-size: $type-medium;
-  font-weight: normal;
+  font-weight: 700;
 
   @media ($bp-smaller) {
     font-size: $type-large;
@@ -286,7 +280,7 @@ input[type="button"].button-secondary {
 ul,
 ol {
   margin: 0 0 $gutter-medium;
-  padding-left: $gutter-large;
+  padding-left: $gutter-medium;
 
   ul,
   ol {
@@ -305,7 +299,7 @@ ol {
 
 li {
   margin-bottom: $gutter-smallest;
-  padding-left: $gutter-smaller;
+  padding-left: $gutter-smallest / 2;
 
   &:before {
     color: $light-grey;

@@ -1,10 +1,12 @@
-.post-title {
-  font-size: $type-huge;
-
-  @media ($bp-smaller) {
-    font-size: $type-huger;
-  }
-}
+// Delete at some point; saving just in case
+//
+// .post-title {
+//   font-size: $type-huge;
+// 
+//   @media ($bp-smaller) {
+//     font-size: $type-huger;
+//   }
+// }
 
 .post-meta {
   margin-bottom: 0.25rem;

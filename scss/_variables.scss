@@ -4,6 +4,7 @@ $white:                 #fff;
 
 $bright-red:            #fb3640;
 $bright-green:          #1a936f;
+$bright-blue:           adjust-hue($bright-green, 60deg);
 
 $dark-grey:             #18231d;
 $medium-grey:           #6d6c6b;
@@ -17,13 +18,9 @@ $text-color:            $dark-grey;
 $link-color:            darken($bright-green, 5%);
 $link-hover-color:      lighten($link-color, 10%);
 $link-active-color:     darken($link-color, 10%);
-$link-visited-color:    lighten(
-                          adjust-hue($link-color, 60deg),
-                        10%);
+$link-visited-color:    $bright-blue;
 $link-visited-hover-color:
-                        lighten(
-                          adjust-hue($link-hover-color, 60deg),
-                        10%);
+                        lighten($link-visited-color, 10%);
 
 $background-color:      $white;
 $divider-color:         $medium-grey;

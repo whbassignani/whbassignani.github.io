@@ -22,6 +22,12 @@ $link-visited-color:          $bright-blue;
 $link-visited-hover-color:    lighten($link-visited-color, 10%);
 $neutral-link-color:          $dark-grey;
 $neutral-link-hover-color:    lighten($neutral-link-color, 20%);
+$inverted-link-color:         lighten($bright-green, 20%);
+$inverted-link-hover-color:   lighten($inverted-link-color, 20%);
+$inverted-neutral-link-color:
+                              $white;
+$inverted-neutral-link-hover-color:
+                              darken($inverted-neutral-link-color, 20%);
 
 $background-color:            $white;
 $divider-color:               $medium-grey;

@@ -2,12 +2,12 @@
 {% assign active_nav_item = "blog" %}
 {% endif %}
 
-  <header id="header" class="container">
+  <header id="header" class="container">    
     <a href="/" class="hawkeward-logo">
       Hawkeward
     </a>
-    
-    <nav class="nav-horizontal">
+
+    <nav class="nav nav-horizontal">
     	<a href="#" {% if active_nav_item == "blog"%}class="is-active"{% endif %}>Blog</a>
     	<a href="#" {% if active_nav_item == "work"%}class="is-active"{% endif %}>Work</a>
     	<a href="#" {% if active_nav_item == "about"%}class="is-active"{% endif %}>About</a>

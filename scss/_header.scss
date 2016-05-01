@@ -1,0 +1,23 @@
+#header {
+  @include box-shadow(0, 5px, 20px, rgba($bright-blue, 0.1));
+
+  margin-bottom: $gutter-small;
+}
+
+.hawkeward-logo,
+.hawkeward-logo:visited {
+  border-bottom: 0;
+  color: $neutral-link-color;
+  font-family: $sans-serif;
+  font-size: $type-medium;
+  font-weight: 700;
+  line-height: 1;
+
+  &:hover {
+    color: $neutral-link-hover-color;
+  }
+
+  @media ($bp-smaller) {
+    font-size: $type-large;
+  }
+}

@@ -1,9 +1,15 @@
-  <a href="/">
-    <strong>Hawke</strong>ward
-  </a>
-  
-  <nav id="mainNav">
-  	<a href="/work">Work</a>
-  	<a href="mailto:hawke[at]hawkeward[dot]com">Contact</a>
-  	<a href="http://www.twitter.com/hawkeward">@hawkeward</a>
-  </nav>
+{% if page.url contains "2016/" %}
+{% assign active_nav_item = "blog" %}
+{% endif %}
+
+  <header id="header" class="container">
+    <a href="/" class="hawkeward-logo">
+      Hawkeward
+    </a>
+    
+    <nav class="nav-horizontal">
+    	<a href="#" {% if active_nav_item == "blog"%}class="is-active"{% endif %}>Blog</a>
+    	<a href="#" {% if active_nav_item == "work"%}class="is-active"{% endif %}>Work</a>
+    	<a href="#" {% if active_nav_item == "about"%}class="is-active"{% endif %}>About</a>
+    </nav>
+  </header>

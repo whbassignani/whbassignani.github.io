@@ -1,53 +1,54 @@
 // Raw colors
-$black:                 #000;
-$white:                 #fff;
+$black:                       #000;
+$white:                       #fff;
 
-$bright-red:            #fb3640;
-$bright-green:          #1a936f;
-$bright-blue:           adjust-hue($bright-green, 60deg);
+$bright-red:                  #fb3640;
+$bright-green:                #1a936f;
+$bright-blue:                 adjust-hue($bright-green, 60deg);
 
-$dark-grey:             #18231d;
-$medium-grey:           #6d6c6b;
-$off-white:             #f2edef;
+$dark-grey:                   #18231d;
+$medium-grey:                 #6d6c6b;
+$off-white:                   #f2edef;
 
-$light-grey:            mix($medium-grey, $off-white, 50%);
+$light-grey:                  mix($medium-grey, $off-white, 50%);
 
 // Theme colors
-$text-color:            $dark-grey;
+$text-color:                  $dark-grey;
 
-$link-color:            darken($bright-green, 5%);
-$link-hover-color:      lighten($link-color, 10%);
-$link-active-color:     darken($link-color, 10%);
-$link-visited-color:    $bright-blue;
-$link-visited-hover-color:
-                        lighten($link-visited-color, 10%);
+$link-color:                  darken($bright-green, 5%);
+$link-hover-color:            lighten($link-color, 10%);
+$link-active-color:           darken($link-color, 10%);
+$link-visited-color:          $bright-blue;
+$link-visited-hover-color:    lighten($link-visited-color, 10%);
+$neutral-link-color:          $dark-grey;
+$neutral-link-hover-color:    lighten($neutral-link-color, 20%);
 
-$background-color:      $white;
-$divider-color:         $medium-grey;
+$background-color:            $white;
+$divider-color:               $medium-grey;
                     
-$twitter-blue:          #55acee;
-$facebook-blue:         #3b5998;
-$instagram-blue:        #3f729b;
+$twitter-blue:                #55acee;
+$facebook-blue:               #3b5998;
+$instagram-blue:              #3f729b;
 
 
 // Typography
-$sans-serif:            "Concourse", sans-serif;
-$serif:                 "Equity", serif;
+$sans-serif:                  "Concourse", sans-serif;
+$serif:                       "Equity", serif;
 
-$type-base:             20px;
-$type-ratio:            1.22474487139;
-$letter-spacing:        0.1em;
-$line-height:           1.5;
+$type-base:                   20px;
+$type-ratio:                  1.22474487139;
+$letter-spacing:              0.1em;
+$line-height:                 1.5;
 
-$type-smallest:         1rem / power($type-ratio, 3);
-$type-smaller:          1rem / power($type-ratio, 2);
-$type-small:            1rem / power($type-ratio, 1);
-$type-medium:           1rem;                        
-$type-large:            1rem * power($type-ratio, 1);
-$type-larger:           1rem * power($type-ratio, 2);
-$type-largest:          1rem * power($type-ratio, 3);
-$type-huge:             1rem * power($type-ratio, 4);
-$type-huger:            1rem * power($type-ratio, 5);
+$type-smallest:               1rem / power($type-ratio, 3);
+$type-smaller:                1rem / power($type-ratio, 2);
+$type-small:                  1rem / power($type-ratio, 1);
+$type-medium:                 1rem;                        
+$type-large:                  1rem * power($type-ratio, 1);
+$type-larger:                 1rem * power($type-ratio, 2);
+$type-largest:                1rem * power($type-ratio, 3);
+$type-huge:                   1rem * power($type-ratio, 4);
+$type-huger:                  1rem * power($type-ratio, 5);
 
 
 // Animations

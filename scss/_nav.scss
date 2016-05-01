@@ -1,0 +1,48 @@
+.nav-horizontal {
+  position: absolute;
+  right: $gutter-smaller;
+  top: $gutter-small;
+
+  a {
+    display: inline-block;
+    margin-bottom: -$gutter-smallest;
+    padding: $gutter-smallest 0;
+    border-bottom: 0;
+    color: $neutral-link-color;
+    font-family: $sans-serif;
+    font-size: $type-smaller;
+    font-weight: 700;
+    letter-spacing: $letter-spacing;
+    line-height: 1;
+    text-transform: uppercase;
+
+    @media ($bp-smaller) {
+      font-size: $type-small;
+    }
+  }
+
+  a + a {
+    margin-left: $gutter-smallest;
+  }
+  
+  a:hover {
+    color: $neutral-link-hover-color;
+  }
+
+  a.is-active {
+    color: $bright-green;
+    position: relative;
+
+    &:after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 100%;
+      bottom: $gutter-smallest / 3;
+      left: 0;
+      position: absolute;
+      background-color: $bright-green;
+      opacity: 0.2;
+    }
+  }
+}

@@ -24,3 +24,16 @@
 
   @return $exponent;
 }
+
+/**
+ * Pixels-to-rems
+ * -----------------------------------------------------------------------------
+ * Converts pixels to rems
+ *
+ * @param   number      $size_pixels    Number to convert.
+ * @return  number      -               Number converted to pixels.
+ */
+
+@function rem($size_pixels) {
+  @return $size_pixels / $type-base * 1rem;
+}

@@ -1,53 +1,58 @@
-$header-bottom-border-height: 4px;
-
 #header {
-  height: 2.4rem + rem($header-bottom-border-height);
-  margin-bottom: $gutter-small;
-  padding-top: $gutter-smaller;
-  position: relative;
-  background-color: $inverted-background-color;
-  
-  &:after {
-    @include css-gradient-horizontal($bright-green, $bright-blue);
+  @include css-gradient-horizontal(
+    $bright-green, 
+    mix($bright-green, $bright-blue, 75%)
+  );
+  @include box-shadow(0, -8px, 16px, rgba($black, 0.1), true);
 
-    clear: both;
-    content: '';
-    display: block;
-    height: $header-bottom-border-height;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-  }
+  height: 2.4rem;
+  margin-bottom: $gutter-small;
+  padding: $gutter-smallest $gutter-smaller $gutter-smallest ($gutter-smaller + 2.4rem);
+//   background-color: $bright-green;
 }
 
 .hawkeward-logo,
 .hawkeward-logo:visited {
-  position: absolute;
-  left: $gutter-smaller;
-  top: $gutter-smaller;
   border-bottom: 0;
   color: $inverted-neutral-link-color;
   font-family: $sans-serif;
   font-size: $type-medium;
+//   font-weight: 700;
+  letter-spacing: $letter-spacing / 4;
   line-height: 1;
 
   &:hover {
     color: $inverted-neutral-link-hover-color;
   }
 
-/*
-  .js-menu-open & {
-    color: $neutral-link-color;
-
-    &:hover {
-      color: $neutral-link-hover-color;
-    }
-  }
-*/
-
   @media ($bp-smaller) {
     font-size: $type-large;
+  }
+}
+
+.nav-open-btn {
+  display: inline-block;
+  height: 2.4rem;
+  padding: $gutter-smaller;
+  width: 2.4rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba($dark-grey, 0.2);
+  border: 0;
+  line-height: 0;
+  
+  svg {
+    height: 0.9rem;
+    width: 0.9rem;
+  }
+  
+  use {
+    fill: $inverted-neutral-link-color;
+  }
+
+  &:hover {
+    background-color: rgba($dark-grey, 0.2);
   }
 }
 
@@ -88,11 +93,14 @@ $header-bottom-border-height: 4px;
   }
 }
 
+
+// Transparent black overlay when menu is open
 main:after {
   @include transition(all 0s, opacity $animation-time);
 
   content: "";
   display: block;
+//   display: none;
   height: 100vh;
   width: 100vw;
   position: fixed;
@@ -101,9 +109,12 @@ main:after {
   z-index: 100;
   background-color: $black;
   opacity: 0;
+  visibility: hidden;
 
   .js-menu-open & {
+//     display: block;
     opacity: 0.8;
+    visibility: visible;
   }
 }
 

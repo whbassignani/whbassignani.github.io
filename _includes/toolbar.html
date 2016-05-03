@@ -1,0 +1,13 @@
+<div id="toolbar" class="container">
+  <div href="/" class="toolbar-links">
+    <a href="/" class="toolbar-link toolbar-link--top">Hawkeward</a>
+    
+    {% if active_nav_item == "writing"%}
+    <a href="/writing" class="toolbar-link toolbar-link--category">Writing</a>
+    {% endif %}
+  </div>
+
+  <a href="#" id="nav-open-btn--left" class="nav-open-btn">
+    <svg><use xlink:href="/images/icons/icon-sprite.svg#icon-menu" /></svg>
+  </a>
+</div>

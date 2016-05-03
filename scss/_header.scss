@@ -1,36 +1,53 @@
-#header {
+#toolbar {
+  @include box-shadow(0, -8px, 16px, rgba($black, 0.1), true);
   @include css-gradient-horizontal(
     $bright-green, 
     mix($bright-green, $bright-blue, 75%)
   );
-  @include box-shadow(0, -8px, 16px, rgba($black, 0.1), true);
 
   height: 2.4rem;
   margin-bottom: $gutter-small;
   padding: $gutter-smallest $gutter-smaller $gutter-smallest ($gutter-smaller + 2.4rem);
-//   background-color: $bright-green;
+  position: relative;
 }
 
-.hawkeward-logo,
-.hawkeward-logo:visited {
+.toolbar-links {
+  padding: ($gutter-smallest / 2) 0;
   border-bottom: 0;
-  color: $inverted-neutral-link-color;
   font-family: $sans-serif;
-  font-size: $type-medium;
-//   font-weight: 700;
+  font-size: 0;
   letter-spacing: $letter-spacing / 4;
   line-height: 1;
-
-  &:hover {
-    color: $inverted-neutral-link-hover-color;
-  }
 
   @media ($bp-smaller) {
     font-size: $type-large;
   }
 }
 
+.toolbar-link,
+.toolbar-link:visited {
+  display: inline-block;
+  border-bottom: 0;
+  color: $inverted-neutral-link-color;
+  font-size: $type-medium;
+
+  &:hover {
+    color: $inverted-neutral-link-hover-color;
+  }
+  
+  & + & {
+    &:before {
+      content: "→";
+      padding: 0 $gutter-smallest;
+      color: lighten($bright-green, 20%);
+      font-weight: normal;
+    }
+  }
+}
+
 .nav-open-btn {
+  @include transition(background-color $animation-time);
+
   display: inline-block;
   height: 2.4rem;
   padding: $gutter-smaller;
@@ -38,13 +55,13 @@
   position: absolute;
   left: 0;
   top: 0;
-  background-color: rgba($dark-grey, 0.2);
+  background-color: rgba($dark-grey, 0.15);
   border: 0;
   line-height: 0;
   
   svg {
-    height: 0.9rem;
-    width: 0.9rem;
+    height: 100%;
+    width: 100%;
   }
   
   use {
@@ -52,96 +69,108 @@
   }
 
   &:hover {
-    background-color: rgba($dark-grey, 0.2);
+    background-color: rgba($dark-grey, 0.3);
+  }
+}
+
+.nav-close-btn {
+  @include transition(background-color $animation-time);
+
+  height: 2.4rem;
+  padding: $gutter-smaller;
+  width: 2.4rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-bottom: 0;
+
+  svg {
+    @include transition(fill $animation-time);
+
+    display: block;
+    height: 100%;
+    width: 100%;
+    fill: $inverted-link-color;
+  }
+
+  &:hover {
+    background-color: rgba($dark-grey, 0.15);
+
+    svg {
+      fill: $white;
+    }
   }
 }
 
 .nav {
-  @include transform(translateX(100%));
-  @include transition(all $animation-time * 2);
+  @include transform(translateX(-100%));
+  @include transition(all $animation-time-long);
   @include css-gradient($bright-green, $bright-blue);
 
   height: 100vh;
-  padding: $gutter-small $gutter-smaller;
+  padding: $gutter-larger 0 $gutter-small;
   width: 12rem;
   position: fixed;
-  right: 0;
+  left: 0;
   top: 0;
   z-index: 200;
-//   background-color: $bright-green;
 
-  a {
-    display: block;
-    padding: $gutter-smaller 0;
-    border-bottom: 0;
-    color: $inverted-neutral-link-color;
-    font-family: $sans-serif;
-    font-size: $type-medium;
-    line-height: 1;
-
-    @media ($bp-smaller) {
-      font-size: $type-small;
-    }
-  }
-
-  a:hover {
-    color: $neutral-link-hover-color;
-  }
-
-  .js-menu-open & {
+  .js-nav-open--left & {
     @include transform(translateX(0));
+  }
+}
+
+.nav-link,
+.nav-link:visited {
+  @include transition(background-color $animation-time);
+
+  display: block;
+  padding: ($gutter-smaller + rem(1px)) $gutter-smaller ($gutter-smaller - rem(1px));
+  border-bottom: 0;
+  color: $inverted-neutral-link-color;
+  font-family: $sans-serif;
+  font-size: $type-medium;
+  line-height: 1;
+
+  @media ($bp-smaller) {
+    font-size: $type-small;
+  }
+
+  &:hover {
+    background-color: $link-hover-color;
+    color: $inverted-neutral-link-color;
   }
 }
 
 
 // Transparent black overlay when menu is open
-main:after {
-  @include transition(all 0s, opacity $animation-time);
+#wrapper:after {
+  @include transition(
+    opacity $animation-time-long,
+    width 0s $animation-time-long,
+    height 0s $animation-time-long
+  );
 
   content: "";
   display: block;
-//   display: none;
-  height: 100vh;
-  width: 100vw;
+  height: 0;
+  width: 0;
   position: fixed;
   left: 0;
   top: 0;
   z-index: 100;
-  background-color: $black;
+  background-color: darken($bright-green, 50%);
   opacity: 0;
-  visibility: hidden;
 
-  .js-menu-open & {
-//     display: block;
-    opacity: 0.8;
-    visibility: visible;
+  .js-nav-open--left & {
+    @include transition(
+      opacity $animation-time-long,
+      width 0s,
+      height 0s
+    );
+
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.85;
   }
 }
-
-/*
-.nav-horizontal {
-  a {
-    display: inline-block;
-  }
-
-  a + a {
-    margin-left: $gutter-smallest;
-  }
-
-  a.is-active {
-    position: relative;
-
-    &:after {
-      content: "";
-      display: block;
-      height: 2px;
-      width: 100%;
-      bottom: $gutter-smallest / 3;
-      left: 0;
-      position: absolute;
-      background-color: $link-color;
-      opacity: 0.5;
-    }
-  }
-}
-*/

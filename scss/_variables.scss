@@ -59,29 +59,29 @@ $type-huger:                  1rem * power($type-ratio, 5);
 
 
 // Animations
-$animation-time-short:  0.1s;
-$animation-time:        0.2s;
-$animation-time-long:   0.4s;
+$animation-time-short:        0.1s;
+$animation-time:              0.2s;
+$animation-time-long:         0.4s;
 
 
 // Gutters/Margins/Padding
-$gutter-largest:        6rem;     // 120px
-$gutter-larger:         3rem;     // 60px
-$gutter-large:          2rem;     // 40px
-$gutter-medium:         1.5rem;   // 30px
-$gutter-small:          1rem;     // 20px
-$gutter-smaller:        0.75rem;  // 15px
-$gutter-smallest:       0.5rem;   // 10px
+$gutter-largest:              6rem;     // 120px
+$gutter-larger:               3rem;     // 60px
+$gutter-large:                2rem;     // 40px
+$gutter-medium:               1.5rem;   // 30px
+$gutter-small:                1rem;     // 20px
+$gutter-smaller:              0.75rem;  // 15px
+$gutter-smallest:             0.5rem;   // 10px
 
 
 // Layout
-$container-max-width:   1160px;
-$border-radius:         6px;
+$container-max-width:         1160px;
+$border-radius:               6px;
 
 
 // Breakpoints
-$bp-smaller:            'min-width: 480px';
-$bp-small:              'min-width: 640px';
-$bp-medium:             'min-width: 800px';
-$bp-large:              'min-width: 960px';
-$bp-larger:             'min-width: 1120px';
+$bp-smaller:                  'min-width: 480px';
+$bp-small:                    'min-width: 640px';
+$bp-medium:                   'min-width: 800px';
+$bp-large:                    'min-width: 960px';
+$bp-larger:                   'min-width: 1120px';

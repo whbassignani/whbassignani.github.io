@@ -1,4 +1,4 @@
-permalink: /:year/:title/
+permalink: /writing/:title/
 
 markdown: kramdown
 kramdown:

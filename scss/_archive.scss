@@ -1,0 +1,36 @@
+.archive ul {
+  padding-left: 0;
+}
+
+.archive li {
+  padding-left: 0;
+  margin-bottom: $gutter-small;
+  list-style: none;
+}
+
+.archive-post {
+  @include flexbox;
+  @include align-items(baseline);
+}
+
+.archive-post-title {
+  flex: 1 1 auto;
+  margin: 0;
+  margin-right: $gutter-medium;
+  font-size: $type-medium;
+}
+
+.archive-post-meta {
+  display: block;
+  flex: 1 0 auto;
+  margin: 0 0 $gutter-smallest;
+  color: $light-grey;
+  font-family: $sans-serif;
+  font-size: $type-smaller;
+  line-height: 1;
+  text-align: right;
+
+  &:last-child {
+    margin: 0;
+  }
+}

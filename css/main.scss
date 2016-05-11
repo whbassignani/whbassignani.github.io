@@ -9,15 +9,18 @@
 @import "functions";
 @import "variables";
 @import "mixins";
+@import "flexbox";
 
 // UI
 @import "base";
 @import "header";
+@import "content";
+@import "post";
+@import "archive";
 @import "footer";
 
 // Page-specific
-@import "intro";
-@import "post";
+@import "homepage";
 @import "styleguide";
 
 // Vendor/plugin-specific

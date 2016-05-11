@@ -8,8 +8,8 @@ $(document).ready(function() {
   $overlay = $("#wrapper");
 
 
-  
-  function init() {
+	// ADD FUNCTIONS TO THE INIT FUNCTION/OBJECT  
+  var init = function() {
 
   };
   
@@ -18,14 +18,25 @@ $(document).ready(function() {
   
 	// CLICK: Header navigation
 	// NEED TO CONVERT TO VANILLA JS
-	// CONSOLIDATE: REFACTOR AND DRY IT
-  $navDrawerCloser.click(function (event) {
+	// ADD ALL THIS TO THE INIT FUNCTION
+	var toggleNavLeft = function(event) {
 		event.preventDefault();
 		$body.toggleClass("js-nav-open--left");
-	});
 
-	$navDrawerOpener.click(function (event) {
-		event.preventDefault();
-		$body.toggleClass("js-nav-open--left");
-	});
+    if ($body.hasClass("js-nav-open--left")) {
+      $(document).on("click", function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        if (event.target.id === "wrapper") {
+          $navDrawerCloser.trigger("click");
+        }
+      });
+    } else {
+      $(document).off("click");
+    }
+	}
+	
+  $navDrawerCloser.click(toggleNavLeft);
+	$navDrawerOpener.click(toggleNavLeft);
 });

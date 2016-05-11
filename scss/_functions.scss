@@ -1,0 +1,39 @@
+/**
+ * Exponential Number
+ * https://www.bhalash.com/archives/13544805657
+ * -----------------------------------------------------------------------------
+ * Raise a number to a given power.
+ *
+ * @param   number      $number         Number to raise.
+ * @param   number      $power          Power to which it should be raised.
+ * @return  number      $exponent       Number raised to exponent.
+ */
+
+@function power($number, $power) {
+  $exponent: 1;
+
+  @if $power > 0 {
+    @for $i from 1 through $power {
+      $exponent: $exponent * $number;
+    }
+  } @else if $power < 0 {
+    @for $i from 1 through $power {
+      $exponent: $exponent / $number;
+    }
+  }
+
+  @return $exponent;
+}
+
+/**
+ * Pixels-to-rems
+ * -----------------------------------------------------------------------------
+ * Converts pixels to rems
+ *
+ * @param   number      $size_pixels    Number to convert.
+ * @return  number      -               Number converted to pixels.
+ */
+
+@function rem($size_pixels) {
+  @return $size_pixels / $type-base * 1rem;
+}

@@ -1,0 +1,34 @@
+// Delete at some point; saving just in case
+//
+// .post-title {
+//   font-size: $type-huge;
+// 
+//   @media ($bp-smaller) {
+//     font-size: $type-huger;
+//   }
+// }
+
+.post-meta {
+  margin-bottom: 0.25rem;
+  color: $light-grey;
+  font-family: $sans-serif;
+  font-size: $type-smaller;
+  text-transform: uppercase;
+
+  @media ($bp-smaller) {
+    font-size: $type-small;
+  }
+}
+
+.post-meta + .post-title {
+  margin-top: 0;
+}
+
+.lede {
+  font-family: $sans-serif;
+  font-size: $type-large;
+
+  @media ($bp-smaller) {
+    font-size: $type-larger;
+  }
+}

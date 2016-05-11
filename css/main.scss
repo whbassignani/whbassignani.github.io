@@ -1,27 +1,27 @@
 ---
 ---
-/* General/setup partials */
 
+
+// Setup
 @import "normalize";
 @import "webfonts";
+
+@import "functions";
+@import "variables";
 @import "mixins";
+@import "flexbox";
 
-/* Author stylesheets: mobile-first */
-
+// UI
 @import "base";
+@import "header";
+@import "content";
+@import "post";
+@import "archive";
+@import "footer";
 
-@media (min-width: 768px) {
-	@import "768px";
-}
+// Page-specific
+@import "homepage";
+@import "styleguide";
 
-@media (min-width: 1030px) {
-	@import "1030px";
-}
-
-/* Content-specific styles */
-
-@import "portfolio";
-
-/* Vendor styles */
-
+// Vendor/plugin-specific
 @import "fluidbox";

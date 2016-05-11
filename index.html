@@ -1,27 +1,8 @@
 ---
-title: 
 ---
 
-{% include header.html %}
-	
-	<section id="intro" class="section">
-		<div class="torso">
-			<p>My name is <strong>William Hawke Bassignani</strong>, and I am a graphic and web designer living in Boston. Currently at <a href="http://www.bu.edu/interactive-design/">BU Interactive Design</a>.</p>
-		</div>
-	</section>
-
-	<section id="portfolio">
-	{% for page in site.posts %}
-		{% if page.featured %}
-			{% if page.categories contains 'portfolio' %}
-			{% include portfolio.html %}
-			{% endif; %}
-			
-			{% if page.categories contains 'blog' %}
-			{% include blog-list.html %}
-			{% endif %}
-		{% endif %}
-	{% endfor %}
-	</section>
-
-{% include footer.html %}
+  <section id="intro" class="section">
+    <div class="torso">
+      <p>My name is <strong class="no-break">Hawke<span class="show-small-up"> Bassignani</span></strong>. I design websites at <a href="http://www.blizzard.com" class="no-break">Blizzard<span class="show-medium-up"> Entertainment</span></a> and live in <span class="no-break">Irvine, CA</span>.</p>
+    </div>
+  </section>

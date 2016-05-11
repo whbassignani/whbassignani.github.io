@@ -1,9 +1,6 @@
-baseurl:    /
-url:        http://www.hawkeward.com
+permalink: /writing/:title/
 
-permalink:  /:categories/:title
-
-markdown:   kramdown
+markdown: kramdown
 kramdown:
   auto_ids: false
 
@@ -11,7 +8,19 @@ excerpt_separator: <!--more-->
 
 sass:
   sass_dir: scss
-  style: :compressed
+#   style: :compressed
 
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
 
-exclude:    [_psd]
+exclude: [_psd]

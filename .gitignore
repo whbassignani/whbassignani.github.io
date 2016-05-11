@@ -1,9 +1,12 @@
-# Ignore sass-cache files.
+# Ignore sass-cache files
 *.sass-cache*
+
+# Ignore Adobe Photoshop files
 *.psd*
+*.psb*
 
-# Ignore /_site
-_site/**
-
+# Ignore OS X ds_store files
 .DS_Store
-*/.DS_Store
+
+# Ignore compiled _site
+_site/**

@@ -1,0 +1,194 @@
+#toolbar {
+  @include flexbox;
+  @include align-items(center);
+
+  height: $toolbar-height--small;
+  padding: 0 0 0 $toolbar-height--small;
+  position: relative;
+  border-bottom: 1px solid $off-white;
+
+  @media ($bp-smaller) {
+    height: $toolbar-height--medium;
+    padding-left: $toolbar-height--medium;
+  }
+}
+
+.toolbar-links {
+  @include transform(translateY(1px));
+
+  font-family: $sans-serif;
+  font-size: 0;
+  letter-spacing: $letter-spacing / 4;
+  line-height: 1;
+}
+
+.toolbar-link,
+.toolbar-link:visited {
+  display: inline-block;
+  border-bottom: 0;
+  color: $neutral-link-color;
+  font-size: $type-medium;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+  
+  & + & {
+    &:before {
+      content: "→";
+      padding: 0 $gutter-smallest;
+      color: lighten($bright-green, 20%);
+      font-weight: normal;
+    }
+  }
+}
+
+  .toolbar-link--category {
+    display: none;
+    
+    @media ($bp-smaller) {
+      display: inline-block;
+    }
+  }
+
+.nav-open-btn {
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+  
+  height: $toolbar-height--small;
+  width: $toolbar-height--small;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 0;
+  line-height: 0;
+  
+  svg {
+    @include transition(fill $animation-time);
+
+    height: 14px;
+    width: 18px;
+    fill: $link-color;
+  }
+
+  &:hover {
+    svg {
+      fill: $link-hover-color;
+    }
+  }
+
+  @media ($bp-smaller) {
+    height: $toolbar-height--medium;
+    width: $toolbar-height--medium;
+  }
+}
+
+.nav-close-btn {
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+  @include transition(background-color $animation-time);
+
+  height: $toolbar-height--small;
+  width: $toolbar-height--small;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 0;
+
+  svg {
+    @include transition(fill $animation-time);
+
+    display: block;
+    height: 18px;
+    width: 18px;
+    fill: $inverted-link-color;
+  }
+
+  &:hover {
+    background-color: rgba($dark-grey, 0.15);
+
+    svg {
+      fill: $white;
+    }
+  }
+
+  @media ($bp-smaller) {
+    height: $toolbar-height--medium;
+    width: $toolbar-height--medium;
+  }
+}
+
+.nav {
+  @include transform(translateX(-100%));
+  @include transition(all $animation-time-long);
+  @include css-gradient($bright-green, $bright-blue);
+
+  height: 100vh;
+  padding: $gutter-larger 0 $gutter-small;
+  width: 12rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 200;
+
+  .js-nav-open--left & {
+    @include transform(translateX(0));
+  }
+}
+
+.nav-link,
+.nav-link:visited {
+  @include transition(background-color $animation-time);
+
+  display: block;
+  padding: ($gutter-smaller + rem(1px)) $gutter-smaller ($gutter-smaller - rem(1px));
+  border-bottom: 0;
+  color: $inverted-neutral-link-color;
+  font-family: $sans-serif;
+  font-size: $type-medium;
+  line-height: 1;
+
+  @media ($bp-smaller) {
+    font-size: $type-small;
+  }
+
+  &:hover {
+    background-color: $link-hover-color;
+    color: $inverted-neutral-link-color;
+  }
+}
+
+
+// Transparent black overlay when menu is open
+#wrapper:after {
+  @include transition(
+    opacity $animation-time-long,
+    width 0s $animation-time-long,
+    height 0s $animation-time-long
+  );
+
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background-color: darken($bright-green, 50%);
+  opacity: 0;
+
+  .js-nav-open--left & {
+    @include transition(
+      opacity $animation-time-long,
+      width 0s,
+      height 0s
+    );
+
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.85;
+  }
+}

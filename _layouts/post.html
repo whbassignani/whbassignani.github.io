@@ -1,0 +1,15 @@
+---
+---
+
+{% include header.html %}
+
+  <main class="container">
+    <article class="post content">
+
+      <time class="post-meta">{{ page.date | date: "%B %-d, %Y" }}</time>
+      <h1 class="post-title">{{ page.title }}</h1>
+{{ content }}
+    </article>
+  </main>
+
+{% include footer.html %}

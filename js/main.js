@@ -2,7 +2,6 @@ $(document).ready(function() {
   // Variables
   $body = $("body");
   $wrapper = $("#wrapper");
-  $navDrawer = $("#nav-left");
   $navDrawerOpener = $("#nav-open-btn--left");
   $navDrawerCloser = $("#nav-close-btn--left");
   $overlay = $("#wrapper");
@@ -10,11 +9,8 @@ $(document).ready(function() {
 
 	// ADD FUNCTIONS TO THE INIT FUNCTION/OBJECT  
   var init = function() {
-
+    $navDrawerOpener.trigger("click");
   };
-  
-  init();
-  
   
 	// CLICK: Header navigation
 	// NEED TO CONVERT TO VANILLA JS
@@ -30,7 +26,7 @@ $(document).ready(function() {
         event.stopPropagation();
 */
 
-        if (event.target.id === "wrapper") {
+        if (event.target.id === "nav-left") {
           $navDrawerCloser.trigger("click");
         }
       });
@@ -41,4 +37,6 @@ $(document).ready(function() {
 	
   $navDrawerCloser.click(toggleNavLeft);
 	$navDrawerOpener.click(toggleNavLeft);
+
+  init();
 });

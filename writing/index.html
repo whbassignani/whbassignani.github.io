@@ -22,8 +22,10 @@ layout: page
     {% endunless %}
     <li>
       <article class="archive-post">
-        <h1 class="archive-post-title">{{ post.title }}</h1>
-        <time class="archive-post-meta">{{ post.date | date: "%b %-d" }}</time>
+        <a href="{{ post.url }}" class="archive-link">
+          <h1 class="archive-post-title">{{ post.title }}</h1>
+          <time class="archive-post-meta">{{ post.date | date: "%b %-d" }}</time>
+        </a>
       </article>
     </li>
   {% endfor %}

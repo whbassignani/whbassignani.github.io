@@ -1,3 +1,17 @@
+.archive h2 {
+  margin-bottom: $gutter-small;
+  margin-right: (-$gutter-smaller);
+  padding-bottom: $gutter-smallest;
+  width: calc(100% + $gutter-smaller);
+  border-bottom: 1px solid $off-white;
+  font-size: $type-small;
+  letter-spacing: $letter-spacing / 2;
+
+  @media ($bp-smaller) {
+    width: auto;
+  }
+}
+
 .archive ul {
   padding-left: 0;
 }
@@ -8,27 +22,42 @@
   list-style: none;
 }
 
-.archive-post {
+.archive-link {
   @include flexbox;
   @include align-items(baseline);
+  
+  border-bottom: 0;
+  color: $black;
 }
 
 .archive-post-title {
+  @include transition(color $animation-time);
+
   flex: 1 1 auto;
   margin: 0;
   margin-right: $gutter-medium;
   font-size: $type-medium;
+
+  a:hover & {
+    color: $link-hover-color;
+  }
 }
 
 .archive-post-meta {
+  @include transition(color $animation-time);
+
   display: block;
   flex: 1 0 auto;
   margin: 0 0 $gutter-smallest;
   color: $light-grey;
   font-family: $sans-serif;
-  font-size: $type-smaller;
+  font-size: $type-small;
   line-height: 1;
   text-align: right;
+
+  a:hover & {
+    color: $link-hover-color;
+  }
 
   &:last-child {
     margin: 0;

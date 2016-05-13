@@ -1,15 +1,76 @@
 .nav {
-  @include transform(translateX(-100%));
-  @include transition(all $animation-time-long);
-  @include css-gradient($bright-green, $bright-blue);
+  @include transition(
+    width 0s $animation-time-long,
+    height 0s $animation-time-long
+  );
 
-  height: 100vh;
-  padding: $gutter-larger 0 $gutter-small;
-  width: 13rem;
+  height: 0;
+  width: 0;
   position: fixed;
   left: 0;
   top: 0;
   z-index: 200;
+  overflow-y: auto;
+
+  &:after {
+    @include transition(
+      opacity $animation-time-long,
+      width 0s $animation-time-long,
+      height 0s $animation-time-long
+    );
+
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 201;
+    background-color: darken($bright-green, 50%);
+    opacity: 0;
+  }
+
+  .js-nav-open--left & {
+    @include transition(
+      width 0s,
+      height 0s
+    );
+
+    height: 100vh;
+    width: 100vw;
+    
+    &:after {
+      @include transition(
+        opacity $animation-time-long,
+        width 0s,
+        height 0s
+      );
+  
+      height: 100vh;
+      width: 100vw;
+      opacity: 1;
+    }
+  }
+}
+
+.nav-drawer {
+  @include transform(translateX(-100%));
+  @include transition(all $animation-time-long);
+  @include css-gradient-horizontal(
+    $bright-green,
+    mix($bright-green, $bright-blue, 80%));
+
+//height: 100vh;
+  padding: $gutter-larger 0 $gutter-small;
+//width: 100vw;
+  width: 14rem;
+//position: absolute;
+//left: 0;
+//top: 0;
+  position: relative;
+  z-index: 202;
+  overflow-y: auto;
 
   .js-nav-open--left & {
     @include transform(translateX(0));
@@ -25,7 +86,7 @@
   height: $toolbar-height--small;
   width: $toolbar-height--small;
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
   border: 0;
 
@@ -75,6 +136,7 @@
 }
 
 
+/*
 // Transparent black overlay when menu is open
 #wrapper:after {
   @include transition(
@@ -106,3 +168,4 @@
     opacity: 0.85;
   }
 }
+*/

@@ -1,10 +1,26 @@
 <nav id="nav-left" class="nav">
-	<a href="#" class="nav-link" {% if active_nav_item == "writing"%}class="is-active"{% endif %}>Writing</a>
-	<a href="#" class="nav-link" {% if active_nav_item == "work"%}class="is-active"{% endif %}>Work</a>
-	<a href="#" class="nav-link" {% if active_nav_item == "about"%}class="is-active"{% endif %}>About</a>
-	<a href="http://www.twitter.com/hawkeward" class="nav-link">@hawkeward</a>
+  <div class="nav-drawer">
+{% for item in site.posts %}
+  {{ item.title }}<br>
+  {% capture item_date_unix %}{{ item.date | date: '%s' }}{% endcapture %}
+  {{ item_date_unix | plus: 0 }}<br><br>
+{% endfor %}
+{% for item in site.posts %}
+  {{ item.title }}<br>
+  {% capture item_date_unix %}{{ item.date | date: '%s' }}{% endcapture %}
+  {{ item_date_unix | plus: 0 }}<br><br>
+{% endfor %}
+{% for item in site.posts %}
+  {{ item.title }}<br>
+  {% capture item_date_unix %}{{ item.date | date: '%s' }}{% endcapture %}
+  {{ item_date_unix | plus: 0 }}<br><br>
+{% endfor %}
 
-  <a href="#" id="nav-close-btn--left" class="nav-close-btn">
-    <svg><use xlink:href="/images/icons/icon-sprite.svg#icon-close" /></svg>
-  </a>
+  	<a href="#" class="nav-link" {% if active_nav_item == "about"%}class="is-active"{% endif %}>About</a>
+  	<a href="http://www.twitter.com/hawkeward" class="nav-link">@hawkeward</a>
+  
+    <a href="#" id="nav-close-btn--left" class="nav-close-btn">
+      <svg><use xlink:href="/images/icons/icon-sprite.svg#icon-close" /></svg>
+    </a>
+  </div>
 </nav>

@@ -25,8 +25,10 @@ $(document).ready(function() {
 
     if ($body.hasClass("js-nav-open--left")) {
       $(document).on("click", function(event) {
+/*
         event.preventDefault();
         event.stopPropagation();
+*/
 
         if (event.target.id === "wrapper") {
           $navDrawerCloser.trigger("click");

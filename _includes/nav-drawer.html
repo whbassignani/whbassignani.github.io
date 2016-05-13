@@ -5,6 +5,16 @@
   {% capture item_date_unix %}{{ item.date | date: '%s' }}{% endcapture %}
   {{ item_date_unix | plus: 0 }}<br><br>
 {% endfor %}
+{% for item in site.posts %}
+  {{ item.title }}<br>
+  {% capture item_date_unix %}{{ item.date | date: '%s' }}{% endcapture %}
+  {{ item_date_unix | plus: 0 }}<br><br>
+{% endfor %}
+{% for item in site.posts %}
+  {{ item.title }}<br>
+  {% capture item_date_unix %}{{ item.date | date: '%s' }}{% endcapture %}
+  {{ item_date_unix | plus: 0 }}<br><br>
+{% endfor %}
 
   	<a href="#" class="nav-link" {% if active_nav_item == "about"%}class="is-active"{% endif %}>About</a>
   	<a href="http://www.twitter.com/hawkeward" class="nav-link">@hawkeward</a>

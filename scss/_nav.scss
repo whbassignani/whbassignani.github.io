@@ -10,6 +10,7 @@
   left: 0;
   top: 0;
   z-index: 200;
+  overflow-y: auto;
 
   &:after {
     @include transition(
@@ -60,12 +61,14 @@
     $bright-green,
     mix($bright-green, $bright-blue, 80%));
 
-  height: 100vh;
+//height: 100vh;
   padding: $gutter-larger 0 $gutter-small;
-  width: 100vw;
-  position: absolute;
-  left: 0;
-  top: 0;
+//width: 100vw;
+  width: 14rem;
+//position: absolute;
+//left: 0;
+//top: 0;
+  position: relative;
   z-index: 202;
   overflow-y: auto;
 

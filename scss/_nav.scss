@@ -10,7 +10,6 @@
   left: 0;
   top: 0;
   z-index: 200;
-  overflow: scroll;
 
   &:after {
     @include transition(
@@ -57,15 +56,18 @@
 .nav-drawer {
   @include transform(translateX(-100%));
   @include transition(all $animation-time-long);
-  @include css-gradient($bright-green, $bright-blue);
+  @include css-gradient-horizontal(
+    $bright-green,
+    mix($bright-green, $bright-blue, 80%));
 
   height: 100vh;
   padding: $gutter-larger 0 $gutter-small;
-  width: 14rem;
+  width: 100vw;
   position: absolute;
   left: 0;
   top: 0;
   z-index: 202;
+  overflow-y: auto;
 
   .js-nav-open--left & {
     @include transform(translateX(0));
@@ -81,7 +83,7 @@
   height: $toolbar-height--small;
   width: $toolbar-height--small;
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
   border: 0;
 

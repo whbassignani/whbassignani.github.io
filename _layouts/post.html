@@ -13,14 +13,14 @@
   && page.banner_large
   && page.banner_medium
   && page.banner_small %}
-      <img class="post-banner" src="{{ page.banner_medium }}" srcset="
-        {{ page.banner_small }} {{ page.banner_small_size }}w,
-        {{ page.banner_medium }} {{ page.banner_medium_size }}w,
-        {{ page.banner_large }} {{ page.banner_large_size }}w,
-        {{ page.banner_xlarge }} {{ page.banner_xlarge_size }}w
+      <img class="post-banner" src="{{ page.banner_medium.url }}" srcset="
+        {{ page.banner_small.url }} {{ page.banner_small.size }}w,
+        {{ page.banner_medium.url }} {{ page.banner_medium.size }}w,
+        {{ page.banner_large.url }} {{ page.banner_large.size }}w,
+        {{ page.banner_xlarge.url }} {{ page.banner_xlarge.size }}w
       " alt="{{ page.title }}, post banner image">
 {% elsif page.banner_medium %}
-      <img class="post-banner" src="{{ page.banner_medium }}" alt="{{ page.title }}, post banner image">
+      <img class="post-banner" src="{{ page.banner_medium.url }}" alt="{{ page.title }}, post banner image">
 {% endif %}
 
 {{ content }}

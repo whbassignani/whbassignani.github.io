@@ -61,13 +61,8 @@
     $bright-green,
     mix($bright-green, $bright-blue, 80%));
 
-//height: 100vh;
   padding: $gutter-larger 0 $gutter-small;
-//width: 100vw;
-  width: 14rem;
-//position: absolute;
-//left: 0;
-//top: 0;
+  width: 13rem;
   position: relative;
   z-index: 202;
   overflow-y: auto;

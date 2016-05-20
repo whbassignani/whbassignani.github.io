@@ -18,9 +18,13 @@ defaults:
       layout: "default"
   -
     scope:
-      path: ""
       type: "posts"
     values:
       layout: "post"
+  -
+    scope:
+      path: "_posts/work"
+    values:
+      layout: "work"
 
 exclude: [_psd]

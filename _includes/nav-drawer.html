@@ -9,7 +9,7 @@
 {% capture item_date_unix %}{{ item.date | date: "%s" }}{% endcapture %}
           <p class="timeline-item-meta">{{ item.category }}</p>
           <h1 class="timeline-item-title">{{ item.title }}</h1>
-          <time class="timeline-item-meta" datetime="{{ item_date }}" data-unixtime="{{ item_date_unix | plus: 0 }}">{{ item.date | date: "%B %-d, %Y" }}</time>
+          <time class="timeline-item-date" datetime="{{ item_date }}" data-unixtime="{{ item_date_unix | plus: 0 }}">{{ item.date | date: "%B %-d, %Y" }}</time>
         </a>
       </li>
 {% endfor %}

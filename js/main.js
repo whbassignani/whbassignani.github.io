@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 	// ADD FUNCTIONS TO THE INIT FUNCTION/OBJECT  
   var init = function() {
-    $navDrawerOpener.trigger("click");
+//     $navDrawerOpener.trigger("click");
   };
   
 	// CLICK: Header navigation

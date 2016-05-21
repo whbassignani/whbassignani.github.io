@@ -62,7 +62,7 @@
     mix($bright-green, $bright-blue, 80%));
 
   min-height: 100vh;
-  padding: $gutter-larger 0 $gutter-small;
+  padding: $toolbar-height--small 0 $gutter-small;
   width: 13rem;
   position: relative;
   z-index: 202;
@@ -70,6 +70,10 @@
 
   .js-nav-open--left & {
     @include transform(translateX(0));
+  }
+
+  @media ($bp-smaller) {
+    padding-top: $toolbar-height--medium;
   }
 }
 
@@ -123,6 +127,16 @@
 
   @media ($bp-smaller) {
     font-size: $type-small;
+  }
+
+  &.is-current-page {
+    background-color: rgba($link-hover-color, 0.5);
+
+    &:after {
+      content: "←";
+      padding-left: $gutter-smallest;
+      opacity: 0.5;
+    }
   }
 
   &:hover {

@@ -1,53 +1,6 @@
-@mixin background-size($bgsize: cover) {
-	// Vendor prefixes
-	$prefixes:      ("-webkit-",  "-moz-", "-0-", "");
-	
-	@each $prefix in $prefixes {
-		#{$prefix}background-size: $bgsize;
-	}
-}
-
-@mixin border-radius($radius) {
-	// Vendor prefixes
-	$prefixes:      ("-webkit-", "");
-	
-	@each $prefix in $prefixes {
-		#{$prefix}border-radius: $radius;
-	}
-}
-
-@mixin box-shadow($top, $left, $blur, $color: #000, $inset: false) {
-	// Vendor prefixes
-	$prefixes:      ("-webkit-",  "-moz-", "");
-
-	@if $inset {
-  	@each $prefix in $prefixes {
-  		#{$prefix}box-shadow: inset $top $left $blur $color;
-  	}
-	} @else {
-  	@each $prefix in $prefixes {
-  		#{$prefix}box-shadow: $top $left $blur $color;
-  	}
-	}
-}
-
-@mixin box-shadow-with-spread($top, $left, $blur, $spread, $color: #000, $inset: false) {
-	// Vendor prefixes
-	$prefixes:      ("-webkit-",  "-moz-", "");
-
-	@if $inset {
-  	@each $prefix in $prefixes {
-  		#{$prefix}box-shadow: inset $top $left $blur $spread $color;
-  	}
-	} @else {
-  	@each $prefix in $prefixes {
-  		#{$prefix}box-shadow: $top $left $blur $spread $color;
-  	}
-	}
-}
-
+// Layout
 @mixin box-sizing($type: border-box) {
-	// Vendor prefixes
+
 	$prefixes:      ("-webkit-",  "-moz-", "");
 	
 	@each $prefix in $prefixes {
@@ -62,6 +15,53 @@
 	@each $prefix in $prefixes {
 		#{$prefix}column-count: $count;
 		#{$prefix}column-gap: $gap;
+	}
+}
+
+
+// Appearance
+@mixin background-size($bgsize: cover) {
+	$prefixes:      ("-webkit-",  "-moz-", "-0-", "");
+	
+	@each $prefix in $prefixes {
+		#{$prefix}background-size: $bgsize;
+	}
+}
+
+@mixin border-radius($radius) {
+	$prefixes:      ("-webkit-", "");
+	
+	@each $prefix in $prefixes {
+		#{$prefix}border-radius: $radius;
+	}
+}
+
+@mixin box-shadow($top, $left, $blur, $color: #000, $inset: false) {
+	$prefixes:      ("-webkit-",  "-moz-", "");
+
+	@if $inset {
+  	@each $prefix in $prefixes {
+  		#{$prefix}box-shadow: inset $top $left $blur $color;
+  	}
+	} @else {
+  	@each $prefix in $prefixes {
+  		#{$prefix}box-shadow: $top $left $blur $color;
+  	}
+	}
+}
+
+@mixin box-shadow-with-spread($top, $left, $blur, $spread, $color: #000, $inset: false) {
+
+	$prefixes:      ("-webkit-",  "-moz-", "");
+
+	@if $inset {
+  	@each $prefix in $prefixes {
+  		#{$prefix}box-shadow: inset $top $left $blur $spread $color;
+  	}
+	} @else {
+  	@each $prefix in $prefixes {
+  		#{$prefix}box-shadow: $top $left $blur $spread $color;
+  	}
 	}
 }
 
@@ -83,6 +83,8 @@
 	background-image: linear-gradient(to right, $from, $to);
 }
 
+
+// Animations & transforms
 @mixin transform($transform...) {
 	// Vendor prefixes
 	$prefixes:      ("-webkit-",  "-moz-", "-ms-", "-o-", "");
@@ -108,4 +110,12 @@
 	@each $prefix in $prefixes {
 		#{$prefix}transition: #{$prefix}$transition;
 	}
+}
+
+
+// Typography
+@mixin bold-spaced-type($letter-spacing: $letter-spacing) {
+  font-weight: 700;
+  letter-spacing: $letter-spacing;
+  text-transform: uppercase;
 }

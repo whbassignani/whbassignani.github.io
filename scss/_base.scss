@@ -73,56 +73,44 @@ code {
 %h4, %h5, %h6 {
   color: $black;
   font-family: $sans-serif;
+  font-weight: 700;
   line-height: 1.1;
 }
 
 %h1 {
   margin: $gutter-larger 0 $gutter-medium;
-  font-size: $type-largest;
-  font-weight: 700;
-
-  @media ($bp-smaller) {
-    font-size: $type-huge;
-  }
-}
-
-%h2 {
-  margin: $gutter-large 0 $gutter-medium;
   font-size: $type-larger;
-  font-weight: 700;
 
   @media ($bp-smaller) {
     font-size: $type-largest;
   }
 }
 
-%h3 {
-  margin: $gutter-medium 0 $gutter-small;
+%h2 {
+  margin: $gutter-large 0 $gutter-medium;
   font-size: $type-large;
-  font-weight: 700;
 
   @media ($bp-smaller) {
     font-size: $type-larger;
   }
 }
 
-%h4 {
-  margin: $gutter-medium 0 $gutter-smaller;
+%h3 {
+  margin: $gutter-medium 0 $gutter-small;
   font-size: $type-medium;
-  font-weight: 700;
 
   @media ($bp-smaller) {
     font-size: $type-large;
   }
 }
 
+%h4,
 %h5,
 %h6 {
+  @include bold-spaced-type;
+
   margin: $gutter-medium 0 $gutter-smallest;
   font-size: $type-smaller;
-  font-weight: 700;
-  letter-spacing: $letter-spacing;
-  text-transform: uppercase;
 
   @media ($bp-smaller) {
     font-size: $type-small;

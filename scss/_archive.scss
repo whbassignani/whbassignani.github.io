@@ -1,11 +1,9 @@
 .archive h2 {
-  margin-bottom: $gutter-small;
-  margin-right: (-$gutter-smaller);
-  padding-bottom: $gutter-smallest;
-  width: calc(100% + $gutter-smaller);
-  border-bottom: 1px solid $off-white;
-  font-size: $type-small;
-  letter-spacing: $letter-spacing / 2;
+  @include bold-spaced-type;
+
+  margin: $gutter-large 0;
+  color: $light-grey;
+  font-size: $type-smaller;
 
   @media ($bp-smaller) {
     width: auto;

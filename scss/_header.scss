@@ -37,7 +37,7 @@
     &:before {
       content: "→";
       padding: 0 $gutter-smallest;
-      color: lighten($bright-green, 20%);
+      color: mix($bright-green, $background-color, 50%);
       font-weight: normal;
     }
   }

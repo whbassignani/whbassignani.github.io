@@ -1,7 +1,7 @@
 .archive h2 {
   @include bold-spaced-type;
 
-  margin: $gutter-large 0;
+  margin: $gutter-large 0 $gutter-small;
   color: $light-grey;
   font-size: $type-smaller;
 

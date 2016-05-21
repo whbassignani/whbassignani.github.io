@@ -1,7 +1,11 @@
 {% include html-head.html %}
 
-{% if page.url contains "2016/" %}
+{% if page.url contains "writing/" %}
 {% assign active_nav_item = "writing" %}
+{% elsif page.url contains "work/" %}
+{% assign active_nav_item = "work" %}
+{% elsif page.url contains "about/" %}
+{% assign active_nav_item = "about" %}
 {% endif %}
 
 <div id="wrapper">

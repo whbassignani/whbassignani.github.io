@@ -61,6 +61,7 @@
     $bright-green,
     mix($bright-green, $bright-blue, 80%));
 
+  min-height: 100vh;
   padding: $gutter-larger 0 $gutter-small;
   width: 13rem;
   position: relative;
@@ -128,31 +129,4 @@
     background-color: $link-hover-color;
     color: $inverted-neutral-link-color;
   }
-}
-
-.timeline-item {
-  > *:first-child {
-    margin-top: 0;
-  }
-
-  > *:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.timeline-item-meta {
-  margin: 0 0 0;
-  font-family: $sans-serif;
-  font-size: $type-small;
-}
-
-.timeline-item-title {
-  margin: 0 0 0;
-  font-size: $type-medium;
-}
-
-.timeline-item-date {
-  margin: 0 0 0;
-  font-family: $sans-serif;
-  font-size: $type-small;
 }

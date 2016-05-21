@@ -1,22 +1,14 @@
 <nav id="nav-left" class="nav">
   <div class="nav-drawer">
-    <ul id="timeline-left" class="timeline">
+{% if active_nav_item == "about" %}{% endif %}
 
-{% for item in site.posts %}
-      <li id="timeline-item-{{ item.category }}" class="timeline-item">
-        <a href="{{ item.url }}">
-{% capture item_date %}{{ item.date | date: "%Y-%m-%d" }}{% endcapture %}
-{% capture item_date_unix %}{{ item.date | date: "%s" }}{% endcapture %}
-          <p class="timeline-item-meta">{{ item.category }}</p>
-          <h1 class="timeline-item-title">{{ item.title }}</h1>
-          <time class="timeline-item-date" datetime="{{ item_date }}" data-unixtime="{{ item_date_unix | plus: 0 }}">{{ item.date | date: "%B %-d, %Y" }}</time>
-        </a>
-      </li>
+{% for item in nav_array %}
+{{ item }}
 {% endfor %}
 
-    </ul>
-
-  	<a href="#" class="nav-link" {% if active_nav_item == "about"%}class="is-active"{% endif %}>About</a>
+  	<a href="/writing" class="nav-link" {% if active_nav_item == "writing"%}class="is-active"{% endif %}>Writing</a>
+  	<a href="/work" class="nav-link" {% if active_nav_item == "work"%}class="is-active"{% endif %}>Work</a>
+  	<a href="/about" class="nav-link">About</a>
   	<a href="http://www.twitter.com/hawkeward" class="nav-link">@hawkeward</a>
   
     <a href="#" id="nav-close-btn--left" class="nav-close-btn">

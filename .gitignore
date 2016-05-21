@@ -10,3 +10,6 @@
 
 # Ignore compiled _site
 _site/**
+
+# Ignore Jekyll meta data
+.jekyll-metadata

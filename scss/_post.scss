@@ -15,7 +15,7 @@
   font-size: $type-smaller;
   text-transform: uppercase;
 
-  @media ($bp-smaller) {
+  @media ($bp-small) {
     font-size: $type-small;
   }
 }
@@ -28,7 +28,7 @@
   font-family: $sans-serif;
   font-size: $type-large;
 
-  @media ($bp-smaller) {
+  @media ($bp-small) {
     font-size: $type-larger;
   }
 }

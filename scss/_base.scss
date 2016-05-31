@@ -17,7 +17,7 @@ body {
   font-size: $type-medium;
   line-height: $line-height;
 
-  @media ($bp-smaller) {
+  @media ($bp-small) {
     font-size: $type-large;
   }
 }
@@ -53,7 +53,7 @@ blockquote {
   color: $medium-grey;
   font-size: $type-medium;
 
-  @media ($bp-smaller) {
+  @media ($bp-small) {
     margin-left: 2rem;
   }
 }
@@ -65,7 +65,11 @@ code {
   background-color: $off-white;
   font-size: $type-small;
 
-  @media ($bp-smaller) {
+  pre & {
+    padding: 0;
+  }
+
+  @media ($bp-small) {
     font-size: $type-medium;
   }
 }
@@ -75,14 +79,14 @@ code {
   color: $black;
   font-family: $sans-serif;
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 %h1 {
   margin: $gutter-larger 0 $gutter-medium;
   font-size: $type-larger;
 
-  @media ($bp-smaller) {
+  @media ($bp-small) {
     font-size: $type-largest;
   }
 }
@@ -91,7 +95,7 @@ code {
   margin: $gutter-large 0 $gutter-medium;
   font-size: $type-large;
 
-  @media ($bp-smaller) {
+  @media ($bp-small) {
     font-size: $type-larger;
   }
 }
@@ -100,7 +104,7 @@ code {
   margin: $gutter-medium 0 $gutter-small;
   font-size: $type-medium;
 
-  @media ($bp-smaller) {
+  @media ($bp-small) {
     font-size: $type-large;
   }
 }
@@ -113,7 +117,7 @@ code {
   margin: $gutter-medium 0 $gutter-smallest;
   font-size: $type-smaller;
 
-  @media ($bp-smaller) {
+  @media ($bp-small) {
     font-size: $type-small;
   }
 }
@@ -147,7 +151,7 @@ p {
     text-transform: uppercase;
   }
 
-  @media ($bp-smaller) {
+  @media ($bp-small) {
     margin-left: 0;
     margin-right: 0;
   }
@@ -239,9 +243,8 @@ input[type="button"] {
     color: $light-grey;
   }
 
-  @media ($bp-smaller) {
+  @media ($bp-small) {
     display: inline-block;
-    margin-left: $gutter-smallest;
   }
 }
 
@@ -316,7 +319,7 @@ hr {
   border: 0;
   border-bottom: 1px solid $light-grey;
 
-  @media ($bp-smaller) {
+  @media ($bp-small) {
     margin: 0 0 $gutter-large;
   }
 }
@@ -327,7 +330,7 @@ pre {
   width: auto;
   background-color: $off-white;
 
-  @media ($bp-smaller) {
+  @media ($bp-small) {
     margin-left: 0;
     margin-right: 0;
   }
@@ -360,7 +363,7 @@ table {
     letter-spacing: $letter-spacing;
     text-transform: uppercase;
 
-    @media ($bp-smaller) {
+    @media ($bp-small) {
       font-size: $type-smaller;
     }
   }
@@ -370,7 +373,7 @@ table {
     font-weight: 700;
   }
 
-  @media ($bp-smaller) {
+  @media ($bp-small) {
     font-size: $type-medium;
   }
 }

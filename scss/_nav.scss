@@ -72,7 +72,7 @@
     @include transform(translateX(0));
   }
 
-  @media ($bp-smaller) {
+  @media ($bp-small) {
     padding-top: $toolbar-height--medium;
   }
 }
@@ -107,7 +107,7 @@
     }
   }
 
-  @media ($bp-smaller) {
+  @media ($bp-small) {
     height: $toolbar-height--medium;
     width: $toolbar-height--medium;
   }
@@ -125,8 +125,8 @@
   font-size: $type-medium;
   line-height: 1;
 
-  @media ($bp-smaller) {
-    font-size: $type-small;
+  @media ($bp-small) {
+//     font-size: $type-small;
   }
 
   &.is-current-page {

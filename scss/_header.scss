@@ -7,7 +7,7 @@
   position: relative;
   border-bottom: 1px solid $off-white;
 
-  @media ($bp-smaller) {
+  @media ($bp-small) {
     height: $toolbar-height--medium;
     padding-left: $toolbar-height--medium;
   }
@@ -78,7 +78,7 @@
     }
   }
 
-  @media ($bp-smaller) {
+  @media ($bp-small) {
     height: $toolbar-height--medium;
     width: $toolbar-height--medium;
   }

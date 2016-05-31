@@ -66,12 +66,12 @@ $animation-time-long:         0.4s;
 
 // Gutters/Margins/Padding
 $gutter-largest:              6rem;     // 120px
-$gutter-larger:               3rem;     // 60px
-$gutter-large:                2rem;     // 40px
-$gutter-medium:               1.5rem;   // 30px
-$gutter-small:                1rem;     // 20px
-$gutter-smaller:              0.75rem;  // 15px
-$gutter-smallest:             0.5rem;   // 10px
+$gutter-larger:               3rem;     //  60px
+$gutter-large:                2rem;     //  40px
+$gutter-medium:               1.5rem;   //  30px
+$gutter-small:                1rem;     //  20px
+$gutter-smaller:              0.75rem;  //  15px
+$gutter-smallest:             0.5rem;   //  10px
 
 
 // Layout
@@ -83,8 +83,8 @@ $toolbar-height--large:       4rem;
 
 
 // Breakpoints
-$bp-smaller:                  'min-width: 480px';
-$bp-small:                    'min-width: 640px';
-$bp-medium:                   'min-width: 800px';
-$bp-large:                    'min-width: 960px';
-$bp-larger:                   'min-width: 1120px';
+$bp-smaller:                  'min-width: 30em';    //  480px
+$bp-small:                    'min-width: 40em';    //  640px
+$bp-medium:                   'min-width: 50em';    //  800px
+$bp-large:                    'min-width: 60em';    //  960px
+$bp-larger:                   'min-width: 70em';    // 1120px

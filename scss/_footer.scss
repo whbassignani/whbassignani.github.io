@@ -10,12 +10,12 @@
   .credits {
     font-size: $type-smaller;
 
-    @media ($bp-smaller) {
+    @media ($bp-small) {
       font-size: $type-small;
     }
   }
 
-  @media ($bp-smaller) {
+  @media ($bp-small) {
     font-size: $type-medium;
   }
 }

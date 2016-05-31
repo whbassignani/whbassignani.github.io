@@ -4,10 +4,6 @@
   margin: $gutter-large 0 $gutter-small;
   color: $light-grey;
   font-size: $type-smaller;
-
-  @media ($bp-smaller) {
-    width: auto;
-  }
 }
 
 .archive ul {

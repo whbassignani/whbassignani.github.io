@@ -47,15 +47,27 @@ $type-ratio:                  1.22474487139;
 $letter-spacing:              0.1em;
 $line-height:                 1.5;
 
-$type-smallest:               1rem / power($type-ratio, 3);
-$type-smaller:                1rem / power($type-ratio, 2);
-$type-small:                  1rem / power($type-ratio, 1);
-$type-medium:                 1rem;                        
-$type-large:                  1rem * power($type-ratio, 1);
-$type-larger:                 1rem * power($type-ratio, 2);
-$type-largest:                1rem * power($type-ratio, 3);
-$type-huge:                   1rem * power($type-ratio, 4);
-$type-huger:                  1rem * power($type-ratio, 5);
+$tier-minus-three:            1rem / power($type-ratio, 3);  // 10.89px
+$tier-minus-two:              1rem / power($type-ratio, 2);  // 13.33px
+$tier-minus-one:              1rem / power($type-ratio, 1);  // 16.33px
+$tier-base:                   1rem;                          // 20.00px
+$tier-plus-one:               1rem * power($type-ratio, 1);  // 24.50px
+$tier-plus-two:               1rem * power($type-ratio, 2);  // 30.00px
+$tier-plus-three:             1rem * power($type-ratio, 3);  // 36.74px
+$tier-plus-four:              1rem * power($type-ratio, 4);  // 45.00px
+$tier-plus-five:              1rem * power($type-ratio, 5);  // 55.11px
+$tier-plus-six:               1rem * power($type-ratio, 6);  // 67.50px
+$tier-plus-seven:             1rem * power($type-ratio, 7);  // 82.67px
+
+$type-smallest:               $tier-minus-three;
+$type-smaller:                $tier-minus-two;
+$type-small:                  $tier-minus-one;
+$type-medium:                 $tier-base;
+$type-large:                  $tier-plus-one;
+$type-larger:                 $tier-plus-two;
+$type-largest:                $tier-plus-three;
+$type-huge:                   $tier-plus-four;
+$type-huger:                  $tier-plus-five;
 
 
 // Animations
@@ -65,13 +77,13 @@ $animation-time-long:         0.4s;
 
 
 // Gutters/Margins/Padding
-$gutter-largest:              6rem;     // 120px
-$gutter-larger:               3rem;     //  60px
-$gutter-large:                2rem;     //  40px
-$gutter-medium:               1.5rem;   //  30px
-$gutter-small:                1rem;     //  20px
-$gutter-smaller:              0.75rem;  //  15px
-$gutter-smallest:             0.5rem;   //  10px
+$gutter-largest:              $tier-plus-six * 2;
+$gutter-larger:               $tier-plus-six;
+$gutter-large:                $tier-plus-four;
+$gutter-medium:               $tier-plus-two;
+$gutter-small:                $tier-base;
+$gutter-smaller:              $tier-minus-one;
+$gutter-smallest:             $tier-minus-three;
 
 
 // Layout

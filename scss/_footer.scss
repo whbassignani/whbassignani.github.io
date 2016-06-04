@@ -8,6 +8,7 @@
   }
 
   .credits {
+    display: block;
     font-size: $type-smaller;
 
     @media ($bp-small) {

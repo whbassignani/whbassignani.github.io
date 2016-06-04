@@ -24,7 +24,6 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: $container-max-width;
   padding: $gutter-small $gutter-smaller;
 
   @media ($bp-smaller) {

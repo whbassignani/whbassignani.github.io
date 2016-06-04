@@ -4,12 +4,12 @@
 {% include header.html %}
 
   <main class="container">
-    <header class="post-header">
+    <header class="post-header torso-narrow">
       <time class="post-meta">{{ page.date | date: "%B %-d, %Y" }}</time>
       <h1 class="post-title">{{ page.title }}</h1>
     </header>
 
-    <article class="post content">
+    <article class="post torso-narrow">
 {% assign this_image = page.banner %}
 {% include img-srcset.html %}
 
@@ -17,7 +17,7 @@
     </article>
 
 {% unless page.hide_author_description == false %}
-    <footer class="post-footer">
+    <footer class="post-footer torso-narrow">
       <p class="author"><strong>Hawke</strong> is a ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper efficitur elit, a consectetur eros luctus ut. Read his not-overly-hashtagged tweets on <a href="http://www.twitter.com/hawkeward">Twitter (@hawkeward)</a>.</p>
     </footer>
 {% endunless %}

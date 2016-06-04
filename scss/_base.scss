@@ -166,10 +166,10 @@ a {
   color: $link-color;
   text-decoration: none;
 
-  &:visited {
-    border-color: rgba($link-visited-color, 0.2);
-    color: $link-visited-color;
-  }
+//  &:visited {
+//    border-color: rgba($link-visited-color, 0.2);
+//    color: $link-visited-color;
+//  }
 
   &:hover {
     border-color: rgba($link-hover-color, 0.4);
@@ -177,10 +177,10 @@ a {
     text-decoration: none;
   }
 
-  &:visited:hover {
-    border-color: rgba($link-visited-hover-color, 0.4);
-    color: $link-visited-hover-color;
-  }
+//  &:visited:hover {
+//    border-color: rgba($link-visited-hover-color, 0.4);
+//    color: $link-visited-hover-color;
+//  }
 
   &:active {
     color: $link-color;

@@ -45,3 +45,18 @@
     width: 100%;
   }
 }
+
+.post-footer {
+  padding-top: $gutter-small;
+  border-top: 1px solid $light-grey;
+  font-family: $sans-serif;
+  font-size: $type-small;
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+
+  @media ($bp-small) {
+    font-size: $type-medium;
+  }
+}

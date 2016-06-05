@@ -5,5 +5,5 @@
     {% capture srcset_string %}{{ srcset_string }}, {{ option.url }} {{ option.size }}w{% endcapture %}
   {% endfor %}
 
-  <img class="post-banner" src="{{ this_image[0].url }}" srcset="{{ capture srcset_string }}{{ srcset_string | remove_first: ", " }}{{ endcapture }}" alt="Post banner image">
+  <img src="{{ this_image[0].url }}" srcset="{{ capture srcset_string }}{{ srcset_string | remove_first: ", " }}{{ endcapture }}">
 {% endif %}

@@ -1,0 +1,19 @@
+.photo {
+  margin: 0 (-$gutter-smaller) $gutter-medium;
+  width: calc(100% + #{$gutter-smaller * 2});
+  
+  img {
+    display: block;
+    width: 100%;
+  }
+  
+  @media ($bp-smaller) {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  @media ($bp-small) {
+    margin-bottom: $gutter-large;
+  }
+}

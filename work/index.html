@@ -2,8 +2,6 @@
 title: Work
 ---
 
-<p>Work content will go here.</p>
-
 <section class="archive-works">
 {% for work in site.categories.work %}
 
@@ -15,7 +13,9 @@ title: Work
   {% for work_image in work.work_images %}
     {% if work_image %}
       {% assign this_image = work_image %}
-      {% include img-srcset.html %}
+      <div class="work-image photo">
+{% include img-srcset.html %}
+      </div>
       {% assign this_image = null %}
     {% endif %}
   {% endfor %}

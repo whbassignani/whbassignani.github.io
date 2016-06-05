@@ -129,7 +129,11 @@ h5, .h5 { @extend %h5; }
 h6, .h6 { @extend %h6; }
 
 p {
-  margin: 0 0 $gutter-medium;
+  margin: 0 0 $gutter-small;
+  
+  @media ($bp-small) {
+    margin-bottom: $gutter-medium;
+  }
 }
 
 .pull-quote {
@@ -272,13 +276,17 @@ input[type="button"].button-secondary {
 // Lists
 ul,
 ol {
-  margin: 0 0 $gutter-medium;
+  margin: 0 0 $gutter-small;
   padding-left: $gutter-medium;
 
   ul,
   ol {
     margin-bottom: 0;
     margin-top: $gutter-smallest;
+  }
+
+  @media ($bp-small) {
+    margin-bottom: $gutter-medium;
   }
 }
 
@@ -300,7 +308,11 @@ li {
 }
 
 dl {
-  margin: 0 0 $gutter-medium;
+  margin: 0 0 $gutter-small;
+
+  @media ($bp-small) {
+    margin-bottom: $gutter-medium;
+  }
 }
 
 dt {
@@ -315,11 +327,12 @@ dd {
 
 // Basic components
 hr {
+  margin: 0 0 $gutter-medium;
   border: 0;
   border-bottom: 1px solid $light-grey;
 
   @media ($bp-small) {
-    margin: 0 0 $gutter-large;
+    margin-bottom: $gutter-large;
   }
 }
 
@@ -330,8 +343,7 @@ pre {
   background-color: $off-white;
 
   @media ($bp-small) {
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0 0 $gutter-large;
   }
 }
 
@@ -373,6 +385,7 @@ table {
   }
 
   @media ($bp-small) {
+    margin-bottom: $gutter-large;
     font-size: $type-medium;
   }
 }

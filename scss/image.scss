@@ -17,3 +17,18 @@
     margin-bottom: $gutter-large;
   }
 }
+
+.photo .caption {
+  margin: $gutter-small $gutter-smallest 0;
+  font-size: $type-small;
+
+  @media ($bp-smaller) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  @media ($bp-small) {
+    margin-top: $gutter-small;
+    font-size: $type-medium;
+  }
+}

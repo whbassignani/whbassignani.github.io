@@ -3,6 +3,7 @@ client: Boston University
 title: Bostonia
 category: work
 type: web
+role: Design, front-end build
 
 work_images:
 -
@@ -16,6 +17,7 @@ work_images:
     url: /assets/writing/placeholders/placeholder-640x360.png
   - size: 320
     url: /assets/writing/placeholders/placeholder-320x180.png
+  - caption: <a href="http://www.bu.edu/bostonia">Bostonia</a> is BU’s award-winning, print and online alumni magazine. I designed and maintained the site, as well as several interactive features.
 -
   - size: 2560
     url: /assets/writing/placeholders/placeholder-inverted-2560x1440.png
@@ -27,8 +29,5 @@ work_images:
     url: /assets/writing/placeholders/placeholder-inverted-640x360.png
   - size: 320
     url: /assets/writing/placeholders/placeholder-inverted-320x180.png
+  - caption: Highlights&colon; <a href="http://www.bu.edu/bostonia/summer14/civil-disobedience">“Civil Disobedience”</a>, a three-part feature on <a href="http://www.bu.edu/bostonia/winter-spring14/china">China</a> (English and <a href="http://www.bu.edu/bostonia/winter-spring14/china/chinese/">Chinese</a>), <a href="http://www.bu.edu/bostonia/fall13/wine">Wine</a>, <a href="http://www.bu.edu/bostonia/high-notes">High Notes</a>, <a href="http://www.bu.edu/bostonia/summer13/warming">Warming</a>, and <a href="http://www.bu.edu/bostonia/summer12/secret">Secret Lives</a>.
 ---
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra, felis at imperdiet fringilla, est nisl aliquam diam, at viverra nisi mauris at orci. Cras tincidunt eu nisi nec rhoncus. Morbi sagittis erat ex, et accumsan nisi rutrum quis. Etiam pellentesque odio nibh, nec vulputate leo faucibus at. Ut tincidunt aliquam scelerisque. Quisque iaculis fermentum risus sit amet accumsan. Vivamus sed eleifend tortor, iaculis ultrices ipsum. Phasellus et ipsum eu purus egestas sollicitudin id in arcu.
-
-Curabitur suscipit ipsum ultricies ligula congue, ac finibus orci pretium. Fusce imperdiet sem id lacus euismod, eu hendrerit magna ornare. Nulla blandit, urna eget auctor dapibus, turpis tellus congue lectus, vel rhoncus diam tortor faucibus lorem. Vestibulum sed tortor euismod, elementum justo ac, mollis turpis. Donec venenatis sed nunc eget aliquet.

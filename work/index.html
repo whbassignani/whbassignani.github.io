@@ -8,12 +8,24 @@ title: Work
   <div class="archive-work">
     <h2>{{ work.title }}</h2>
 
+<dl class="archive-work-details">
+  <dt>Client/Company</dt>
+  <dd>{{ work.client }}</dd>
+
+  <dt>Role</dt>
+  <dd>{{ work.role }}</dd>
+</dl>
+
+<div class="archive-work-description">
+{{ work.content }}
+</div>
+
 {% if work.work_images %}
 
   {% for work_image in work.work_images %}
     {% if work_image %}
       {% assign this_image = work_image %}
-      <div class="work-image photo">
+      <div class="archive-work-image photo">
 {% include img-srcset.html %}
       </div>
       {% assign this_image = null %}

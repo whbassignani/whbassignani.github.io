@@ -1,9 +1,17 @@
 {% if this_image %}
   {% assign srcset_string = "" %}
+  {% assign caption = "" %}
 
   {% for option in this_image %}
     {% capture srcset_string %}{{ srcset_string }}, {{ option.url }} {{ option.size }}w{% endcapture %}
+    {% assign caption = option.caption %}
   {% endfor %}
+  
+  {% capture srcset_string %}{{ srcset_string | remove_first: ", " }}{% endcapture %}
 
-  <img src="{{ this_image[0].url }}" srcset="{{ capture srcset_string }}{{ srcset_string | remove_first: ", " }}{{ endcapture }}">
+  <img src="{{ this_image[0].url }}" srcset="{{ srcset_string }}">
+  
+  {% if caption %}
+  <p class="caption">{{ caption }}</p>
+  {% endif %}
 {% endif %}

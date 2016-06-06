@@ -3,7 +3,7 @@ title: Writing
 ---
 
 <section id="archive-posts" class="archive">
-  {%for post in site.posts %}
+  {%for post in site.categories.writing %}
     {% unless post.next %}
   <h2>{{ post.date | date: '%Y' }}</h2>
   
@@ -23,7 +23,9 @@ title: Writing
       <article class="archive-post">
         <a href="{{ post.url }}" class="archive-link">
           <h1 class="archive-post-title">{{ post.title }}</h1>
-          <time class="archive-post-meta">{{ post.date | date: "%b %-d" }}</time>
+          <time class="archive-post-date" data-full="{{ post.date | date: "%A, %B %-d, %Y" }}">
+            <span class="shorthand">{{ post.date | date: "%b %-d" }}</span>
+          </time>
         </a>
       </article>
     </li>

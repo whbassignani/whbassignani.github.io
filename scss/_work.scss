@@ -1,0 +1,9 @@
+.archive-work .caption:before {
+  @include bold-spaced-type;
+
+  content: "Above:";
+  display: block;
+  font-family: $sans-serif;
+  font-size: #{1/$type-ratio/$type-ratio}em;
+  line-height: $line-height * $type-ratio * $type-ratio;
+}

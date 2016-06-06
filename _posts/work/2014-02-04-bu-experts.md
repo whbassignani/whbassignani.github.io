@@ -3,6 +3,7 @@ client: Boston University
 title: Faculty Experts
 category: work
 type: web
+role: Design, front-end build
 
 work_images:
 -

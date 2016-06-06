@@ -17,6 +17,10 @@
   margin-top: $gutter-small;
   
   @media ($bp-small) {
+    margin-top: $gutter-smallest;
+  }
+
+  @media ($bp-medium) {
     margin-top: 0;
   }
 }

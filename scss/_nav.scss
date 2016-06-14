@@ -105,6 +105,11 @@
     &,
     .js-nav-open--left & {
       @include transform(translateX(0));
+      @include transition(
+        all 0s,
+        width 0s,
+        height 0s
+      );
 
       width: 100%;
     }

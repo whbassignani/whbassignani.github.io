@@ -1,3 +1,9 @@
+#wrapper {
+  @media ($bp-larger) {
+    padding-left: $nav-drawer-width;
+  }
+}
+
 .torso,
 .torso-wide,
 .torso-narrow {

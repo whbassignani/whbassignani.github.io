@@ -29,6 +29,10 @@
     z-index: 201;
     background-color: darken($bright-green, 50%);
     opacity: 0;
+
+    @media ($bp-larger) {
+      display: none;
+    }
   }
 
   .js-nav-open--left & {
@@ -52,18 +56,39 @@
       opacity: 1;
     }
   }
+
+  @media ($bp-larger) {
+    &,
+    .js-nav-open--left & {
+      @include transition(
+        opacity 0s,
+        width 0s,
+        height 0s
+      );
+  
+      height: 100vh;
+      width: $nav-drawer-width;
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
+  }
 }
 
 .nav-drawer {
   @include transform(translateX(-100%));
-  @include transition(all $animation-time-long);
+  @include transition(
+    all $animation-time-long,
+    width 0s,
+    height 0s
+  );
   @include css-gradient-horizontal(
     $bright-green,
     mix($bright-green, $bright-blue, 80%));
 
   min-height: 100vh;
   padding: $toolbar-height--small 0 $gutter-small;
-  width: 13rem;
+  width: $nav-drawer-width;
   position: relative;
   z-index: 202;
   overflow-y: auto;
@@ -74,6 +99,15 @@
 
   @media ($bp-small) {
     padding-top: $toolbar-height--medium;
+  }
+
+  @media ($bp-larger) {
+    &,
+    .js-nav-open--left & {
+      @include transform(translateX(0));
+
+      width: 100%;
+    }
   }
 }
 

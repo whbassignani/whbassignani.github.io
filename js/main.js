@@ -19,6 +19,17 @@ $(document).ready(function() {
 		event.preventDefault();
 		$body.toggleClass("js-nav-open--left");
 
+    animateNavDrawer();
+	}
+
+	var closeNavLeft = function(event) {
+		event.preventDefault();
+		$body.removeClass("js-nav-open--left");
+
+    animateNavDrawer();
+	}
+
+  var animateNavDrawer = function() {
     if ($body.hasClass("js-nav-open--left")) {
       $(document).on("click", function(event) {
 /*
@@ -33,9 +44,9 @@ $(document).ready(function() {
     } else {
       $(document).off("click");
     }
-	}
+  }
 	
-  $navDrawerCloser.click(toggleNavLeft);
+  $navDrawerCloser.click(closeNavLeft);
 	$navDrawerOpener.click(toggleNavLeft);
 
   init();

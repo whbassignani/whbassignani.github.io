@@ -1,3 +1,13 @@
+#header {
+  @media ($bp-when-drawer-expands) {
+    width: $nav-drawer-width;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 204;
+  }
+}
+
 #toolbar {
   @include flexbox;
   @include align-items(center);
@@ -14,6 +24,8 @@
 
   @media ($bp-when-drawer-expands) {
     padding-left: $gutter-small;
+//     border-bottom: 0;
+    border-bottom-color: rgba($white, 0.2);
   }
 }
 
@@ -43,6 +55,18 @@
       padding: 0 $gutter-smallest;
       color: mix($bright-green, $background-color, 50%);
       font-weight: normal;
+    }
+  }
+
+  @media ($bp-when-drawer-expands) {
+    color: $inverted-neutral-link-color;
+
+    &:hover {
+      color: $inverted-link-hover-color;
+    }
+
+    & + & {
+      display: none;
     }
   }
 }

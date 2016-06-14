@@ -1,13 +1,16 @@
 ---
-- name: "Writing"
-  url: /writing
-
-- name: "Work"
-  url: /work
-
-- name: "About"
-  url: /about
-
-- name: "@hawkeward"
-  url: http://www.twitter.com/hawkeward
+- name: Pages
+  links:
+  - name: "Writing"
+    url: /writing
+  
+  - name: "Work"
+    url: /work
+  
+  - name: "About"
+    url: /about
+- name: Social
+  links:
+  - name: "@hawkeward"
+    url: http://www.twitter.com/hawkeward
 ---

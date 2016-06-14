@@ -72,6 +72,19 @@
       left: 0;
       top: 0;
     }
+
+    // Adds a shadow
+    &:after {
+      @include box-shadow(-5px, 0, 10px, rgba($black, 0.5));
+
+      content: "";
+      display: block;
+      height: 100%;
+      width: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
   }
 }
 
@@ -116,6 +129,47 @@
   }
 }
 
+.nav-header {
+  @include bold-spaced-type;
+
+  margin: $gutter-medium 0 $gutter-smallest;
+  padding-left: $gutter-smaller;
+  opacity: 0.5;
+  font-size: $type-smaller;
+}
+
+.nav-link,
+.nav-link:visited {
+  @include transition(background-color $animation-time);
+
+  display: block;
+  padding: ($gutter-smaller + rem(1px)) $gutter-smaller ($gutter-smaller - rem(1px));
+  border-bottom: 0;
+  color: $inverted-neutral-link-color;
+  font-family: $sans-serif;
+  font-size: $type-medium;
+  line-height: 1;
+
+  @media ($bp-small) {
+//     font-size: $type-small;
+  }
+
+  &.is-current-page {
+    background-color: rgba($link-hover-color, 0.5);
+
+    &:after {
+      content: "←";
+      padding-left: $gutter-smallest;
+      opacity: 0.5;
+    }
+  }
+
+  &:hover {
+    background-color: $link-hover-color;
+    color: $inverted-neutral-link-color;
+  }
+}
+
 .nav-close-btn {
   @include flexbox;
   @include align-items(center);
@@ -153,37 +207,5 @@
 
   @media ($bp-when-drawer-expands) {
     display: none;
-  }
-}
-
-.nav-link,
-.nav-link:visited {
-  @include transition(background-color $animation-time);
-
-  display: block;
-  padding: ($gutter-smaller + rem(1px)) $gutter-smaller ($gutter-smaller - rem(1px));
-  border-bottom: 0;
-  color: $inverted-neutral-link-color;
-  font-family: $sans-serif;
-  font-size: $type-medium;
-  line-height: 1;
-
-  @media ($bp-small) {
-//     font-size: $type-small;
-  }
-
-  &.is-current-page {
-    background-color: rgba($link-hover-color, 0.5);
-
-    &:after {
-      content: "←";
-      padding-left: $gutter-smallest;
-      opacity: 0.5;
-    }
-  }
-
-  &:hover {
-    background-color: $link-hover-color;
-    color: $inverted-neutral-link-color;
   }
 }

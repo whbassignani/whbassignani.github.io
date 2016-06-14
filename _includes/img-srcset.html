@@ -3,8 +3,11 @@
   {% assign caption = "" %}
 
   {% for option in this_image %}
-    {% capture srcset_string %}{{ srcset_string }}, {{ option.url }} {{ option.size }}w{% endcapture %}
-    {% assign caption = option.caption %}
+    {% unless option.caption %}
+      {% capture srcset_string %}{{ srcset_string }}, {{ option.url }} {{ option.size }}w{% endcapture %}
+    {% else %}
+      {% assign caption = option.caption %}
+    {% endunless %}
   {% endfor %}
   
   {% capture srcset_string %}{{ srcset_string | remove_first: ", " }}{% endcapture %}

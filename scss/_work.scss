@@ -7,3 +7,31 @@
   font-size: #{1/$type-ratio/$type-ratio}em;
   line-height: $line-height * $type-ratio * $type-ratio;
 }
+
+.archive-work-details {
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  dt {
+    margin-top: 0;
+  }
+
+  @media ($bp-medium) {
+    @include flexbox;
+    @include align-items(baseline);
+
+    li {
+      width: calc((100% - #{$gutter-large}) / 2);
+    }
+    
+    li + li {
+      margin-left: $gutter-large;
+    }
+  }
+}

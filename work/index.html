@@ -8,13 +8,20 @@ title: Work
   <div class="archive-work">
     <h2>{{ work.title }}</h2>
 
-<dl class="archive-work-details">
-  <dt>Client/Company</dt>
-  <dd>{{ work.client }}</dd>
-
-  <dt>Role</dt>
-  <dd>{{ work.role }}</dd>
-</dl>
+    <ul class="archive-work-details">
+      <li>
+        <dl>
+          <dt>Client/Company</dt>
+          <dd>{{ work.client }}</dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt>Role</dt>
+          <dd>{{ work.role }}</dd>
+        </dl>
+      </li>
+    </ul>
 
 <div class="archive-work-description">
 {{ work.content }}

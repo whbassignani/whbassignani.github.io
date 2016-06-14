@@ -117,6 +117,7 @@ code {
   font-size: $type-smaller;
 
   @media ($bp-small) {
+    margin: $gutter-large 0 $gutter-smaller;
     font-size: $type-small;
   }
 }
@@ -317,6 +318,12 @@ dl {
 
 dt {
   @extend %h5;
+  
+  margin-top: $gutter-small;
+  
+  @media ($bp-small) {
+    margin-top: $gutter-medium;
+  }
 }
 
 dd {

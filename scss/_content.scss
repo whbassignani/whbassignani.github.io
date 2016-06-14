@@ -1,5 +1,5 @@
 #wrapper {
-  @media ($bp-larger) {
+  @media ($bp-when-drawer-expands) {
     padding-left: $nav-drawer-width;
   }
 }

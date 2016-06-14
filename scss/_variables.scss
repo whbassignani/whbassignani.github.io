@@ -93,7 +93,7 @@ $toolbar-height--medium:      3rem;
 $toolbar-height--large:       4rem;
 $max-width-narrow:            1rem * power($type-ratio, 18);  //  768.87px
 $max-width-wide:              1rem * power($type-ratio, 20);  // 1153.30px
-$nav-drawer-width:            13rem;
+$nav-drawer-width:            12rem;
 
 
 // Breakpoints
@@ -102,3 +102,5 @@ $bp-small:                    'min-width: 40em';    //  640px
 $bp-medium:                   'min-width: 50em';    //  800px
 $bp-large:                    'min-width: 60em';    //  960px
 $bp-larger:                   'min-width: 70em';    // 1120px
+
+$bp-when-drawer-expands:      $bp-larger;

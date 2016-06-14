@@ -11,6 +11,10 @@
     height: $toolbar-height--medium;
     padding-left: $toolbar-height--medium;
   }
+
+  @media ($bp-when-drawer-expands) {
+    padding-left: $gutter-small;
+  }
 }
 
 .toolbar-links {
@@ -81,5 +85,9 @@
   @media ($bp-small) {
     height: $toolbar-height--medium;
     width: $toolbar-height--medium;
+  }
+
+  @media ($bp-when-drawer-expands) {
+    display: none;
   }
 }

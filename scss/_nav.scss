@@ -30,7 +30,7 @@
     background-color: darken($bright-green, 50%);
     opacity: 0;
 
-    @media ($bp-larger) {
+    @media ($bp-when-drawer-expands) {
       display: none;
     }
   }
@@ -57,7 +57,7 @@
     }
   }
 
-  @media ($bp-larger) {
+  @media ($bp-when-drawer-expands) {
     &,
     .js-nav-open--left & {
       @include transition(
@@ -101,7 +101,7 @@
     padding-top: $toolbar-height--medium;
   }
 
-  @media ($bp-larger) {
+  @media ($bp-when-drawer-expands) {
     &,
     .js-nav-open--left & {
       @include transform(translateX(0));
@@ -149,6 +149,10 @@
   @media ($bp-small) {
     height: $toolbar-height--medium;
     width: $toolbar-height--medium;
+  }
+
+  @media ($bp-when-drawer-expands) {
+    display: none;
   }
 }
 

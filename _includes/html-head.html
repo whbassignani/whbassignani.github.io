@@ -26,4 +26,21 @@
 
   <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
-<body class="layout-{{ page.layout }}">
+
+{% if page.url contains "writing/" %}
+{% assign active_nav_item = "writing" %}
+{% elsif page.url contains "work/" %}
+{% assign active_nav_item = "work" %}
+{% elsif page.url contains "about/" %}
+{% assign active_nav_item = "about" %}
+{% elsif page.url contains "style-guide/" %}
+{% assign active_nav_item = "style-guide" %}
+{% endif %}
+
+{% if active_nav_item %}
+{% assign body_class = active_nav_item %}
+{% else %}
+{% assign body_class = "" %}
+{% endif %}
+
+<body class="layout-{{ page.layout }} {{ body_class }}">

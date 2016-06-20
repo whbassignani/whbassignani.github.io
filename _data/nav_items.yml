@@ -11,6 +11,8 @@
     url: /about
 - name: Social
   links:
-  - name: "@hawkeward"
+  - name: "Twitter"
     url: http://www.twitter.com/hawkeward
+  - name: "Github"
+    url: http://www.github.com/whbassignani
 ---

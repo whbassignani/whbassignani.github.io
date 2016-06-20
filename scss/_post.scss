@@ -44,6 +44,12 @@
   }
 
   @media ($bp-small) {
+    margin-top: $gutter-large;
+    padding-top: $gutter-medium;
     font-size: $type-medium;
+  }
+
+  @media ($bp-large) {
+    margin-top: $gutter-larger;
   }
 }

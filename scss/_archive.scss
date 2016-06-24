@@ -26,10 +26,10 @@
 
 .archive-post-title {
   @include transition(color $animation-time);
+  @include flex(0 1 auto);
 
-  flex: 1 1 auto;
   margin: 0;
-  margin-right: $gutter-medium;
+  margin-right: $gutter-small;
   font-size: $type-medium;
 
   a:hover & {
@@ -43,10 +43,10 @@
 
 .archive-post-date {
   @include transition(color $animation-time);
+  @include flex(0 0 auto);
 
   display: block;
-  flex: 1 0 auto;
-  margin: 0 0 $gutter-smallest;
+  margin: 0 0 $gutter-smallest $gutter-small;
   color: $light-grey;
   font-family: $sans-serif;
   font-size: $type-small;
@@ -58,7 +58,7 @@
   }
 
   &:last-child {
-    margin: 0;
+    margin-bottom: 0;
   }
 
   @media ($bp-small) {
@@ -74,4 +74,11 @@
       display: none;
     }
   }
+}
+
+.archive-dots {
+  @include flex(1 1 auto);
+
+  border-bottom: 1px dotted $light-grey;
+  opacity: 0.5;
 }

@@ -170,21 +170,11 @@ a {
   color: $link-color;
   text-decoration: none;
 
-//  &:visited {
-//    border-color: rgba($link-visited-color, 0.2);
-//    color: $link-visited-color;
-//  }
-
   &:hover {
     border-color: rgba($link-hover-color, 0.4);
     color: $link-hover-color;
     text-decoration: none;
   }
-
-//  &:visited:hover {
-//    border-color: rgba($link-visited-hover-color, 0.4);
-//    color: $link-visited-hover-color;
-//  }
 
   &:active {
     color: $link-color;
@@ -204,8 +194,8 @@ a {
   }
 }
 
-button, button:visited,
-.button, .button:visited,
+button,
+.button,
 input[type="button"] {
   @include border-radius($border-radius);
   @include transition(background-color $animation-time/2);
@@ -252,7 +242,7 @@ input[type="button"] {
   }
 }
 
-.button-secondary, .button-secondary:visited,
+.button-secondary,
 input[type="button"].button-secondary {
   background-color: transparentize($link-color, 0.9);
   border: 1px solid $link-color;

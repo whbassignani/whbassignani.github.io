@@ -67,28 +67,6 @@
   color: $dark-grey;
 }
 
-// Anchor tag-specific
-a.is-unvisited {
-  border-color: rgba($link-color, 0.2);
-  color: $link-color;
-  
-  &:hover {
-    border-color: rgba($link-hover-color, 0.4);
-    color: $link-hover-color;
-    text-decoration: none;
-  }
-}
-
-a.is-visited {
-  border-color: rgba($link-visited-color, 0.2);
-  color: $link-visited-color;
-}
-
-a.is-visited:hover {
-  border-color: rgba($link-visited-hover-color, 0.4);
-  color: $link-visited-hover-color;
-}
-
 
 // Sample article styles
 .sampleArticle-divider {

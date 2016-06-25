@@ -13,8 +13,8 @@
   {% capture srcset_string %}{{ srcset_string | remove_first: ", " }}{% endcapture %}
 
   <img src="{{ this_image[0].url }}" srcset="{{ srcset_string }}">
-  
-  {% if caption %}
+
+  {% if caption != "" %}
   <p class="caption">{{ caption }}</p>
   {% endif %}
 {% endif %}

@@ -28,7 +28,7 @@
 	}
 }
 
-@mixin border-radius($radius) {
+@mixin border-radius($radius: $border-radius) {
 	$prefixes:      ("-webkit-", "");
 	
 	@each $prefix in $prefixes {

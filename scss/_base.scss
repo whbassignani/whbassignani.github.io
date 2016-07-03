@@ -58,7 +58,7 @@ blockquote {
 }
 
 code {
-  @include border-radius($border-radius);
+  @include border-radius;
 
   padding: $gutter-smallest;
   background-color: $off-white;

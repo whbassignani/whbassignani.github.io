@@ -4,14 +4,14 @@ category: writing
 excerpt: “Peace is our gift to each other.”
 
 banner:
-- size: 2560
-  url: /assets/writing/placeholders/placeholder-2560x1440.png
 - size: 1280
-  url: /assets/writing/placeholders/placeholder-1280x720.png
+  url: /assets/writing/2016-07-02-elie-wiesel/banner-1280.jpg
+- size: 1050
+  url: /assets/writing/2016-07-02-elie-wiesel/banner-1050.jpg
 - size: 640
-  url: /assets/writing/placeholders/placeholder-640x360.png
+  url: /assets/writing/2016-07-02-elie-wiesel/banner-640.jpg
 - size: 320
-  url: /assets/writing/placeholders/placeholder-320x180.png
+  url: /assets/writing/2016-07-02-elie-wiesel/banner-320.jpg
 - caption: Photo by <i>NYT</i>
 ---
 

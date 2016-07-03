@@ -15,11 +15,27 @@
 
   @media ($bp-small) {
     margin-bottom: $gutter-large;
+
+    &.photo-small,
+    &.photo-medium {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &.photo-small {
+      width: 50%;
+    }
+
+    &.photo-medium {
+      width: 66.66666667%;
+    }
   }
 }
 
 .photo .caption {
   margin: $gutter-smaller $gutter-smaller 0;
+  color: $light-grey;
+  font-family: $sans-serif;
   font-size: $type-small;
 
   @media ($bp-smaller) {

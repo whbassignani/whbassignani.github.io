@@ -53,3 +53,29 @@
     margin-top: $gutter-larger;
   }
 }
+
+.footnotes {
+  margin: $gutter-medium 0 $gutter-large;
+  font-size: $type-small;
+  
+  p {
+    margin: 0;
+  }
+
+  &:before {
+    content: "Footnotes:";
+    display: block;
+    margin-bottom: $gutter-smaller;
+    font-family: $sans-serif;
+    font-weight: bold;
+  }
+
+  @media ($bp-small) {
+    margin: $gutter-large 0 $gutter-larger;
+    font-size: $type-medium;
+
+    &:before {
+      margin-bottom: $gutter-small;
+    }
+  }
+}

@@ -29,5 +29,5 @@ work_images:
     url: /assets/writing/placeholders/placeholder-inverted-640x360.png
   - size: 320
     url: /assets/writing/placeholders/placeholder-inverted-320x180.png
-  - caption: Highlights&colon; <a href="http://www.bu.edu/bostonia/summer14/civil-disobedience">“Civil Disobedience”</a>, a three-part feature on <a href="http://www.bu.edu/bostonia/winter-spring14/china">China</a> (English and <a href="http://www.bu.edu/bostonia/winter-spring14/china/chinese/">Chinese</a>), <a href="http://www.bu.edu/bostonia/fall13/wine">Wine</a>, <a href="http://www.bu.edu/bostonia/high-notes">High Notes</a>, <a href="http://www.bu.edu/bostonia/summer13/warming">Warming</a>, and <a href="http://www.bu.edu/bostonia/summer12/secret">Secret Lives</a>.
+  - caption: <strong>Highlights&colon;</strong> <a href="http://www.bu.edu/bostonia/summer14/civil-disobedience">“Civil Disobedience”</a>, a three-part feature on <a href="http://www.bu.edu/bostonia/winter-spring14/china">China</a> (English and <a href="http://www.bu.edu/bostonia/winter-spring14/china/chinese/">Chinese</a>), <a href="http://www.bu.edu/bostonia/fall13/wine">Wine</a>, <a href="http://www.bu.edu/bostonia/high-notes">High Notes</a>, <a href="http://www.bu.edu/bostonia/summer13/warming">Warming</a>, and <a href="http://www.bu.edu/bostonia/summer12/secret">Secret Lives</a>.
 ---

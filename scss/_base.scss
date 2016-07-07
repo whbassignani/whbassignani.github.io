@@ -53,7 +53,7 @@ blockquote {
   font-size: $type-medium;
 
   @media ($bp-small) {
-    margin-left: 2rem;
+    margin-left: $gutter-small;
   }
 }
 

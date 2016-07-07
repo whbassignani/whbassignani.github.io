@@ -15,8 +15,6 @@ banner:
 - caption: Photo by <i>NYT</i>
 ---
 
-[[ Photo of Elie Wiesel ]]
-
 <p class="lede">Today, Holocaust survivor, author, and Nobel Peace Prize Winner, Elie Wiesel, <a href="http://www.nytimes.com/2016/07/03/world/europe/elie-wiesel-auschwitz-survivor-and-nobel-peace-prize-winner-dies-at-87.html">passed away at the age of 87</a>.</p>
 
 To most Americans who went through the public school system, his name is synonymous with [*Night*](https://en.wikipedia.org/wiki/Night_(book)), Wiesel’s iconic 1960 account of his struggles at Auschwitz and Buchenwald. That, however, is not what I remember him from.

@@ -45,14 +45,27 @@
   @media ($bp-smaller) {
     margin-left: 0;
     margin-right: 0;
+    padding-left: $gutter-small;
+    position: relative;
+
+    &:before {
+      content: "↑";
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
   }
   
   @media ($bp-small) {
     margin-top: $gutter-small;
+    padding-left: $gutter-medium;
     font-size: $type-medium;
   }
 
+/*
   @media ($bp-large) {
     width: 66.66666667%;
   }
+*/
 }

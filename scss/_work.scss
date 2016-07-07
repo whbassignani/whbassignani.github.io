@@ -1,8 +1,13 @@
 .archive-work .caption {
   color: $black;
-  font-family: $serif;
+//   font-family: $serif;
+
+  @media ($bp-large) {
+    width: 66.66666667%;
+  }
 }
 
+/*
 .archive-work .caption:before {
   @include bold-spaced-type;
 
@@ -12,6 +17,7 @@
   font-size: #{1/$type-ratio/$type-ratio}em;
   line-height: $line-height * $type-ratio * $type-ratio;
 }
+*/
 
 .archive-work-details {
   margin: 0;

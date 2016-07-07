@@ -1,14 +1,3 @@
-/*
-#header {
-  @media ($bp-when-drawer-expands) {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 204;
-  }
-}
-*/
-
 #toolbar {
   @include flexbox;
   @include align-items(center);

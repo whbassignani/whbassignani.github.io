@@ -1,0 +1,42 @@
+---
+title: Library
+---
+
+<section class="archive-books">
+{% for book in site.categories.books %}
+
+  <div class="archive-book">
+    <h2>{{ book.title }}</h2>
+
+    <ul class="archive-book-details">
+      <li>
+        <dl>
+          <dt>Author</dt>
+          <dd>{{ book.author }}</dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt>Genre</dt>
+          <dd>{{ book.genre }}</dd>
+        </dl>
+      </li>
+    </ul>
+
+<div class="archive-book-description">
+{{ book.content }}
+</div>
+
+{% if book.cover_image %}
+
+  {% assign this_image = book.cover_image %}
+  <div class="archive-book-image photo">
+{% include img-srcset.html %}
+  </div>
+  {% assign this_image = null %}
+
+{% endif %}
+
+  </div>
+{% endfor %}
+</section>

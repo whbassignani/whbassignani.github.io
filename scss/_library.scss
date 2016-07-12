@@ -1,0 +1,16 @@
+.archive-books-list {
+  @include flexbox;
+  @include flex-wrap(wrap);
+
+  padding-left: 0;
+  width: 100%;
+  list-style: none;
+}
+
+.archive-book {  
+  padding-left: 0;
+
+  @media ($bp-larger) {
+    @include flex-basis(25%);
+  }
+}

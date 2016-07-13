@@ -8,9 +8,64 @@
 }
 
 .archive-book {  
+  @include flex-basis(
+    calc(50% - #{$gutter-smaller / 2})
+  );
+
   padding-left: 0;
+  text-align: center;
+
+  &:nth-child(2n - 1) {
+    margin-right: $gutter-smaller;
+  }
 
   @media ($bp-larger) {
     @include flex-basis(25%);
   }
 }
+
+.archive-book-image {
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+
+  margin-left: 0;
+  margin-right: 0;
+  height: 6rem + (2 * 1rem);
+  width: auto;
+  
+  img {
+    @include border-radius(0);
+  }
+}
+
+.archive-book-title {
+  margin: 0 0 ($gutter-smallest / 4);
+}
+
+.archive-book-author {
+  
+}
+
+.archive-book-details dt {
+  display: none;
+}
+
+.archive-book-details dd {
+  padding-left: 0;
+}
+
+  .archive-book-author {
+    color: $medium-grey;
+    font-size: $type-small;
+  }
+
+  .archive-book-genre {
+    @include bold-spaced-type;
+
+    color: $light-grey;
+    font-family: $sans-serif;
+    font-size: $type-smallest;
+    font-weight: normal;
+    line-height: $line-height * $line-height;
+  }

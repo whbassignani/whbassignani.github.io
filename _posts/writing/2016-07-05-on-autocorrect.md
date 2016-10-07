@@ -4,18 +4,14 @@ category: writing
 excerpt: Man vs. phone
 
 banner:
-- size: 2560
-  url: /assets/writing/placeholders/placeholder-2560x1440.png
-- size: 1280
-  url: /assets/writing/placeholders/placeholder-1280x720.png
+- size: 960
+  url: /assets/writing/2016-07-05-on-autocorrect/banner-960.jpg
 - size: 640
-  url: /assets/writing/placeholders/placeholder-640x360.png
+  url: /assets/writing/2016-07-05-on-autocorrect/banner-640.jpg
 - size: 320
-  url: /assets/writing/placeholders/placeholder-320x180.png
+  url: /assets/writing/2016-07-05-on-autocorrect/banner-320.jpg
 - caption: Photos from <a href="http://www.damnyouautocorrect.com/">Damn You Autocorrect!</a>
 ---
-
-[[ Banner = photo of funny autocorrects ]]
 
 <p class="lede">“Babbage an bar mac at Navarro.”</p>
 
@@ -35,7 +31,10 @@ My beef is not with autocorrect; “nabber” is not a big deal.[^1] This whole 
 
 This is a segue to a larger topic: our devices are missing *context* in a world that is increasingly pivoting toward Big Data and personalization.
 
-[[ Photo of us at Thai food with blurred faces and question marks everywhere ]]
+<div class="photo">
+  <img src="/assets/writing/2016-07-05-on-autocorrect/img-thai-960.jpg" srcset="/assets/writing/2016-07-05-on-autocorrect/img-thai-960.jpg 960w, /assets/writing/2016-07-05-on-autocorrect/img-thai-640.jpg 640w, /assets/writing/2016-07-05-on-autocorrect/img-thai-320.jpg 320w" alt="Thai restaurant, blurred out faces with question marks">
+  <p class="caption">Source: a friend who took the photo, but my phone doesn’t know who.</p>
+</div>
 
 **Facebook** knows that I went to eat Thai food last night with some friends because someone tagged me in it. But it doesn’t know whether I liked it… or why I went there… or even what I ordered. That checkin didn’t tell Facebook how apathetic I am toward Thai food. Maybe **Yelp** knows, but I never leave reviews.
 

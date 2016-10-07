@@ -35,5 +35,5 @@
  */
 
 @function rem($size_pixels) {
-  @return $size_pixels / $type-base * 1rem;
+  @return $size_pixels / $type-base-size;
 }

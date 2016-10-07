@@ -36,19 +36,17 @@
 	}
 }
 
-@mixin box-shadow($top, $left, $blur, $color: #000, $inset: false) {
+@mixin box-shadow($box-shadow...) {
 	$prefixes:      ("-webkit-",  "-moz-", "");
 
-	@if $inset {
-  	@each $prefix in $prefixes {
-  		#{$prefix}box-shadow: inset $top $left $blur $color;
-  	}
-	} @else {
-  	@each $prefix in $prefixes {
-  		#{$prefix}box-shadow: $top $left $blur $color;
-  	}
+	@each $prefix in $prefixes {
+		#{$prefix}box-shadow: $box-shadow;
 	}
 }
+
+  @mixin box-shadow-soft() {
+    @include box-shadow(0 1px 3px rgba($medium-grey, 0.8), 0 10px 60px rgba($medium-grey, 0.4));
+  }
 
 @mixin box-shadow-with-spread($top, $left, $blur, $spread, $color: #000, $inset: false) {
 

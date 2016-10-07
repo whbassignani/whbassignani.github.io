@@ -42,32 +42,35 @@ $instagram-blue:              #3f729b;
 $sans-serif:                  "Concourse", sans-serif;
 $serif:                       "Equity", serif;
 
-$type-base:                   20px;
+$type-base-size:              20px;
 $type-ratio:                  1.22474487139;
 $letter-spacing:              0.1em;
 $line-height:                 1.5;
 
-$tier-minus-three:            1rem / power($type-ratio, 3);   // 10.89px
-$tier-minus-two:              1rem / power($type-ratio, 2);   // 13.33px
-$tier-minus-one:              1rem / power($type-ratio, 1);   // 16.33px
-$tier-base:                   1rem;                           // 20.00px
-$tier-plus-one:               1rem * power($type-ratio, 1);   // 24.50px
-$tier-plus-two:               1rem * power($type-ratio, 2);   // 30.00px
-$tier-plus-three:             1rem * power($type-ratio, 3);   // 36.74px
-$tier-plus-four:              1rem * power($type-ratio, 4);   // 45.00px
-$tier-plus-five:              1rem * power($type-ratio, 5);   // 55.11px
-$tier-plus-six:               1rem * power($type-ratio, 6);   // 67.50px
-$tier-plus-seven:             1rem * power($type-ratio, 7);   // 82.67px
+$tier-minus-three:            1rem / power($type-ratio, 3);   //  10.89 px
+$tier-minus-two:              1rem / power($type-ratio, 2);   //  13.33 px
+$tier-minus-one:              1rem / power($type-ratio, 1);   //  16.33 px
+$tier-base:                   1rem;                           //  20.00 px
+$tier-plus-one:               1rem * power($type-ratio, 1);   //  24.50 px
+$tier-plus-two:               1rem * power($type-ratio, 2);   //  30.00 px
+$tier-plus-three:             1rem * power($type-ratio, 3);   //  36.74 px
+$tier-plus-four:              1rem * power($type-ratio, 4);   //  45.00 px
+$tier-plus-five:              1rem * power($type-ratio, 5);   //  55.11 px
+$tier-plus-six:               1rem * power($type-ratio, 6);   //  67.50 px
+$tier-plus-seven:             1rem * power($type-ratio, 7);   //  82.67 px
+$tier-plus-eight:             1rem * power($type-ratio, 8);   // 101.25 px
+$tier-plus-nine:              1rem * power($type-ratio, 9);   // 124.01 px
+$tier-plus-ten:               1rem * power($type-ratio, 10);  // 151.88 px
 
-$type-smallest:               $tier-minus-three;
-$type-smaller:                $tier-minus-two;
-$type-small:                  $tier-minus-one;
-$type-medium:                 $tier-base;
-$type-large:                  $tier-plus-one;
-$type-larger:                 $tier-plus-two;
-$type-largest:                $tier-plus-three;
-$type-huge:                   $tier-plus-four;
-$type-huger:                  $tier-plus-five;
+$type-minus-three:            $tier-minus-three;
+$type-minus-two:              $tier-minus-two;
+$type-minus-one:              $tier-minus-one;
+$type-base:                   $tier-base;
+$type-plus-one:               $tier-plus-one;
+$type-plus-two:               $tier-plus-two;
+$type-plus-three:             $tier-plus-three;
+$type-plus-four:              $tier-plus-four;
+$type-plus-fourr:             $tier-plus-five;
 
 
 // Animations

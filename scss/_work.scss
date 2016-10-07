@@ -1,3 +1,13 @@
+.archive-work + .archive-work {
+  margin-top: $gutter-larger;
+  padding-top: $gutter-small;
+  border-top: 1px solid $light-grey;
+  
+  @media ($bp-medium) {
+    padding-top: $gutter-medium;
+  }
+}
+
 .archive-work .caption {
   color: $black;
 //   font-family: $serif;

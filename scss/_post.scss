@@ -2,11 +2,11 @@
   margin-bottom: $gutter-smallest;
   color: $light-grey;
   font-family: $sans-serif;
-  font-size: $type-smaller;
+  font-size: $type-minus-two;
   text-transform: uppercase;
 
   @media ($bp-small) {
-    font-size: $type-small;
+    font-size: $type-minus-one;
   }
 }
 
@@ -16,10 +16,10 @@
 
 .lede {
   font-family: $sans-serif;
-  font-size: $type-large;
+  font-size: $type-plus-one;
 
   @media ($bp-small) {
-    font-size: $type-larger;
+    font-size: $type-plus-two;
   }
 }
 
@@ -27,7 +27,7 @@
   padding-top: $gutter-small;
   border-top: 1px solid $light-grey;
   font-family: $sans-serif;
-  font-size: $type-small;
+  font-size: $type-minus-one;
 
   & > *:last-child {
     margin-bottom: 0;
@@ -36,7 +36,7 @@
   @media ($bp-small) {
     margin-top: $gutter-large;
     padding-top: $gutter-medium;
-    font-size: $type-medium;
+    font-size: $type-base;
   }
 
   @media ($bp-large) {
@@ -46,7 +46,7 @@
 
 .footnotes {
   margin: $gutter-medium 0 $gutter-large;
-  font-size: $type-small;
+  font-size: $type-minus-one;
   
   p {
     margin: 0;
@@ -62,7 +62,7 @@
 
   @media ($bp-small) {
     margin: $gutter-large 0 $gutter-larger;
-    font-size: $type-medium;
+    font-size: $type-base;
 
     &:before {
       margin-bottom: $gutter-small;

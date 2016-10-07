@@ -1,8 +1,11 @@
 .photo {
-  margin: 0 (-$gutter-smaller) $gutter-medium;
+  margin: $gutter-medium (-$gutter-smaller);
+  position: relative;
   width: calc(100% + #{$gutter-smaller * 2});
   
   img {
+    @include box-shadow-soft;
+
     display: block;
     width: 100%;
   }
@@ -12,13 +15,14 @@
     margin-right: 0;
     width: 100%;
 
-    img {
-      @include border-radius;
-    }
+//     img {
+//       @include border-radius;
+//     }
   }
 
   @media ($bp-small) {
     margin-bottom: $gutter-large;
+    margin-top: $gutter-large;
 
     &.photo-small,
     &.photo-medium {
@@ -38,9 +42,11 @@
 
 .photo .caption {
   margin: $gutter-smaller $gutter-smaller 0;
+  position: relative;
+  z-index: 1;
   color: $light-grey;
   font-family: $sans-serif;
-  font-size: $type-small;
+  font-size: $type-minus-one;
 
   @media ($bp-smaller) {
     margin-left: 0;
@@ -60,7 +66,7 @@
   @media ($bp-small) {
     margin-top: $gutter-small;
     padding-left: $gutter-medium;
-    font-size: $type-medium;
+    font-size: $type-base;
   }
 
 /*

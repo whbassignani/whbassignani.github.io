@@ -75,7 +75,7 @@
 
     // Adds a shadow
     &:after {
-      @include box-shadow(-5px, 0, 10px, rgba($black, 0.5));
+      @include box-shadow(-5px 0 10px rgba($black, 0.5));
 
       content: "";
       display: block;
@@ -133,7 +133,7 @@
   margin: $gutter-medium 0 $gutter-smallest;
   padding-left: $gutter-smaller;
   opacity: 0.5;
-  font-size: $type-smaller;
+  font-size: $type-minus-two;
 }
 
 .nav-link,
@@ -145,7 +145,7 @@
   border-bottom: 0;
   color: $inverted-neutral-link-color;
   font-family: $sans-serif;
-  font-size: $type-medium;
+  font-size: $type-base;
   line-height: 1;
 
   &.is-current-page {

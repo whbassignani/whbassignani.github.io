@@ -1,7 +1,7 @@
 #footer {
   background-color: $off-white;
   font-family: $sans-serif;
-  font-size: $type-small;
+  font-size: $type-minus-one;
 
   p {
     margin: 0;
@@ -9,14 +9,14 @@
 
   .credits {
     display: block;
-    font-size: $type-smaller;
+    font-size: $type-minus-two;
 
     @media ($bp-small) {
-      font-size: $type-small;
+      font-size: $type-minus-one;
     }
   }
 
   @media ($bp-small) {
-    font-size: $type-medium;
+    font-size: $type-base;
   }
 }

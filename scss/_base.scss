@@ -6,7 +6,7 @@
 
 // Layout styles
 html, body {
-  font-size: $type-base;
+  font-size: $type-base-size;
 }
 
 body {
@@ -14,11 +14,11 @@ body {
   overflow-x: hidden;
   color: $dark-grey;
   font-family: $serif;
-  font-size: $type-medium;
+  font-size: $type-base;
   line-height: $line-height;
 
   @media ($bp-small) {
-    font-size: $type-large;
+    font-size: $type-plus-one;
   }
 }
 
@@ -50,7 +50,7 @@ blockquote {
   padding-left: $gutter-smaller;
   border-left: ($gutter-smallest / 2) solid $off-white;
   color: $medium-grey;
-  font-size: $type-medium;
+  font-size: $type-base;
 
   @media ($bp-small) {
     margin-left: $gutter-small;
@@ -62,14 +62,14 @@ code {
 
   padding: $gutter-smallest;
   background-color: $off-white;
-  font-size: $type-small;
+  font-size: $type-minus-one;
 
   pre & {
     padding: 0;
   }
 
   @media ($bp-small) {
-    font-size: $type-medium;
+    font-size: $type-base;
   }
 }
 
@@ -83,28 +83,28 @@ code {
 
 %h1 {
   margin: $gutter-larger 0 $gutter-medium;
-  font-size: $type-larger;
+  font-size: $type-plus-two;
 
   @media ($bp-small) {
-    font-size: $type-largest;
+    font-size: $type-plus-three;
   }
 }
 
 %h2 {
   margin: $gutter-large 0 $gutter-medium;
-  font-size: $type-large;
+  font-size: $type-plus-one;
 
   @media ($bp-small) {
-    font-size: $type-larger;
+    font-size: $type-plus-two;
   }
 }
 
 %h3 {
   margin: $gutter-medium 0 $gutter-small;
-  font-size: $type-medium;
+  font-size: $type-base;
 
   @media ($bp-small) {
-    font-size: $type-large;
+    font-size: $type-plus-one;
   }
 }
 
@@ -114,11 +114,11 @@ code {
   @include bold-spaced-type;
 
   margin: $gutter-medium 0 $gutter-smallest;
-  font-size: $type-smaller;
+  font-size: $type-minus-two;
 
   @media ($bp-small) {
     margin: $gutter-large 0 $gutter-smaller;
-    font-size: $type-small;
+    font-size: $type-minus-one;
   }
 }
 
@@ -142,7 +142,7 @@ p {
   padding: $gutter-medium;
   background-color: $off-white;
   font-family: $sans-serif;
-  font-size: $type-large;
+  font-size: $type-plus-one;
 
   p {
     margin-bottom: 0;
@@ -151,7 +151,7 @@ p {
   .pull-quote-source {
     margin-top: $gutter-smaller;
     color: $light-grey;
-    font-size: $type-smaller;
+    font-size: $type-minus-two;
     text-transform: uppercase;
   }
 
@@ -207,8 +207,8 @@ input[type="button"] {
   border: 0;
   color: $white;
   font-family: $sans-serif;
-  font-size: $type-smaller;
-  font-weight: 800;
+  font-size: $type-minus-two;
+  font-weight: 700;
   letter-spacing: $letter-spacing;
   line-height: 1;
   text-align: center;
@@ -348,7 +348,7 @@ table {
   margin: 0 0 $gutter-medium;
   width: 100%;
   border: 1px solid $light-grey;
-  font: $type-small/1 $sans-serif;
+  font: $type-minus-one/1 $sans-serif;
   
   td,
   th {
@@ -366,13 +366,13 @@ table {
   thead {
     background-color: $off-white;
     border-bottom: 1px solid $light-grey;
-    font-size: $type-smallest;
+    font-size: $type-minus-three;
     font-weight: 700;
     letter-spacing: $letter-spacing;
     text-transform: uppercase;
 
     @media ($bp-small) {
-      font-size: $type-smaller;
+      font-size: $type-minus-two;
     }
   }
 
@@ -383,7 +383,7 @@ table {
 
   @media ($bp-small) {
     margin-bottom: $gutter-large;
-    font-size: $type-medium;
+    font-size: $type-base;
   }
 }
 

@@ -185,12 +185,13 @@ a {
   position: relative;
   
   &:after {
+    @include transform(translateY(-50%));
     content: "→";
     display: inline-block;
     padding-left: $gutter-smallest;
     position: absolute;
     left: 100%;
-    top: 0;
+    top: 50%;
   }
 }
 

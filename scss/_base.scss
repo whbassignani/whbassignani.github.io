@@ -186,6 +186,7 @@ a {
   
   &:after {
     @include transform(translateY(-50%));
+
     content: "→";
     display: inline-block;
     padding-left: $gutter-smallest;
@@ -199,7 +200,7 @@ button,
 .button,
 input[type="button"] {
   @include border-radius($border-radius);
-  @include transition(background-color $animation-time/2);
+  @include transition(background-color $animation-time/2, box-shadow $animation-time/2);
 
   display: block;
   margin-bottom: $gutter-medium;

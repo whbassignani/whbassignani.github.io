@@ -181,6 +181,20 @@ a {
   }
 }
 
+  @mixin inverted-link-color {  
+    border-color: rgba($inverted-link-color, 0.2);
+    color: $inverted-link-color;
+  
+    &:hover {
+      border-color: rgba($inverted-link-hover-color, 0.4);
+      color: $inverted-link-hover-color;
+    }
+  
+    &:active {
+      color: $inverted-link-color;
+    }
+  }
+
 .action-link {
   position: relative;
   

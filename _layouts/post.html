@@ -11,10 +11,12 @@
 
     <article class="post torso-narrow">
 {% assign this_image = page.banner %}
-      
+
+{% if this_image %}
       <div class="post-banner photo">
 {% include img-srcset.html %}
       </div>
+{% endif %}
 
 {{ content }}
     </article>
@@ -23,7 +25,7 @@
     <footer class="post-footer torso-narrow">
       <p class="author"><strong>Hawke</strong> is a designer at <a href="http://www.blizzard.com">Blizzard Entertainment</a>. Interests: typography, web development, indoor rock climbing, video games, coffee, and European history. Want to learn more? <a href="/about">Of course you&nbsp;do.</a></p>
       
-      <p>Read his not-overly-hashtagged tweets on <a href="http://www.twitter.com/hawkeward">Twitter (@hawkeward)</a>.</p>
+      <p>Read his not-overly-hashtagged tweets on <a href="http://www.twitter.com/hawkeward">Twitter (@hawkeward)</a>. <span class="hashtag">#doit</span></p>
     </footer>
 {% endunless %}
   </main>

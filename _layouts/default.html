@@ -8,9 +8,12 @@
       <h1 class="page-title">{{ page.title }}</h1>
 
 {% assign this_image = page.banner %}
+
+{% if this_image %}
       <div class="photo">
 {% include img-srcset.html %}
       </div>
+{% endif %}
 
 {{ content }}
     </article>

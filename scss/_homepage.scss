@@ -1,0 +1,59 @@
+.homepage-list-item {
+  @include background-size(cover);
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  p {
+    margin: $gutter-medium 0;
+    max-width: $max-width-narrow;
+    
+    @media ($bp-small) {
+      width: 66.66666667%;
+    }
+  }
+}
+
+%homepage-list-item--inverted {
+  color: $off-white;
+  
+  a {
+    @include inverted-link-color;
+  }
+}
+  
+  #homepage-list-item--intro {
+    font-size: $type-plus-one;
+    
+    strong {
+      font-family: $sans-serif;
+    }
+  
+    @media ($bp-small) {
+      font-size: $type-plus-two;
+    }
+  }
+  
+  #homepage-list-item--heroes {
+    @extend %homepage-list-item--inverted;
+    
+    background-color: darkblue;
+    background-image: url(/assets/homepage/homepage-bg-mobile-heroes.jpg);
+
+    @media ($bp-small) {
+      background-image: url(/assets/homepage/homepage-bg-heroes.jpg);
+    }
+  }
+
+  #homepage-list-item--app {
+    background-color: goldenrod;
+    background-image: url();
+  }
+
+  #homepage-list-item--tespa {
+    @extend %homepage-list-item--inverted;
+    
+    background-color: purple;
+    background-image: url();
+  }

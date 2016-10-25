@@ -1,7 +1,8 @@
 .photo {
-  margin: $gutter-medium (-$gutter-smaller);
+//   margin: $gutter-medium (-$gutter-smaller);
+  margin: $gutter-medium 0;
   position: relative;
-  width: calc(100% + #{$gutter-smaller * 2});
+//   width: calc(100% + #{$gutter-smaller * 2});
   
   img {
     @include box-shadow-soft;
@@ -44,7 +45,7 @@
   margin: $gutter-smaller $gutter-smaller 0;
   position: relative;
   z-index: 1;
-  color: $light-grey;
+  color: $medium-grey;
   font-family: $sans-serif;
   font-size: $type-minus-one;
 

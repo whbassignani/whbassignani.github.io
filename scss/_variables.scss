@@ -47,20 +47,26 @@ $type-ratio:                  1.22474487139;
 $letter-spacing:              0.1em;
 $line-height:                 1.5;
 
-$tier-minus-three:            1rem / power($type-ratio, 3);   //  10.89 px
-$tier-minus-two:              1rem / power($type-ratio, 2);   //  13.33 px
-$tier-minus-one:              1rem / power($type-ratio, 1);   //  16.33 px
-$tier-base:                   1rem;                           //  20.00 px
-$tier-plus-one:               1rem * power($type-ratio, 1);   //  24.50 px
-$tier-plus-two:               1rem * power($type-ratio, 2);   //  30.00 px
-$tier-plus-three:             1rem * power($type-ratio, 3);   //  36.74 px
-$tier-plus-four:              1rem * power($type-ratio, 4);   //  45.00 px
-$tier-plus-five:              1rem * power($type-ratio, 5);   //  55.11 px
-$tier-plus-six:               1rem * power($type-ratio, 6);   //  67.50 px
-$tier-plus-seven:             1rem * power($type-ratio, 7);   //  82.67 px
-$tier-plus-eight:             1rem * power($type-ratio, 8);   // 101.25 px
-$tier-plus-nine:              1rem * power($type-ratio, 9);   // 124.01 px
-$tier-plus-ten:               1rem * power($type-ratio, 10);  // 151.88 px
+$tier-minus-three:            1rem / power($type-ratio, 3);   //   10.89 px
+$tier-minus-two:              1rem / power($type-ratio, 2);   //   13.33 px
+$tier-minus-one:              1rem / power($type-ratio, 1);   //   16.33 px
+$tier-base:                   1rem;                           //   20.00 px
+$tier-plus-one:               1rem * power($type-ratio, 1);   //   24.50 px
+$tier-plus-two:               1rem * power($type-ratio, 2);   //   30.00 px
+$tier-plus-three:             1rem * power($type-ratio, 3);   //   36.74 px
+$tier-plus-four:              1rem * power($type-ratio, 4);   //   45.00 px
+$tier-plus-five:              1rem * power($type-ratio, 5);   //   55.11 px
+$tier-plus-six:               1rem * power($type-ratio, 6);   //   67.50 px
+$tier-plus-seven:             1rem * power($type-ratio, 7);   //   82.67 px
+$tier-plus-eight:             1rem * power($type-ratio, 8);   //  101.25 px
+$tier-plus-nine:              1rem * power($type-ratio, 9);   //  124.01 px
+$tier-plus-ten:               1rem * power($type-ratio, 10);  //  151.88 px
+
+$tier-plus-fourteen:          1rem * power($type-ratio, 14);  //  341.72 px
+$tier-plus-sixteen:           1rem * power($type-ratio, 15);  //  512.58 px
+$tier-plus-eighteen:          1rem * power($type-ratio, 18);  //  768.87 px
+$tier-plus-twenty:            1rem * power($type-ratio, 20);  // 1153.30 px
+
 
 $type-minus-three:            $tier-minus-three;
 $type-minus-two:              $tier-minus-two;
@@ -70,7 +76,7 @@ $type-plus-one:               $tier-plus-one;
 $type-plus-two:               $tier-plus-two;
 $type-plus-three:             $tier-plus-three;
 $type-plus-four:              $tier-plus-four;
-$type-plus-fourr:             $tier-plus-five;
+$type-plus-five:              $tier-plus-five;
 
 
 // Animations
@@ -94,8 +100,9 @@ $border-radius:               6px;
 $toolbar-height--small:       2.5rem;
 $toolbar-height--medium:      3rem;
 $toolbar-height--large:       4rem;
-$max-width-narrow:            1rem * power($type-ratio, 18);  //  768.87px
-$max-width-wide:              1rem * power($type-ratio, 20);  // 1153.30px
+$max-width-sidebar:           $tier-plus-fourteen;
+$max-width-narrow:            $tier-plus-eighteen;
+$max-width-wide:              $tier-plus-twenty;
 $nav-drawer-width:            12rem;
 
 

@@ -6,11 +6,20 @@
   background-size: cover;
 
   p {
-    margin: $gutter-medium 0;
-    max-width: $max-width-narrow;
+    margin: 0;
     
     @media ($bp-small) {
+      max-width: $max-width-sidebar;
       width: 66.66666667%;
+    }
+  }
+  
+  h1 {
+    margin-top: 0;
+    font-size: $type-base;
+
+    @media ($bp-small) {
+      font-size: $type-plus-one;
     }
   }
 }
@@ -20,6 +29,10 @@
   
   a {
     @include inverted-link-color;
+  }
+  
+  h1 {
+    color: $white;
   }
 }
   
@@ -32,6 +45,10 @@
   
     @media ($bp-small) {
       font-size: $type-plus-two;
+      
+      p {
+        max-width: $max-width-narrow;
+      }
     }
   }
   

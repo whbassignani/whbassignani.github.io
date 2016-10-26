@@ -81,7 +81,7 @@ code {
   line-height: 1.2;
 }
 
-%h1 {
+@mixin h1 {
   margin: $gutter-larger 0 $gutter-medium;
   font-size: $type-plus-two;
 
@@ -90,7 +90,7 @@ code {
   }
 }
 
-%h2 {
+@mixin h2 {
   margin: $gutter-large 0 $gutter-medium;
   font-size: $type-plus-one;
 
@@ -99,7 +99,7 @@ code {
   }
 }
 
-%h3 {
+@mixin h3 {
   margin: $gutter-medium 0 $gutter-small;
   font-size: $type-base;
 
@@ -108,9 +108,7 @@ code {
   }
 }
 
-%h4,
-%h5,
-%h6 {
+@mixin h4 {
   @include bold-spaced-type;
 
   margin: $gutter-medium 0 $gutter-smallest;
@@ -121,6 +119,11 @@ code {
     font-size: $type-minus-one;
   }
 }
+
+%h1 { @include h1; }
+%h2 { @include h2; }
+%h3 { @include h3; }
+%h4, %h5, %h6 { @include h4; }
 
 h1, .h1 { @extend %h1; }
 h2, .h2 { @extend %h2; }

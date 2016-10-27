@@ -1,13 +1,20 @@
+.homepage-torso {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $max-width-wide;
+}
+
 #homepage-intro {
   border-bottom: 1px solid $off-white;
 }
 
 .homepage-intro-text {
-  margin: 0;
+  margin: $gutter-small 0;
   max-width: $max-width-narrow;
   font-size: $type-plus-one;
   
   @media ($bp-small) {
+//     margin: 0;
     font-size: $type-plus-two;
   }
 
@@ -16,7 +23,7 @@
   
     padding-left: $gutter-smallest / 2;
     padding-right: $gutter-smallest / 2;
-    background-color: rgba($bright-green, 0.2);
+    background-color: rgba($bright-green, 0.1);
     
     &:hover {
       background-color: rgba($bright-green, 0.8);
@@ -25,11 +32,38 @@
   }
 }
 
+.homepage-intro-name {
+  font-family: $sans-serif;
+}
+
+.homepage-intro-link {
+	$colors: (
+  	blizzard: #1590ce,
+  	heroes: #330099,
+  	esports: #cc0022,
+  	writing: #bba00c,
+  	work: #4ac32d,
+	  twitter: #1da1f2
+	 );
+
+	@each $key, $color in $colors {
+		&.#{$key} {
+      background-color: rgba($color, 0.1);
+      border-color: rgba($color, 0.2);
+      color: mix($color, $black, 80%);
+      
+      &:hover {
+        background-color: rgba($color, 0.8);
+      }
+		}
+	}
+}
+
 #homepage-writing {
   .section-title {
     @include h3;
 
-    margin-top: 0;
+    margin-top: $gutter-small;
   }
 }
 
@@ -85,10 +119,22 @@
   .homepage-post-title {
     @include h2;
     
-    margin-top: 0;
+    margin: 0 0 $gutter-smallest;
+
+    @media ($bp-small) {
+      margin-bottom: $gutter-smaller;
+    }
   }
   
   .homepage-post-dek {
     margin-bottom: 0;
+  }
+}
+
+.homepage-all-link {
+  margin-top: $gutter-small;
+  
+  @media ($bp-small) {
+    margin-top: $gutter-medium;
   }
 }

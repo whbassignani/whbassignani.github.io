@@ -1,7 +1,7 @@
 ---
 title: "Your Other House, or The Crap Cycle"
 category: writing
-excerpt: When your office becomes a storage locker
+dek: When your office becomes a storage locker
 ---
 
 <p class="lede">Everyday for the past week, I have been sorting through all the junk in my apartment that I have collected over the last seven years of Boston living. And everyday for the past week, I have carried that stuff—in a duffle bag—to Goodwill on my morning commute to work.</p>

@@ -1,7 +1,7 @@
 ---
 title: On Autocorrect
 category: writing
-excerpt: Man vs. phone
+dek: "Dear iPhone, my name is Hawke, not “Gayle.” Lobe, Hawke"
 
 banner:
 - size: 960

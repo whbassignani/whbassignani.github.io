@@ -4,6 +4,7 @@ title: Bostonia
 category: work
 type: web
 role: Design, front-end build
+url: http://www.bu.edu/bostonia
 
 work_images:
 -

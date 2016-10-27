@@ -3,27 +3,42 @@ layout: blank
 ---
 
   <main>
-    <article>
-      <section id="homepage-list-item--intro" class="container homepage-list-item">
-        <p>My name is <strong class="no-break">Hawke<span class="show-small-up"> Bassignani</span></strong>. I design websites at <a href="http://www.blizzard.com" class="no-break">Blizzard<span class="show-medium-up"> Entertainment</span></a> and live in <span class="no-break">Irvine, CA</span>.</p>
-      </section>
-      
-      <section id="homepage-list-item--heroes" class="container homepage-list-item">
-        <h1>Lorem ipsum</h1>
-
-        <p>Currently designing sites for <a href="http://www.playheroes.com">Heroes of the Storm</a> and Blizzard Esports. Learn more about  Heroes Esports 2017 on our <a href="http://us.heroesofthestorm.com/esports/en/overview">program overview page</a>.</p>
-      </section>
-    
-      <section id="homepage-list-item--app" class="container homepage-list-item">
-        <h1>Lorem ipsum</h1>
-
-        <p>Also building my first native apps for time-tracking. Read more about it in my <a href="/writing/dev-diary-1/">developer diaries</a>.</p>
-      </section>
-      
-      <section id="homepage-list-item--tespa" class="container homepage-list-item">
-        <h1>Lorem ipsum</h1>
-
-        <p>Redesigned <a href="http://www.tespa.org">Tespa’s</a> website and brand. They are the leader in <strong>collegiate esports</strong> on campuses across North America.</p>
-      </section>
+    <article id="homepage-intro" class="container">
+      <p class="homepage-intro-text">
+        <span class="homepage-intro-name">Hawke Bassignani</span>
+        
+        <a href="http://www.blizzard.com">is a designer at <span class="no-break">Blizzard Entertainment</span></a> <a href="http://www.playheroes.com">works on <cite>Heroes of the Storm</cite></a> <a href="http://us.heroesofthestorm.com/esports/en/overview">and esports</a> 
+        
+        <a href="/writing">Read his writing </a> <a href="/work">see his work </a> <a href="http://www.twitter.com/hawkeward">and follow him on Twitter.</a>
+      </p>
     </article>
+    <section id="homepage-writing" class="container">
+      <h1 class="section-title">Latest writing</h1>
+
+
+
+
+
+
+
+<ul id="homepage-posts">
+{%for post in site.categories.writing limit:4 %}
+  <li class="homepage-post">
+    <a href="{{ post.url }}" title="{{ post.title }}">
+      <time class="homepage-post-date" data-full="{{ post.date | date: "%A, %B %-d, %Y" }}">{{ post.date | date: "%b %-d" }}</time>
+      <h1 class="homepage-post-title">{{ post.title }}</h1>
+      <p class="homepage-post-dek">{{ post.dek }}</p>
+    </a>
+  </li>
+{% endfor %}
+</ul>
+
+
+
+
+
+
+
+
+    </section>
   </main>

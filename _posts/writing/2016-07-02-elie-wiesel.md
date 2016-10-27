@@ -1,7 +1,7 @@
 ---
 title: R.I.P. Elie Wiesel
 category: writing
-excerpt: “Peace is our gift to each other.”
+dek: “Peace is our gift to each other.” 1928–2016
 
 banner:
 - size: 1280

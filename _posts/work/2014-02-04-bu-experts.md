@@ -4,6 +4,7 @@ title: Faculty Experts
 category: work
 type: web
 role: Design, front-end build
+url: http://www.bu.edu/experts
 
 work_images:
 -

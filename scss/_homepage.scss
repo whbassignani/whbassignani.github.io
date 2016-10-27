@@ -1,76 +1,94 @@
-.homepage-list-item {
-  @include background-size(cover);
-
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  p {
-    margin: 0;
-    
-    @media ($bp-small) {
-      max-width: $max-width-sidebar;
-      width: 66.66666667%;
-    }
-  }
-  
-  h1 {
-    margin-top: 0;
-    font-size: $type-base;
-
-    @media ($bp-small) {
-      font-size: $type-plus-one;
-    }
-  }
+#homepage-intro {
+  border-bottom: 1px solid $off-white;
 }
 
-%homepage-list-item--inverted {
-  color: $off-white;
+.homepage-intro-text {
+  margin: 0;
+  max-width: $max-width-narrow;
+  font-size: $type-plus-one;
   
+  @media ($bp-small) {
+    font-size: $type-plus-two;
+  }
+
   a {
-    @include inverted-link-color;
-  }
+    @include transition(color $animation-time, background-color $animation-time, border-color $animation-time);
   
-  h1 {
-    color: $white;
+    padding-left: $gutter-smallest / 2;
+    padding-right: $gutter-smallest / 2;
+    background-color: rgba($bright-green, 0.2);
+    
+    &:hover {
+      background-color: rgba($bright-green, 0.8);
+      color: $white;
+    }
   }
 }
-  
-  #homepage-list-item--intro {
-    font-size: $type-plus-one;
-    
-    strong {
-      font-family: $sans-serif;
-    }
-  
-    @media ($bp-small) {
-      font-size: $type-plus-two;
-      
-      p {
-        max-width: $max-width-narrow;
-      }
-    }
+
+#homepage-writing {
+  .section-title {
+    @include h3;
+
+    margin-top: 0;
   }
-  
-  #homepage-list-item--heroes {
-    @extend %homepage-list-item--inverted;
+}
+
+#homepage-posts {
+  @include flexbox;
+  @include flex-wrap(wrap);
+
+  list-style: none;
+  margin: 0 #{-$gutter-small};
+  padding: 0;
+}
+
+.homepage-post {
+  @include flex(1 0 100%);  
+  @include flexbox;
+
+  margin: 0;
+  padding: 0;
+
+  @media ($bp-small) {
+    @include flex-basis(50%);
+  }
+
+  a {
+    @include transition(background-color $animation-time);
+
+    padding: $gutter-small;
+    width: 100%;
+    border-bottom: 0;
+    color: inherit;
     
-    background-color: darkblue;
-    background-image: url(/assets/homepage/homepage-bg-mobile-heroes.jpg);
+    &:hover {
+      background-color: rgba($off-white, 0.5);
+    }
 
     @media ($bp-small) {
-      background-image: url(/assets/homepage/homepage-bg-heroes.jpg);
+      padding: $gutter-small $gutter-small $gutter-large;
     }
   }
 
-  #homepage-list-item--app {
-    background-color: goldenrod;
-    background-image: url();
-  }
-
-  #homepage-list-item--tespa {
-    @extend %homepage-list-item--inverted;
+  .homepage-post-date {
+    color: $bright-green;
+    font-family: $sans-serif;
+    font-size: $type-minus-one;
+    font-weight: 400;
+    white-space: nowrap;
     
-    background-color: purple;
-    background-image: url();
+    @media ($bp-small) {
+      font-size: $type-base;
+    }
   }
+  
+  .homepage-post-title {
+    @include h2;
+    
+    margin-top: 0;
+  }
+  
+  .homepage-post-dek {
+    margin-bottom: 0;
+  }
+}

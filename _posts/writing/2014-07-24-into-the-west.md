@@ -1,7 +1,7 @@
 ---
 title: "Operation: Into the West"
 category: writing
-excerpt: That one time I moved to California
+dek: That one time I moved to California
 ---
 
 <p class="lede">The two former pizza places around the corner from my apartment have been closed for almost two years.</p>

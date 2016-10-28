@@ -31,7 +31,7 @@ $(document).ready(function() {
 
   var animateNavDrawer = function() {
     if ($body.hasClass("js-nav-open--left")) {
-      $(document).on("click", function(event) {
+      $(document).on("touchstart click", function(event) {
 /*
         event.preventDefault();
         event.stopPropagation();

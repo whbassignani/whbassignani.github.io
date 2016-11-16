@@ -106,7 +106,7 @@
 	$prefixes:      ("-webkit-",  "-moz-", "-o-", "");
 
 	@each $prefix in $prefixes {
-		#{$prefix}transition: #{$prefix}$transition;
+		#{$prefix}transition: unquote("#{$prefix}#{$transition}")
 	}
 }
 

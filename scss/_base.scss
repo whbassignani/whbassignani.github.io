@@ -134,7 +134,7 @@ h6, .h6 { @extend %h6; }
 
 p {
   margin: 0 0 $gutter-small;
-  
+
   @media ($bp-small) {
     margin-bottom: $gutter-medium;
   }
@@ -184,15 +184,15 @@ a {
   }
 }
 
-  @mixin inverted-link-color {  
+  @mixin inverted-link-color {
     border-color: rgba($inverted-link-color, 0.2);
     color: $inverted-link-color;
-  
+
     &:hover {
       border-color: rgba($inverted-link-hover-color, 0.4);
       color: $inverted-link-hover-color;
     }
-  
+
     &:active {
       color: $inverted-link-color;
     }
@@ -200,7 +200,7 @@ a {
 
 .action-link {
   position: relative;
-  
+
   &:after {
     @include transform(translateY(-50%));
 
@@ -327,9 +327,9 @@ dl {
 
 dt {
   @extend %h5;
-  
+
   margin-top: $gutter-small;
-  
+
   @media ($bp-small) {
     margin-top: $gutter-medium;
   }
@@ -345,11 +345,19 @@ dd {
 hr {
   margin: 0 0 $gutter-medium;
   border: 0;
-  border-bottom: 1px solid $light-grey;
+  border-bottom: 1px dotted $light-grey;
 
   @media ($bp-small) {
     margin-bottom: $gutter-large;
   }
+}
+
+p + hr {
+	margin-top: $gutter-medium;
+
+	@media ($bp-small) {
+		margin-top: $gutter-large;
+	}
 }
 
 pre {
@@ -368,7 +376,7 @@ table {
   width: 100%;
   border: 1px solid $light-grey;
   font: $type-minus-one/1 $sans-serif;
-  
+
   td,
   th {
     padding: $gutter-smallest;

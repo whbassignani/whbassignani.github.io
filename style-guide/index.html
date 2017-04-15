@@ -2,22 +2,20 @@
 title: Style Guide
 ---
 
-  <section class="styleGuide-section intro">
-    <p>This is a <em>living</em> style guide. It will evolve alongside the main site, <a href="//hawkeward.com">hawkeward.com</a>.</p>
-  </section>
-  
+  <p>This is a <em>living</em> style guide. It will evolve alongside the main site, <a href="//hawkeward.com">hawkeward.com</a>.</p>
+
   <section class="styleGuide-section">
     <h2 class="styleGuide-section-header">Colors</h2>
 
+{% assign value_list = "50|100|200|300|400|500|600|700|800|900" | split: "|" %}
+{% for value in value_list %}
     <ul class="swatch-list cf">
-      <li class="swatch" style="background-color: #fb3640">#fb3640</li>
-      <li class="swatch" style="background-color: #6d6c6b">#6d6c6b</li>
-      <li class="swatch" style="background-color: #1a936f">#1a936f</li>
-      <li class="swatch" style="background-color: #18231d">#18231d</li>
-      <li class="swatch" style="background-color: #f2eaee">
-        <span class="swatch-label--dark">#f2eaee</span>
-      </li>
+      <li class="swatch bg-red-{{ value }}">Red {{ value }}</li>
+      <li class="swatch bg-green-{{ value }}">Green {{ value }}</li>
+      <li class="swatch bg-blue-{{ value }}">Blue {{ value }}</li>
+      <li class="swatch bg-grey-{{ value }}">Grey {{ value }}</li>
     </ul>
+{% endfor %}
   </section>
 
   <section class="styleGuide-section">
@@ -26,7 +24,7 @@ title: Style Guide
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mauris purus, dictum sed rhoncus et, efficitur a risus. Curabitur vel odio id nisi ultricies feugiat. <strong>Praesent at augue viverra</strong> neque egestas ornare. Phasellus posuere accumsan aliquet. Duis suscipit, <em>elit sodales bibendum fringilla</em>, est sapien tempus augue, eget ultrices massa dui in dui. Morbi eu mauris ac odio blandit egestas id eu erat. Praesent ultrices vehicula gravida.</p>
 
     <p>Mauris at velit vitae ipsum bibendum blandit. Fusce sed nisl interdum, molestie mi in, consequat ex. Proin sagittis est nec orci efficitur, tempus interdum tellus scelerisque.</p>
-    
+
     <p><a href="#" class="action-link">Read more</a></p>
   </section>
 
@@ -76,7 +74,7 @@ title: Style Guide
 
   <section class="styleGuide-section">
     <h2 class="styleGuide-section-header">Pull quote</h2>
-    
+
     <p>This pull quote has no source:</p>
 
     <aside class="pull-quote">
@@ -95,7 +93,7 @@ title: Style Guide
     <h2 class="styleGuide-section-header">Code blocks</h2>
 
     <p>This is a code sample: <code>console.log("Hello world!");</code>.</p>
-    
+
     <p>Here are some individual tags like <code>&lt;html&gt;</code> and <code>&lt;html&gt;</code>.</p>
 
 <pre><code>&lt;html&gt;
@@ -129,7 +127,7 @@ title: Style Guide
 
   <section class="styleGuide-section">
     <h2 class="styleGuide-section-header">Lists</h2>
-    
+
     <p>First, simple ordered and unordered lists:</p>
 
     <ol>
@@ -137,7 +135,7 @@ title: Style Guide
       <li>And list item 2</li>
       <li>Finally, list item 3</li>
     </ol>
-    
+
     <ul>
       <li>List item 1</li>
       <li>And list item 2</li>
@@ -158,7 +156,7 @@ title: Style Guide
       </li>
       <li>Finally, list item 3</li>
     </ol>
-    
+
     <ul>
       <li>List item 1</li>
       <li>
@@ -200,7 +198,7 @@ title: Style Guide
         </ol>
       </li>
     </ol>
-    
+
     <ul>
       <li>List item 1</li>
       <li>
@@ -242,7 +240,7 @@ title: Style Guide
 
   <section class="styleGuide-section">
     <h2 class="styleGuide-section-header">Tables</h2>
-    
+
     <p>This table has a header and footer:</p>
 
     <table>
@@ -283,7 +281,7 @@ title: Style Guide
         <td>34</td>
       </tr>
     </table>
-    
+
     <p>This is a simpler table:</p>
 
     <table>

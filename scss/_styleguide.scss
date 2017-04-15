@@ -1,10 +1,6 @@
 // Style guide styles
 .styleGuide-section {
   margin: 4rem 0;
-
-  &.intro {
-    margin-top: 2rem;
-  }
 }
 
 .styleGuide-section-header {
@@ -18,14 +14,16 @@
 
 // Swatches
 .swatch-list {
+  margin: 0;
   padding: 0;
 }
 
 .swatch {
   float: left;
-  margin-bottom: $gutter-small;
-  padding: $gutter-large $gutter-small;
+  margin: 0;
+  padding: $gutter-small;
   width: calc((100% - #{$gutter-small}) / 2);
+  list-style: none;
   color: $white;
   font-family: $sans-serif;
   font-size: $type-minus-one;
@@ -33,7 +31,7 @@
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
-  
+
   & + & {
     margin-left: $gutter-small;
   }
@@ -42,13 +40,17 @@
     margin-left: 0;
   }
 
+  &.invert-label-color {
+    color: $dark-grey;
+  }
+
   @media ($bp-small) {
     width: calc((100% - #{2 * $gutter-small}) / 3);
-    
+
     & + & {
       margin-left: $gutter-small;
     }
-  
+
     &:nth-child(3n + 1) {
       margin-left: 0;
     }
@@ -56,15 +58,11 @@
 
   @media ($bp-medium) {
     width: calc((100% - #{4 * $gutter-small}) / 5);
-    
+
     & + & {
       margin-left: $gutter-small;
     }
   }
-}
-
-.swatch-label--dark {
-  color: $dark-grey;
 }
 
 

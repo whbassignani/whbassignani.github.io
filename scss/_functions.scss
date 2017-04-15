@@ -4,9 +4,9 @@
  * -----------------------------------------------------------------------------
  * Raise a number to a given power.
  *
- * @param   number      $number         Number to raise.
- * @param   number      $power          Power to which it should be raised.
- * @return  number      $exponent       Number raised to exponent.
+ * @param   number      $number         Number to raise
+ * @param   number      $power          Power to which it should be raised
+ * @return  number      $exponent       Number raised to exponent
  */
 
 @function power($number, $power) {
@@ -30,10 +30,52 @@
  * -----------------------------------------------------------------------------
  * Converts pixels to rems
  *
- * @param   number      $size_pixels    Number to convert.
- * @return  number      -               Number converted to pixels.
+ * @param   number      $size_pixels    Number to convert
+ * @return  number      -               Number converted to pixels
  */
 
 @function rem($size_pixels) {
   @return $size_pixels / $type-base-size;
+}
+
+/**
+ * Color adjustment by value
+ * -----------------------------------------------------------------------------
+ * Adjusts raw hues based on a set value number between 0–1000
+ *
+ * @param   number      $hue            Hue to adjust
+ * @param   number      $value          Value by which to adjust the hue
+ * @return  number      -               Adjusted color
+ */
+
+@function adjust-color-by-value($hue, $value) {
+  @if $value < 500 {
+    @return mix($white, $hue, 0.2% * (500 - $value));
+  } @elseif $value > 500 {
+    @return mix($black, $hue, 0.2% * ($value - 500));
+  } @else {
+    @return $hue;
+  }
+}
+
+/**
+ * Get a color from the color scheme
+ * -----------------------------------------------------------------------------
+ * Recalls colors from $color-map, which holds the official color scheme
+ *
+ * @param   number      $hue            Hue family, a keyword
+ * @param   number      $value          Value from hue family to recall, number
+ * @return  number      -               Color requested
+ */
+
+@function get-color($hue, $value) {
+  @if map-has-key($color-map, #{$hue}-#{$value}) {
+    @return map-get($color-map, #{$hue}-#{$value});
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$hue}-#{$value}`. "
+        + "Please make sure it is defined in `$color-map` map.";
+    @return false;
+  }
 }

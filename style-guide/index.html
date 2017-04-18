@@ -8,14 +8,18 @@ title: Style Guide
     <h2 class="styleGuide-section-header">Colors</h2>
 
 {% assign value_list = "50|100|200|300|400|500|600|700|800|900" | split: "|" %}
-{% for value in value_list %}
-    <ul class="swatch-list cf">
-      <li class="swatch bg-red-{{ value }}">Red {{ value }}</li>
-      <li class="swatch bg-green-{{ value }}">Green {{ value }}</li>
-      <li class="swatch bg-blue-{{ value }}">Blue {{ value }}</li>
-      <li class="swatch bg-grey-{{ value }}">Grey {{ value }}</li>
-    </ul>
+{% assign color_list = "red|green|blue|grey" | split: "|" %}
+
+    <div id="swatches">
+{% for color in color_list %}
+      <ul class="swatch-list">
+  {% for value in value_list %}
+        <li class="swatch bg-{{ color }}-{{ value }}">{{ color | capitalize }} {{ value }}</li>
+  {% endfor %}
+      </ul>
 {% endfor %}
+    </div>
+
   </section>
 
   <section class="styleGuide-section">

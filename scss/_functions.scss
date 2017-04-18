@@ -38,6 +38,7 @@
   @return $size_pixels / $type-base-size;
 }
 
+
 /**
  * Color adjustment by value
  * -----------------------------------------------------------------------------
@@ -58,6 +59,7 @@
   }
 }
 
+
 /**
  * Get a color from the color scheme
  * -----------------------------------------------------------------------------
@@ -68,7 +70,7 @@
  * @return  number      -               Color requested
  */
 
-@function get-color($hue, $value) {
+@function color($hue, $value) {
   @if map-has-key($color-map, #{$hue}-#{$value}) {
     @return map-get($color-map, #{$hue}-#{$value});
   }
@@ -76,6 +78,31 @@
   @else {
     @warn "Unfortunately, no value could be retrieved from `#{$hue}-#{$value}`. "
         + "Please make sure it is defined in `$color-map` map.";
+    @return false;
+  }
+}
+
+
+/**
+ * Calculate a size on the modular scale
+ * -----------------------------------------------------------------------------
+ * Calculates a size (in rems) based on a modular scale
+ *
+ * @param   number      $tier-number    How far up the scale to go
+ * @return  number      -               Size, in rems
+ */
+
+@function size($tier-number) {
+  @if $type-ratio {
+    @if $tier-number < 0 {
+      @return 1rem / power($type-ratio, ($tier-number * -1));
+    } @else {
+      @return 1rem * power($type-ratio, $tier-number);
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, `$type-ratio` is not a valid number.";
     @return false;
   }
 }

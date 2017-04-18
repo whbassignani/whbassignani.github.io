@@ -12,10 +12,10 @@ $black:     #000;
 // First, set the supported values (i.e. darkness/lightness)
 $value-list: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900; // values
 
-// Create an empty Sass map
+// Second, create an empty Sass map
 $color-map: (); // empty map
 
-// Build $color-map dynamically by looping and merge Sass maps
+// Finally, build $color-map dynamically by looping and merge Sass maps
 @each $color-value in $value-list {
   // Create a temporary Sass map with new colors
   $new: (
@@ -29,8 +29,8 @@ $color-map: (); // empty map
   $color-map: map-merge($color-map, $new);
 
   // Declare some helper color classes
-  .bg-red-#{$color-value} { background-color: get-color(red, $color-value); }
-  .bg-green-#{$color-value} { background-color: get-color(green, $color-value); }
-  .bg-blue-#{$color-value} { background-color: get-color(blue, $color-value); }
-  .bg-grey-#{$color-value} { background-color: get-color(grey, $color-value); }
+  .bg-red-#{$color-value} { background-color: color(red, $color-value); }
+  .bg-green-#{$color-value} { background-color: color(green, $color-value); }
+  .bg-blue-#{$color-value} { background-color: color(blue, $color-value); }
+  .bg-grey-#{$color-value} { background-color: color(grey, $color-value); }
 }

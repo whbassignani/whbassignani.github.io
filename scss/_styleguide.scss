@@ -1,59 +1,52 @@
 // Style guide styles
 .styleGuide-section {
-  margin: 4rem 0;
+  margin: size(4) 0;
+
+  @media ($bp-small) {
+    margin: size(6) 0;
+  }
+
+  @media ($bp-large) {
+    margin: size(8) 0;
+  }
 }
 
 .styleGuide-section-header {
   @extend %h6;
 
-  border-bottom: 1px solid currentColor;
-  padding: 0.5rem 0;
-  margin-bottom: 1rem;
-  color: $off-white;
+  border-bottom: 2px solid color(grey, 50);
+  padding: size(-3) 0;
+  margin-bottom: size(0);
+  color: get-color(grey, 200);
 }
 
 // Swatches
+#swatches {
+  @include flexbox();
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+}
+
 .swatch-list {
-  margin: 0;
+  margin: 0 0 size(0);
   padding: 0;
+  width: calc((100% - #{size(-1)}) / 2);
 }
 
 .swatch {
-  float: left;
   margin: 0;
-  padding: $gutter-small;
-  width: calc((100% - #{$gutter-small}) / 2);
+  padding: size(-2);
   list-style: none;
   color: $white;
   font-family: $sans-serif;
-  font-size: $type-minus-one;
+  font-size: size(-2);
   letter-spacing: 0.1em;
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
 
-  & + & {
-    margin-left: $gutter-small;
-  }
-
-  &:nth-child(2n + 3) {
-    margin-left: 0;
-  }
-
-  &.invert-label-color {
-    color: $dark-grey;
-  }
-
   @media ($bp-small) {
-    width: calc((100% - #{2 * $gutter-small}) / 3);
-
-    & + & {
-      margin-left: $gutter-small;
-    }
-
-    &:nth-child(3n + 1) {
-      margin-left: 0;
-    }
+    font-size: size(0);
   }
 
   @media ($bp-medium) {

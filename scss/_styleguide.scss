@@ -2,23 +2,23 @@
 .styleGuide-section {
   margin: size(4) 0;
 
-  @media ($bp-small) {
+  @media ($bp-s) {
     margin: size(6) 0;
-  }
-
-  @media ($bp-large) {
-    margin: size(8) 0;
   }
 }
 
 .styleGuide-section-header {
-  @extend %h6;
+  @include h4;
 
-  border-bottom: 2px solid color(grey, 50);
-  padding: size(-3) 0;
+  border-bottom: $border-width solid color(grey, 50);
   margin-bottom: size(0);
-  color: get-color(grey, 200);
+  padding: size(-4) 0;
+
+  @media($bp-s) {
+    margin-bottom: size(2);
+  }
 }
+
 
 // Swatches
 #swatches {
@@ -28,9 +28,18 @@
 }
 
 .swatch-list {
-  margin: 0 0 size(0);
+  margin: 0 0 size(-4);
   padding: 0;
-  width: calc((100% - #{size(-1)}) / 2);
+  width: calc((100% - #{size(-4)}) / 2);
+
+  &:nth-child(n+2) {
+    margin-bottom: 0;
+  }
+
+  @media ($bp-s) {
+    margin: 0;
+    width: calc((100% - 3 * #{size(-4)}) / 4);
+  }
 }
 
 .swatch {
@@ -45,21 +54,17 @@
   text-align: center;
   text-transform: uppercase;
 
-  @media ($bp-small) {
-    font-size: size(0);
-  }
-
-  @media ($bp-medium) {
-    width: calc((100% - #{4 * $gutter-small}) / 5);
-
-    & + & {
-      margin-left: $gutter-small;
-    }
+  @media ($bp-s) {
+    font-size: size(-1);
   }
 }
 
 
 // Sample article styles
 .sampleArticle-divider {
-  margin: 4rem 0;
+  margin: size(4) 0;
+
+  @media ($bp-s) {
+    margin: size(6) 0;
+  }
 }

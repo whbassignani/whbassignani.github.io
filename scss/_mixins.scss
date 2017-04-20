@@ -2,7 +2,7 @@
 @mixin box-sizing($type: border-box) {
 
 	$prefixes:      ("-webkit-",  "-moz-", "");
-	
+
 	@each $prefix in $prefixes {
 		#{$prefix}box-sizing: $type;
 	}
@@ -11,7 +11,7 @@
 @mixin columns($count, $gap: 20px) {
 	// Vendor prefixes
 	$prefixes:      ("-webkit-",  "-moz-", "");
-	
+
 	@each $prefix in $prefixes {
 		#{$prefix}column-count: $count;
 		#{$prefix}column-gap: $gap;
@@ -22,7 +22,7 @@
 // Appearance
 @mixin background-size($bgsize: cover) {
 	$prefixes:      ("-webkit-",  "-moz-", "-0-", "");
-	
+
 	@each $prefix in $prefixes {
 		#{$prefix}background-size: $bgsize;
 	}
@@ -30,7 +30,7 @@
 
 @mixin border-radius($radius: $border-radius) {
 	$prefixes:      ("-webkit-", "");
-	
+
 	@each $prefix in $prefixes {
 		#{$prefix}border-radius: $radius;
 	}
@@ -86,7 +86,7 @@
 @mixin transform($transform...) {
 	// Vendor prefixes
 	$prefixes:      ("-webkit-",  "-moz-", "-ms-", "-o-", "");
-	
+
 	@each $prefix in $prefixes {
 		#{$prefix}transform: $transform;
 	}
@@ -95,7 +95,7 @@
 @mixin transition($transition...) {
 	// Vendor prefixes
 	$prefixes:      ("-webkit-",  "-moz-", "-o-", "");
-	
+
 	@each $prefix in $prefixes {
 		#{$prefix}transition: $transition;
 	}

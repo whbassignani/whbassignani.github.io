@@ -27,7 +27,7 @@
     left: 0;
     top: 0;
     z-index: 201;
-    background-color: darken($bright-green, 50%);
+    background-color: color(grey, 50);
     opacity: 0;
 
     @media ($bp-when-drawer-expands) {
@@ -43,14 +43,14 @@
 
     height: 100vh;
     width: 100vw;
-    
+
     &:after {
       @include transition(
         opacity $animation-time-long,
         width 0s,
         height 0s
       );
-  
+
       height: 100vh;
       width: 100vw;
       opacity: 0.9;
@@ -65,7 +65,7 @@
         width 0s,
         height 0s
       );
-  
+
       height: 100vh;
       width: $nav-drawer-width;
       position: fixed;
@@ -95,9 +95,10 @@
     width 0s,
     height 0s
   );
-  @include css-gradient-horizontal(
-    $bright-green,
-    mix($bright-green, $bright-blue, 80%));
+  background-color: $white;
+  // @include css-gradient-horizontal(
+    // $bright-green,
+    // mix($bright-green, $bright-blue, 80%));
 
   min-height: 100vh;
   padding: $toolbar-height--small 0 $gutter-small;
@@ -143,7 +144,7 @@
   display: block;
   padding: ($gutter-smaller + rem(1px)) $gutter-smaller ($gutter-smaller - rem(1px));
   border-bottom: 0;
-  color: $inverted-neutral-link-color;
+  color: $link-color;
   font-family: $sans-serif;
   font-size: $type-base;
   line-height: 1;
@@ -160,7 +161,7 @@
 
   &:hover {
     background-color: $link-hover-color;
-    color: $inverted-neutral-link-color;
+    color: $link-color;
   }
 }
 
@@ -183,7 +184,7 @@
     display: block;
     height: 18px;
     width: 18px;
-    fill: $inverted-link-color;
+    fill: $link-color;
   }
 
   &:hover {

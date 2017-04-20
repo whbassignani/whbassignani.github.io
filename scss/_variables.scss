@@ -13,24 +13,15 @@ $off-white:                   #f2edef;
 $light-grey:                  mix($medium-grey, $off-white, 50%);
 
 // Theme colors
-$text-color:                  $dark-grey;
+$text-color:                  color(grey, 800);
+$text-color-faded:            color(grey, 400);
 
-$link-color:                  darken($bright-green, 5%);
+$link-color:                  color(blue, 600);
 $link-hover-color:            lighten($link-color, 10%);
 $link-active-color:           darken($link-color, 10%);
-$link-visited-color:          $bright-blue;
-$link-visited-hover-color:    lighten($link-visited-color, 10%);
-$neutral-link-color:          $dark-grey;
-$neutral-link-hover-color:    lighten($neutral-link-color, 10%);
-$inverted-link-color:         lighten($bright-green, 20%);
-$inverted-link-hover-color:   lighten($inverted-link-color, 10%);
-$inverted-neutral-link-color:
-                              $white;
-$inverted-neutral-link-hover-color:
-                              darken($inverted-neutral-link-color, 10%);
 
 $background-color:            $white;
-$inverted-background-color:   $dark-grey;
+$inverted-background-color:   color(grey, 800);
 $divider-color:               $medium-grey;
 
 $twitter-blue:                #55acee;
@@ -45,7 +36,8 @@ $serif:                       "Equity", serif;
 $type-base-size:              20px;
 $type-ratio:                  1.22474487139;
 $letter-spacing:              0.1em;
-$line-height:                 1.5;
+$line-height:                 power($type-ratio, 2);
+$line-height-tight:            $type-ratio;
 
 
 $type-minus-three:            size(-3);
@@ -72,11 +64,12 @@ $gutter-larger:               size(6);
 $gutter-large:                size(4);
 $gutter-medium:               size(2);
 $gutter-small:                size(0);
-$gutter-smaller:              size(-1);
-$gutter-smallest:             size(-3);
+$gutter-smaller:              size(-2);
+$gutter-smallest:             size(-4);
 
 
 // Layout
+$border-width:                2px;
 $border-radius:               6px;
 $toolbar-height--small:       2.5rem;
 $toolbar-height--medium:      3rem;
@@ -88,6 +81,13 @@ $nav-drawer-width:            14rem;
 
 
 // Breakpoints
+$bp-xs:                       'min-width: 30em';    //  480px
+$bp-s:                        'min-width: 40em';    //  640px
+$bp-m:                        'min-width: 50em';    //  800px
+$bp-l:                        'min-width: 60em';    //  960px
+$bp-xl:                       'min-width: 80em';    // 1280px
+$bp-xxl:                      'min-width: 100em';    // 1600px
+
 $bp-smaller:                  'min-width: 30em';    //  480px
 $bp-small:                    'min-width: 40em';    //  640px
 $bp-medium:                   'min-width: 50em';    //  800px

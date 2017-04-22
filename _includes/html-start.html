@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>
+{% if page.title %}
+    {{ page.title }} - Hawkeward.com
+{% else %}
+    Hawkeward.com
+{% endif %}
+  </title>
+
+{% if page.title %}
+  <meta property="og:title" content="{{ page.title | strip_html }}">
+{% else %}
+  <meta property="og:title" content="Hawkeward.com">
+{% endif %}
+
+{% if page.dek %}
+  <meta property="og:description" content="{{ page.dek | strip_html  }}">
+  <meta name="description" content="{{ page.dek | strip_html  }}">
+{% elsif page.excerpt %}
+  <meta property="og:description" content="{{ page.excerpt | remove: '<p>' | remove: '</p>' | strip_html }}">
+  <meta name="description" content="{{ page.excerpt | remove: '<p>' | remove: '</p>' | strip_html }}">
+{% else %}
+  <meta property="og:description" content="Hawke Bassignani is a designer at Blizzard Entertainment. He works on Heroes of the Storm and esports.">
+  <meta name="description" content="Hawke Bassignani is a designer at Blizzard Entertainment. He works on Heroes of the Storm and esports.">
+{% endif %}
+
+{% assign meta_image = "/assets/share-default-img.jpg" %}
+{% for option in page.banner %}
+  {% if option.size > 800 and option.size < 1600 %}
+    {% assign meta_image = option.url %}
+  {% endif %}
+{% endfor %}
+  <meta property="og:image" content="{{ meta_image }}">
+
+  <meta property="og:url" content="http://www.hawkeward.com{{ page.url }}">
+
+  <meta name="twitter:card" content="{{ meta_image }}">
+
+  <meta chartset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/webfonts.css">
+  <!--[if lt IE 9]>
+  <link rel="stylesheet" href="/css/ie.css">
+  <![endif]-->
+  {% if page.customcss %}
+  <link rel="stylesheet" href="/css/{{ page.slug }}.css">
+  {% endif %}
+
+  <script src="/js/vendor/modernizr-3.5.0.min.js"></script>
+</head>
+
+{% if page.url contains "writing/" %}
+{% assign active_nav_item = "writing" %}
+{% elsif page.url contains "work/" %}
+{% assign active_nav_item = "work" %}
+{% elsif page.url contains "about/" %}
+{% assign active_nav_item = "about" %}
+{% elsif page.url contains "style-guide/" %}
+{% assign active_nav_item = "style-guide" %}
+{% endif %}
+
+{% if active_nav_item %}
+{% assign body_class = active_nav_item %}
+{% else %}
+{% assign body_class = "" %}
+{% endif %}
+
+<body class="layout-{{ page.layout }} {{ body_class }}">

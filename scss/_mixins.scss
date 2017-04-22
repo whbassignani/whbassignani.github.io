@@ -81,6 +81,15 @@
 	background-image: linear-gradient(to right, $from, $to);
 }
 
+@mixin filter($filter...) {
+	// Vendor prefixes
+	$prefixes:      ("-webkit-", "");
+
+	@each $prefix in $prefixes {
+		#{$prefix}filter: $filter;
+	}
+}
+
 
 // Animations & transforms
 @mixin transform($transform...) {
@@ -116,4 +125,44 @@
   font-weight: 700;
   letter-spacing: $letter-spacing;
   text-transform: uppercase;
+}
+
+
+// Components
+@mixin button($options) {
+	background-color: map-get($options, background-color);
+	font-family: $sans-serif;
+	font-size: size(-2);
+	line-height: 1;
+	text-align: center;
+	text-decoration: none;
+
+	@if map-has-key($options, color) {
+		color: map-get($option, color);
+	} @else {
+		color: $link-color;
+	}
+
+
+	&.is-hover,
+	&:hover {
+		@if map-has-key($options, background-hover-color) {
+			background-color: map-get($options, background-hover-color);
+		}
+
+		@if map-has-key($options, hover-color) {
+			color: map-get($options, hover-color);
+		}
+	}
+
+	&.is-active,
+	&:active {
+		@if map-has-key($options, background-active-color) {
+			background-color: map-get($options, background-active-color);
+		}
+
+		@if map-has-key($options, active-color) {
+			color: map-get($options, active-color);
+		}
+	}
 }

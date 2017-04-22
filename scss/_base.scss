@@ -21,27 +21,6 @@ body {
   }
 }
 
-.container {
-  margin: 0 auto;
-  padding: size(0) size(-2);
-
-  @media ($bp-xs) {
-    padding: size(0);
-  }
-
-  @media ($bp-s) {
-    padding: size(2);
-  }
-
-  @media ($bp-m) {
-    padding: size(4);
-  }
-
-  @media ($bp-l) {
-    padding: size(6);
-  }
-}
-
 
 // Typography
 blockquote {
@@ -53,6 +32,7 @@ blockquote {
   font-size: size(0);
 
   @media ($bp-s) {
+		font-size: size(1);
 		padding-left: size(2);
   }
 }
@@ -143,6 +123,10 @@ h3, .h3 { @extend %h3; }
 h4, .h4 { @extend %h4; }
 h5, .h5 { @extend %h5; }
 h6, .h6 { @extend %h6; }
+
+	h1:first-child {
+		margin-top: 0;
+	}
 
 p {
   margin: 0 0 size(0);

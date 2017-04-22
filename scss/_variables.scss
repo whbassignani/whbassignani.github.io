@@ -1,17 +1,3 @@
-// Raw colors
-$black:                       #000;
-$white:                       #fff;
-
-$bright-red:                  #fb3640;
-$bright-green:                #1a936f;
-$bright-blue:                 adjust-hue($bright-green, 60deg);
-
-$dark-grey:                   #18231d;
-$medium-grey:                 #6d6c6b;
-$off-white:                   #f2edef;
-
-$light-grey:                  mix($medium-grey, $off-white, 50%);
-
 // Theme colors
 $text-color:                  color(grey, 800);
 $text-color-faded:            color(grey, 400);
@@ -26,7 +12,7 @@ $button-active-color:         darken($button-color, 5%);
 
 $background-color:            $white;
 $inverted-background-color:   color(grey, 800);
-$divider-color:               $medium-grey;
+$divider-color:               color(grey, 500);
 
 $twitter-blue:                #55acee;
 $facebook-blue:               #3b5998;
@@ -44,6 +30,7 @@ $line-height:                 power($type-ratio, 2);
 $line-height-tight:           $type-ratio;
 
 
+// DELETE THIS LATER -->
 $type-minus-three:            size(-3);
 $type-minus-two:              size(-2);
 $type-minus-one:              size(-1);
@@ -53,6 +40,7 @@ $type-plus-two:               size(2);
 $type-plus-three:             size(3);
 $type-plus-four:              size(4);
 $type-plus-five:              size(5);
+// <-- DELETE THIS LATER
 
 
 // Animations
@@ -61,8 +49,8 @@ $animation-time:              0.2s;
 $animation-time-long:         0.4s;
 
 
+// DELETE THIS LATER -->
 // Gutters/Margins/Padding/Layout
-// DELETE THIS LATER
 $gutter-largest:              size(6) * 2;
 $gutter-larger:               size(6);
 $gutter-large:                size(4);
@@ -70,6 +58,7 @@ $gutter-medium:               size(2);
 $gutter-small:                size(0);
 $gutter-smaller:              size(-2);
 $gutter-smallest:             size(-4);
+// <-- DELETE THIS LATER
 
 
 // Layout

@@ -2,7 +2,7 @@
   @include bold-spaced-type;
 
   margin: $gutter-large 0 $gutter-small;
-  color: $light-grey;
+  color: color(grey, 200);
   font-size: $type-minus-two;
 }
 
@@ -47,7 +47,7 @@
 
   display: block;
   margin: 0 0 $gutter-smallest $gutter-small;
-  color: $light-grey;
+  color: color(grey, 200);
   font-family: $sans-serif;
   font-size: $type-minus-one;
   line-height: 1;
@@ -79,6 +79,6 @@
 .archive-dots {
   @include flex(1 1 auto);
 
-  border-bottom: 1px dotted $light-grey;
+  border-bottom: 1px dotted color(grey, 200);
   opacity: 0.5;
 }

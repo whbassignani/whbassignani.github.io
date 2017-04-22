@@ -5,7 +5,7 @@
   height: $toolbar-height--small;
   padding: 0 0 0 $toolbar-height--small;
   position: relative;
-  border-bottom: 1px solid $off-white;
+  border-bottom: 1px solid color(grey, 50);
 
   @media ($bp-small) {
     height: $toolbar-height--medium;
@@ -57,7 +57,7 @@
     &:before {
       content: "→";
       padding: 0 $gutter-smallest;
-      color: mix($bright-green, $background-color, 50%);
+      color: color(green, 600);
       font-weight: normal;
     }
   }

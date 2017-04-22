@@ -45,7 +45,7 @@
 }
 
   @mixin box-shadow-soft() {
-    @include box-shadow(0 1px 3px rgba($medium-grey, 0.8), 0 10px 60px rgba($medium-grey, 0.4));
+    @include box-shadow(0 1px 3px rgba(color(grey, 500), 0.8), 0 10px 60px rgba(color(grey, 500), 0.4));
   }
 
 @mixin box-shadow-with-spread($top, $left, $blur, $spread, $color: #000, $inset: false) {
@@ -128,7 +128,7 @@
 }
 
 @mixin meta {
-	color: $light-grey;
+	color: color(grey, 200);
   font-family: $sans-serif;
   font-size: size(-2);
   letter-spacing: $letter-spacing;

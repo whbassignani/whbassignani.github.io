@@ -27,7 +27,7 @@
 
 .post-footer {
   padding-top: $gutter-small;
-  border-top: 1px solid $light-grey;
+  border-top: 1px solid color(grey, 200);
   font-family: $sans-serif;
   font-size: $type-minus-one;
 
@@ -46,7 +46,7 @@
   }
 
   .hashtag {
-    color: $off-white;
+    color: color(grey, 50);
   }
 }
 

@@ -1,6 +1,21 @@
-#wrapper {
-  @media ($bp-when-drawer-expands) {
-    padding-left: $nav-drawer-width;
+.container {
+  margin: 0 auto;
+  padding: size(0) size(-2);
+
+  @media ($bp-xs) {
+    padding: size(0);
+  }
+
+  @media ($bp-s) {
+    padding: size(2);
+  }
+
+  @media ($bp-m) {
+    padding: size(4);
+  }
+
+  @media ($bp-l) {
+    padding: size(6);
   }
 }
 
@@ -19,14 +34,14 @@
     max-width: $max-width-narrow;
   }
 
-.page-title {
-  margin-top: $gutter-small;
-  
-  @media ($bp-small) {
-    margin-top: $gutter-smallest;
+.page {
+  padding-top: size(0);
+
+  @media ($bp-s) {
+    padding-top: size(2);
   }
 
-  @media ($bp-medium) {
-    margin-top: 0;
+  @media ($bp-m) {
+    padding-top: size(4);
   }
 }

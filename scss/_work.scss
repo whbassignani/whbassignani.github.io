@@ -1,7 +1,7 @@
 .archive-work + .archive-work {
   margin-top: $gutter-larger;
   padding-top: $gutter-small;
-  border-top: 1px solid $light-grey;
+  border-top: 1px solid color(grey, 200);
   
   @media ($bp-medium) {
     padding-top: $gutter-medium;

@@ -95,11 +95,8 @@
     width 0s,
     height 0s
   );
-  background-color: $white;
-  // @include css-gradient-horizontal(
-    // $bright-green,
-    // mix($bright-green, $bright-blue, 80%));
 
+  background-color: $white;
   min-height: 100vh;
   padding: $toolbar-height--small 0 $gutter-small;
   width: $nav-drawer-width;
@@ -188,7 +185,7 @@
   }
 
   &:hover {
-    background-color: rgba($dark-grey, 0.15);
+    background-color: rgba(color(grey, 500), 0.15);
 
     svg {
       fill: $white;

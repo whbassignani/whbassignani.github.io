@@ -5,6 +5,10 @@
   @media ($bp-s) {
     margin: size(6) 0;
   }
+
+  @media ($bp-m) {
+    margin: size(8) 0;
+  }
 }
 
 .styleGuide-section-header {

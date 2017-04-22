@@ -3,13 +3,7 @@
     width 0s $animation-time-long,
     height 0s $animation-time-long
   );
-
-  height: 0;
-  width: 0;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 200;
+  
   overflow-y: auto;
 
   &:after {

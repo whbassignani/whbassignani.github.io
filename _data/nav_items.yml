@@ -3,16 +3,14 @@
   links:
   - name: "Writing"
     url: /writing
-  
+
   - name: "Work"
     url: /work
-  
+
   - name: "About"
     url: /about
 - name: Social
   links:
   - name: "Twitter"
     url: http://www.twitter.com/hawkeward
-  - name: "Github"
-    url: http://www.github.com/whbassignani
 ---

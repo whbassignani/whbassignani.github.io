@@ -45,23 +45,23 @@ body {
 
 // Typography
 blockquote {
-  margin: 0 0 size(2);
+  @include standard-margins;
+
   padding: 0 0 0 size(0);
   border-left: size(-6) solid color(grey, 50);
   color: $text-color-faded;
   font-size: size(0);
 
   @media ($bp-s) {
-    margin-bottom: size(4);
 		padding-left: size(2);
   }
 }
 
 code {
   @include border-radius;
+	@include standard-margins;
 
-	margin: 0 0 size(2);
-  padding: size(-4);
+	padding: size(-4);
   background-color: color(grey, 50);
   font-size: size(-1);
 
@@ -74,12 +74,16 @@ code {
   }
 }
 
-%h1, %h2, %h3,
-%h4, %h5, %h6 {
-  color: $black;
+@mixin headings {
+	color: $black;
   font-family: $sans-serif;
   font-weight: 700;
   line-height: $line-height-tight;
+}
+
+%h1, %h2, %h3,
+%h4, %h5, %h6 {
+  @include headings;
 }
 
 @mixin h1 {
@@ -149,8 +153,11 @@ p {
 }
 
 .pull-quote {
-  margin: 0 0 size(2);
-  padding: size(2);
+	@include border-radius;
+	@include soft-box-shadow;
+  @include standard-margins;
+
+  padding: size(0);
   background-color: color(grey, 50);
   font-family: $sans-serif;
   font-size: size(1);
@@ -159,16 +166,19 @@ p {
     margin-bottom: 0;
   }
 
-  @media ($bp-s) {
-    margin-bottom: size(4);
-  }
+	@media ($bp-s) {
+		padding: size(2);
+	}
 }
 
 .pull-quote-source {
-	margin-top: size(-2);
-	color: $text-color-faded;
-	font-size: size(-1);
-	text-transform: uppercase;
+	@include meta;
+
+	margin-top: size(-4);
+
+	@media ($bp-s) {
+		margin-top: size(-1);
+	}
 }
 
 
@@ -209,24 +219,16 @@ a {
 button,
 .button,
 input[type="button"] {
-	$options: (
-		background-color: $button-color,
-	  background-hover-color: $button-hover-color,
-		background-active-color: $button-active-color,
-		color: $white,
-		hover-color: $white,
-		active-color: $white
-	);
-
-  @include border-radius($border-radius);
+  @include border-radius;
 	@include bold-spaced-type;
-	@include button($options);
+	@include soft-box-shadow($button-color);
+	@include standard-margins;
   @include transition(background-color $animation-time, border $animation-time, background-color $animation-time);
 
   display: block;
-  margin-bottom: size(2);
-  padding: (size(2)/2) size(2);
+  padding: calc(#{size(2)/2} + 1px) size(2) calc(#{size(2)/2} - 1px);
 	position: relative;
+  background-color: $button-color;
   border: 0;
   color: $white;
   font-family: $sans-serif;
@@ -241,11 +243,13 @@ input[type="button"] {
   &.is-hover,
   &:hover {
     background-color: $button-hover-color;
+    color: $white;
   }
 
   &.is-active,
   &:active {
     background-color: $button-active-color;
+    color: $white;
   }
 
   &.is-disabled, &.is-disabled:hover, &.is-disabled:active,
@@ -260,28 +264,8 @@ input[type="button"] {
 		}
   }
 
-	&:after {
-		@include filter(blur(15px));
-		@include transform(translate(-50%, -25%));
-
-		content: "";
-		display: block;
-		height: 60%;
-		width: 95%;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		z-index: -1;
-		background-color: $button-color;
-	}
-
-	&:hover:after {
-		background-color: $button-hover-color;
-	}
-
   @media ($bp-s) {
     display: inline-block;
-		margin-bottom: size(4);
 		font-size: size(-1);
   }
 }
@@ -315,17 +299,23 @@ input[type="button"].button-secondary {
 // Lists
 ul,
 ol {
-  margin: 0 0 $gutter-small;
-  padding-left: $gutter-medium;
+  @include standard-margins;
+
+  padding-left: size(3);
 
   ul,
   ol {
     margin-bottom: 0;
-    margin-top: $gutter-smallest;
+		margin-top: size(-2);
   }
 
-  @media ($bp-small) {
-    margin-bottom: $gutter-medium;
+  @media ($bp-s) {
+		padding-left: size(4);
+
+		ul,
+		ol {
+			margin-top: size(0);
+		}
   }
 }
 
@@ -338,108 +328,110 @@ ol {
   ul ol { list-style: lower-roman; }
 
 li {
-  margin-bottom: $gutter-smallest;
-  padding-left: $gutter-smallest / 2;
+	margin-bottom: size(-2);
+  padding-left: size(-4);
 
-  &:before {
-    color: $light-grey;
-  }
+	@media($bp-s) {
+		margin-bottom: size(0);
+	}
 }
 
 dl {
-  margin: 0 0 $gutter-small;
-
-  @media ($bp-small) {
-    margin-bottom: $gutter-medium;
-  }
+  @include standard-margins;
 }
 
 dt {
-  @extend %h5;
+	@include headings;
+  @include h4;
 
-  margin-top: $gutter-small;
-
-  @media ($bp-small) {
-    margin-top: $gutter-medium;
-  }
+  margin-top: 0;
 }
 
 dd {
-  margin: 0;
-  padding-left: $gutter-small;
+  @include standard-margins;
+
+	padding-left: size(3);
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 
 // Basic components
 hr {
-  margin: 0 0 $gutter-medium;
-  border: 0;
-  border-bottom: 1px dotted $light-grey;
+	@include standard-margins;
 
-  @media ($bp-small) {
-    margin-bottom: $gutter-large;
-  }
+	height: 0;
+  border: 0;
+  border-bottom: $border-width dotted color(grey, 100);
 }
 
 p + hr {
-	margin-top: $gutter-medium;
+	margin-top: size(2);
 
-	@media ($bp-small) {
-		margin-top: $gutter-large;
+	@media ($bp-s) {
+		margin-top: size(4);
 	}
 }
 
 pre {
-  margin: 0 0 size(2);
-  padding: $gutter-small;
-  width: auto;
-  background-color: $off-white;
+	@include border-radius;
+	@include soft-box-shadow;
+  @include standard-margins;
 
-  @media ($bp-small) {
-    margin: 0 0 $gutter-large;
-  }
+  padding: size(0);
+  width: auto;
+  background-color: color(grey, 50);
+
+	@media ($bp-s) {
+		padding: size(2);
+	}
 }
 
 table {
-  margin: 0 0 $gutter-medium;
+  @include standard-margins;
+
   width: 100%;
-  border: 1px solid $light-grey;
-  font: $type-minus-one/1 $sans-serif;
+	background-color: $white;
+  border: $border-width solid color(grey, 200);
+	font-family: $sans-serif;
+	font-size: size(-1);
+	line-height: 1;
+
+	@media ($bp-s) {
+    font-size: size(0);
+  }
 
   td,
   th {
-    padding: $gutter-smallest;
-  }
+    padding: size(-2);
+		text-align: left;
 
-  th {
-    text-align: left;
+		@media ($bp-s) {
+			padding: size(0);
+		}
   }
 
   tr:nth-child(2n) {
-    background-color: transparentize($off-white, 0.5);
+    background-color: transparentize(color(grey, 50), 0.5);
   }
 
   thead {
-    background-color: $off-white;
-    border-bottom: 1px solid $light-grey;
-    font-size: $type-minus-three;
-    font-weight: 700;
-    letter-spacing: $letter-spacing;
-    text-transform: uppercase;
+		@include bold-spaced-type;
 
-    @media ($bp-small) {
-      font-size: $type-minus-two;
+    background-color: color(grey, 100);
+    border-bottom: $border-width solid color(grey, 200);
+    font-size: size(-2);
+
+    @media ($bp-s) {
+      font-size: size(-1);
     }
   }
 
   tfoot {
-    border-top: 1px dashed $light-grey;
+    border-top: $border-width dashed color(grey, 200);
     font-weight: 700;
-  }
-
-  @media ($bp-small) {
-    margin-bottom: $gutter-large;
-    font-size: $type-base;
   }
 }
 

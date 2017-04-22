@@ -1,17 +1,19 @@
 .post-meta {
-  margin-bottom: $gutter-smallest;
-  color: $light-grey;
-  font-family: $sans-serif;
-  font-size: $type-minus-two;
-  text-transform: uppercase;
+  @include meta;
+
+  margin-bottom: size(-4);
 
   @media ($bp-small) {
-    font-size: $type-minus-one;
+    margin-bottom: size(-3);
   }
 }
 
-.post-meta + .post-title {
-  margin-top: 0;
+.post-title + .post-meta {
+  margin-top: -#{size(-1)};
+
+  @media($bp-s) {
+    margin-top: -#{size(0)};
+  }
 }
 
 .lede {
@@ -42,7 +44,7 @@
   @media ($bp-large) {
     margin-top: $gutter-larger;
   }
-  
+
   .hashtag {
     color: $off-white;
   }
@@ -51,7 +53,7 @@
 .footnotes {
   margin: $gutter-medium 0 $gutter-large;
   font-size: $type-minus-one;
-  
+
   p {
     margin: 0;
   }

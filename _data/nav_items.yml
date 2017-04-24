@@ -3,14 +3,18 @@
   links:
   - name: "Writing"
     url: /writing
+    class: writing
 
   - name: "Work"
     url: /work
+    class: work
 
   - name: "About"
     url: /about
+    class: about
 - name: Social
   links:
   - name: "Twitter"
     url: http://www.twitter.com/hawkeward
+    class: twitter
 ---

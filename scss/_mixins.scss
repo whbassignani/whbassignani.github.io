@@ -168,3 +168,13 @@
 		background-color: $shadow-color;
 	}
 }
+
+
+// Utilities
+@mixin image-replacement {
+	text-indent: -9999px;
+}
+
+@mixin undo-image-replacement {
+	text-indent: initial;
+}

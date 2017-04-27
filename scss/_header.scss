@@ -1,42 +1,83 @@
+#header {
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(space-between);
+}
+
+#header-nav {
+  @include flexbox;
+}
+
 .header-link {
   @include bold-spaced-type;
 
+  display: inline-block;
+  padding: size(0) size(-2);
   border: 0;
   color: color(grey, 800);
   font-size: size(-2);
+  line-height: 1;
+background-color: green;
 
   @media ($bp-s) {
     font-size: size(-1);
   }
 }
 
+  .header-link.twitter {
+    @include image-replacement;
+
+    width: size(5);
+background-color: red;
+    background-image: url("/assets/svg-icons.svg");
+    background-position: center 49%;
+    background-repeat: no-repeat;
+    background-size: 60%;
+  }
+
 #pageTitle {
-  @include flexbox;
   @include align-items(center);
+  @include flexbox;
+  @include image-replacement;
 
   margin: 0;
+  width: size(2);
+  position: relative;
   color: inherit;
+  font-size: inherit;
+  line-height: 1;
 
   @media ($bp-s) {
+    @include undo-image-replacement;
+
     margin: 0;
-    font-size: size(-1);
+    padding-left: size(4);
+    width: auto;
+    font-size: inherit;
   }
 }
 
 .pageTitle-logo {
   @include border-radius($border-radius);
   @include box-shadow(inset 0 0 0 2px currentColor);
+  @include transform(translate(-50%, -50%));
+
+  $temp-logo-size: size(1);
 
   display: inline-block;
-  height: size(2);
-  width: size(2);
-}
-
-.pageTitle-name {
-  display: none;
-  margin-left: size(-2);
+  height: $temp-logo-size;
+  width: $temp-logo-size;
+  position: absolute;
+  left: 50%;
+  top: 50%;
 
   @media ($bp-s) {
-    display: inline-block;
+    @include transform(translateY(-50%));
+
+    $temp-logo-size: size(2);
+
+    height: $temp-logo-size;
+    width: $temp-logo-size;
+    left: 0;
   }
 }

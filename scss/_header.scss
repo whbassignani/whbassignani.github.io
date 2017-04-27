@@ -1,0 +1,42 @@
+.header-link {
+  @include bold-spaced-type;
+
+  border: 0;
+  color: color(grey, 800);
+  font-size: size(-2);
+
+  @media ($bp-s) {
+    font-size: size(-1);
+  }
+}
+
+#pageTitle {
+  @include flexbox;
+  @include align-items(center);
+
+  margin: 0;
+  color: inherit;
+
+  @media ($bp-s) {
+    margin: 0;
+    font-size: size(-1);
+  }
+}
+
+.pageTitle-logo {
+  @include border-radius($border-radius);
+  @include box-shadow(inset 0 0 0 2px currentColor);
+
+  display: inline-block;
+  height: size(2);
+  width: size(2);
+}
+
+.pageTitle-name {
+  display: none;
+  margin-left: size(-2);
+
+  @media ($bp-s) {
+    display: inline-block;
+  }
+}

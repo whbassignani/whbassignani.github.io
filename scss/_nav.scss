@@ -1,141 +1,13 @@
 .nav {
-  @include transition(
-    width 0s $animation-time-long,
-    height 0s $animation-time-long
-  );
-  
-  overflow-y: auto;
 
-  &:after {
-    @include transition(
-      opacity $animation-time-long,
-      width 0s $animation-time-long,
-      height 0s $animation-time-long
-    );
-
-    content: "";
-    display: block;
-    height: 0;
-    width: 0;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 201;
-    background-color: color(grey, 50);
-    opacity: 0;
-
-    @media ($bp-when-drawer-expands) {
-      display: none;
-    }
-  }
-
-  .js-nav-open--left & {
-    @include transition(
-      width 0s,
-      height 0s
-    );
-
-    height: 100vh;
-    width: 100vw;
-
-    &:after {
-      @include transition(
-        opacity $animation-time-long,
-        width 0s,
-        height 0s
-      );
-
-      height: 100vh;
-      width: 100vw;
-      opacity: 0.9;
-    }
-  }
-
-  @media ($bp-when-drawer-expands) {
-    &,
-    .js-nav-open--left & {
-      @include transition(
-        opacity 0s,
-        width 0s,
-        height 0s
-      );
-
-      height: 100vh;
-      width: $nav-drawer-width;
-      position: fixed;
-      left: 0;
-      top: 0;
-    }
-
-    // Adds a shadow
-    &:after {
-      @include box-shadow(-5px 0 10px rgba($black, 0.5));
-
-      content: "";
-      display: block;
-      height: 100%;
-      width: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-  }
 }
 
-.nav-drawer {
-  @include transform(translateX(-100%));
-  @include transition(
-    all $animation-time-long,
-    width 0s,
-    height 0s
-  );
+.nav-link {
+  @include transition(color $animation-time);
 
-  background-color: $white;
-  min-height: 100vh;
-  padding: $toolbar-height--small 0 $gutter-small;
-  width: $nav-drawer-width;
-  position: relative;
-  z-index: 202;
-  overflow-y: auto;
-
-  .js-nav-open--left & {
-    @include transform(translateX(0));
-  }
-
-  @media ($bp-small) {
-    padding-top: $toolbar-height--medium;
-  }
-
-  @media ($bp-when-drawer-expands) {
-    &,
-    .js-nav-open--left & {
-      @include transform(translateX(0));
-      @include transition(
-        all 0s,
-        width 0s,
-        height 0s
-      );
-    }
-  }
-}
-
-.nav-header {
-  @include bold-spaced-type;
-
-  margin: $gutter-medium 0 $gutter-smallest;
-  padding-left: $gutter-smaller;
-  opacity: 0.5;
-  font-size: $type-minus-two;
-}
-
-.nav-link,
-.nav-link:visited {
-  @include transition(background-color $animation-time);
-
-  display: block;
-  padding: ($gutter-smaller + rem(1px)) $gutter-smaller ($gutter-smaller - rem(1px));
+  color: color(grey, 800);
+  display: inline-block;
   border-bottom: 0;
-  color: $link-color;
   font-family: $sans-serif;
   font-size: $type-base;
   line-height: 1;
@@ -148,11 +20,6 @@
       padding-left: $gutter-smallest;
       opacity: 0.5;
     }
-  }
-
-  &:hover {
-    background-color: $link-hover-color;
-    color: $link-color;
   }
 }
 

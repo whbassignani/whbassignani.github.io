@@ -1,83 +1,130 @@
-#header {
+#toolbar {
   @include flexbox;
   @include align-items(center);
-  @include justify-content(space-between);
-}
 
-#header-nav {
-  @include flexbox;
-}
-
-.header-link {
-  @include bold-spaced-type;
-
-  display: inline-block;
-  padding: size(0) size(-2);
-  border: 0;
-  color: color(grey, 800);
-  font-size: size(-2);
-  line-height: 1;
-background-color: green;
-
-  @media ($bp-s) {
-    font-size: size(-1);
-  }
-}
-
-  .header-link.twitter {
-    @include image-replacement;
-
-    width: size(5);
-background-color: red;
-    background-image: url("/assets/svg-icons.svg");
-    background-position: center 49%;
-    background-repeat: no-repeat;
-    background-size: 60%;
-  }
-
-#pageTitle {
-  @include align-items(center);
-  @include flexbox;
-  @include image-replacement;
-
-  margin: 0;
-  width: size(2);
+  height: $toolbar-height--small;
+  padding: 0 0 0 $toolbar-height--small;
   position: relative;
-  color: inherit;
-  font-size: inherit;
-  line-height: 1;
+  border-bottom: 1px solid color(grey, 50);
 
-  @media ($bp-s) {
-    @include undo-image-replacement;
+  @media ($bp-small) {
+    height: $toolbar-height--medium;
+    padding-left: $toolbar-height--medium;
+  }
 
-    margin: 0;
-    padding-left: size(4);
-    width: auto;
-    font-size: inherit;
+  @media ($bp-when-drawer-expands) {
+    height: auto;
+    padding-left: 0;
+    width: $nav-drawer-width;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 204;
+    border-bottom: 0;
   }
 }
 
-.pageTitle-logo {
-  @include border-radius($border-radius);
-  @include box-shadow(inset 0 0 0 2px currentColor);
-  @include transform(translate(-50%, -50%));
+.toolbar-links {
+  @include transform(translateY(1px));
 
-  $temp-logo-size: size(1);
+  font-family: $sans-serif;
+  font-size: 0;
+  letter-spacing: $letter-spacing / 4;
+  line-height: 1;
+
+  @media ($bp-when-drawer-expands) {
+    @include transform(translateY(0));
+
+    width: 100%;
+  }
+}
+
+.toolbar-link,
+.toolbar-link:visited {
+  @include transition(color $animation-time);
 
   display: inline-block;
-  height: $temp-logo-size;
-  width: $temp-logo-size;
+  border-bottom: 0;
+  padding: $gutter-smaller 0;
+  color: $link-color;
+  font-size: $type-base;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+
+  & + & {
+    &:before {
+      content: "→";
+      padding: 0 $gutter-smallest;
+      color: mix(color(green, 500), $background-color, 50%);
+      font-weight: normal;
+    }
+  }
+
+  @media ($bp-when-drawer-expands) {
+    @include transition(
+      color $animation-time,
+      background-color $animation-time
+    );
+
+    padding: $gutter-small $gutter-small;
+    width: 100%;
+    background-color: $link-color;
+    color: $link-color;
+
+    &:hover {
+      background-color: $link-hover-color;
+      color: $link-color;
+    }
+  }
+}
+
+  .toolbar-link--category {
+    display: none;
+
+    @media ($bp-smaller) {
+      display: inline-block;
+    }
+
+    @media ($bp-when-drawer-expands) {
+      display: none;
+    }
+  }
+
+.nav-open-btn {
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+
+  height: $toolbar-height--small;
+  width: $toolbar-height--small;
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 0;
+  top: 0;
+  border: 0;
+  line-height: 0;
 
-  @media ($bp-s) {
-    @include transform(translateY(-50%));
+  svg {
+    @include transition(fill $animation-time);
 
-    $temp-logo-size: size(2);
+    height: 14px;
+    width: 18px;
+    fill: $link-color;
+  }
 
-    height: $temp-logo-size;
-    width: $temp-logo-size;
-    left: 0;
+  &:hover {
+    svg {
+      fill: $link-hover-color;
+    }
+  }
+
+  @media ($bp-small) {
+    height: $toolbar-height--medium;
+    width: $toolbar-height--medium;
+  }
+
+  @media ($bp-when-drawer-expands) {
+    display: none;
   }
 }

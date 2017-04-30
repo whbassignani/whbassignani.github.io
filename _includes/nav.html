@@ -1,19 +1,25 @@
-<nav id="header-nav">
+<nav id="nav-left" class="nav">
+  <div class="nav-drawer">
+    <h1>Hawkeward</h1>
+    
 {% for group in site.data.nav_items %}
+    <h2 class="nav-header">{{ group.name }}</h2>
+
   {% for item in group.links %}
 
-    {% assign class_string = "header-link" %}
+    {% assign class_string = "nav-link" %}
 
-    {% if item.class %}
-      {% capture class_string %}{{ class_string }} {{ item.class }}{% endcapture %}
-    {% endif %}
-
-    {% if item.url contains active_nav_item %}
+      {% if item.url contains active_nav_item %}
       {% capture class_string %}{{ class_string }} is-current-page{% endcapture %}
-    {% endif %}
+      {% endif %}
 
     <a href="{{ item.url }}" class="{{ class_string }}">{{ item.name }}</a>
 
   {% endfor %}
 {% endfor %}
+
+    <a href="#" id="nav-close-btn--left" class="nav-close-btn">
+      <svg><use xlink:href="/images/icons/icon-sprite.svg#icon-close" /></svg>
+    </a>
+  </div>
 </nav>

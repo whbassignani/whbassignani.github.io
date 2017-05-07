@@ -12,28 +12,28 @@
   z-index: 200;
   overflow-y: auto;
 
-  &:after {
-    @include transition(
-      opacity $animation-time-long,
-      width 0s $animation-time-long,
-      height 0s $animation-time-long
-    );
-
-    content: "";
-    display: block;
-    height: 0;
-    width: 0;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 201;
-    background-color: darken(color(green, 500), 50%);
-    opacity: 0;
-
-    @media ($bp-when-drawer-expands) {
-      display: none;
-    }
-  }
+  // &:after {
+  //   @include transition(
+  //     opacity $animation-time-long,
+  //     width 0s $animation-time-long,
+  //     height 0s $animation-time-long
+  //   );
+  //
+  //   content: "";
+  //   display: block;
+  //   height: 0;
+  //   width: 0;
+  //   position: fixed;
+  //   left: 0;
+  //   top: 0;
+  //   z-index: 201;
+  //   background-color: $white;
+  //   opacity: 0;
+  //
+  //   @media ($bp-when-drawer-expands) {
+  //     display: none;
+  //   }
+  // }
 
   .js-nav-open--left & {
     @include transition(
@@ -96,8 +96,9 @@
     height 0s
   );
   @include css-gradient-horizontal(
-    color(green, 500),
-    mix(color(green, 500), color(blue, 500), 80%));
+    $white,
+    $white
+    );
 
   min-height: 100vh;
   padding: $toolbar-height--small 0 $gutter-small;

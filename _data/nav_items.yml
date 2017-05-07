@@ -1,20 +1,13 @@
 ---
-- name: Pages
-  links:
-  - name: "Writing"
-    url: /writing
-    class: writing
+- name: "Work"
+  url: /work
+  class: work
 
-  - name: "Work"
-    url: /work
-    class: work
+- name: "Writing"
+  url: /writing
+  class: writing
 
-  - name: "About"
-    url: /about
-    class: about
-- name: Social
-  links:
-  - name: "Twitter"
-    url: http://www.twitter.com/hawkeward
-    class: twitter
+- name: "About"
+  url: /about
+  class: about
 ---

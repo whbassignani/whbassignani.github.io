@@ -91,7 +91,7 @@
 .nav-drawer {
   @include transform(translateX(-100%));
   @include transition(
-    all $animation-time-long,
+    transform $animation-time-long $easing-in-out-back,
     width 0s,
     height 0s
   );

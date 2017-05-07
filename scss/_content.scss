@@ -2,7 +2,7 @@
   background-color: $white;
 
   @include transition(
-    transform $animation-time-long
+    transform $animation-time-long $easing-in-out-back
   );
 
   .js-nav-open--left & {

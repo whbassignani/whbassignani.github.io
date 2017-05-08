@@ -1,7 +1,6 @@
 #header {
   // Eventually, this is for the homepage header only
   // background-color: $header-background-color;
-  background-color: rgba($black, 0.1);
 }
 
 #toolbar {
@@ -9,6 +8,7 @@
   @include align-items(center);
 
   height: $toolbar-height--small;
+  padding: 0 0 0 $toolbar-height--small;
   position: relative;
 
   a {
@@ -22,10 +22,15 @@
 
   @media ($bp-small) {
     height: $toolbar-height--medium;
+    padding-left: $toolbar-height--medium;
   }
 
   @media ($bp-when-drawer-expands) {
-    height: $toolbar-height--large;
+    height: auto;
+    padding-left: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
   }
 }
 
@@ -51,10 +56,11 @@
   @include button-hover-state;
   @include transition(background-color $animation-time);
 
-  height: $nav-button--small;
-  margin-left: -#{size(-1)};
-  width: $nav-button--small;
-  position: relative;
+  height: $toolbar-height--small;
+  width: $toolbar-height--small;
+  position: absolute;
+  left: 0;
+  top: 0;
   border: 0;
   line-height: 0;
 
@@ -73,9 +79,8 @@
   }
 
   @media ($bp-small) {
-    height: $nav-button--medium;
-    margin-left: -#{size(0)};
-    width: $nav-button--medium;
+    height: $toolbar-height--medium;
+    width: $toolbar-height--medium;
   }
 
   @media ($bp-when-drawer-expands) {

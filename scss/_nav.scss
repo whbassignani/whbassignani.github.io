@@ -4,14 +4,15 @@
   position: fixed;
   left: 0;
   top: 0;
+  z-index: -1;
   overflow-y: auto;
 
   @media ($bp-when-drawer-expands) {
     height: auto;
-    width: 100%;
+    width: auto;
     position: absolute;
-    left: 0;
-    top: 0;
+    left: auto;
+    right: 0;
   }
 }
 
@@ -43,8 +44,15 @@
   @media ($bp-when-drawer-expands) {
     &,
     .js-nav-open--left & {
+      @include box-shadow(none);
       @include transform(translateX(0));
       @include transition(all 0s);
+
+      height: $toolbar-height--large;
+      min-height: 0;
+      padding: 0;
+      width: 100%;
+      opacity: 1;
     }
   }
 }
@@ -95,6 +103,14 @@
   &:active {
     color: $inverted-link-active-color;
   }
+
+  @media ($bp-when-drawer-expands) {
+    @include bold-spaced-type;
+
+    display: inline-block;
+    font-size: size(-2);
+    background-color: transparent;
+  }
 }
 
   .nav-link--twitter {
@@ -125,11 +141,11 @@
   @include button-hover-state;
   @include transition(background-color $animation-time);
 
-  height: $toolbar-height--small;
-  width: $toolbar-height--small;
+  height: $nav-button--small;
+  width: $nav-button--small;
   position: absolute;
   left: 0;
-  top: 0;
+  top: size(-6);
   border: 0;
 
   svg {
@@ -148,8 +164,10 @@
   }
 
   @media ($bp-small) {
-    height: $toolbar-height--medium;
-    width: $toolbar-height--medium;
+    height: $nav-button--medium;
+    width: $nav-button--medium;
+    left: -#{size(-6)};
+    top: size(-2);
   }
 
   @media ($bp-when-drawer-expands) {

@@ -1,6 +1,5 @@
 #wrapper {
   z-index: 1;
-  position: relative;
   background-color: $white;
 
   @include transition(
@@ -9,6 +8,13 @@
 
   .js-nav-open--left & {
     @include transform(translateX($nav-drawer-width));
+  }
+
+  @media ($bp-when-drawer-expands) {
+    &,
+    .js-nav-open--left & {
+      @include transform(none);
+    }
   }
 }
 
@@ -24,9 +30,9 @@
     padding: size(2);
   }
 
-  @media ($bp-m) {
-    padding: size(4);
-  }
+  // @media ($bp-m) {
+  //   padding: size(4);
+  // }
 
   @media ($bp-l) {
     padding: size(6);

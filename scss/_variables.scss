@@ -73,13 +73,17 @@ $gutter-smallest:             size(-4);
 // Layout
 $border-width:                2px;
 $border-radius:               6px;
-$toolbar-height--small:       2.5rem;
-$toolbar-height--medium:      3rem;
-$toolbar-height--large:       4rem;
 $max-width-sidebar:           size(14);
 $max-width-narrow:            size(18);
 $max-width-wide:              size(20);
+
 $nav-drawer-width:            14rem;
+$nav-button--small:           2.5rem;
+$nav-button--medium:          3rem;
+
+$toolbar-height--small:       3rem;
+$toolbar-height--medium:      4.5rem;
+$toolbar-height--large:       5.5rem;
 
 
 // Breakpoints

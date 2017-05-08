@@ -9,9 +9,9 @@
   @media ($bp-when-drawer-expands) {
     height: auto;
     width: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
+    position: relative;
+    left: auto;
+    top: auto;
   }
 }
 
@@ -45,6 +45,11 @@
     .js-nav-open--left & {
       @include transform(translateX(0));
       @include transition(all 0s);
+
+      min-height: 0;
+      padding: 0;
+      width: 100%;
+      opacity: 1;
     }
   }
 }
@@ -95,6 +100,14 @@
   &:active {
     color: $inverted-link-active-color;
   }
+
+  @media ($bp-when-drawer-expands) {
+    @include bold-spaced-type;
+
+    display: inline-block;
+    font-size: size(-2);
+    background-color: transparent;
+  }
 }
 
   .nav-link--twitter {
@@ -125,11 +138,11 @@
   @include button-hover-state;
   @include transition(background-color $animation-time);
 
-  height: $toolbar-height--small;
-  width: $toolbar-height--small;
+  height: $nav-button--small;
+  width: $nav-button--small;
   position: absolute;
   left: 0;
-  top: 0;
+  top: size(-6);
   border: 0;
 
   svg {
@@ -148,8 +161,10 @@
   }
 
   @media ($bp-small) {
-    height: $toolbar-height--medium;
-    width: $toolbar-height--medium;
+    height: $nav-button--medium;
+    width: $nav-button--medium;
+    left: -#{size(-6)};
+    top: size(-2);
   }
 
   @media ($bp-when-drawer-expands) {

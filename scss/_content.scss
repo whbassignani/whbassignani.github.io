@@ -10,6 +10,13 @@
   .js-nav-open--left & {
     @include transform(translateX($nav-drawer-width));
   }
+
+  @media ($bp-when-drawer-expands) {
+    &,
+    .js-nav-open--left & {
+      @include transform(none);
+    }
+  }
 }
 
 .container {
@@ -24,9 +31,9 @@
     padding: size(2);
   }
 
-  @media ($bp-m) {
-    padding: size(4);
-  }
+  // @media ($bp-m) {
+  //   padding: size(4);
+  // }
 
   @media ($bp-l) {
     padding: size(6);

@@ -7,18 +7,9 @@
   overflow-y: auto;
 
   @media ($bp-when-drawer-expands) {
-    // These are the styles when there is no longer
-    //   a mobile nav drawer... i.e. when it becomes
-    //   a header nav along the top edge.
-    @include transition(
-      opacity 0s,
-      width 0s,
-      height 0s
-    );
-
-    height: 100vh;
-    width: $nav-drawer-width;
-    position: fixed;
+    height: auto;
+    width: 100%;
+    position: absolute;
     left: 0;
     top: 0;
   }
@@ -52,12 +43,8 @@
   @media ($bp-when-drawer-expands) {
     &,
     .js-nav-open--left & {
-      @include transform(translateX(0) translateZ(0));
-      @include transition(
-        all 0s,
-        width 0s,
-        height 0s
-      );
+      @include transform(translateX(0));
+      @include transition(all 0s);
     }
   }
 }
@@ -66,14 +53,21 @@
   @include bold-spaced-type;
 
   color: color(grey, 500);
-  margin: $gutter-medium 0 $gutter-smallest;
-  padding-left: $gutter-smaller;
+  margin: size(2) 0 size(-2);
+  padding-left: size(-2);
   font-size: size(-2);
+
+  @media ($bp-when-drawer-expands) {
+    display: none;
+  }
 }
 
 .nav-link,
 .nav-link:visited {
-  @include transition(background-color $animation-time);
+  @include transition(
+    background-color $animation-time,
+    color $animation-time
+  );
 
   display: block;
   padding: ($gutter-smaller + rem(1px)) $gutter-smaller ($gutter-smaller - rem(1px));
@@ -95,7 +89,7 @@
 
   &:hover {
     background-color: rgba($white, 0.2);
-    color: $inverted-link-color;
+    color: $inverted-link-hover-color;
   }
 
   &:active {
@@ -103,15 +97,26 @@
   }
 }
 
-.nav-link--twitter {
-  padding: size(-4) size(-7);
+  .nav-link--twitter {
+    padding: size(-4) size(-7);
 
-  svg {
-    display: block;
-    height: size(3);
-    width: size(3);
+    svg {
+      @include transition(fill $animation-time);
+
+      display: block;
+      height: size(3);
+      width: size(3);
+      fill: $twitter-blue;
+    }
+
+    &:hover {
+      background-color: rgba($twitter-blue, 0.8);
+
+      svg {
+        fill: $white;
+      }
+    }
   }
-}
 
 .nav-close-btn {
   @include flexbox;
@@ -136,7 +141,7 @@
   }
 
   &:hover {
-    background-color: rgba(color(grey, 800), 0.15);
+    background-color: rgba($white, 0.1);
 
     svg {
       fill: $white;

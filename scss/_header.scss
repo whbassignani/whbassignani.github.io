@@ -1,3 +1,8 @@
+#header {
+  // Eventually, this is for the homepage header only
+  // background-color: $header-background-color;
+}
+
 #toolbar {
   @include flexbox;
   @include align-items(center);
@@ -5,7 +10,6 @@
   height: $toolbar-height--small;
   padding: 0 0 0 $toolbar-height--small;
   position: relative;
-  border-bottom: 1px solid color(grey, 50);
 
   @media ($bp-small) {
     height: $toolbar-height--medium;
@@ -15,87 +19,23 @@
   @media ($bp-when-drawer-expands) {
     height: auto;
     padding-left: 0;
-    width: $nav-drawer-width;
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 0;
-    z-index: 204;
-    border-bottom: 0;
   }
 }
 
-.toolbar-links {
-  @include transform(translateY(1px));
-
-  font-family: $sans-serif;
-  font-size: 0;
-  letter-spacing: $letter-spacing / 4;
-  line-height: 1;
-
-  @media ($bp-when-drawer-expands) {
-    @include transform(translateY(0));
-
-    width: 100%;
-  }
+.toolbar-title {
+  margin: 0;
+  font-size: size(0);
+  font-weight: normal;
 }
-
-.toolbar-link,
-.toolbar-link:visited {
-  @include transition(color $animation-time);
-
-  display: inline-block;
-  border-bottom: 0;
-  padding: $gutter-smaller 0;
-  color: $link-color;
-  font-size: $type-base;
-
-  &:hover {
-    color: $link-hover-color;
-  }
-
-  & + & {
-    &:before {
-      content: "→";
-      padding: 0 $gutter-smallest;
-      color: mix(color(green, 500), $background-color, 50%);
-      font-weight: normal;
-    }
-  }
-
-  @media ($bp-when-drawer-expands) {
-    @include transition(
-      color $animation-time,
-      background-color $animation-time
-    );
-
-    padding: $gutter-small $gutter-small;
-    width: 100%;
-    background-color: $link-color;
-    color: $link-color;
-
-    &:hover {
-      background-color: $link-hover-color;
-      color: $link-color;
-    }
-  }
-}
-
-  .toolbar-link--category {
-    display: none;
-
-    @media ($bp-smaller) {
-      display: inline-block;
-    }
-
-    @media ($bp-when-drawer-expands) {
-      display: none;
-    }
-  }
 
 .nav-open-btn {
   @include flexbox;
   @include align-items(center);
   @include justify-content(center);
+  @include transition(background-color $animation-time);
 
   height: $toolbar-height--small;
   width: $toolbar-height--small;
@@ -114,6 +54,8 @@
   }
 
   &:hover {
+    background-color: rgba($white, 0.1);
+
     svg {
       fill: $link-hover-color;
     }

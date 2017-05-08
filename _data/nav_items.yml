@@ -1,4 +1,8 @@
 ---
+- name: "Home"
+  url: /
+  class: home
+  
 - name: "Work"
   url: /work
   class: work

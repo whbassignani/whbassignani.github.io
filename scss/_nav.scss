@@ -122,6 +122,7 @@
   @include flexbox;
   @include align-items(center);
   @include justify-content(center);
+  @include button-hover-state;
   @include transition(background-color $animation-time);
 
   height: $toolbar-height--small;
@@ -141,8 +142,6 @@
   }
 
   &:hover {
-    background-color: rgba($white, 0.1);
-
     svg {
       fill: $white;
     }

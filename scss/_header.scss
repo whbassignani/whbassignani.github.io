@@ -11,6 +11,15 @@
   padding: 0 0 0 $toolbar-height--small;
   position: relative;
 
+  a {
+    border: 0;
+    color: color(grey, 800);
+
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
+
   @media ($bp-small) {
     height: $toolbar-height--medium;
     padding-left: $toolbar-height--medium;
@@ -26,15 +35,25 @@
 }
 
 .toolbar-title {
+  @include transform(translateY(1px));
+
+  color: inherit;
   margin: 0;
   font-size: size(0);
   font-weight: normal;
+
+  @media ($bp-s) {
+    @include transform(translateY(0));
+
+    font-size: size(1);
+  }
 }
 
 .nav-open-btn {
   @include flexbox;
   @include align-items(center);
   @include justify-content(center);
+  @include button-hover-state;
   @include transition(background-color $animation-time);
 
   height: $toolbar-height--small;
@@ -54,8 +73,6 @@
   }
 
   &:hover {
-    background-color: rgba($white, 0.1);
-
     svg {
       fill: $link-hover-color;
     }

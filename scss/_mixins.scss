@@ -101,15 +101,6 @@
 	}
 }
 
-@mixin transform-origin($transform-origin...) {
-	// Vendor prefixes
-	$prefixes:      ("-webkit-",  "-moz-", "-ms-", "-o-", "");
-
-	@each $prefix in $prefixes {
-		#{$prefix}transform-origin: $transform-origin;
-	}
-}
-
 @mixin transition($transition...) {
 	// Vendor prefixes
 	$prefixes:      ("-webkit-",  "-moz-", "-o-", "");

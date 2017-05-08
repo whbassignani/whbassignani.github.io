@@ -55,8 +55,7 @@ $animation-time:              0.2s;
 $animation-time-long:         0.4s;
 
 $easing-in-out-back:          cubic-bezier(0.68, -0.55, 0.265, 1.55);
-$easing-out-quint:            cubic-bezier(0.23, 1, 0.32, 1);
-$easing-in-quint:             cubic-bezier(0.755, 0.05, 0.855, 0.06);
+
 
 // DELETE THIS LATER -->
 // Gutters/Margins/Padding/Layout
@@ -96,4 +95,4 @@ $bp-medium:                   'min-width: 50em';    //  800px
 $bp-large:                    'min-width: 60em';    //  960px
 $bp-larger:                   'min-width: 70em';    // 1120px
 
-$bp-when-drawer-expands:      $bp-l;
+$bp-when-drawer-expands:      $bp-larger;

@@ -1,42 +1,88 @@
 .nav {
-  height: 100vh;
-  width: 100vw;
+  height: 0;
+  width: 0;
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 200;
   overflow-y: auto;
 
+  .js-nav-open--left & {
+    height: 100vh;
+    width: 100vw;
+
+    &:after {
+      @include transition(
+        opacity $animation-time-long,
+        width 0s,
+        height 0s
+      );
+
+      height: 100vh;
+      width: 100vw;
+      opacity: 0.9;
+    }
+  }
+
   @media ($bp-when-drawer-expands) {
+<<<<<<< HEAD:scss/_nav.scss
     height: auto;
     width: 100%;
     position: absolute;
     left: 0;
     top: 0;
+=======
+    &,
+    .js-nav-open--left & {
+      @include transition(
+        opacity 0s,
+        width 0s,
+        height 0s
+      );
+
+      height: 100vh;
+      width: $nav-drawer-width;
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
+
+    // Adds a shadow
+    &:after {
+      @include box-shadow(-5px 0 10px rgba($black, 0.5));
+
+      content: "";
+      display: block;
+      height: 100%;
+      width: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+>>>>>>> parent of cb72e53... Finished nav animations; renaming partials and Sass variables:scss/nav.scss
   }
 }
 
 .nav-links {
-  @include box-shadow(inset -20px 0 80px rgba(0, 0, 0, 0.4));
-  @include transform(translateX(25%));
+  @include transform(translateX(-100%));
   @include transition(
-    transform $animation-time-long $easing-out-quint,
-    opacity $animation-time-long
+    transform $animation-time-long $easing-in-out-back,
+    width 0s,
+    height 0s
   );
 
   min-height: 100vh;
-  padding: $toolbar-height--small 0 size(0);
+  padding: $toolbar-height--small 0 $gutter-small;
   width: $nav-drawer-width;
   position: relative;
+  z-index: 202;
   overflow-y: auto;
-  opacity: 0.5;
 
   .js-nav-open--left & {
     @include transform(translateX(0));
-
-    opacity: 1;
   }
 
-  @media ($bp-s) {
+  @media ($bp-small) {
     padding-top: $toolbar-height--medium;
   }
 
@@ -44,7 +90,15 @@
     &,
     .js-nav-open--left & {
       @include transform(translateX(0));
+<<<<<<< HEAD:scss/_nav.scss
       @include transition(all 0s);
+=======
+      @include transition(
+        all 0s,
+        width 0s,
+        height 0s
+      );
+>>>>>>> parent of cb72e53... Finished nav animations; renaming partials and Sass variables:scss/nav.scss
     }
   }
 }
@@ -52,6 +106,7 @@
 .nav-header {
   @include bold-spaced-type;
 
+<<<<<<< HEAD:scss/_nav.scss
   color: color(grey, 500);
   margin: size(2) 0 size(-2);
   padding-left: size(-2);
@@ -60,6 +115,12 @@
   @media ($bp-when-drawer-expands) {
     display: none;
   }
+=======
+  margin: $gutter-medium 0 $gutter-smallest;
+  padding-left: $gutter-smaller;
+  opacity: 0.5;
+  font-size: $type-minus-two;
+>>>>>>> parent of cb72e53... Finished nav animations; renaming partials and Sass variables:scss/nav.scss
 }
 
 .nav-link,
@@ -74,7 +135,7 @@
   border-bottom: 0;
   color: $inverted-link-color;
   font-family: $sans-serif;
-  font-size: size(0);
+  font-size: $type-base;
   line-height: 1;
 
   &.is-current-page {
@@ -100,6 +161,7 @@
   .nav-link--twitter {
     padding: size(-4) size(-7);
 
+<<<<<<< HEAD:scss/_nav.scss
     svg {
       @include transition(fill $animation-time);
 
@@ -116,6 +178,12 @@
         fill: $white;
       }
     }
+=======
+  svg {
+    display: inline-block;
+    height: size(3);
+    width: size(3);
+>>>>>>> parent of cb72e53... Finished nav animations; renaming partials and Sass variables:scss/nav.scss
   }
 
 .nav-close-btn {

@@ -1,87 +1,58 @@
 .nav {
-  height: 0;
-  width: 0;
+  height: 100vh;
+  width: 100vw;
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 200;
   overflow-y: auto;
 
-  .js-nav-open--left & {
-    height: 100vh;
-    width: 100vw;
-
-    &:after {
-      @include transition(
-        opacity $animation-time-long,
-        width 0s,
-        height 0s
-      );
-
-      height: 100vh;
-      width: 100vw;
-      opacity: 0.9;
-    }
-  }
-
   @media ($bp-when-drawer-expands) {
-    &,
-    .js-nav-open--left & {
-      @include transition(
-        opacity 0s,
-        width 0s,
-        height 0s
-      );
+    // These are the styles when there is no longer
+    //   a mobile nav drawer... i.e. when it becomes
+    //   a header nav along the top edge.
+    @include transition(
+      opacity 0s,
+      width 0s,
+      height 0s
+    );
 
-      height: 100vh;
-      width: $nav-drawer-width;
-      position: fixed;
-      left: 0;
-      top: 0;
-    }
-
-    // Adds a shadow
-    &:after {
-      @include box-shadow(-5px 0 10px rgba($black, 0.5));
-
-      content: "";
-      display: block;
-      height: 100%;
-      width: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
+    height: 100vh;
+    width: $nav-drawer-width;
+    position: fixed;
+    left: 0;
+    top: 0;
   }
 }
 
 .nav-links {
-  @include transform(translateX(-100%));
+  @include box-shadow(inset -20px 0 80px rgba(0, 0, 0, 0.4));
+  @include transform(translateX(25%));
   @include transition(
-    transform $animation-time-long $easing-in-out-back,
-    width 0s,
-    height 0s
+    transform $animation-time-long $easing-out-quint,
+    opacity $animation-time-long
   );
 
   min-height: 100vh;
-  padding: $toolbar-height--small 0 $gutter-small;
+  padding: $toolbar-height--small 0 size(0);
   width: $nav-drawer-width;
   position: relative;
-  z-index: 202;
   overflow-y: auto;
+  opacity: 0.5;
 
   .js-nav-open--left & {
     @include transform(translateX(0));
+
+    opacity: 1;
   }
 
-  @media ($bp-small) {
+  @media ($bp-s) {
     padding-top: $toolbar-height--medium;
   }
 
   @media ($bp-when-drawer-expands) {
     &,
     .js-nav-open--left & {
-      @include transform(translateX(0));
+      @include transform(translateX(0) translateZ(0));
       @include transition(
         all 0s,
         width 0s,
@@ -94,10 +65,10 @@
 .nav-header {
   @include bold-spaced-type;
 
+  color: color(grey, 500);
   margin: $gutter-medium 0 $gutter-smallest;
   padding-left: $gutter-smaller;
-  opacity: 0.5;
-  font-size: $type-minus-two;
+  font-size: size(-2);
 }
 
 .nav-link,
@@ -109,7 +80,7 @@
   border-bottom: 0;
   color: $inverted-link-color;
   font-family: $sans-serif;
-  font-size: $type-base;
+  font-size: size(0);
   line-height: 1;
 
   &.is-current-page {
@@ -136,7 +107,7 @@
   padding: size(-4) size(-7);
 
   svg {
-    display: inline-block;
+    display: block;
     height: size(3);
     width: size(3);
   }

@@ -9,19 +9,24 @@
 @import "globals/variables";
 @import "globals/mixins";
 @import "globals/flexbox";
+@import "globals/utilities";
 
-// UI
+
+// Toolkit: typography
 @import "typography/basics";
 @import "typography/headings";
 @import "typography/lists";
 @import "typography/quotes";
 @import "typography/misc";
 
+
+// Toolkit: components
 @import "components/buttons";
 @import "components/tables";
 @import "components/images";
 @import "components/forms";
 @import "components/misc";
+
 
 // Layouts and includes
 @import "header";
@@ -30,6 +35,7 @@
 @import "post";
 @import "archive";
 @import "footer";
+
 
 // Page-specific
 @import "homepage";

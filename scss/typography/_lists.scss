@@ -12,13 +12,23 @@ ol {
   }
 }
 
-  ul { list-style: disc; }
-  ol ul,
-  ul ul { list-style: circle; }
+  ul {
+    list-style: disc;
+  }
 
-  ol { list-style: decimal; }
+  ol ul,
+  ul ul {
+    list-style: circle;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
   ol ol,
-  ul ol { list-style: lower-roman; }
+  ul ol {
+    list-style: lower-roman;
+  }
 
 li {
 	margin-bottom: size(-2);

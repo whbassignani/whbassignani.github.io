@@ -48,39 +48,11 @@ a {
 
   &:after {
     @include transform(translateY(-50%));
-
     content: "→";
     display: inline-block;
+		left: 100%;
     padding-left: size(-4);
     position: absolute;
-    left: 100%;
     top: 50%;
   }
-}
-
-
-
-
-
-
-
-
-
-// Display none
-.display-none {
-  display: none;
-}
-
-
-// -- Clearfix
-.clearfix, .cf {
-  zoom: 1;
-	&:before, &:after { content: ""; display: table; }
-	&:after { clear: both; }
-}
-
-
-// -- No-break (to new lines)
-.no-wrap {
-  white-space: nowrap;
 }

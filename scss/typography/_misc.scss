@@ -3,16 +3,12 @@ code {
   @include border-radius;
 	@include standard-margins;
 
-	padding: size(-4);
-  background-color: color(grey, 50);
+  background-color: $color-ui-subtle;
   font-size: size(-1);
+  padding: size(-4);
 
   pre & {
     padding: 0;
-  }
-
-  @media ($bp-s) {
-    font-size: size(0);
   }
 }
 
@@ -24,8 +20,4 @@ pre {
   padding: size(0);
   width: auto;
   background-color: color(grey, 50);
-
-	@media ($bp-s) {
-		padding: size(2);
-	}
 }

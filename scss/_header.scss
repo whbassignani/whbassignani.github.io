@@ -53,7 +53,7 @@
   @include flexbox;
   @include align-items(center);
   @include justify-content(center);
-  @include button-hover-state;
+  @include nav-button-hover-state;
   @include transition(background-color $animation-time);
 
   height: $toolbar-height--small;

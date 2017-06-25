@@ -24,11 +24,11 @@
 @import "components/buttons";
 @import "components/tables";
 @import "components/images";
-@import "components/forms";
 @import "components/misc";
 
 
 // Layouts and includes
+@import "layout";
 @import "header";
 @import "nav";
 @import "content";

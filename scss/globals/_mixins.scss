@@ -148,7 +148,7 @@
 
 
 // Components
-@mixin button-hover-state {
+@mixin nav-button-hover-state {
 	&:after {
 		@include border-radius;
 		@include transform(translateX(-50%) translateY(-50%));

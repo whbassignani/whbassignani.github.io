@@ -17,6 +17,8 @@ $color-nav:                   color(grey, 200);
 $color-nav-hover:             lighten($color-nav, 20%);
 $color-nav-active:            darken($color-nav, 20%);
 
+$color-border:                $color-ui-light;
+
 $header-background-color:     color(grey, 700);
 $nav-background-color:        $color-ui-dark;
 

@@ -7,17 +7,17 @@ input[type="button"] {
 	@include soft-box-shadow($color-interactive);
 	@include standard-margins;
   @include transition(background-color $animation-time, border $animation-time, background-color $animation-time);
-
-  display: block;
-  padding: calc(#{size(3)/2} + 1px) size(3) calc(#{size(3)/2} - 1px);
-	position: relative;
   background-color: $color-interactive;
   border: 0;
   color: $white;
+  display: block;
   font-size: size(-1);
   line-height: 1;
+  padding: calc(#{size(3)/2} + 1px) size(3) calc(#{size(3)/2} - 1px);
+	position: relative;
   text-align: center;
   text-decoration: none;
+  width: 100%;
 
   -webkit-appearance: none;
           appearance: none;
@@ -36,42 +36,48 @@ input[type="button"] {
 
   &.is-disabled, &.is-disabled:hover, &.is-disabled:active,
   &:disabled, &:disabled:hover, &:disabled:active {
-    background-color: color(grey, 50);
-    border: $border-width solid transparentize(color(grey, 400), 0.8);
-    color: color(grey, 300);
+    background-color: $color-ui-subtle;
+    border: $border-width solid $color-ui-light;
+    color: $color-ui-light;
 		cursor: default;
 
+    // Hides shadow from @mixin soft-box-shadow
 		&:after {
 			display: none;
 		}
   }
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @media ($bp-s) {
     display: inline-block;
-		font-size: size(-1);
+    width: auto;
   }
 }
 
 .button-secondary,
 input[type="button"].button-secondary {
-  background-color: color(blue, 50);
+  background-color: transparentize($color-interactive, 0.8);
   border: $border-width solid transparentize($color-interactive, 0.4);
   color: $color-interactive;
 
   &.is-hover,
   &:hover {
-		background-color: color(blue, 50);
+		background-color: transparentize($color-interactive, 0.9);
     border-color: transparentize($color-interactive-hover, 0.6);
     color: $color-interactive-hover;
   }
 
   &.is-active,
   &:active {
-		background-color: color(blue, 50);
+		background-color: transparentize($color-interactive, 0.8);
     border-color: transparentize($color-interactive-active, 0.4);
     color: $color-interactive-active;
   }
 
+  // Hides shadow from @mixin soft-box-shadow
 	&:after {
 		display: none;
 	}

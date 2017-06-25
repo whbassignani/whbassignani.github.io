@@ -1,0 +1,16 @@
+// Dividers
+hr {
+	@include standard-margins;
+
+	height: 0;
+  border: 0;
+  border-bottom: $border-width dotted $color-ui-dark;
+}
+
+p + hr {
+	margin-top: size(2);
+
+	@media ($bp-s) {
+		margin-top: size(4);
+	}
+}

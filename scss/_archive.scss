@@ -33,7 +33,7 @@
   font-size: $type-base;
 
   a:hover & {
-    color: $link-hover-color;
+    color: $color-interactive-hover;
   }
 
   @media ($bp-small) {
@@ -54,7 +54,7 @@
   text-align: right;
 
   a:hover & {
-    color: $link-hover-color;
+    color: $color-interactive-hover;
   }
 
   &:last-child {

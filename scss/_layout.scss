@@ -1,0 +1,11 @@
+// Box sizing
+* {
+	@include box-sizing(border-box);
+}
+
+
+// Layout styles
+body {
+	overflow-x: hidden;
+  background-color: $nav-background-color;
+}

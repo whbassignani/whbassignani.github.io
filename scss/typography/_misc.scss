@@ -1,0 +1,31 @@
+// Code blocks
+code {
+  @include border-radius;
+	@include standard-margins;
+
+	padding: size(-4);
+  background-color: color(grey, 50);
+  font-size: size(-1);
+
+  pre & {
+    padding: 0;
+  }
+
+  @media ($bp-s) {
+    font-size: size(0);
+  }
+}
+
+pre {
+	@include border-radius;
+	@include soft-box-shadow;
+  @include standard-margins;
+
+  padding: size(0);
+  width: auto;
+  background-color: color(grey, 50);
+
+	@media ($bp-s) {
+		padding: size(2);
+	}
+}

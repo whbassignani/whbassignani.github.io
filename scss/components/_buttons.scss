@@ -1,0 +1,78 @@
+// Buttons
+button,
+.button,
+input[type="button"] {
+  @include border-radius;
+	@include bold-spaced-type;
+	@include soft-box-shadow($color-interactive);
+	@include standard-margins;
+  @include transition(background-color $animation-time, border $animation-time, background-color $animation-time);
+
+  display: block;
+  padding: calc(#{size(3)/2} + 1px) size(3) calc(#{size(3)/2} - 1px);
+	position: relative;
+  background-color: $color-interactive;
+  border: 0;
+  color: $white;
+  font-size: size(-1);
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+
+  -webkit-appearance: none;
+          appearance: none;
+
+  &.is-hover,
+  &:hover {
+    background-color: $color-interactive-hover;
+    color: $white;
+  }
+
+  &.is-active,
+  &:active {
+    background-color: $color-interactive-active;
+    color: $white;
+  }
+
+  &.is-disabled, &.is-disabled:hover, &.is-disabled:active,
+  &:disabled, &:disabled:hover, &:disabled:active {
+    background-color: color(grey, 50);
+    border: $border-width solid transparentize(color(grey, 400), 0.8);
+    color: color(grey, 300);
+		cursor: default;
+
+		&:after {
+			display: none;
+		}
+  }
+
+  @media ($bp-s) {
+    display: inline-block;
+		font-size: size(-1);
+  }
+}
+
+.button-secondary,
+input[type="button"].button-secondary {
+  background-color: color(blue, 50);
+  border: $border-width solid transparentize($color-interactive, 0.4);
+  color: $color-interactive;
+
+  &.is-hover,
+  &:hover {
+		background-color: color(blue, 50);
+    border-color: transparentize($color-interactive-hover, 0.6);
+    color: $color-interactive-hover;
+  }
+
+  &.is-active,
+  &:active {
+		background-color: color(blue, 50);
+    border-color: transparentize($color-interactive-active, 0.4);
+    color: $color-interactive-active;
+  }
+
+	&:after {
+		display: none;
+	}
+}

@@ -1,0 +1,45 @@
+// Blockquotes
+blockquote {
+  @include standard-margins;
+
+  padding: 0 0 0 size(0);
+  border-left: size(-6) solid color(grey, 50);
+  color: $color-text-faded;
+  font-size: size(0);
+
+  @media ($bp-s) {
+		font-size: size(1);
+		padding-left: size(2);
+  }
+}
+
+
+// Pull quotes
+.pull-quote {
+	@include border-radius;
+	@include soft-box-shadow;
+  @include standard-margins;
+
+  padding: size(0);
+  background-color: color(grey, 50);
+  font-family: $sans-serif;
+  font-size: size(1);
+
+  p {
+    margin-bottom: 0;
+  }
+
+	@media ($bp-s) {
+		padding: size(2);
+	}
+}
+
+.pull-quote-source {
+	@include meta;
+
+	margin-top: size(-4);
+
+	@media ($bp-s) {
+		margin-top: size(-1);
+	}
+}

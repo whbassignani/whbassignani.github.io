@@ -72,13 +72,13 @@
   display: block;
   padding: ($gutter-smaller + rem(1px)) $gutter-smaller ($gutter-smaller - rem(1px));
   border-bottom: 0;
-  color: $inverted-link-color;
+  color: $color-nav;
   font-family: $sans-serif;
   font-size: size(0);
   line-height: 1;
 
   &.is-current-page {
-    background-color: rgba($link-hover-color, 0.5);
+    background-color: rgba($color-interactive-hover, 0.5);
 
     &:after {
       content: "←";
@@ -89,11 +89,11 @@
 
   &:hover {
     background-color: rgba($white, 0.2);
-    color: $inverted-link-hover-color;
+    color: $color-nav-hover;
   }
 
   &:active {
-    color: $inverted-link-active-color;
+    color: $color-nav-active;
   }
 }
 

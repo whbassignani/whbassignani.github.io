@@ -16,7 +16,7 @@
     color: color(grey, 800);
 
     &:hover {
-      color: $link-hover-color;
+      color: $color-interactive-hover;
     }
   }
 
@@ -69,12 +69,12 @@
 
     height: 14px;
     width: 18px;
-    fill: $link-color;
+    fill: $color-interactive;
   }
 
   &:hover {
     svg {
-      fill: $link-hover-color;
+      fill: $color-interactive-hover;
     }
   }
 

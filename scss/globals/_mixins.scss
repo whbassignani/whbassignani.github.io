@@ -143,10 +143,6 @@
   font-size: size(-2);
   letter-spacing: $letter-spacing;
   text-transform: uppercase;
-
-	@media ($bp-small) {
-		font-size: size(-1);
-	}
 }
 
 
@@ -164,7 +160,7 @@
 		position: absolute;
 		left: 50%;
 		top: 50%;
-		background-color: rgba($link-color, 0.2);
+		background-color: rgba($color-interactive, 0.2);
 		opacity: 0;
 	}
 
@@ -175,10 +171,6 @@
 
 @mixin standard-margins {
 	margin: 0 0 size(2);
-
-	@media ($bp-s) {
-		margin-bottom: size(4);
-	}
 }
 
 @mixin soft-box-shadow($shadow-color: color(grey, 200)) {

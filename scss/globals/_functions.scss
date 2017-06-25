@@ -95,9 +95,9 @@
 @function size($tier-number) {
   @if $type-ratio {
     @if $tier-number < 0 {
-      @return 1rem / power($type-ratio, ($tier-number * -1));
+      @return 1em / power($type-ratio, ($tier-number * -1));
     } @else {
-      @return 1rem * power($type-ratio, $tier-number);
+      @return 1em * power($type-ratio, $tier-number);
     }
   }
 

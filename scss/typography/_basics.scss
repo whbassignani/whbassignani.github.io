@@ -1,0 +1,86 @@
+// Base typography
+html, body {
+  font-size: $type-base-size;
+
+	@media ($bp-s) {
+    font-size: $type-base-size * $type-ratio;
+  }
+
+	@media ($bp-xxl) {
+    font-size: $type-base-size * power($type-ratio, 2);
+  }
+}
+
+body {
+  color: $color-text;
+  font-family: $serif;
+  font-size: size(0);
+  line-height: $line-height;
+}
+
+p {
+  margin: 0 0 size(0);
+}
+
+
+// Links & buttons
+a {
+  @include transition(color $animation-time, border-color $animation-time);
+
+  border-bottom: 2px solid rgba($color-interactive, 0.2);
+  color: $color-interactive;
+  text-decoration: none;
+
+  &:hover {
+    border-color: rgba($color-interactive-hover, 0.1);
+    color: $color-interactive-hover;
+    text-decoration: none;
+  }
+
+  &:active {
+		border-color: rgba($color-interactive-hover, 0.2);
+    color: $color-interactive-active;
+  }
+}
+
+.action-link {
+  position: relative;
+
+  &:after {
+    @include transform(translateY(-50%));
+
+    content: "→";
+    display: inline-block;
+    padding-left: size(-4);
+    position: absolute;
+    left: 100%;
+    top: 50%;
+  }
+}
+
+
+
+
+
+
+
+
+
+// Display none
+.display-none {
+  display: none;
+}
+
+
+// -- Clearfix
+.clearfix, .cf {
+  zoom: 1;
+	&:before, &:after { content: ""; display: table; }
+	&:after { clear: both; }
+}
+
+
+// -- No-break (to new lines)
+.no-wrap {
+  white-space: nowrap;
+}

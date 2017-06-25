@@ -1,0 +1,65 @@
+// Headings
+@mixin heading-styles {
+	color: $color-heading;
+  font-family: $sans-serif;
+  font-weight: 700;
+  line-height: $line-height-tight;
+}
+
+@mixin h1 {
+	@include heading-styles;
+  margin: size(6) 0 size(2);
+  font-size: size(2);
+
+	&:first-child:not(.page-title) {
+		margin-top: 0;
+	}
+}
+
+@mixin h2 {
+	@include heading-styles;
+	margin: size(4) 0 size(0);
+  font-size: size(1);
+}
+
+@mixin h3 {
+	@include heading-styles;
+	margin: size(2) 0 size(-2);
+  font-size: size(0);
+}
+
+@mixin h4 {
+	@include heading-styles;
+  @include bold-spaced-type;
+
+	margin: size(2) 0 size(-2);
+  font-size: size(-2);
+}
+
+h1,
+.h1 {
+	@include h1;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+h2,
+.h2 {
+	@include h2;
+}
+
+h3,
+.h3 {
+	@include h3;
+}
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	@include h4;
+}

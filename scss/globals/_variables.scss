@@ -1,24 +1,23 @@
 // Theme colors
-$text-color:                  color(grey, 800);
-$text-color-faded:            color(grey, 400);
+$color-background:            $white;
+$color-ui-dark:               color(grey, 800);
+$color-ui-medium:             color(grey, 500);
+$color-ui-light:              color(grey, 200);
 
-$link-color:                  color(blue, 600);
-$link-hover-color:            lighten($link-color, 10%);
-$link-active-color:           darken($link-color, 10%);
+$color-text:                  color(grey, 800);
+$color-text-faded:            color(grey, 400);
+$color-heading:               $black;
 
-$inverted-link-color:         color(grey, 200);
-$inverted-link-hover-color:   lighten($inverted-link-color, 20%);
-$inverted-link-active-color:  darken($inverted-link-color, 20%);
+$color-interactive:           color(blue, 600);
+$color-interactive-hover:     lighten($color-interactive, 10%);
+$color-interactive-active:    darken($color-interactive, 10%);
 
-$button-color:                color(blue, 500);
-$button-hover-color:          lighten($button-color, 5%);
-$button-active-color:         darken($button-color, 5%);
-
-$background-color:            $white;
-$divider-color:               color(grey, 500);
+$color-nav:                   color(grey, 200);
+$color-nav-hover:             lighten($color-nav, 20%);
+$color-nav-active:            darken($color-nav, 20%);
 
 $header-background-color:     color(grey, 700);
-$nav-background-color:        color(grey, 800);
+$nav-background-color:        $color-ui-dark;
 
 $twitter-blue:                #55acee;
 $facebook-blue:               #3b5998;

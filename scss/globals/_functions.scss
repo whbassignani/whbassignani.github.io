@@ -1,9 +1,7 @@
 /**
- * Exponential Number
+ * Exponential Number: raise a number to the given power
  * https://www.bhalash.com/archives/13544805657
  * -----------------------------------------------------------------------------
- * Raise a number to a given power.
- *
  * @param   number      $number         Number to raise
  * @param   number      $power          Power to which it should be raised
  * @return  number      $exponent       Number raised to exponent
@@ -25,11 +23,10 @@
   @return $exponent;
 }
 
+
 /**
- * Pixels-to-rems
- * -----------------------------------------------------------------------------
  * Converts pixels to rems
- *
+ * -----------------------------------------------------------------------------
  * @param   number      $size_pixels    Number to convert
  * @return  number      -               Number converted to pixels
  */
@@ -40,10 +37,8 @@
 
 
 /**
- * Color adjustment by value
- * -----------------------------------------------------------------------------
  * Adjusts raw hues based on a set value number between 0–1000
- *
+ * -----------------------------------------------------------------------------
  * @param   number      $hue            Hue to adjust
  * @param   number      $value          Value by which to adjust the hue
  * @return  number      -               Adjusted color
@@ -61,10 +56,8 @@
 
 
 /**
- * Get a color from the color scheme
+ * Get a color from $color-map, which holds the official color scheme
  * -----------------------------------------------------------------------------
- * Recalls colors from $color-map, which holds the official color scheme
- *
  * @param   number      $hue            Hue family, a keyword
  * @param   number      $value          Value from hue family to recall, number
  * @return  number      -               Color requested
@@ -84,10 +77,8 @@
 
 
 /**
- * Calculate a size on the modular scale
+ * Get a size value (in ems) from the modular scale
  * -----------------------------------------------------------------------------
- * Calculates a size (in rems) based on a modular scale
- *
  * @param   number      $tier-number    How far up the scale to go
  * @return  number      -               Size, in rems
  */

@@ -1,7 +1,6 @@
 // Blockquotes
 blockquote {
   @include spacing-standard;
-
   border-left: size(-6) solid $color-ui-subtle;
   color: $color-text-faded;
   font-size: size(0);
@@ -11,8 +10,8 @@ blockquote {
 
 // Pull quotes
 .pull-quote {
-	@include border-radius;
-	@include soft-box-shadow;
+  @include border-radius;
+  @include soft-box-shadow;
   @include spacing-standard;
   background-color: $color-ui-subtle;
   font-family: $sans-serif;
@@ -25,6 +24,6 @@ blockquote {
 }
 
 .pull-quote-source {
-	@include meta;
-	margin-top: size(-4);
+  @include meta;
+  margin-top: size(-4);
 }

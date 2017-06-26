@@ -2,7 +2,6 @@
 ul,
 ol {
   @include spacing-standard;
-
   padding-left: size(4);
 
   ul,
@@ -50,7 +49,6 @@ dt {
 
 dd {
   @include spacing-standard;
-
   padding-left: size(0);
 
   dt + & {

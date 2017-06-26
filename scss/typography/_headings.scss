@@ -35,7 +35,6 @@
 @mixin h4 {
   @include heading-styles;
   @include bold-spaced-type;
-
   margin: size(2) 0 size(-1);
   font-size: size(-2);
 }

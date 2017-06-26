@@ -1,17 +1,17 @@
 // Tables
 table {
   @include spacing-standard;
-	background-color: $white;
+  background-color: $white;
   border: $border-width solid $color-ui-light;
-	font-family: $sans-serif;
-	font-size: size(-1);
-	line-height: 1;
+  font-family: $sans-serif;
+  font-size: size(-1);
+  line-height: 1;
   width: 100%;
 
   td,
   th {
     padding: calc(#{size(0)/2} + 1px) size(0) calc(#{size(0)/2} - 1px);
-		text-align: left;
+    text-align: left;
   }
 
     th {
@@ -25,7 +25,7 @@ table {
   }
 
   thead {
-		@include bold-spaced-type;
+    @include bold-spaced-type;
     background-color: $color-ui-subtle;
     border-bottom: $border-width solid $color-border;
   }

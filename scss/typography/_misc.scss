@@ -2,7 +2,6 @@
 code {
   @include border-radius;
   @include spacing-standard;
-
   background-color: $color-ui-subtle;
   font-size: size(-1);
   padding: size(-4);
@@ -16,7 +15,6 @@ pre {
   @include border-radius;
   @include soft-box-shadow;
   @include spacing-standard;
-
   padding: size(0);
   width: auto;
   background-color: color(grey, 50);

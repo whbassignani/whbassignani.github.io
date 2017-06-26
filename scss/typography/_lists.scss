@@ -1,14 +1,14 @@
 // Unordered and ordered lists
 ul,
 ol {
-  @include standard-margins;
+  @include spacing-standard;
 
   padding-left: size(4);
 
   ul,
   ol {
     margin-bottom: 0;
-		margin-top: size(-2);
+    margin-top: size(-2);
   }
 }
 
@@ -31,29 +31,33 @@ ol {
   }
 
 li {
-	margin-bottom: size(-2);
+  margin-bottom: size(-2);
   padding-left: size(-4);
 }
 
 
 // Definition lists
 dl {
-  @include standard-margins;
+  @include spacing-standard;
 }
 
 dt {
-	@include heading-styles;
+  @include heading-styles;
   @include h4;
 
   margin-top: 0;
 }
 
 dd {
-  @include standard-margins;
+  @include spacing-standard;
 
-	padding-left: size(0);
+  padding-left: size(0);
 
-	&:last-child {
-		margin-bottom: 0;
-	}
+  dt + & {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }

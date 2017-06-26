@@ -170,8 +170,8 @@
   }
 }
 
-@mixin standard-margins {
-  margin: 0 0 size(2);
+@mixin spacing-standard {
+  margin: size(2) 0;
 }
 
 @mixin soft-box-shadow($shadow-color: color(grey, 200)) {

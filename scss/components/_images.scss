@@ -1,10 +1,9 @@
 .photo {
-  margin: $gutter-medium 0;
+  @include spacing-standard;
+  @include soft-box-shadow;
   position: relative;
 
   img {
-    @include box-shadow-soft;
-
     display: block;
     width: 100%;
   }
@@ -35,27 +34,26 @@
   }
 }
 
-.photo .caption {
-  margin: $gutter-smaller $gutter-smaller 0;
-  position: relative;
-  z-index: 1;
+.caption {
+  background-color: white;
   color: color(grey, 500);
   font-family: $sans-serif;
   font-size: $type-minus-one;
+  padding: size(0);
+
+  p:first-child {
+    margin-top: 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
 
   @media ($bp-smaller) {
     margin-left: 0;
     margin-right: 0;
     padding-left: $gutter-small;
     position: relative;
-
-    &:before {
-      content: "↑";
-      display: inline-block;
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
   }
 
   @media ($bp-small) {

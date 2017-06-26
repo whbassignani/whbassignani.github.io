@@ -5,7 +5,7 @@ input[type="button"] {
   @include border-radius;
 	@include bold-spaced-type;
 	@include soft-box-shadow($color-interactive);
-	@include standard-margins;
+	@include spacing-standard;
   @include transition(background-color $animation-time, border $animation-time, background-color $animation-time);
   background-color: $color-interactive;
   border: 0;

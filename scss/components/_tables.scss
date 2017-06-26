@@ -1,6 +1,6 @@
 // Tables
 table {
-  @include standard-margins;
+  @include spacing-standard;
 	background-color: $white;
   border: $border-width solid $color-ui-light;
 	font-family: $sans-serif;

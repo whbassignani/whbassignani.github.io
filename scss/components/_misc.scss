@@ -1,7 +1,7 @@
 // Dividers
 hr {
   border: 0;
-  border-bottom: $border-width dotted $color-border;
+  border-bottom: $border-width dotted $color-ui-subtle;
 	height: 0;
 	margin: size(2) auto;
 }

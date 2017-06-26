@@ -1,47 +1,47 @@
 // Layout
 @mixin box-sizing($type: border-box) {
 
-	$prefixes:      ("-webkit-",  "-moz-", "");
+  $prefixes:      ("-webkit-",  "-moz-", "");
 
-	@each $prefix in $prefixes {
-		#{$prefix}box-sizing: $type;
-	}
+  @each $prefix in $prefixes {
+    #{$prefix}box-sizing: $type;
+  }
 }
 
 @mixin columns($count, $gap: 20px) {
-	// Vendor prefixes
-	$prefixes:      ("-webkit-",  "-moz-", "");
+  // Vendor prefixes
+  $prefixes:      ("-webkit-",  "-moz-", "");
 
-	@each $prefix in $prefixes {
-		#{$prefix}column-count: $count;
-		#{$prefix}column-gap: $gap;
-	}
+  @each $prefix in $prefixes {
+    #{$prefix}column-count: $count;
+    #{$prefix}column-gap: $gap;
+  }
 }
 
 
 // Appearance
 @mixin background-size($bgsize: cover) {
-	$prefixes:      ("-webkit-",  "-moz-", "-0-", "");
+  $prefixes:      ("-webkit-",  "-moz-", "-0-", "");
 
-	@each $prefix in $prefixes {
-		#{$prefix}background-size: $bgsize;
-	}
+  @each $prefix in $prefixes {
+    #{$prefix}background-size: $bgsize;
+  }
 }
 
 @mixin border-radius($radius: $border-radius) {
-	$prefixes:      ("-webkit-", "");
+  $prefixes:      ("-webkit-", "");
 
-	@each $prefix in $prefixes {
-		#{$prefix}border-radius: $radius;
-	}
+  @each $prefix in $prefixes {
+    #{$prefix}border-radius: $radius;
+  }
 }
 
 @mixin box-shadow($box-shadow...) {
-	$prefixes:      ("-webkit-",  "-moz-", "");
+  $prefixes:      ("-webkit-",  "-moz-", "");
 
-	@each $prefix in $prefixes {
-		#{$prefix}box-shadow: $box-shadow;
-	}
+  @each $prefix in $prefixes {
+    #{$prefix}box-shadow: $box-shadow;
+  }
 }
 
   @mixin box-shadow-soft() {
@@ -50,98 +50,98 @@
 
 @mixin box-shadow-with-spread($top, $left, $blur, $spread, $color: #000, $inset: false) {
 
-	$prefixes:      ("-webkit-",  "-moz-", "");
+  $prefixes:      ("-webkit-",  "-moz-", "");
 
-	@if $inset {
-  	@each $prefix in $prefixes {
-  		#{$prefix}box-shadow: inset $top $left $blur $spread $color;
-  	}
-	} @else {
-  	@each $prefix in $prefixes {
-  		#{$prefix}box-shadow: $top $left $blur $spread $color;
-  	}
-	}
+  @if $inset {
+    @each $prefix in $prefixes {
+      #{$prefix}box-shadow: inset $top $left $blur $spread $color;
+    }
+  } @else {
+    @each $prefix in $prefixes {
+      #{$prefix}box-shadow: $top $left $blur $spread $color;
+    }
+  }
 }
 
 @mixin css-gradient($from: #dfdfdf, $to: #f8f8f8) {
-	background-color: $to;
-	background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
-	background-image: -webkit-linear-gradient(top, $from, $to);
-	background-image: -moz-linear-gradient(top, $from, $to);
-	background-image: -o-linear-gradient(top, $from, $to);
-	background-image: linear-gradient(to bottom, $from, $to);
+  background-color: $to;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+  background-image: -webkit-linear-gradient(top, $from, $to);
+  background-image: -moz-linear-gradient(top, $from, $to);
+  background-image: -o-linear-gradient(top, $from, $to);
+  background-image: linear-gradient(to bottom, $from, $to);
 }
 
 @mixin css-gradient-horizontal($from: #dfdfdf, $to: #f8f8f8) {
-	background-color: $to;
-	background-image: -webkit-gradient(linear, left top, right top, from($from), to($to));
-	background-image: -webkit-linear-gradient(left, $from, $to);
-	background-image: -moz-linear-gradient(left, $from, $to);
-	background-image: -o-linear-gradient(left, $from, $to);
-	background-image: linear-gradient(to right, $from, $to);
+  background-color: $to;
+  background-image: -webkit-gradient(linear, left top, right top, from($from), to($to));
+  background-image: -webkit-linear-gradient(left, $from, $to);
+  background-image: -moz-linear-gradient(left, $from, $to);
+  background-image: -o-linear-gradient(left, $from, $to);
+  background-image: linear-gradient(to right, $from, $to);
 }
 
 @mixin filter($filter...) {
-	// Vendor prefixes
-	$prefixes:      ("-webkit-", "");
+  // Vendor prefixes
+  $prefixes:      ("-webkit-", "");
 
-	@each $prefix in $prefixes {
-		#{$prefix}filter: $filter;
-	}
+  @each $prefix in $prefixes {
+    #{$prefix}filter: $filter;
+  }
 }
 
 
 // Animations & transforms
 @mixin transform($transform...) {
-	// Vendor prefixes
-	$prefixes:      ("-webkit-",  "-moz-", "-ms-", "-o-", "");
+  // Vendor prefixes
+  $prefixes:      ("-webkit-",  "-moz-", "-ms-", "-o-", "");
 
-	@each $prefix in $prefixes {
-		#{$prefix}transform: $transform;
-	}
+  @each $prefix in $prefixes {
+    #{$prefix}transform: $transform;
+  }
 }
 
 @mixin transform-origin($transform-origin...) {
-	// Vendor prefixes
-	$prefixes:      ("-webkit-",  "-moz-", "-ms-", "-o-", "");
+  // Vendor prefixes
+  $prefixes:      ("-webkit-",  "-moz-", "-ms-", "-o-", "");
 
-	@each $prefix in $prefixes {
-		#{$prefix}transform-origin: $transform-origin;
-	}
+  @each $prefix in $prefixes {
+    #{$prefix}transform-origin: $transform-origin;
+  }
 }
 
 @mixin transition($transition...) {
-	// Vendor prefixes
-	$prefixes:      ("-webkit-",  "-moz-", "-o-", "");
+  // Vendor prefixes
+  $prefixes:      ("-webkit-",  "-moz-", "-o-", "");
 
-	@each $prefix in $prefixes {
-		#{$prefix}transition: $transition;
-	}
+  @each $prefix in $prefixes {
+    #{$prefix}transition: $transition;
+  }
 }
 
 @mixin transition-with-prefixes($transition...) {
-	// Vendor prefixes
-	$prefixes:      ("-webkit-",  "-moz-", "-o-", "");
+  // Vendor prefixes
+  $prefixes:      ("-webkit-",  "-moz-", "-o-", "");
 
-	@each $prefix in $prefixes {
-		#{$prefix}transition: unquote("#{$prefix}#{$transition}")
-	}
+  @each $prefix in $prefixes {
+    #{$prefix}transition: unquote("#{$prefix}#{$transition}")
+  }
 }
 
 
 // Typography
 @mixin bold-spaced-type($letter-spacing: $letter-spacing) {
-	font-family: $sans-serif;
-	font-weight: 700;
+  font-family: $sans-serif;
+  font-weight: 700;
   letter-spacing: $letter-spacing;
   text-transform: uppercase;
 }
 
 @mixin meta {
-	color: $color-ui-light;
+  color: $color-ui-light;
   font-family: $sans-serif;
   font-size: size(-3);
-	font-weight: bold;
+  font-weight: bold;
   letter-spacing: $letter-spacing;
   text-transform: uppercase;
 }
@@ -149,56 +149,56 @@
 
 // Components
 @mixin nav-button-hover-state {
-	&:after {
-		@include border-radius;
-		@include transform(translateX(-50%) translateY(-50%));
-		@include transition(opacity $animation-time);
+  &:after {
+    @include border-radius;
+    @include transform(translateX(-50%) translateY(-50%));
+    @include transition(opacity $animation-time);
 
-		content: '';
-		display: block;
-		height: 80%;
-		width: 80%;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		background-color: rgba($color-interactive, 0.2);
-		opacity: 0;
-	}
+    content: '';
+    display: block;
+    height: 80%;
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: rgba($color-interactive, 0.2);
+    opacity: 0;
+  }
 
-	&:hover:after {
-		opacity: 1;
-	}
+  &:hover:after {
+    opacity: 1;
+  }
 }
 
 @mixin standard-margins {
-	margin: 0 0 size(2);
+  margin: 0 0 size(2);
 }
 
 @mixin soft-box-shadow($shadow-color: color(grey, 200)) {
-	position: relative;
+  position: relative;
 
-	&:after {
-		@include filter(blur(15px));
-		@include transform(translate(-50%, -15%));
+  &:after {
+    @include filter(blur(15px));
+    @include transform(translate(-50%, -15%));
 
-		content: "";
-		display: block;
-		height: 60%;
-		width: 85%;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		z-index: -1;
-		background-color: $shadow-color;
-	}
+    content: "";
+    display: block;
+    height: 60%;
+    width: 95%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+    background-color: $shadow-color;
+  }
 }
 
 
 // Utilities
 @mixin image-replacement {
-	text-indent: -9999px;
+  text-indent: -9999px;
 }
 
 @mixin undo-image-replacement {
-	text-indent: initial;
+  text-indent: initial;
 }

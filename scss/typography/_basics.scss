@@ -2,11 +2,11 @@
 html, body {
   font-size: $type-base-size;
 
-	@media ($bp-s) {
+  @media ($bp-s) {
     font-size: $type-base-size * $type-ratio;
   }
 
-	@media ($bp-xxl) {
+  @media ($bp-xxl) {
     font-size: $type-base-size * power($type-ratio, 2);
   }
 }
@@ -42,7 +42,7 @@ a {
   }
 
   &:active {
-		border-color: rgba($color-interactive-hover, 0.2);
+    border-color: rgba($color-interactive-hover, 0.2);
     color: $color-interactive-active;
   }
 }
@@ -54,7 +54,7 @@ a {
     @include transform(translateY(-50%));
     content: "→";
     display: inline-block;
-		left: 100%;
+    left: 100%;
     padding-left: size(-4);
     position: absolute;
     top: 50%;

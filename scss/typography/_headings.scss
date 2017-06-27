@@ -15,7 +15,7 @@
   margin: size(5) 0 size(2);
   font-size: size(2);
 
-  &:first-child:not(.page-title) {
+  &:first-child:not(.content-title) {
     margin-top: 0;
   }
 }

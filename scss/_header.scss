@@ -1,86 +1,72 @@
+// TO DO: delete this?
 #header {
-  // Eventually, this is for the homepage header only
-  // background-color: $header-background-color;
+  // #header contains the #toolbar. We may not need a style block, though we
+  //   will still need to conform to proper semantics.
+  //
+  // May need to use #header for the left navigation stuff?
 }
 
+// The site title (Hawkeward.com) next to the hamburger icon
 #toolbar {
-  @include flexbox;
   @include align-items(center);
-
-  height: $toolbar-height--small;
-  padding: 0 0 0 $toolbar-height--small;
+  @include flexbox;
+  height: $toolbar-height;
+  padding: 0;
   position: relative;
 
   a {
     border: 0;
-    color: color(grey, 800);
+    color: $color-ui-dark;
 
     &:hover {
       color: $color-interactive-hover;
     }
   }
 
-  @media ($bp-small) {
-    height: $toolbar-height--medium;
-    padding-left: $toolbar-height--medium;
-  }
-
+  // When the mobile drawer nav moves to its permanent home on the left
+  //   if needed
   @media ($bp-when-drawer-expands) {
-    height: auto;
-    padding-left: 0;
-    position: absolute;
-    left: 0;
-    top: 0;
+    // height: auto;
+    // padding-left: 0;
+    // position: absolute;
+    // left: 0;
+    // top: 0;
   }
 }
 
 .toolbar-title {
+  @include order(2);
   @include transform(translateY(1px));
 
-  color: inherit;
-  margin: 0;
-  font-size: size(0);
-  font-weight: normal;
-
-  @media ($bp-s) {
-    @include transform(translateY(0));
-
-    font-size: size(1);
+  h1 {
+    color: inherit;
+    margin: 0;
+    font-size: size(0);
+    font-weight: normal;
   }
 }
 
 .nav-open-btn {
-  @include flexbox;
   @include align-items(center);
+  @include flexbox;
+  @include order(1);
   @include justify-content(center);
   @include nav-button-hover-state;
-  @include transition(background-color $animation-time);
-
-  height: $toolbar-height--small;
-  width: $toolbar-height--small;
-  position: absolute;
-  left: 0;
-  top: 0;
   border: 0;
+  height: $toolbar-height;
   line-height: 0;
+  position: relative;
+  width: $toolbar-height;
 
   svg {
     @include transition(fill $animation-time);
-
     height: 14px;
     width: 18px;
     fill: $color-interactive;
   }
 
-  &:hover {
-    svg {
-      fill: $color-interactive-hover;
-    }
-  }
-
-  @media ($bp-small) {
-    height: $toolbar-height--medium;
-    width: $toolbar-height--medium;
+  &:hover svg {
+    fill: $color-interactive-hover;
   }
 
   @media ($bp-when-drawer-expands) {

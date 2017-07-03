@@ -1,25 +1,24 @@
 <nav id="nav-left" class="nav">
   <div class="nav-links">
-    <h2 class="nav-header">Navigation</h2>
+{% for category in site.data.nav_items.links %}
+    <h2 class="nav-header">{{ category.category_name }}</h2>
+  {% for item in category.children %}
+    {% capture class_string %}nav-link nav-link--{{ item.class }}{% endcapture %}
 
-{% for item in site.data.nav_items %}
-
-  {% capture class_string %}nav-link nav-link--{{ item.class }}{% endcapture %}
-
-  {% if item.url contains active_nav_item %}
-  {% capture class_string %}{{ class_string }} is-current-page{% endcapture %}
-  {% endif %}
-
-    <a href="{{ item.url }}" class="{{ class_string }}">{{ item.name }}</a>
-
+    {% if item.url contains active_nav_item %}
+    {% capture class_string %}{{ class_string }} is-current-page{% endcapture %}
+    {% endif %}
+    <a href="{{ item.url }}" class="{{ class_string }}">
+    {% if item.icon %}
+    {{ item.icon }}
+    {% endif %}
+    {{ item.name }}
+    </a>
+  {% endfor %}
 {% endfor %}
-
-    <a href="http://www.twitter.com/hawkeward" class="nav-link nav-link--twitter">
-      <svg><use xlink:href="/images/icons/icon-sprite.svg#twitter-logo-blue" /></svg>
-    </a>
-
-    <a href="#" id="nav-close-btn--left" class="nav-close-btn">
-      <svg><use xlink:href="/images/icons/icon-sprite.svg#icon-close" /></svg>
-    </a>
   </div>
+
+  <a href="#" id="nav-close-btn--left" class="nav-close-btn">
+    <svg><use xlink:href="/images/icons/icon-sprite.svg#icon-close" /></svg>
+  </a>
 </nav>

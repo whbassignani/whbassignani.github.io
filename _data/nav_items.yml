@@ -1,17 +1,30 @@
 ---
-- name: "Home"
-  url: /
-  class: home
-  
-- name: "Work"
-  url: /work
-  class: work
+links:
+ - category_name: "Pages"
+   children:
+    - name: "Home"
+      url: /
+      class: home
 
-- name: "Writing"
-  url: /writing
-  class: writing
+    - name: "Work"
+      url: /work
+      class: work
 
-- name: "About"
-  url: /about
-  class: about
+    - name: "Writing"
+      url: /writing
+      class: writing
+
+    - name: "About"
+      url: /about
+      class: about
+ - category_name: "Social"
+   children:
+    - name: Twitter
+      url: http://www.twitter.com/hawkeward
+      class: twitter
+      icon: <svg><use xlink:href="/images/icons/icon-sprite.svg#twitter-logo-blue" /></svg>
+    - name: GitHub
+      url: http://www.github.com/whbassignani
+      class: github
+      icon: <svg><use xlink:href="/images/icons/icon-sprite.svg#github-logo" /></svg>
 ---

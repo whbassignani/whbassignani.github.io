@@ -1,14 +1,15 @@
 #wrapper {
+  @include box-shadow(-20px 0 80px rgba(0, 0, 0, 0.4));
+  @include css-gradient($white, color(grey, 50));
   z-index: 1;
   position: relative;
-  background-color: $white;
 
   @include transition(
     transform $animation-time-long $easing-out-quint
   );
 
   .js-nav-open--left & {
-    @include transform(translateX($nav-drawer-width));
+    @include transform(translateX($nav-width-drawer));
   }
 }
 

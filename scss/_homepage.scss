@@ -19,7 +19,11 @@
   }
 
   a {
-    @include transition(color $animation-time, background-color $animation-time, border-color $animation-time);
+    @include transition(
+      color $animation-time,
+      background-color $animation-time,
+      border-color $animation-time
+    );
 
     padding-left: $gutter-smallest / 2;
     padding-right: $gutter-smallest / 2;
@@ -37,17 +41,17 @@
 }
 
 .homepage-intro-link {
-	$colors: (
-  	blizzard: #1590ce,
-  	heroes: #330099,
-  	esports: #cc0022,
-  	writing: #bba00c,
-  	work: #4ac32d,
-	  twitter: #1da1f2
-	 );
+  $colors: (
+    blizzard: #1590ce,
+    heroes: #330099,
+    esports: #cc0022,
+    writing: #bba00c,
+    work: #4ac32d,
+    twitter: #1da1f2
+   );
 
-	@each $key, $color in $colors {
-		&.#{$key} {
+  @each $key, $color in $colors {
+    &.#{$key} {
       background-color: rgba($color, 0.1);
       border-color: rgba($color, 0.2);
       color: mix($color, $black, 80%);
@@ -55,8 +59,8 @@
       &:hover {
         background-color: rgba($color, 0.8);
       }
-		}
-	}
+    }
+  }
 }
 
 #homepage-writing {

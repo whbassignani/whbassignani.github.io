@@ -4,8 +4,13 @@
 }
 
 
+html,
+body {
+  overflow-x: hidden;
+}
+
+
 // Layout styles
 body {
-  background-color: $nav-background-color;
-  overflow-x: hidden;
+  background-color: $color-background-nav;
 }

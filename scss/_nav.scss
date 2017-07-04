@@ -64,9 +64,10 @@
     background-color $animation-time,
     color $animation-time
   );
-  padding: (size(-1) + rem(1px)) size(0) (size(-1) - rem(1px));
+  // padding: (size(-1) + rem(1px)) size(0) (size(-1) - rem(1px));
+  padding: (size(-6) + rem(1px)) size(-2) (size(-6) - rem(1px));
   border-bottom: 0;
-  color: $color-light-link;
+  color: $color-ui-medium;
   font-family: $sans-serif;
   font-size: size(0);
   line-height: 1;
@@ -81,56 +82,67 @@
     }
   }
 
-  &:hover {
-    background-color: rgba($white, 0.2);
-    color: $color-light-link-hover;
-  }
-
-  &:active {
-    color: $color-light-link-active;
-  }
-}
-
-.nav-link--twitter,
-.nav-link--github {
-  padding: (size(-6) + rem(1px)) size(-2) (size(-6) - rem(1px));
-
   svg {
     @include transition(fill $animation-time);
     display: block;
-    height: size(3);
-    margin-right: size(-4);
-    width: size(3);
+    fill: $color-icon-default;
+    height: size(2);
+    margin-right: size(-1);
+    transition: fill $animation-time-long;
+    width: size(2);
+  }
+
+  &:hover {
+    background-color: rgba($color-interactive-hover, 0.1);
+    color: $color-interactive-hover;
+
+    svg {
+      fill: $color-interactive-hover;
+    }
+  }
+
+  &:active {
+    color: $color-interactive-active;
   }
 }
 
-  .nav-link--twitter {
-    svg {
-      fill: $color-brand-twitter;
-    }
-
-    // &:hover {
-    //   background-color: rgba($color-brand-twitter, 0.8);
+    // Colorful nav icons
     //
+    // .nav-link.nav-link--home {
     //   svg {
-    //     fill: $white;
+    //     fill: #FDD835;
     //   }
     // }
-  }
-
-  .nav-link--github {
-    svg {
-      fill: $color-brand-github;
-    }
-
-    // &:hover {
-    //   background-color: rgba($color-brand-github, 0.8);
     //
+    // .nav-link.nav-link--work {
     //   svg {
-    //     fill: $white;
+    //     fill: #FB8C00;
     //   }
     // }
-  }
+    //
+    // .nav-link.nav-link--writing {
+    //   svg {
+    //     fill: #E53935;
+    //   }
+    // }
+    //
+    // .nav-link.nav-link--about {
+    //   svg {
+    //     fill: #7E57C2;
+    //   }
+    // }
+
+    .nav-link.nav-link--twitter {
+      svg {
+        fill: $color-brand-twitter;
+      }
+    }
+
+    .nav-link.nav-link--github {
+      svg {
+        fill: $color-brand-github;
+      }
+    }
 
 .nav-close-btn {
   @include align-items(center);
@@ -142,7 +154,7 @@
   border: 0;
   height: $toolbar-height;
   position: relative;
-  width: $toolbar-height;
+  width: $toolbar-button-width;
 
   svg {
     @include transition(fill $animation-time);
@@ -150,13 +162,11 @@
     display: block;
     height: 18px;
     width: 18px;
-    fill: lighten($color-interactive, 10%);
+    fill: $color-interactive;
   }
 
-  &:hover {
-    svg {
-      fill: $white;
-    }
+  &:hover svg {
+    fill: $color-interactive-hover;
   }
 
   @media ($bp-when-drawer-expands) {

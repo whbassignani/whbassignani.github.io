@@ -56,7 +56,7 @@
   height: $toolbar-height;
   line-height: 0;
   position: relative;
-  width: $toolbar-height;
+  width: $toolbar-button-width;
 
   svg {
     @include transition(fill $animation-time);

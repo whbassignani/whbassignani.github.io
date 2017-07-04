@@ -17,11 +17,10 @@ table {
     th {
       color: $color-heading;
       font-size: size(-2);
-      padding: calc(#{size(2)/2} + 1px) size(2) calc(#{size(2)/2} - 1px);
     }
 
   tr:nth-child(2n) {
-    background-color: transparentize($color-ui-subtle, 0.5);
+    background-color: transparentize($color-ui-subtle, 0.4);
   }
 
   thead {

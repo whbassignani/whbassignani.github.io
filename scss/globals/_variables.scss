@@ -1,5 +1,5 @@
 // Theme colors
-$color-background:            $white;
+$color-background:            color(grey, 25);
 $color-ui-dark:               color(grey, 800);
 $color-ui-medium:             color(grey, 500);
 $color-ui-light:              color(grey, 200);
@@ -13,14 +13,19 @@ $color-interactive:           color(blue, 600);
 $color-interactive-hover:     lighten($color-interactive, 10%);
 $color-interactive-active:    darken($color-interactive, 10%);
 
+// TO DO: maybe delete this?
 $color-light-link:            color(grey, 200);
 $color-light-link-hover:      lighten($color-light-link, 20%);
 $color-light-link-active:     darken($color-light-link, 20%);
 
 $color-border:                $color-ui-light;
 
+// TO DO: delete one of these
+$color-icon-default:          #99997a;
+$color-icon-default:          rgba($color-ui-medium, 0.6);
+
 $header-background-color:     color(grey, 700);
-$nav-background-color:        $color-ui-dark;
+$color-background-nav:        $color-ui-subtle;
 
 $color-brand-github:          #6cc644;
 $color-brand-twitter:         #55acee;
@@ -77,6 +82,7 @@ $gutter-smallest:             size(-4);
 $border-width:                2px;
 $border-radius:               6px;
 $toolbar-height:              2.5rem;
+$toolbar-button-width:        2.7rem;
 $max-width-sidebar:           size(14);
 $max-width-narrow:            size(18);
 $max-width-wide:              size(20);

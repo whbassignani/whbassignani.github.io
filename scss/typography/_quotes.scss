@@ -1,7 +1,7 @@
 // Blockquotes
 blockquote {
   @include spacing-standard;
-  border-left: size(-6) solid $color-ui-subtle;
+  border-left: size(-6) solid rgba($color-ui-light, 0.4);
   color: $color-text-faded;
   font-size: size(0);
   padding: 0 0 0 size(0);
@@ -13,12 +13,16 @@ blockquote {
   @include border-radius;
   @include soft-box-shadow;
   @include spacing-standard;
-  background-color: $color-ui-subtle;
+  background-color: $white;
   font-family: $sans-serif;
   font-size: size(0);
   padding: size(0);
 
-  p {
+  p:first-child {
+    margin-top: 0;
+  }
+
+  p:last-child {
     margin-bottom: 0;
   }
 }

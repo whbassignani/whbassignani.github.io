@@ -1,8 +1,9 @@
 #wrapper {
-  @include box-shadow(-20px 0 80px rgba(0, 0, 0, 0.4));
-  @include css-gradient($white, color(grey, 50));
-  z-index: 1;
+  @include box-shadow(-1px 0 4px rgba($color-ui-medium, 0.2), -10px 0 40px rgba($color-ui-medium, 0.2));
+  background-color: $color-background;
+  min-height: 100vh;
   position: relative;
+  z-index: 1;
 
   @include transition(
     transform $animation-time-long $easing-out-quint
@@ -49,14 +50,15 @@
     max-width: $max-width-narrow;
   }
 
-.content {
-  padding-top: size(0);
-
-  @media ($bp-s) {
-    padding-top: size(2);
-  }
-
-  @media ($bp-m) {
-    padding-top: size(4);
-  }
-}
+// TO DO: maybe delete this?
+// .content {
+//   padding-top: size(0);
+//
+//   @media ($bp-s) {
+//     padding-top: size(2);
+//   }
+//
+//   @media ($bp-m) {
+//     padding-top: size(4);
+//   }
+// }

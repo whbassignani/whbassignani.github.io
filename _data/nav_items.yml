@@ -5,24 +5,30 @@ links:
     - name: "Home"
       url: /
       class: home
+      icon: <svg><use xlink:href="/images/icons/icon-sprite.svg#icon-home" /></svg>
 
     - name: "Work"
       url: /work
       class: work
+      icon: <svg><use xlink:href="/images/icons/icon-sprite.svg#icon-work" /></svg>
 
     - name: "Writing"
       url: /writing
       class: writing
+      icon: <svg><use xlink:href="/images/icons/icon-sprite.svg#icon-writing" /></svg>
 
     - name: "About"
       url: /about
       class: about
+      icon: <svg><use xlink:href="/images/icons/icon-sprite.svg#icon-about" /></svg>
+
  - category_name: "Social"
    children:
     - name: Twitter
       url: http://www.twitter.com/hawkeward
       class: twitter
       icon: <svg><use xlink:href="/images/icons/icon-sprite.svg#twitter-logo-blue" /></svg>
+
     - name: GitHub
       url: http://www.github.com/whbassignani
       class: github

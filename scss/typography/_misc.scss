@@ -2,7 +2,7 @@
 code {
   @include border-radius;
   @include spacing-standard;
-  background-color: $color-ui-subtle;
+  background-color: $white;
   font-size: size(-1);
   padding: size(-4);
 
@@ -17,5 +17,5 @@ pre {
   @include spacing-standard;
   padding: size(0);
   width: auto;
-  background-color: color(grey, 50);
+  background-color: $white;
 }

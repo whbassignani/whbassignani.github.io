@@ -77,7 +77,7 @@
 
 
 /**
- * Get a size value (in ems) from the modular scale
+ * Get a size value (in rems) from the modular scale
  * -----------------------------------------------------------------------------
  * @param   number      $tier-number    How far up the scale to go
  * @return  number      -               Size, in rems
@@ -89,6 +89,29 @@
       @return 1rem / power($type-ratio, ($tier-number * -1));
     } @else {
       @return 1rem * power($type-ratio, $tier-number);
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, `$type-ratio` is not a valid number.";
+    @return false;
+  }
+}
+
+
+/**
+ * Get a size value (in ems) from the modular scale
+ * -----------------------------------------------------------------------------
+ * @param   number      $tier-number    How far up the scale to go
+ * @return  number      -               Size, in ems
+ */
+
+@function size-in-ems($tier-number) {
+  @if $type-ratio {
+    @if $tier-number < 0 {
+      @return 1em / power($type-ratio, ($tier-number * -1));
+    } @else {
+      @return 1em * power($type-ratio, $tier-number);
     }
   }
 

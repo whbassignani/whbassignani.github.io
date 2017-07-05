@@ -73,12 +73,17 @@
   line-height: 1;
 
   &.is-current-page {
-    background-color: rgba($color-interactive-hover, 0.5);
+    background-color: rgba($color-interactive-hover, 0.6);
+    color: $white;
 
     &:after {
       content: "←";
       padding-left: $gutter-smallest;
-      opacity: 0.5;
+      opacity: 0.6;
+    }
+
+    svg {
+      fill: $white;
     }
   }
 
@@ -103,6 +108,10 @@
 
   &:active {
     color: $color-interactive-active;
+
+    svg {
+      fill: $color-interactive-active;
+    }
   }
 }
 

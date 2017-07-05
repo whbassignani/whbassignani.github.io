@@ -10,7 +10,6 @@ blockquote {
 
 // Pull quotes
 .pull-quote {
-  @include border-radius;
   @include soft-box-shadow;
   @include spacing-standard;
   background-color: $white;

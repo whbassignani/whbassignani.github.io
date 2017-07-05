@@ -1,6 +1,5 @@
 // Code blocks
 code {
-  @include border-radius;
   @include spacing-standard;
   background-color: $white;
   font-size: size(-1);
@@ -12,7 +11,6 @@ code {
 }
 
 pre {
-  @include border-radius;
   @include soft-box-shadow;
   @include spacing-standard;
   padding: size(0);

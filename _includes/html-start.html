@@ -56,7 +56,9 @@
   <script src="/js/vendor/modernizr-3.5.0.min.js"></script>
 </head>
 
-{% if page.url contains "writing/" %}
+{% if page.url == "/" %}
+{% assign active_nav_item = "home" %}
+{% elsif page.url contains "writing/" %}
 {% assign active_nav_item = "writing" %}
 {% elsif page.url contains "work/" %}
 {% assign active_nav_item = "work" %}

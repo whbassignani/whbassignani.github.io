@@ -175,6 +175,7 @@
 }
 
 @mixin soft-box-shadow($shadow-color: color(grey, 200)) {
+  @include box-shadow(0 2px 8px rgba($shadow-color, 0.2));
   position: relative;
 
   &:after {

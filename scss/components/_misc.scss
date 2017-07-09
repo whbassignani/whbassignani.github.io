@@ -1,6 +1,6 @@
 // Dividers
 hr {
-  // @include box-shadow(inset 0 2px 4px $color-ui-light);
+  @include container-full-width-child;
   @include spacing-standard(medium);
   background-color: rgba($color-ui-subtle, 0.6);
   border-bottom: $border-width solid rgba($color-ui-light, 0.4);

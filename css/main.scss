@@ -27,14 +27,17 @@
 @import "components/misc";
 
 
-// Layouts and includes
+// Site-wide elements
 @import "layout";
+@import "content";
 @import "header";
 @import "nav";
-@import "content";
+@import "footer";
+
+
+// Layouts and includes
 @import "post";
 @import "archive";
-@import "footer";
 
 
 // Page-specific

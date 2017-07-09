@@ -2,22 +2,18 @@
   background-color: $color-ui-subtle;
   flex: 1 0 100%;
   font-family: $sans-serif;
-  font-size: $type-minus-one;
+  font-size: size(-1);
 
   p {
-    margin: 0;
+    @include spacing-standard(xsmall);
   }
 
+  .copyright,
   .credits {
     display: block;
-    font-size: $type-minus-two;
-
-    @media ($bp-small) {
-      font-size: $type-minus-one;
-    }
   }
 
-  @media ($bp-small) {
-    font-size: $type-base;
+  .copyright {
+    font-size: size(0);
   }
 }

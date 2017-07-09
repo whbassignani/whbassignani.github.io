@@ -17,8 +17,10 @@
 }
 
 .post-content {
-  & > p {
-    margin-right: 20%;
+  @media ($bp-m) {
+    & > p {
+      margin-right: 20%;
+    }
   }
 }
 

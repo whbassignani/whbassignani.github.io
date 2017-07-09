@@ -41,35 +41,19 @@
 
   // .container-fullWidthChild "undoes" the padding from .container
   .container-fullWidthChild {
-    margin-left: -#{size(-2)};
-    margin-right: -#{size(-2)};
+    @include container-full-width-child;
   }
 
   @media ($bp-xs) {
     padding: size(0);
-
-    .container-fullWidthChild {
-      margin-left: -#{size(0)};
-      margin-right: -#{size(0)};
-    }
   }
 
   @media ($bp-s) {
     padding: size(2);
-
-    .container-fullWidthChild {
-      margin-left: -#{size(2)};
-      margin-right: -#{size(2)};
-    }
   }
 
   @media ($bp-m) {
     padding: size(4);
-
-    .container-fullWidthChild {
-      margin-left: -#{size(4)};
-      margin-right: -#{size(4)};
-    }
   }
 }
 

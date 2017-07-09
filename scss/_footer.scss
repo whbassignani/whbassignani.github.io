@@ -1,4 +1,8 @@
 #footer {
+  @include box-shadow(
+    inset 0 1px 2px rgba($color-ui-medium, 0.2),
+    inset 0 5px 10px rgba($color-ui-medium, 0.2)
+  );
   background-color: $color-ui-subtle;
   flex: 1 0 100%;
   font-family: $sans-serif;
@@ -6,6 +10,7 @@
 
   p {
     @include spacing-standard(xsmall);
+    margin: 0;
   }
 
   .copyright,
@@ -14,6 +19,26 @@
   }
 
   .copyright {
-    font-size: size(0);
+    @include bold-spaced-type;
+    font-size: size(-2);
+    margin-bottom: size(-4);
+  }
+
+  @media ($bp-when-drawer-expands) {
+    @include box-shadow(
+      0 0 5px rgba($color-ui-medium, 0.2),
+      0 0 50px rgba($color-ui-medium, 0.2)
+    );
+    background-color: $color-background;
+    flex: 1 1 100%;
+    margin-left: $nav-width-sidebar;
+    margin-right: 0;
+    max-width: $max-width-content;
+    position: relative;
+    z-index: -1;
+
+    p {
+      margin: 0;
+    }
   }
 }

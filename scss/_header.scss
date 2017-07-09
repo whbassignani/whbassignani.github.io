@@ -1,7 +1,7 @@
 // TO DO: delete this?
 #header {
   @media ($bp-when-drawer-expands) {
-    width: $nav-width-sidebar;
+    flex: 0 1 $nav-width-sidebar;
   }
 }
 

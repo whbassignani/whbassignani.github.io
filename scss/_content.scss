@@ -1,16 +1,23 @@
 #wrapper {
-  @include box-shadow(-1px 0 4px rgba($color-ui-medium, 0.2), -10px 0 40px rgba($color-ui-medium, 0.2));
+  @include box-shadow(
+    -1px 0 4px rgba($color-ui-medium, 0.2),
+    -10px 0 40px rgba($color-ui-medium, 0.2)
+  );
+  @include transition(transform $animation-time-long $easing-out-quint);
   background-color: $color-background;
   min-height: 100vh;
   position: relative;
   z-index: 1;
 
-  @include transition(
-    transform $animation-time-long $easing-out-quint
-  );
-
   .js-nav-open--left & {
     @include transform(translateX($nav-width-drawer));
+  }
+
+  @media ($bp-when-drawer-expands) {
+    .js-nav-open--left & {
+      @include transform(none);
+      @include transition(all 0s);
+    }
   }
 }
 

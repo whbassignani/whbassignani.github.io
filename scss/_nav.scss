@@ -15,7 +15,7 @@
     left: auto;
     position: static;
     top: auto;
-    width: $nav-width-sidebar;
+    width: auto;
   }
 }
 
@@ -24,6 +24,11 @@
   color: $color-ui-medium;
   font-size: size(-2);
   padding: 0 size(0);
+
+  @media ($bp-when-drawer-expands) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .nav-links {
@@ -40,6 +45,7 @@
 
   @media ($bp-when-drawer-expands) {
     @include transition(all 0s);
+    background-color: yellow;
     min-height: 0;
   }
 }
@@ -100,6 +106,11 @@
     svg {
       fill: $color-interactive-active;
     }
+  }
+
+  @media ($bp-when-drawer-expands) {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

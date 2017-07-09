@@ -1,9 +1,9 @@
 // TO DO: delete this?
 #header {
-  // #header contains the #toolbar. We may not need a style block, though we
-  //   will still need to conform to proper semantics.
-  //
-  // May need to use #header for the left navigation stuff?
+  @media ($bp-when-drawer-expands) {
+    background-color: red;
+    width: $nav-width-sidebar;
+  }
 }
 
 // The site title (Hawkeward.com) next to the hamburger icon
@@ -26,6 +26,7 @@
   // When the mobile drawer nav moves to its permanent home on the left
   //   if needed
   @media ($bp-when-drawer-expands) {
+    background-color: green;
     // height: auto;
     // padding-left: 0;
     // position: absolute;

@@ -17,9 +17,9 @@
     @include box-shadow(none);
     background-color: transparent;
     display: flex;
-    align-items: baseline;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 0 size(2) 0 size(-4);
 
     .js-nav-open--left & {
       @include transform(none);
@@ -31,7 +31,6 @@
 #content {
   @media ($bp-when-drawer-expands) {
     flex: 1 0 0;
-    padding: size(0) size(0) 0 0;
     max-width: $max-width-content;
   }
 }
@@ -55,7 +54,6 @@
 
   .content-text {
     @media ($bp-when-drawer-expands) {
-      @include border-radius;
       @include box-shadow(
         0 0 5px rgba($color-ui-medium, 0.2),
         0 0 50px rgba($color-ui-medium, 0.2)

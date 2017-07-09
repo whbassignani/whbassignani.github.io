@@ -26,7 +26,7 @@
   //   if needed
   @media ($bp-when-drawer-expands) {
     height: auto;
-    margin: size(6) 0 size(3);
+    margin: size(4) 0;
     padding-left: size(0);
   }
 }
@@ -34,12 +34,19 @@
 .toolbar-title {
   @include order(2);
   @include transform(translateY(1px));
+  line-height: 1;
+  padding: size(-3) 0;
 
   h1 {
     color: inherit;
     margin: 0;
     font-size: size(0);
     font-weight: normal;
+
+    @media ($bp-when-drawer-expands) {
+      @include bold-spaced-type;
+      font-size: size(-1);
+    }
   }
 }
 

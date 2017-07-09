@@ -5,18 +5,17 @@
   height: 100vh;
   left: 0;
   position: fixed;
-  overflow-y: auto;
   top: 0;
   width: $nav-width-drawer;
 
   // When the mobile drawer nav moves to its permanent home on the left
-  //   if needed
   @media ($bp-when-drawer-expands) {
-    // height: auto;
-    // width: 100%;
-    // position: absolute;
-    // left: 0;
-    // top: 0;
+    @include transform(none);
+    height: auto;
+    left: auto;
+    position: static;
+    top: auto;
+    width: $nav-width-sidebar;
   }
 }
 
@@ -25,10 +24,6 @@
   color: $color-ui-medium;
   font-size: size(-2);
   padding: 0 size(0);
-
-  @media ($bp-when-drawer-expands) {
-    display: none;
-  }
 }
 
 .nav-links {
@@ -42,17 +37,10 @@
   position: relative;
   width: 100%;
 
-  .js-nav-open--left & {
-    // @include transform(translateX(0));
-
-    // opacity: 1;
-  }
 
   @media ($bp-when-drawer-expands) {
-    // &,
-    // .js-nav-open--left & {
-    //   @include transition(all 0s);
-    // }
+    @include transition(all 0s);
+    min-height: 0;
   }
 }
 

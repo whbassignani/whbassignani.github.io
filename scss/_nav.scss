@@ -26,8 +26,8 @@
   padding: 0 size(0);
 
   @media ($bp-when-drawer-expands) {
-    padding-left: 0;
-    padding-right: 0;
+  //   padding-left: 0;
+  //   padding-right: 0;
   }
 }
 
@@ -42,10 +42,10 @@
   position: relative;
   width: 100%;
 
-
   @media ($bp-when-drawer-expands) {
     @include transition(all 0s);
     min-height: 0;
+    padding: 0;
   }
 }
 
@@ -108,8 +108,9 @@
   }
 
   @media ($bp-when-drawer-expands) {
-    padding-left: 0;
-    padding-right: 0;
+    @include border-radius($border-radius 0 0 $border-radius);
+    // padding-left: 0;
+    // padding-right: 0;
   }
 }
 

@@ -25,11 +25,9 @@
   // When the mobile drawer nav moves to its permanent home on the left
   //   if needed
   @media ($bp-when-drawer-expands) {
-    // height: auto;
-    // padding-left: 0;
-    // position: absolute;
-    // left: 0;
-    // top: 0;
+    height: auto;
+    margin: size(6) 0 size(3);
+    padding-left: size(0);
   }
 }
 

@@ -17,6 +17,7 @@
     @include box-shadow(none);
     background-color: transparent;
     display: flex;
+    align-items: baseline;
     flex-wrap: wrap;
     justify-content: center;
 
@@ -29,12 +30,8 @@
 
 #content {
   @media ($bp-when-drawer-expands) {
-    @include box-shadow(
-      0 0 5px rgba($color-ui-medium, 0.2),
-      0 0 50px rgba($color-ui-medium, 0.2)
-    );
-    background-color: $color-background;
     flex: 1 0 0;
+    padding: size(0) size(0) 0 0;
     max-width: $max-width-content;
   }
 }
@@ -54,36 +51,15 @@
   @media ($bp-m) {
     padding: size(4);
   }
-
-  @media ($bp-l) {
-    padding: size(6);
-  }
 }
 
-// .torso,
-// .torso-wide,
-// .torso-narrow {
-//   margin: 0 auto;
-// }
-//
-//   .torso,
-//   .torso-wide {
-//     max-width: $max-width-wide;
-//   }
-//
-//   .torso-narrow {
-//     max-width: $max-width-narrow;
-//   }
-
-// TO DO: maybe delete this?
-// .content {
-//   padding-top: size(0);
-//
-//   @media ($bp-s) {
-//     padding-top: size(2);
-//   }
-//
-//   @media ($bp-m) {
-//     padding-top: size(4);
-//   }
-// }
+  .content-text {
+    @media ($bp-when-drawer-expands) {
+      @include border-radius;
+      @include box-shadow(
+        0 0 5px rgba($color-ui-medium, 0.2),
+        0 0 50px rgba($color-ui-medium, 0.2)
+      );
+      background-color: $color-background;
+    }
+  }

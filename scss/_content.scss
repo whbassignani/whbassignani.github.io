@@ -29,7 +29,11 @@
 
 #content {
   @media ($bp-when-drawer-expands) {
-    background-color: orange;
+    @include box-shadow(
+      0 0 5px rgba($color-ui-medium, 0.2),
+      0 0 50px rgba($color-ui-medium, 0.2)
+    );
+    background-color: $color-background;
     flex: 1 0 0;
     max-width: $max-width-content;
   }

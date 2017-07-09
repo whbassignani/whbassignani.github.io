@@ -16,12 +16,9 @@
   }
 }
 
-.lede {
-  font-family: $sans-serif;
-  font-size: $type-plus-one;
-
-  @media ($bp-small) {
-    font-size: $type-plus-two;
+.post-content {
+  & > p {
+    margin-right: 20%;
   }
 }
 

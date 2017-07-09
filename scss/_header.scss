@@ -1,7 +1,6 @@
 // TO DO: delete this?
 #header {
   @media ($bp-when-drawer-expands) {
-    background-color: red;
     width: $nav-width-sidebar;
   }
 }
@@ -26,7 +25,6 @@
   // When the mobile drawer nav moves to its permanent home on the left
   //   if needed
   @media ($bp-when-drawer-expands) {
-    background-color: green;
     // height: auto;
     // padding-left: 0;
     // position: absolute;

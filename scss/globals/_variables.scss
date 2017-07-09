@@ -83,11 +83,14 @@ $border-width:                2px;
 $border-radius:               6px;
 $toolbar-height:              2.5rem;
 $toolbar-button-width:        2.7rem;
-$max-width-sidebar:           size(14);
-$max-width-narrow:            size(18);
-$max-width-wide:              size(20);
 $nav-width-drawer:            13rem;
 $nav-width-sidebar:           10rem;
+$max-width-content:           size(19);
+
+
+// TO DO: delete this later?
+$max-width-narrow:            size(18);
+$max-width-wide:              size(20);
 
 
 // Breakpoints

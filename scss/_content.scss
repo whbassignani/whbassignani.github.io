@@ -14,10 +14,24 @@
   }
 
   @media ($bp-when-drawer-expands) {
+    @include box-shadow(none);
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
     .js-nav-open--left & {
       @include transform(none);
       @include transition(all 0s);
     }
+  }
+}
+
+#content {
+  @media ($bp-when-drawer-expands) {
+    background-color: orange;
+    flex: 1 0 0;
+    max-width: $max-width-content;
   }
 }
 
@@ -42,20 +56,20 @@
   }
 }
 
-.torso,
-.torso-wide,
-.torso-narrow {
-  margin: 0 auto;
-}
-
-  .torso,
-  .torso-wide {
-    max-width: $max-width-wide;
-  }
-
-  .torso-narrow {
-    max-width: $max-width-narrow;
-  }
+// .torso,
+// .torso-wide,
+// .torso-narrow {
+//   margin: 0 auto;
+// }
+//
+//   .torso,
+//   .torso-wide {
+//     max-width: $max-width-wide;
+//   }
+//
+//   .torso-narrow {
+//     max-width: $max-width-narrow;
+//   }
 
 // TO DO: maybe delete this?
 // .content {

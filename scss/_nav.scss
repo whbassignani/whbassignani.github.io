@@ -45,7 +45,6 @@
 
   @media ($bp-when-drawer-expands) {
     @include transition(all 0s);
-    background-color: yellow;
     min-height: 0;
   }
 }

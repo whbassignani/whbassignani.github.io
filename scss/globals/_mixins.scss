@@ -175,24 +175,10 @@
 }
 
 @mixin soft-box-shadow($shadow-color: color(grey, 200)) {
-  @include box-shadow(0 2px 8px rgba($shadow-color, 0.2));
-  position: relative;
-  z-index: 1;
-
-  &:after {
-    @include filter(blur(15px));
-    @include transform(translate(-50%, -15%));
-
-    content: "";
-    display: block;
-    height: 60%;
-    width: 95%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: -1;
-    background-color: $shadow-color;
-  }
+  @include box-shadow(
+    0 2px 8px rgba($shadow-color, 0.2),
+    0 8px 16px rgba($shadow-color, 0.4)
+  );
 }
 
 

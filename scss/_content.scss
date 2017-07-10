@@ -3,6 +3,8 @@
   box-shadow:
     -1px 0 4px rgba($color-ui-medium, 0.2),
     -10px 0 40px rgba($color-ui-medium, 0.2);
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   position: relative;
   transition: transform $animation-time-long $easing-out-quint;
@@ -15,7 +17,7 @@
   @media ($bp-when-drawer-expands) {
     background-color: transparent;
     box-shadow: none;
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     padding: 0 size(2) 0 size(-4);

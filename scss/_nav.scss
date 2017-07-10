@@ -33,19 +33,18 @@
 
 .nav-links {
   @include order(2);
-  @include transition(
-    transform $animation-time-long $easing-out-quint,
-    opacity $animation-time-long
-  );
   min-height: calc(100vh - #{$toolbar-height});
   padding: size(0) 0;
   position: relative;
+  transition:
+    transform $animation-time-long $easing-out-quint,
+    opacity $animation-time-long;
   width: 100%;
 
   @media ($bp-when-drawer-expands) {
-    @include transition(all 0s);
     min-height: 0;
     padding: 0;
+    transition: all 0s;
   }
 }
 
@@ -53,10 +52,6 @@
 .nav-link:visited {
   @include align-items(center);
   @include flexbox;
-  @include transition(
-    background-color $animation-time,
-    color $animation-time
-  );
   // padding: (size(-1) + rem(1px)) size(0) (size(-1) - rem(1px));
   padding: (size(-6) + rem(1px)) size(-2) (size(-6) - rem(1px));
   border-bottom: 0;
@@ -64,6 +59,9 @@
   font-family: $sans-serif;
   font-size: size(0);
   line-height: 1;
+  transition:
+    background-color $animation-time,
+    color $animation-time;
 
   &.is-current-page {
     background-color: rgba($color-interactive-hover, 0.6);
@@ -81,12 +79,11 @@
   }
 
   svg {
-    @include transition(fill $animation-time);
     display: block;
     fill: $color-icon-default;
     height: size(2);
     margin-right: size(-1);
-    transition: fill $animation-time-long;
+    transition: fill $animation-time;
     width: size(2);
   }
 
@@ -108,37 +105,9 @@
   }
 
   @media ($bp-when-drawer-expands) {
-    @include border-radius($border-radius 0 0 $border-radius);
-    // padding-left: 0;
-    // padding-right: 0;
+    border-radius: $border-radius 0 0 $border-radius;
   }
 }
-
-    // Colorful nav icons
-    //
-    // .nav-link.nav-link--home {
-    //   svg {
-    //     fill: #FDD835;
-    //   }
-    // }
-    //
-    // .nav-link.nav-link--work {
-    //   svg {
-    //     fill: #FB8C00;
-    //   }
-    // }
-    //
-    // .nav-link.nav-link--writing {
-    //   svg {
-    //     fill: #E53935;
-    //   }
-    // }
-    //
-    // .nav-link.nav-link--about {
-    //   svg {
-    //     fill: #7E57C2;
-    //   }
-    // }
 
     .nav-link.nav-link--twitter {
       svg {
@@ -165,12 +134,11 @@
   width: $toolbar-button-width;
 
   svg {
-    @include transition(fill $animation-time);
-
     display: block;
+    fill: $color-interactive;
     height: 18px;
     width: 18px;
-    fill: $color-interactive;
+    transition: fill $animation-time;
   }
 
   &:hover svg {

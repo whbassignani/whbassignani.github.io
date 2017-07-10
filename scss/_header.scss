@@ -63,10 +63,10 @@
   width: $toolbar-button-width;
 
   svg {
-    @include transition(fill $animation-time);
+    fill: $color-interactive;
     height: 14px;
     width: 18px;
-    fill: $color-interactive;
+    transition: fill $animation-time;
   }
 
   &:hover svg {

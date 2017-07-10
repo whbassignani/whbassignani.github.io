@@ -1,100 +1,7 @@
-// Layout
-@mixin box-sizing($type: border-box) {
-
-  $prefixes:      ("-webkit-",  "-moz-", "");
-
-  @each $prefix in $prefixes {
-    #{$prefix}box-sizing: $type;
-  }
-}
-
-@mixin columns($count, $gap: 20px) {
-  // Vendor prefixes
-  $prefixes:      ("-webkit-",  "-moz-", "");
-
-  @each $prefix in $prefixes {
-    #{$prefix}column-count: $count;
-    #{$prefix}column-gap: $gap;
-  }
-}
-
-
-// Appearance
-@mixin background-size($bgsize: cover) {
-  $prefixes:      ("-webkit-",  "-moz-", "-0-", "");
-
-  @each $prefix in $prefixes {
-    #{$prefix}background-size: $bgsize;
-  }
-}
-
-@mixin border-radius($radius: $border-radius) {
-  $prefixes:      ("-webkit-", "");
-
-  @each $prefix in $prefixes {
-    #{$prefix}border-radius: $radius;
-  }
-}
-
-@mixin box-shadow($box-shadow...) {
-  $prefixes:      ("-webkit-",  "-moz-", "");
-
-  @each $prefix in $prefixes {
-    #{$prefix}box-shadow: $box-shadow;
-  }
-}
-
-  @mixin box-shadow-soft() {
-    @include box-shadow(0 1px 3px rgba(color(grey, 500), 0.8), 0 10px 60px rgba(color(grey, 500), 0.4));
-  }
-
-@mixin box-shadow-with-spread($top, $left, $blur, $spread, $color: #000, $inset: false) {
-
-  $prefixes:      ("-webkit-",  "-moz-", "");
-
-  @if $inset {
-    @each $prefix in $prefixes {
-      #{$prefix}box-shadow: inset $top $left $blur $spread $color;
-    }
-  } @else {
-    @each $prefix in $prefixes {
-      #{$prefix}box-shadow: $top $left $blur $spread $color;
-    }
-  }
-}
-
-@mixin css-gradient($from: #dfdfdf, $to: #f8f8f8) {
-  background-color: $to;
-  background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
-  background-image: -webkit-linear-gradient(top, $from, $to);
-  background-image: -moz-linear-gradient(top, $from, $to);
-  background-image: -o-linear-gradient(top, $from, $to);
-  background-image: linear-gradient(to bottom, $from, $to);
-}
-
-@mixin css-gradient-horizontal($from: #dfdfdf, $to: #f8f8f8) {
-  background-color: $to;
-  background-image: -webkit-gradient(linear, left top, right top, from($from), to($to));
-  background-image: -webkit-linear-gradient(left, $from, $to);
-  background-image: -moz-linear-gradient(left, $from, $to);
-  background-image: -o-linear-gradient(left, $from, $to);
-  background-image: linear-gradient(to right, $from, $to);
-}
-
-@mixin filter($filter...) {
-  // Vendor prefixes
-  $prefixes:      ("-webkit-", "");
-
-  @each $prefix in $prefixes {
-    #{$prefix}filter: $filter;
-  }
-}
-
-
-// Animations & transforms
+// Mixins for cross-browser prefix
 @mixin transform($transform...) {
   // Vendor prefixes
-  $prefixes:      ("-webkit-",  "-moz-", "-ms-", "-o-", "");
+  $prefixes:      ("-webkit-", "");
 
   @each $prefix in $prefixes {
     #{$prefix}transform: $transform;
@@ -103,28 +10,10 @@
 
 @mixin transform-origin($transform-origin...) {
   // Vendor prefixes
-  $prefixes:      ("-webkit-",  "-moz-", "-ms-", "-o-", "");
+  $prefixes:      ("-webkit-", "");
 
   @each $prefix in $prefixes {
     #{$prefix}transform-origin: $transform-origin;
-  }
-}
-
-@mixin transition($transition...) {
-  // Vendor prefixes
-  $prefixes:      ("-webkit-",  "-moz-", "-o-", "");
-
-  @each $prefix in $prefixes {
-    #{$prefix}transition: $transition;
-  }
-}
-
-@mixin transition-with-prefixes($transition...) {
-  // Vendor prefixes
-  $prefixes:      ("-webkit-",  "-moz-", "-o-", "");
-
-  @each $prefix in $prefixes {
-    #{$prefix}transition: unquote("#{$prefix}#{$transition}")
   }
 }
 
@@ -173,19 +62,18 @@
 // Components
 @mixin nav-button-hover-state {
   &:after {
-    @include border-radius;
     @include transform(translateX(-50%) translateY(-50%));
-    @include transition(opacity $animation-time);
-
+    background-color: rgba($color-interactive-hover, 0.2);
+    border-radius: $border-radius;
     content: '';
     display: block;
     height: 80%;
-    width: 80%;
-    position: absolute;
     left: 50%;
-    top: 50%;
-    background-color: rgba($color-interactive-hover, 0.2);
     opacity: 0;
+    position: absolute;
+    top: 50%;
+    transition: opacity $animation-time;
+    width: 80%;
   }
 
   &:hover:after {
@@ -194,10 +82,9 @@
 }
 
 @mixin soft-box-shadow($shadow-color: color(grey, 200)) {
-  @include box-shadow(
+  box-shadow:
     0 2px 8px rgba($shadow-color, 0.2),
-    0 8px 16px rgba($shadow-color, 0.4)
-  );
+    0 8px 16px rgba($shadow-color, 0.4);
 }
 
 @mixin spacing-standard($size: small) {
@@ -212,14 +99,4 @@
   } @else {
     @error "#{$size} is not a valid argument for @mixin spacing-standard.";
   }
-}
-
-
-// Utilities
-@mixin image-replacement {
-  text-indent: -9999px;
-}
-
-@mixin undo-image-replacement {
-  text-indent: initial;
 }

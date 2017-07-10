@@ -19,15 +19,13 @@
   }
 
   a {
-    @include transition(
-      color $animation-time,
-      background-color $animation-time,
-      border-color $animation-time
-    );
-
+    background-color: rgba(color(green, 500), 0.1);
     padding-left: $gutter-smallest / 2;
     padding-right: $gutter-smallest / 2;
-    background-color: rgba(color(green, 500), 0.1);
+    transition:
+      color $animation-time,
+      background-color $animation-time,
+      border-color $animation-time;
 
     &:hover {
       background-color: rgba(color(green, 500), 0.8);
@@ -92,12 +90,11 @@
   }
 
   a {
-    @include transition(background-color $animation-time);
-
-    padding: $gutter-small;
-    width: 100%;
     border-bottom: 0;
     color: inherit;
+    padding: $gutter-small;
+    transition: background-color $animation-time;
+    width: 100%;
 
     &:hover {
       background-color: rgba(color(grey, 50), 0.5);

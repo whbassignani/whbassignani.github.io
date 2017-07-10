@@ -1,12 +1,11 @@
 #wrapper {
-  @include box-shadow(
-    -1px 0 4px rgba($color-ui-medium, 0.2),
-    -10px 0 40px rgba($color-ui-medium, 0.2)
-  );
-  @include transition(transform $animation-time-long $easing-out-quint);
   background-color: $color-background;
+  box-shadow:
+    -1px 0 4px rgba($color-ui-medium, 0.2),
+    -10px 0 40px rgba($color-ui-medium, 0.2);
   min-height: 100vh;
   position: relative;
+  transition: transform $animation-time-long $easing-out-quint;
   z-index: 1;
 
   .js-nav-open--left & {
@@ -14,8 +13,8 @@
   }
 
   @media ($bp-when-drawer-expands) {
-    @include box-shadow(none);
     background-color: transparent;
+    box-shadow: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -23,18 +22,17 @@
 
     .js-nav-open--left & {
       @include transform(none);
-      @include transition(all 0s);
+      transition: all 0s;
     }
   }
 }
 
 #content {
   @media ($bp-when-drawer-expands) {
-    @include box-shadow(
-      0 0 5px rgba($color-ui-medium, 0.2),
-      0 0 50px rgba($color-ui-medium, 0.2)
-    );
     background-color: $color-background;
+    box-shadow:
+      0 0 5px rgba($color-ui-medium, 0.2),
+      0 0 50px rgba($color-ui-medium, 0.2);
     flex: 1 0 0;
     max-width: $max-width-content;
   }

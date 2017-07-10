@@ -19,18 +19,17 @@
 .archive-link {
   @include flexbox;
   @include align-items(baseline);
-  
+
   border-bottom: 0;
   color: $black;
 }
 
 .archive-post-title {
-  @include transition(color $animation-time);
   @include flex(0 1 auto);
-
+  font-size: $type-base;
   margin: 0;
   margin-right: $gutter-small;
-  font-size: $type-base;
+  transition: color $animation-time;
 
   a:hover & {
     color: $color-interactive-hover;
@@ -42,9 +41,7 @@
 }
 
 .archive-post-date {
-  @include transition(color $animation-time);
   @include flex(0 0 auto);
-
   display: block;
   margin: 0 0 $gutter-smallest $gutter-small;
   color: color(grey, 200);
@@ -52,6 +49,7 @@
   font-size: $type-minus-one;
   line-height: 1;
   text-align: right;
+  transition: color $animation-time;
 
   a:hover & {
     color: $color-interactive-hover;
@@ -69,7 +67,7 @@
     &:before {
       content: attr(data-full);
     }
-    
+
     .shorthand {
       display: none;
     }

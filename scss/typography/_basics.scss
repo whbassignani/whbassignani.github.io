@@ -33,10 +33,12 @@ p {
 
 // Links & buttons
 a {
-  @include transition(color $animation-time, border-color $animation-time);
   border-bottom: 2px solid rgba($color-interactive, 0.2);
   color: $color-interactive;
   text-decoration: none;
+  transition:
+    color $animation-time,
+    border-color $animation-time;
 
   &:hover {
     border-color: rgba($color-interactive-hover, 0.1);

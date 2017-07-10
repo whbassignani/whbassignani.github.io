@@ -2,13 +2,12 @@
 button,
 .button,
 input[type="button"] {
-  @include border-radius;
   @include bold-spaced-type;
   @include soft-box-shadow($color-interactive);
   @include spacing-standard;
-  @include transition(background-color $animation-time, border $animation-time, background-color $animation-time, opacity $animation-time, transform $animation-time);
   background-color: $color-interactive;
   border: 0;
+  border-radius: $border-radius;
   color: $white;
   display: block;
   font-size: size(-1);
@@ -17,6 +16,12 @@ input[type="button"] {
   position: relative;
   text-align: center;
   text-decoration: none;
+  transition:
+    background-color $animation-time,
+    border $animation-time,
+    background-color $animation-time,
+    opacity $animation-time,
+    transform $animation-time;
   width: 100%;
 
   -webkit-appearance: none;
@@ -38,10 +43,10 @@ input[type="button"] {
 
   &.is-disabled, &.is-disabled:hover, &.is-disabled:active,
   &:disabled, &:disabled:hover, &:disabled:active {
-    @include box-shadow(none);
     @include transform(none);
     background-color: $color-ui-subtle;
     border: $border-width solid $color-ui-light;
+    box-shadow: none;
     color: $color-ui-light;
     cursor: default;
     opacity: 1;

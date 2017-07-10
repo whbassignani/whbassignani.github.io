@@ -1,18 +1,14 @@
-// Display none
-.display-none {
-  display: none;
-}
-
-
-// -- Clearfix
-.clearfix, .cf {
-  zoom: 1;
-	&:before, &:after { content: ""; display: table; }
-	&:after { clear: both; }
-}
-
-
-// -- No-break (to new lines)
-.no-wrap {
+// prevent string from wrapping
+.no-break {
   white-space: nowrap;
+}
+
+
+// Image replacement
+@mixin image-replacement {
+  text-indent: -9999px;
+}
+
+@mixin undo-image-replacement {
+  text-indent: initial;
 }

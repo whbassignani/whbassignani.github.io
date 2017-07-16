@@ -1,16 +1,79 @@
-// Box sizing
+// Global layout styles, setup
 * {
   box-sizing: border-box;
 }
-
 
 html,
 body {
   overflow-x: hidden;
 }
 
-
-// Layout styles
 body {
   background-color: $color-background-nav;
+}
+
+
+// Content
+#wrapper {
+  background-color: $color-background;
+  box-shadow:
+    -1px 0 4px rgba($color-ui-medium, 0.2),
+    -10px 0 40px rgba($color-ui-medium, 0.2);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  transition: transform $animation-time-long $easing-out-quint;
+  z-index: 1;
+
+  .js-nav-open--left & {
+    @include transform(translateX($nav-width-drawer));
+  }
+
+  @media ($bp-when-drawer-expands) {
+    background-color: transparent;
+    box-shadow: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 size(2) 0 size(-4);
+
+    .js-nav-open--left & {
+      @include transform(none);
+      transition: all 0s;
+    }
+  }
+}
+
+#content {
+  @media ($bp-when-drawer-expands) {
+    background-color: $color-background;
+    box-shadow:
+      0 0 5px rgba($color-ui-medium, 0.2),
+      0 0 50px rgba($color-ui-medium, 0.2);
+    flex: 1 0 0;
+    max-width: $max-width-content;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: size(0) size(-2);
+
+  // .container-fullWidthChild "undoes" the padding from .container
+  .container-fullWidthChild {
+    @include container-full-width-child;
+  }
+
+  @media ($bp-xs) {
+    padding: size(0);
+  }
+
+  @media ($bp-s) {
+    padding: size(2);
+  }
+
+  @media ($bp-m) {
+    padding: size(4);
+  }
 }

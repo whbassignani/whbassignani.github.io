@@ -81,9 +81,4 @@ input[type="button"].button-secondary {
     border-color: transparentize($color-interactive-active, 0.4);
     color: $color-interactive-active;
   }
-
-  // Hides shadow from @mixin soft-box-shadow
-  &:after {
-    display: none;
-  }
 }

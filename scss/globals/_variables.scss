@@ -13,18 +13,9 @@ $color-interactive:           color(blue, 600);
 $color-interactive-hover:     lighten($color-interactive, 10%);
 $color-interactive-active:    darken($color-interactive, 10%);
 
-// TO DO: maybe delete this?
-$color-light-link:            color(grey, 200);
-$color-light-link-hover:      lighten($color-light-link, 20%);
-$color-light-link-active:     darken($color-light-link, 20%);
-
 $color-border:                $color-ui-light;
-
-// TO DO: delete one of these
-$color-icon-default:          #99997a;
 $color-icon-default:          rgba($color-ui-medium, 0.6);
 
-$header-background-color:     color(grey, 700);
 $color-background-nav:        $color-ui-subtle;
 
 $color-brand-github:          #6cc644;
@@ -86,11 +77,6 @@ $toolbar-button-width:        2.7rem;
 $nav-width-drawer:            13rem;
 $nav-width-sidebar:           12rem;
 $max-width-content:           size(19);
-
-
-// TO DO: delete this later?
-$max-width-narrow:            size(18);
-$max-width-wide:              size(20);
 
 
 // Breakpoints

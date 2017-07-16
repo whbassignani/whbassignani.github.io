@@ -1,0 +1,56 @@
+// @mixin container-fullWidthChild "undoes" the padding from .container
+@mixin container-full-width-child {
+  margin-left: -#{size(-2)};
+  margin-right: -#{size(-2)};
+
+  @media ($bp-xs) {
+    margin-left: -#{size(0)};
+    margin-right: -#{size(0)};
+  }
+
+  @media ($bp-s) {
+    margin-left: -#{size(2)};
+    margin-right: -#{size(2)};
+  }
+
+  @media ($bp-m) {
+    margin-left: -#{size(4)};
+    margin-right: -#{size(4)};
+  }
+}
+
+@mixin spacing-standard($size: small) {
+  @if $size == "xsmall" {
+    margin: size(0) 0;
+  } @else if  $size == "small" {
+    margin: size(2) 0;
+  } @else if $size == "medium" {
+    margin: size(4) 0;
+  } @else if $size == "large" {
+    margin: size(6) 0;
+  } @else {
+    @error "#{$size} is not a valid argument for @mixin spacing-standard.";
+  }
+}
+
+// Navigation drawer open and close button, hover state
+@mixin nav-button-hover-state {
+  &:after {
+    @include transform(translateX(-50%) translateY(-50%));
+    background-color: rgba($color-interactive-hover, 0.2);
+    border-radius: $border-radius;
+    content: '';
+    display: block;
+    height: 80%;
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transition: opacity $animation-time;
+    width: 80%;
+  }
+
+  &:hover:after {
+    opacity: 1;
+  }
+}

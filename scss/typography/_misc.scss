@@ -13,7 +13,7 @@ code {
 pre {
   @include soft-box-shadow;
   @include spacing-standard;
+  background-color: $white;
   padding: size(0);
   width: auto;
-  background-color: $white;
 }

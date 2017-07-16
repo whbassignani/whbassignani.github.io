@@ -7,9 +7,8 @@
 @import "globals/functions";
 @import "globals/colors";
 @import "globals/variables";
-@import "globals/mixins";
+@import "globals/mixins/index";
 @import "globals/flexbox";
-@import "globals/utilities";
 
 
 // Toolkit: typography
@@ -29,7 +28,6 @@
 
 // Site-wide elements
 @import "layout";
-@import "content";
 @import "header";
 @import "nav";
 @import "footer";

@@ -1,4 +1,3 @@
-// TO DO: delete this?
 #header {
   @media ($bp-when-drawer-expands) {
     flex: 0 1 $nav-width-sidebar;
@@ -39,9 +38,9 @@
 
   h1 {
     color: inherit;
-    margin: 0;
     font-size: size(0);
     font-weight: normal;
+    margin: 0;
 
     @media ($bp-when-drawer-expands) {
       @include bold-spaced-type;
@@ -65,8 +64,8 @@
   svg {
     fill: $color-interactive;
     height: 14px;
-    width: 18px;
     transition: fill $animation-time;
+    width: 18px;
   }
 
   &:hover svg {

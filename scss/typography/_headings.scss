@@ -12,31 +12,27 @@
 
 @mixin h1 {
   @include heading-styles;
-  margin: size(5) 0 size(2);
   font-size: size(2);
-
-  &:first-child:not(.content-title) {
-    margin-top: 0;
-  }
+  margin: size(5) 0 size(2);
 }
 
 @mixin h2 {
   @include heading-styles;
-  margin: size(4) 0 size(1);
   font-size: size(1);
+  margin: size(4) 0 size(1);
 }
 
 @mixin h3 {
   @include heading-styles;
-  margin: size(3) 0 size(0);
   font-size: size(0);
+  margin: size(3) 0 size(0);
 }
 
 @mixin h4 {
   @include heading-styles;
   @include bold-spaced-type;
-  margin: size(2) 0 size(-1);
   font-size: size(-2);
+  margin: size(2) 0 size(-1);
 }
 
 h1,

@@ -33,14 +33,16 @@ This is a segue to a larger topic: our devices are missing *context* in a world 
 
 <div class="photo">
   <img src="/assets/writing/2016-07-05-on-autocorrect/img-thai-960.jpg" srcset="/assets/writing/2016-07-05-on-autocorrect/img-thai-960.jpg 960w, /assets/writing/2016-07-05-on-autocorrect/img-thai-640.jpg 640w, /assets/writing/2016-07-05-on-autocorrect/img-thai-320.jpg 320w" alt="Thai restaurant, blurred out faces with question marks">
-  <p class="caption">Source: a friend who took the photo, but my phone doesn’t know who.</p>
+  <div class="caption">
+    <p>Source: a friend who took the photo, but my phone doesn’t know who.</p>
+  </div>
 </div>
 
 **Facebook** knows that I went to eat Thai food last night with some friends because someone tagged me in it. But it doesn’t know whether I liked it… or why I went there… or even what I ordered. That checkin didn’t tell Facebook how apathetic I am toward Thai food. Maybe **Yelp** knows, but I never leave reviews.
 
 Either way, I’m already getting sidebar advertisements for similar restaurants in the area.
 
-[**Automatic**](http://automatic.com) knows that my car went from home to the Thai restaurant, and **Uber** has my ride from a friends to a nearby shopping center on file. Neither service knows that we went to a karaoke bar, or that I hate karaoke. 
+[**Automatic**](http://automatic.com) knows that my car went from home to the Thai restaurant, and **Uber** has my ride from a friends to a nearby shopping center on file. Neither service knows that we went to a karaoke bar, or that I hate karaoke.
 
 ## Coming soon: something better?
 

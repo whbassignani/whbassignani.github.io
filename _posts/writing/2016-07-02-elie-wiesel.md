@@ -2,6 +2,7 @@
 title: R.I.P. Elie Wiesel
 category: writing
 dek: “Peace is our gift to each other.” 1928–2016
+hide_author: true
 
 banner:
 - size: 1280
@@ -25,15 +26,15 @@ Thankfully, he extended that talk into a trilogy of lectures in October 2009. Th
 
 <blockquote>
   <p>Wiesel, a survivor of the Holocaust and a renowned author, has lectured on the story of Job before but he said he returns to it because it is timeless and timely and “like a fairytale for adults.”</p>
-    
+
   <p>He said that Job’s story is far-reaching because it could have taken place anywhere and everywhere…</p>
-  
+
   <p>Among these dilemmas, are the struggles of indifference and silence, he said. “Silence helps the victimizer, never the victim,” Wiesel said. He also said that anything is preferable to indifference.[^1]</p>
-  
+
   <p>…</p>
-  
+
   <p>Despite Job’s wretched tribulations, this adult fairy tale has a happy ending, Wiesel said. Just as starting over is an “essential component in Jewish history”, it is also how the story of Job ends, he said.</p>
-  
+
   <p>“It is a story not of beginnings, but of beginning again,” said Wiesel.</p>
 </blockquote>
 

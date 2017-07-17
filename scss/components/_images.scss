@@ -1,6 +1,8 @@
 .photo {
   @include soft-box-shadow;
   @include spacing-standard;
+  margin-left: auto;
+  margin-right: auto;
 
   img {
     display: block;

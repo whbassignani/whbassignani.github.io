@@ -1,68 +1,55 @@
-.archive h2 {
-  @include bold-spaced-type;
-
-  margin: $gutter-large 0 $gutter-small;
-  color: color(grey, 200);
-  font-size: $type-minus-two;
+.archive-year {
+  @include h4;
+  color: $color-ui-light;
+  font-size: size(-1);
+  margin-top: size(2);
 }
 
-.archive ul {
+.archive-list {
+  margin: 0;
   padding-left: 0;
 }
 
-.archive li {
-  padding-left: 0;
-  margin-bottom: $gutter-small;
+.archive-list-item {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .archive-link {
   @include flexbox;
   @include align-items(baseline);
-
   border-bottom: 0;
-  color: $black;
+  padding: size(-2) 0;
+
+  &:hover .archive-post-title,
+  &:hover .archive-post-date,
+  &:hover .archive-post-dots {
+    border-color: $color-interactive-hover;
+    color: $color-interactive-hover;
+  }
 }
 
 .archive-post-title {
   @include flex(0 1 auto);
   font-size: $type-base;
   margin: 0;
-  margin-right: $gutter-small;
+  margin-right: size(0);
   transition: color $animation-time;
-
-  a:hover & {
-    color: $color-interactive-hover;
-  }
-
-  @media ($bp-small) {
-    font-size: $type-plus-one;
-  }
 }
 
 .archive-post-date {
-  @include flex(0 0 auto);
+  color: $color-ui-light;
   display: block;
-  margin: 0 0 $gutter-smallest $gutter-small;
-  color: color(grey, 200);
+  flex: 0 0 auto;
   font-family: $sans-serif;
-  font-size: $type-minus-one;
+  font-size: size(-1);
   line-height: 1;
+  margin-left: size(0);
   text-align: right;
   transition: color $animation-time;
 
-  a:hover & {
-    color: $color-interactive-hover;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-
-  @media ($bp-small) {
-    font-size: $type-base;
-  }
-
+  // Swaps the shorthand/abbreviated date for a full string
   @media ($bp-medium) {
     &:before {
       content: attr(data-full);
@@ -74,9 +61,8 @@
   }
 }
 
-.archive-dots {
-  @include flex(1 1 auto);
-
-  border-bottom: 1px dotted color(grey, 200);
-  opacity: 0.5;
+.archive-post-dots {
+  border-bottom: ($border-width / 2) dotted $color-ui-light;
+  flex: 1 1 auto;
+  opacity: 0.6;
 }

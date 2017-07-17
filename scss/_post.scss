@@ -33,10 +33,11 @@
 }
 
 .footnotes {
-  margin: $gutter-medium 0 $gutter-large;
-  font-size: $type-minus-one;
+  @include spacing-standard;
+  font-size: size(-1);
+  margin-bottom: 0;
 
-  p {
+  ol {
     margin: 0;
   }
 
@@ -46,14 +47,5 @@
     margin-bottom: $gutter-smaller;
     font-family: $sans-serif;
     font-weight: bold;
-  }
-
-  @media ($bp-small) {
-    margin: $gutter-large 0 $gutter-larger;
-    font-size: $type-base;
-
-    &:before {
-      margin-bottom: $gutter-small;
-    }
   }
 }

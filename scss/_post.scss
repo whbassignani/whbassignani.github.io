@@ -44,7 +44,7 @@
   &:before {
     content: "Footnotes:";
     display: block;
-    margin-bottom: $gutter-smaller;
+    margin-bottom: size(-2);
     font-family: $sans-serif;
     font-weight: bold;
   }

@@ -57,6 +57,9 @@ $easing-in-out-back:          cubic-bezier(0.68, -0.55, 0.265, 1.55);
 $easing-out-quint:            cubic-bezier(0.23, 1, 0.32, 1);
 $easing-in-quint:             cubic-bezier(0.755, 0.05, 0.855, 0.06);
 
+$amount-brighten:             1.1;
+$amount-fade:                 0.8;
+
 // DELETE THIS LATER -->
 // Gutters/Margins/Padding/Layout
 $gutter-largest:              size(6) * 2;

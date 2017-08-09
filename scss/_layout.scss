@@ -60,6 +60,14 @@ body {
   margin: 0 auto;
   padding: size(0) size(-2);
 
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
   // .container-fullWidthChild "undoes" the padding from .container
   .container-fullWidthChild {
     @include container-full-width-child;

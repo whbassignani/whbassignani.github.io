@@ -4,29 +4,45 @@
 {% include header.html %}
 
   <main id="content">
+    {% if page.banner_image %}
+      {% assign this_image = page.banner_image %}
+          <div class="work-banner">
+    {% include img-srcset.html %}
+          </div>
+      {% assign this_image = null %}
+    {% endif %}
+
     <article class="container content-text">
-      <header class="post-header">
-        <time class="post-meta">{{ page.date | date: "%B %-d, %Y" }}</time>
+      <header class="work-header post-header">
         <h1 class="content-title post-title">{{ page.title }}</h1>
       </header>
 
       <div class="work-content">
+        <h2 class="work-content-title">Project Details</h2>
 {{ content }}
       </div>
 
-      <dl class="work-details">
-        <dt>Client/Company</dt>
-        <dd>{{ page.client }}</dd>
-        <dt>Role</dt>
-        <dd>{{ page.role }}</dd>
-      </dl>
+      <aside class="work-details">
+        <div class="work-detail">
+          <h2 class="work-detail-title">Client/Company</h2>
+          {{ page.client }}
+        </div>
+        <div class="work-detail">
+          <h2 class="work-detail-title">Role</h2>
+          {{ page.role }}
+        </div>
+        <div class="work-detail">
+          <h2 class="work-detail-title">Date</h2>
+          {{ page.date | date: "%B %Y" }}
+        </div>
+      </aside
 
 {% if page.work_images %}
       <div class="work-images">
   {% for work_image in page.work_images %}
     {% if work_image %}
       {% assign this_image = work_image %}
-        <div class="work-image photo">
+        <div class="work-image">
 {% include img-srcset.html %}
         </div>
       {% assign this_image = null %}

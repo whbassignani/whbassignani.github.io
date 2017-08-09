@@ -2,14 +2,56 @@
   padding-bottom: 0;
 }
 
+.work-banner {
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.work-content-title {
+  @include h4;
+}
+
 .work-images {
   @include spacing-standard;
 }
 
 .work-image {
   @include container-full-width-child;
-  margin-bottom: 0;
-  margin-top: 0;
+
+  img {
+    display:block;
+    width: 100%;
+  }
+}
+
+.work-content {
+  max-width: size(17);
+}
+
+.work-details {
+  @include spacing-standard(xsmall);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.work-detail {
+  flex: 1 0 100%;
+  margin: size(-2) 0;
+  padding-right: size(0);
+
+  @media ($bp-s) {
+    flex-basis: 50%;
+  }
+
+  @media ($bp-m) {
+    flex-basis: 33%;
+  }
+}
+
+.work-detail-title {
+  @include h4;
 }
 
 

@@ -1,8 +1,12 @@
 .archive-year {
   @include h4;
   color: $color-ui-light;
-  font-size: size(-1);
   margin-top: size(2);
+}
+
+.archive-divider {
+  margin-bottom: size(3);
+  margin-top: size(0);
 }
 
 .archive-list {
@@ -32,7 +36,7 @@
 
 .archive-post-title {
   @include flex(0 1 auto);
-  font-size: $type-base;
+  font-size: size(0);
   margin: 0;
   margin-right: size(0);
   transition: color $animation-time;

@@ -7,9 +7,9 @@
 }
 
 .post-content {
-  @media ($bp-m) {
+  @media ($bp-s) {
     & > p {
-      margin-right: 20%;
+      max-width: size(17);
     }
   }
 }

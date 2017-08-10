@@ -20,11 +20,21 @@
 <div class="work-content-wrapper">
 
       <div class="work-content">
-        <h2 class="work-content-title">Project Details</h2>
-{{ content }}
+        <h2 class="work-content-title">Project Overview</h2>
+        {{ content }}
       </div>
 
       <aside class="work-details">
+        <h2 class="work-detail-title">Details</h2>
+
+        <ul class="work-detail-list">
+          <li><strong>Client or Company:</strong> {{ page.client }}</li>
+          <li><strong>Role:</strong> {{ page.role }}</li>
+          <li><strong>Date:</strong> {{ page.date | date: "%B %Y" }}</li>
+        </ul>
+      </aside>
+
+      <!-- <aside class="work-details">
         <div class="work-detail">
           <h2 class="work-detail-title">Client/Company</h2>
           <p>{{ page.client }}</p>
@@ -37,8 +47,7 @@
           <h2 class="work-detail-title">Date</h2>
           <p>{{ page.date | date: "%B %Y" }}</p>
         </div>
-      </aside>
-
+      </aside> -->
 </div>
 
 {% if page.work_images %}

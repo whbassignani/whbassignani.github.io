@@ -45,19 +45,17 @@
 
 .work-content {
   @media ($bp-m) {
-    flex: 1 1 70%;
+    flex: 1 1 60%;
   }
 }
 
 .work-details {
   @include spacing-standard;
-  display: flex;
-  flex-wrap: wrap;
   width: 100%;
 
   @media ($bp-m) {
     display: block;
-    flex: 1 1 30%;
+    flex: 1 1 40%;
     margin-top: 0;
     padding-left: size(2);
     width: auto;
@@ -66,12 +64,6 @@
 
 .work-detail {
   @include spacing-standard(xsmall);
-  flex: 1 0 50%;
-  padding-right: size(0);
-
-  @media ($bp-m) {
-    padding-right: 0;
-  }
 }
 
 .work-content-title,
@@ -80,6 +72,25 @@
 
   @media ($bp-m) {
     font-size: size(-3);
+  }
+}
+
+.work-detail-list {
+  @include spacing-standard(xsmall);
+  font-family: $sans-serif;
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    padding-left: 0;
+  }
+
+  li strong {
+    display: block;
+  }
+
+  @media ($bp-m) {
+    font-size: size(-2);
   }
 }
 

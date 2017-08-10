@@ -18,7 +18,7 @@ body {
 }
 
 p {
-  margin: size(0) 0;
+  @include spacing-standard(xsmall);
 
   &:last-child {
     margin-bottom: 0;

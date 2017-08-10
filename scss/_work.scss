@@ -33,6 +33,7 @@
 
   @media ($bp-m) {
     align-items: baseline;
+    margin-bottom: size(4);
   }
 }
 
@@ -45,7 +46,7 @@
 
 .work-content {
   @media ($bp-m) {
-    flex: 1 1 60%;
+    flex: 2 0 0;
   }
 }
 
@@ -56,9 +57,9 @@
 
   @media ($bp-m) {
     display: block;
-    flex: 1 1 40%;
+    flex: 1 0 0;
     margin-top: 0;
-    padding-left: size(2);
+    padding-left: size(3);
     width: auto;
   }
 }
@@ -95,7 +96,8 @@
     }
 
     @media ($bp-m) {
-      flex-basis: 33.333333%;
+      // flex-basis: 33.333333%;
+      padding-right: 0;
     }
   }
 
@@ -104,7 +106,8 @@
   }
 
   @media ($bp-m) {
-    font-size: size(-2);
+    display: block;
+    // font-size: size(-2);
   }
 }
 

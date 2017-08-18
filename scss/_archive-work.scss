@@ -1,9 +1,9 @@
 .archive-work {
   @include spacing-standard(medium);
 
-  &:last-child {
-    margin-bottom: 0;
-  }
+  // &:last-child {
+  //   margin-bottom: 0;
+  // }
 }
 
 .archive-work-link {

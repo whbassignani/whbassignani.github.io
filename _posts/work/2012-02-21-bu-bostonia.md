@@ -16,6 +16,16 @@ archive_image:
   - size: 640
     url: /assets/writing/placeholders/placeholder-640x360.png
 
+banner_image:
+  - size: 2400
+    url: /assets/writing/placeholders/placeholder-2400x1200.png
+  - size: 1200
+    url: /assets/writing/placeholders/placeholder-1200x600.png
+  - size: 600
+    url: /assets/writing/placeholders/placeholder-600x300.png
+  - size: 300
+    url: /assets/writing/placeholders/placeholder-300x150.png
+
 work_images:
   -
     - size: 1560
@@ -26,7 +36,6 @@ work_images:
       url: /assets/work/2012-02-21-bu-bostonia/homepage-640.jpg
     - size: 320
       url: /assets/work/2012-02-21-bu-bostonia/homepage-320.jpg
-    - caption: <a href="http://www.bu.edu/bostonia">Bostonia</a> is BU’s award-winning, print and online alumni magazine. I designed and maintained the site, as well as several interactive features.
   -
     - size: 1560
       url: /assets/work/2012-02-21-bu-bostonia/civil-1560.jpg
@@ -54,5 +63,10 @@ work_images:
       url: /assets/work/2012-02-21-bu-bostonia/campaign-640.jpg
     - size: 320
       url: /assets/work/2012-02-21-bu-bostonia/campaign-320.jpg
-    - caption: <strong>Highlights&colon;</strong> <a href="http://www.bu.edu/bostonia/summer14/civil-disobedience">“Civil Disobedience”</a>, a three-part feature on <a href="http://www.bu.edu/bostonia/winter-spring14/china">China</a> (English and <a href="http://www.bu.edu/bostonia/winter-spring14/china/chinese/">Chinese</a>), <a href="http://www.bu.edu/bostonia/fall13/wine">Wine</a>, <a href="http://www.bu.edu/bostonia/high-notes">High Notes</a>, <a href="http://www.bu.edu/bostonia/summer13/warming">Warming</a>, and <a href="http://www.bu.edu/bostonia/summer12/secret">Secret Lives</a>.
 ---
+
+[*Bostonia*](http://www.bu.edu/bostonia) is BU’s award-winning, print and online alumni magazine. Every issue featured five to six of its most important stories, and we were tasked with reinterpreting each article’s design for the web.
+
+In addition to other work at BU, my primary responsibility was designing, maintaining, and shepherding *Bostonia* Online from kick-off to launch day. I designed and maintained the site, as well as several interactive features.
+
+Here are some of the many stories that I worked on: [“Civil Disobedience”](http://www.bu.edu/bostonia/summer14/civil-disobedience), a three-part feature on [China](http://www.bu.edu/bostonia/winter-spring14/china) (English and [Chinese](http://www.bu.edu/bostonia/winter-spring14/china/chinese/)), [Wine](http://www.bu.edu/bostonia/fall13/wine), [High Notes](http://www.bu.edu/bostonia/high-notes), [Warming](http://www.bu.edu/bostonia/summer13/warming), and [Secret Lives](http://www.bu.edu/bostonia/summer12/secret).

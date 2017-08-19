@@ -24,11 +24,6 @@
   color: $color-ui-medium;
   font-size: size(-2);
   padding: 0 size(0);
-
-  @media ($bp-when-drawer-expands) {
-  //   padding-left: 0;
-  //   padding-right: 0;
-  }
 }
 
 .nav-links {
@@ -52,7 +47,6 @@
 .nav-link:visited {
   @include align-items(center);
   @include flexbox;
-  // padding: (size(-1) + rem(1px)) size(0) (size(-1) - rem(1px));
   padding: (size(-6) + rem(1px)) size(-2) (size(-6) - rem(1px));
   border-bottom: 0;
   color: $color-ui-medium;

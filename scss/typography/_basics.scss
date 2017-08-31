@@ -6,7 +6,7 @@ html, body {
     font-size: $type-base-size * $type-ratio;
   }
 
-  @media ($bp-xl) {
+  @media ($bp-xxl) {
     font-size: $type-base-size * power($type-ratio, 2);
   }
 }

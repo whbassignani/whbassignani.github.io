@@ -1,7 +1,7 @@
 // @mixin container-fullWidthChild "undoes" the padding from .container
 @mixin container-full-width-child {
-  margin-left: -#{size(-2)};
-  margin-right: -#{size(-2)};
+  margin-left: -#{size(-3)};
+  margin-right: -#{size(-3)};
 
   @media ($bp-xs) {
     margin-left: -#{size(0)};
@@ -9,13 +9,13 @@
   }
 
   @media ($bp-s) {
-    margin-left: -#{size(2)};
-    margin-right: -#{size(2)};
+    margin-left: -#{size(3)};
+    margin-right: -#{size(3)};
   }
 
   @media ($bp-m) {
-    margin-left: -#{size(4)};
-    margin-right: -#{size(4)};
+    margin-left: -#{size(6)};
+    margin-right: -#{size(6)};
   }
 }
 
@@ -24,14 +24,14 @@
     margin-bottom: size(0);
     margin-top: size(0)
   } @else if  $size == "small" {
-    margin-bottom: size(2);
-    margin-top: size(2)
+    margin-bottom: size(3);
+    margin-top: size(3)
   } @else if $size == "medium" {
-    margin-bottom: size(4);
-    margin-top: size(4)
-  } @else if $size == "large" {
     margin-bottom: size(6);
     margin-top: size(6)
+  } @else if $size == "large" {
+    margin-bottom: size(9);
+    margin-top: size(9)
   } @else {
     @error "#{$size} is not a valid argument for @mixin spacing-standard.";
   }

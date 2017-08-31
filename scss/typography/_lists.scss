@@ -2,7 +2,7 @@
 ul,
 ol {
   @include spacing-standard;
-  padding-left: size(4);
+  padding-left: size(6);
 
   ul,
   ol {
@@ -30,8 +30,8 @@ ol {
   }
 
 li {
-  margin: size(-2) 0;
-  padding-left: size(-4);
+  margin: size(-3) 0;
+  padding-left: size(-3);
 }
 
 

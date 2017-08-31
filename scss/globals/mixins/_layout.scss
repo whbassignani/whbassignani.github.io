@@ -19,7 +19,7 @@
   }
 }
 
-@mixin spacing-standard($size: small) {
+@mixin spacing-standard($size: medium) {
   @if $size == "xsmall" {
     margin-bottom: size(0);
     margin-top: size(0)

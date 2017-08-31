@@ -3,7 +3,7 @@ code {
   @include spacing-standard;
   background-color: $white;
   font-size: size(-1);
-  padding: size(-4);
+  padding: size(-6);
 
   pre & {
     padding: 0;

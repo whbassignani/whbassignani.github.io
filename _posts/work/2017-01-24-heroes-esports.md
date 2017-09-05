@@ -28,34 +28,63 @@ banner_image:
 
 work_images:
   -
-    - size: 1280
-      url: /assets/writing/placeholders/placeholder-1280x720.png
-    - size: 960
-      url: /assets/writing/placeholders/placeholder-960x540.png
-    - size: 640
-      url: /assets/writing/placeholders/placeholder-640x360.png
-    - size: 320
-      url: /assets/writing/placeholders/placeholder-320x180.png
+    - size: 2400
+      url: /assets/work/2017-01-24-heroes-esports/preview-image-1-2400.jpg
+    - size: 1200
+      url: /assets/work/2017-01-24-heroes-esports/preview-image-1-1200.jpg
+    - size: 600
+      url: /assets/work/2017-01-24-heroes-esports/preview-image-1-600.jpg
   -
-    - size: 1280
-      url: /assets/writing/placeholders/placeholder-1280x720.png
-    - size: 960
-      url: /assets/writing/placeholders/placeholder-960x540.png
-    - size: 640
-      url: /assets/writing/placeholders/placeholder-640x360.png
-    - size: 320
-      url: /assets/writing/placeholders/placeholder-320x180.png
+    - size: 2400
+      url: /assets/work/2017-01-24-heroes-esports/preview-image-2-2400.jpg
+    - size: 1200
+      url: /assets/work/2017-01-24-heroes-esports/preview-image-2-1200.jpg
+    - size: 600
+      url: /assets/work/2017-01-24-heroes-esports/preview-image-2-600.jpg
   -
-    - size: 1280
-      url: /assets/writing/placeholders/placeholder-1280x720.png
-    - size: 960
-      url: /assets/writing/placeholders/placeholder-960x540.png
-    - size: 640
-      url: /assets/writing/placeholders/placeholder-640x360.png
-    - size: 320
-      url: /assets/writing/placeholders/placeholder-320x180.png
+    - size: 2400
+      url: /assets/work/2017-01-24-heroes-esports/preview-image-3-2400.jpg
+    - size: 1200
+      url: /assets/work/2017-01-24-heroes-esports/preview-image-3-1200.jpg
+    - size: 600
+      url: /assets/work/2017-01-24-heroes-esports/preview-image-3-600.jpg
+  -
+    - size: 2400
+      url: /assets/work/2017-01-24-heroes-esports/preview-image-4-2400.jpg
+    - size: 1200
+      url: /assets/work/2017-01-24-heroes-esports/preview-image-4-1200.jpg
+    - size: 600
+      url: /assets/work/2017-01-24-heroes-esports/preview-image-4-600.jpg
+  -
+    - size: 2400
+      url: /assets/work/2017-01-24-heroes-esports/preview-image-5-2400.jpg
+    - size: 1200
+      url: /assets/work/2017-01-24-heroes-esports/preview-image-5-1200.jpg
+    - size: 600
+      url: /assets/work/2017-01-24-heroes-esports/preview-image-5-600.jpg
+  -
+    - size: 2400
+      url: /assets/work/2017-01-24-heroes-esports/preview-image-6-2400.jpg
+    - size: 1200
+      url: /assets/work/2017-01-24-heroes-esports/preview-image-6-1200.jpg
+    - size: 600
+      url: /assets/work/2017-01-24-heroes-esports/preview-image-6-600.jpg
+  -
+    - size: 2400
+      url: /assets/work/2017-01-24-heroes-esports/preview-image-7-2400.jpg
+    - size: 1200
+      url: /assets/work/2017-01-24-heroes-esports/preview-image-7-1200.jpg
+    - size: 600
+      url: /assets/work/2017-01-24-heroes-esports/preview-image-7-600.jpg
+  -
+    - size: 2400
+      url: /assets/work/2017-01-24-heroes-esports/preview-image-8-2400.jpg
+    - size: 1200
+      url: /assets/work/2017-01-24-heroes-esports/preview-image-8-1200.jpg
+    - size: 600
+      url: /assets/work/2017-01-24-heroes-esports/preview-image-8-600.jpg
 ---
 
-[FitRec](http://www.bu.edu/fitrec/) is BU’s fitness center. <a href="http://www.bu.edu/interactive-design/">BU Interactive Design</a> redesigned their website and customized the WordPress-powered back-end to be highly editor-friendly. FitRec was built using Sass and mobile-first web development.
+The *Heroes of the Storm* esports site, or [HGC](http://www.playheroes.com/esports/), is lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet, metus quis pharetra porta, tellus turpis consectetur mi, ut accumsan nisl felis gravida elit. Vestibulum dui risus, ultrices eget rutrum ac, ultricies a diam.
 
-I also contributed some design to the responsive layouts whilst building the site, adjusting any desktop-only mockups to fit multiple viewports.
+Morbi ornare, mauris aliquet cursus fermentum, est ante efficitur felis, a ultrices neque nibh et dolor. Aenean ut ipsum maximus, malesuada ante quis, lacinia dui. Praesent ac molestie neque. Etiam iaculis eros sed risus viverra congue. Sed nulla nulla, egestas eget lacinia suscipit, ullamcorper at nisi.

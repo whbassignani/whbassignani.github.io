@@ -10,6 +10,7 @@
 
   @media ($bp-when-drawer-expands) {
     @include transform(none);
+    display: block;
     height: auto;
     left: auto;
     position: static;
@@ -23,6 +24,10 @@
   color: $color-ui-medium;
   font-size: size(-2);
   padding: 0 size(0);
+
+  @media ($bp-when-drawer-expands) {
+    display: none;
+  }
 }
 
 .nav-links {
@@ -36,6 +41,8 @@
   width: 100%;
 
   @media ($bp-when-drawer-expands) {
+    align-items: center;
+    display: flex;
     min-height: 0;
     padding: 0;
     transition: all 0s;
@@ -55,21 +62,6 @@
   transition:
     background-color $animation-time,
     color $animation-time;
-
-  &.is-current-page {
-    background-color: rgba($color-interactive-hover, 0.6);
-    color: $white;
-
-    &:after {
-      content: "←";
-      padding-left: size(-4);
-      opacity: 0.6;
-    }
-
-    svg {
-      fill: $white;
-    }
-  }
 
   svg {
     display: block;
@@ -98,8 +90,22 @@
   }
 
   @media ($bp-when-drawer-expands) {
-    border-radius: $border-radius 0 0 $border-radius;
+    @include bold-spaced-type;
+    border-radius: 0;
+    color: $color-ui-dark;
+    display: inline-block;
+    flex: 1;
+    font-size: size(-3);
+    background-color: red;
+
+    &:hover {
+      background-color: transparent;
+    }
   }
+}
+
+.nav-link-text {
+  display: block;
 }
 
     .nav-link.nav-link--twitter {
@@ -113,6 +119,55 @@
         fill: $color-brand-github;
       }
     }
+
+    @media ($bp-when-drawer-expands) {
+      .nav-link--home {
+        display: none;
+      }
+
+      .nav-link--about svg,
+      .nav-link--work svg,
+      .nav-link--writing svg {
+        display: none;
+      }
+
+      .nav-link--twitter,
+      .nav-link--github {
+        svg {
+          margin-right: 0;
+        }
+
+        .nav-link-text {
+          display: none;
+        }
+      }
+    }
+
+.nav-link.is-current-page,
+.nav-link.is-current-page:visited {
+  background-color: rgba($color-interactive-hover, 0.6);
+  color: $white;
+
+  &::after {
+    content: "←";
+    padding-left: size(-4);
+    opacity: 0.6;
+  }
+
+  svg {
+    fill: $white;
+  }
+
+  @media ($bp-when-drawer-expands) {
+    background-color: transparent;
+    background-color: yellow;
+    color: $color-interactive;
+
+    &::after {
+      display: none;
+    }
+  }
+}
 
 .nav-close-btn {
   @include align-items(center);

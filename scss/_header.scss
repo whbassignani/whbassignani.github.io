@@ -1,6 +1,10 @@
 #header {
   @media ($bp-when-drawer-expands) {
-  //   flex: 0 1 $nav-width-sidebar;
+    // flex: 0 1 $nav-width-sidebar;
+    display: flex;
+background-color: orange;
+    align-items: baseline;
+    justify-content: space-between;
   }
 }
 
@@ -8,6 +12,7 @@
 #toolbar {
   @include align-items(center);
   @include flexbox;
+background-color: green;
   height: $toolbar-height;
   padding: 0;
   position: relative;
@@ -24,6 +29,8 @@
   // When the mobile drawer nav moves to its permanent home on the left
   //   if needed
   @media ($bp-when-drawer-expands) {
+    display: block;
+    margin-left: 0;
     // height: auto;
     // margin: size(4) 0;
     // padding-left: size(0);
@@ -33,6 +40,7 @@
 .toolbar-title {
   @include order(2);
   @include transform(translateY(1px));
+  display: block;
   line-height: 1;
   padding: size(-3) 0;
 

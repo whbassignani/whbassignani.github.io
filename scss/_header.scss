@@ -1,6 +1,6 @@
 #header {
   @media ($bp-when-drawer-expands) {
-    flex: 0 1 $nav-width-sidebar;
+  //   flex: 0 1 $nav-width-sidebar;
   }
 }
 
@@ -24,9 +24,9 @@
   // When the mobile drawer nav moves to its permanent home on the left
   //   if needed
   @media ($bp-when-drawer-expands) {
-    height: auto;
-    margin: size(4) 0;
-    padding-left: size(0);
+    // height: auto;
+    // margin: size(4) 0;
+    // padding-left: size(0);
   }
 }
 
@@ -43,7 +43,7 @@
     margin: 0;
 
     @media ($bp-when-drawer-expands) {
-      @include bold-spaced-type;
+      // @include bold-spaced-type;
       font-size: size(-1);
     }
   }

@@ -8,7 +8,6 @@
   top: 0;
   width: $nav-width-drawer;
 
-  // When the mobile drawer nav moves to its permanent home on the left
   @media ($bp-when-drawer-expands) {
     @include transform(none);
     height: auto;

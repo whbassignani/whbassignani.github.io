@@ -7,13 +7,15 @@
   position: fixed;
   top: 0;
   width: $nav-width-drawer;
+  background-color: blue;
 
   @media ($bp-when-drawer-expands) {
+    @include flex-direction(row);
     @include transform(none);
     display: block;
     height: auto;
     left: auto;
-    position: static;
+    position: relative;
     top: auto;
     width: auto;
   }
@@ -39,10 +41,12 @@
     transform $animation-time-long $easing-out-quint,
     opacity $animation-time-long;
   width: 100%;
+  background-color: purple;
 
   @media ($bp-when-drawer-expands) {
     align-items: center;
     display: flex;
+    height: $toolbar-height;
     min-height: 0;
     padding: 0;
     transition: all 0s;
@@ -93,7 +97,7 @@
     @include bold-spaced-type;
     border-radius: 0;
     color: $color-ui-dark;
-    display: inline-block;
+    display: block;
     flex: 1;
     font-size: size(-3);
     background-color: red;

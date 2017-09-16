@@ -1,6 +1,6 @@
 #header {
   @include flexbox;
-  @include align-items(baseline);
+  @include align-items(center);
   @include justify-content(flex-start);
   // border-bottom: $border-width solid rgba($color-ui-light, 0.3);
   box-shadow:
@@ -35,16 +35,17 @@
 
 .header-title {
   // @include transform(translateY(1px));
+  @include bold-spaced-type;
   border-bottom: 0;
   color: $color-ui-dark;
   display: inline-block;
   line-height: 1;
-  padding: size(-6) size(0) size(-6) 0;
+  padding: size(-6) size(-6) size(-6) 0;
 
   h1 {
     color: inherit;
-    font-size: size(1);
-    font-weight: normal;
+    font-size: size(-2);
+    // font-weight: normal;
     margin: 0;
   }
 

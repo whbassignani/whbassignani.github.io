@@ -10,7 +10,6 @@
   @include flexbox;
   @include align-items(center);
   @include flex-wrap(nowrap);
-  padding-left: (size(-3) - size(-6));
   position: relative;
   width: 100%;
 }
@@ -24,14 +23,11 @@
   display: inline-block;
   font-size: size(-3);
   line-height: 1;
+  margin-left: size(-10);
   padding: size(-6);
   transition:
     background-color $animation-time,
     color $animation-time;
-
-  & + & {
-    margin-left: size(-10);
-  }
 
   &:hover {
     background-color: rgba($color-interactive-hover, 0.05);
@@ -65,12 +61,12 @@
 
 .nav-link-icon {
   display: inline-block;
-  fill: $color-icon-default;
   height: size(3);
   transition: fill $animation-time;
   width: size(3);
 
   svg {
+    fill: $color-interactive;
     height: 100%;
     width: 100%;
   }
@@ -81,12 +77,21 @@
   transform: translateY(rem(1px));
 }
 
+.nav-link--home,
 .nav-link--twitter,
 .nav-link--github {
   @include flexbox;
-  padding-bottom: rem(2px);
-  padding-top: rem(3px);
+  @include align-items(center);
+  height: rem(34px);
 }
+
+  .nav-link.nav-link--home {
+    .nav-link-icon {
+      height: size(0);
+      transform: translateY(-1px);
+      width: size(0);
+    }
+  }
 
     .nav-link.nav-link--twitter {
       svg {
@@ -101,26 +106,7 @@
     }
 
     @media ($bp-when-drawer-expands) {
-      .nav-link--home {
-        display: none;
-      }
 
-      .nav-link--about svg,
-      .nav-link--work svg,
-      .nav-link--writing svg {
-        display: none;
-      }
-
-      .nav-link--twitter,
-      .nav-link--github {
-        svg {
-          margin-right: 0;
-        }
-
-        .nav-link-text {
-          display: none;
-        }
-      }
     }
 
 .nav-link.is-current-page,

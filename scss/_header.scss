@@ -34,8 +34,8 @@
 }
 
 .header-title {
-  // @include transform(translateY(1px));
   @include bold-spaced-type;
+  // @include transform(translateY(rem(1px)));
   border-bottom: 0;
   color: $color-ui-dark;
   display: inline-block;

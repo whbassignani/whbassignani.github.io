@@ -17,59 +17,41 @@
         <h1 class="content-title post-title">{{ page.title }}</h1>
       </header>
 
-<div class="work-content-wrapper">
+      <div class="work-content-wrapper">
+        <div class="work-content">
+          <h2 class="work-content-title">Project Overview</h2>
+          {{ content }}
+        </div>
 
-      <div class="work-content">
-        <h2 class="work-content-title">Project Overview</h2>
-        {{ content }}
+        <aside class="work-details">
+          <h2 class="work-details-title">Details</h2>
+
+          <ul class="work-details-list">
+            <li class="work-detail">
+              <strong class="work-detail-label">Client or Company:</strong> {{ page.client }}
+            </li>
+            <li class="work-detail">
+              <strong class="work-detail-label">Role:</strong> {{ page.role }}
+            </li>
+            <li class="work-detail">
+              <strong class="work-detail-label">Date:</strong> {{ page.date | date: "%B %Y" }}
+            </li>
+          </ul>
+        </aside>
       </div>
-
-      <aside class="work-details">
-        <h2 class="work-details-title">Details</h2>
-
-        <ul class="work-details-list">
-          <li class="work-detail">
-            <strong class="work-detail-label">Client or Company:</strong> {{ page.client }}
-          </li>
-          <li class="work-detail">
-            <strong class="work-detail-label">Role:</strong> {{ page.role }}
-          </li>
-          <li class="work-detail">
-            <strong class="work-detail-label">Date:</strong> {{ page.date | date: "%B %Y" }}
-          </li>
-        </ul>
-      </aside>
-
-      <!-- <aside class="work-details">
-        <div class="work-detail">
-          <h2 class="work-detail-title">Client/Company</h2>
-          <p>{{ page.client }}</p>
-        </div>
-        <div class="work-detail">
-          <h2 class="work-detail-title">Role</h2>
-          <p>{{ page.role }}</p>
-        </div>
-        <div class="work-detail">
-          <h2 class="work-detail-title">Date</h2>
-          <p>{{ page.date | date: "%B %Y" }}</p>
-        </div>
-      </aside> -->
-</div>
+    </article>
 
 {% if page.work_images %}
-      <div class="work-images">
+  <div class="work-images">
   {% for work_image in page.work_images %}
     {% if work_image %}
       {% assign this_image = work_image %}
-        <div class="work-image">
-{% include img-srcset.html %}
-        </div>
+    <div class="work-image">{% include img-srcset.html %}</div>
       {% assign this_image = null %}
     {% endif %}
   {% endfor %}
-      </div>
+  </div>
 {% endif %}
-    </article>
   </main>
 
 {% include footer.html %}

@@ -1,5 +1,5 @@
 .work .content-text {
-  padding-bottom: 0;
+  max-width: $max-width-wide;
 }
 
 .work-banner {
@@ -14,13 +14,7 @@
   flex: 1 0 100%;
 }
 
-.work-images {
-  @include spacing-standard;
-}
-
 .work-image {
-  @include container-full-width-child;
-
   img {
     display:block;
     width: 100%;
@@ -52,6 +46,7 @@
     display: block;
     flex: 1 0 0;
     margin-top: 0;
+    min-width: 290px;
     padding-left: size(3);
     width: auto;
   }

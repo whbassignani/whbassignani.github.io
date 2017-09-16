@@ -9,7 +9,7 @@
 .post-content {
   @media ($bp-s) {
     & > p {
-      max-width: $max-width-post;
+      max-width: $max-width-narrow;
     }
   }
 }

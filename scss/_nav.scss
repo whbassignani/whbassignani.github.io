@@ -1,9 +1,5 @@
 #Nav {
-  // white-space: nowrap;
 
-  @media ($bp-when-drawer-expands) {
-
-  }
 }
 
 .nav-links {
@@ -47,15 +43,7 @@
   }
 
   @media ($bp-when-drawer-expands) {
-    @include bold-spaced-type;
-    color: $color-ui-dark;
-    display: block;
-    flex: 1;
-    font-size: size(-3);
 
-    &:hover {
-      background-color: transparent;
-    }
   }
 }
 
@@ -75,6 +63,10 @@
 .nav-link-text {
   display: inline-block;
   transform: translateY(rem(1px));
+
+  @media ($bp-m) {
+    transform: none;
+  }
 }
 
 .nav-link--home,
@@ -106,7 +98,7 @@
     }
 
     @media ($bp-when-drawer-expands) {
-// 
+//
     }
 
 .nav-link.is-current-page,

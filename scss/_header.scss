@@ -2,7 +2,7 @@
   @include flexbox;
   @include align-items(center);
   @include justify-content(flex-start);
-  // border-bottom: $border-width solid rgba($color-ui-light, 0.3);
+  background-color: $color-background-header;
   box-shadow:
     0 rem(1px) rem(4px) rgba($color-ui-medium, 0.4),
     0 rem(4px) rem(16px) rgba($color-ui-medium, 0.2);
@@ -13,7 +13,7 @@
   &::after {
     background-image: linear-gradient(
       to left,
-      rgba($color-ui-light, 0.2),
+      rgba($color-ui-light, 0.3),
       rgba($color-ui-light, 0)
     );
     content: '';

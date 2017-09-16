@@ -1,12 +1,6 @@
 // Dividers
 hr {
   @include container-full-width-child;
+  @include divider-styles;
   @include spacing-standard(medium);
-  background-color: rgba($color-ui-subtle, 0.6);
-  border-bottom: $border-width solid rgba($color-ui-light, 0.4);
-  border-left: 0;
-  border-right: 0;
-  border-top: $border-width solid rgba($color-ui-light, 0.4);
-  height: size(-4);
-  opacity: 0.5;
 }

@@ -3,3 +3,13 @@
     0 2px 8px rgba($shadow-color, 0.2),
     0 8px 16px rgba($shadow-color, 0.4);
 }
+
+@mixin divider-styles() {
+  background-color: rgba($color-ui-subtle, 0.6);
+  border-bottom: $border-width solid rgba($color-ui-light, 0.4);
+  border-left: 0;
+  border-right: 0;
+  border-top: $border-width solid rgba($color-ui-light, 0.4);
+  height: size(-4);
+  opacity: 0.5;
+}

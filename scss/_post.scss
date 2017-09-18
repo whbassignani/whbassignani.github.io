@@ -1,3 +1,7 @@
+.layout-post .content-text {
+  max-width: $max-width-narrow;
+}
+
 .post-meta {
   @include meta;
 }
@@ -6,12 +10,24 @@
   margin-top: 0;
 }
 
-.post-content {
+.post-banner {
   @media ($bp-s) {
-    & > p {
-      max-width: $max-width-narrow;
-    }
+    margin-left: -#{size(3)};
+    margin-right: -#{size(3)};
   }
+
+  @media ($bp-m) {
+    margin-left: -#{size(6)};
+    margin-right: -#{size(6)};
+  }
+}
+
+.post-content {
+  // @media ($bp-s) {
+  //   & > p {
+  //     max-width: $max-width-narrow;
+  //   }
+  // }
 }
 
 .post-footer {

@@ -1,5 +1,11 @@
 #Nav {
+  padding: 0 size(2) 0 size(-6);
 
+  @media ($bp-when-drawer-expands) {
+    margin-right: -#{size(-3)};
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .nav-links {
@@ -41,10 +47,6 @@
       fill: $color-interactive-active;
     }
   }
-
-  @media ($bp-when-drawer-expands) {
-
-  }
 }
 
 .nav-link-icon {
@@ -62,7 +64,7 @@
 
 .nav-link-text {
   display: inline-block;
-  transform: translateY(rem(1px));
+  transform: translateY(rem(0.5px));
 
   @media ($bp-m) {
     transform: none;
@@ -85,21 +87,13 @@
     }
   }
 
-    .nav-link.nav-link--twitter {
-      svg {
-        fill: $color-brand-twitter;
-      }
-    }
+  .nav-link.nav-link--twitter svg {
+    fill: $color-brand-twitter;
+  }
 
-    .nav-link.nav-link--github {
-      svg {
-        fill: $color-brand-github;
-      }
-    }
-
-    @media ($bp-when-drawer-expands) {
-//
-    }
+  .nav-link.nav-link--github svg {
+    fill: $color-brand-github;
+  }
 
 .nav-link.is-current-page,
 .nav-link.is-current-page:visited {
@@ -108,9 +102,5 @@
 
   &:hover {
     color: $color-interactive-hover;
-  }
-
-  @media ($bp-when-drawer-expands) {
-
   }
 }

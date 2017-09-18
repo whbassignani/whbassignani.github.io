@@ -1,7 +1,7 @@
 .archive-year {
   @include h4;
   color: $color-ui-light;
-  margin-top: size(2);
+  margin-top: size(7);
 }
 
 .archive-divider {
@@ -10,8 +10,12 @@
 }
 
 .archive-list {
-  margin: 0;
-  padding-left: 0;
+  @include container-full-width-child;
+  @include soft-box-shadow(xsmall);
+  @include spacing-standard(xsmall);
+  background-color: $white;
+  padding-bottom: size(0);
+  padding-top: size(0);
 }
 
 .archive-list-item {

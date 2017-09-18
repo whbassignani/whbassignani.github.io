@@ -3,24 +3,22 @@ title: Writing
 ---
 
 <section id="archive-posts" class="archive">
-  <ul class="archive-list">
-    
+  <ul class="archive-list container">
+
   {%for post in site.categories.writing %}
     {% unless post.next %}
   <h2 class="archive-year">{{ post.date | date: '%Y' }}</h2>
 
-  <ul class="archive-list">
+  <ul class="archive-list container">
     {% else %}
       {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
       {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
       {% if year != nyear %}
   </ul>
 
-  <hr class="archive-divider">
-
   <h2 class="archive-year">{{ post.date | date: '%Y' }}</h2>
 
-  <ul class="archive-list">
+  <ul class="archive-list container">
       {% endif %}
     {% endunless %}
     <li class="archive-list-item">

@@ -22,16 +22,16 @@
 @mixin spacing-standard($size: medium) {
   @if $size == "xsmall" {
     margin-bottom: size(0);
-    margin-top: size(0)
+    margin-top: size(0);
   } @else if  $size == "small" {
     margin-bottom: size(3);
-    margin-top: size(3)
+    margin-top: size(3);
   } @else if $size == "medium" {
     margin-bottom: size(6);
-    margin-top: size(6)
+    margin-top: size(6);
   } @else if $size == "large" {
     margin-bottom: size(9);
-    margin-top: size(9)
+    margin-top: size(9);
   } @else {
     @error "#{$size} is not a valid argument for @mixin spacing-standard.";
   }

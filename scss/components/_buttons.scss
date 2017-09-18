@@ -3,7 +3,7 @@ button,
 .button,
 input[type="button"] {
   @include bold-spaced-type;
-  @include soft-box-shadow(color(blue, 600));
+  @include soft-box-shadow(small, color(blue, 600));
   @include spacing-standard;
   background-color: $color-interactive;
   border: 0;
@@ -64,7 +64,7 @@ input[type="button"] {
 
 .button-secondary,
 input[type="button"].button-secondary {
-  @include soft-box-shadow(color(blue, 300));
+  @include soft-box-shadow(small, color(blue, 300));
   background-color: transparentize($color-interactive, 0.8);
   border: $border-width solid transparentize($color-interactive, 0.4);
   color: $color-interactive;

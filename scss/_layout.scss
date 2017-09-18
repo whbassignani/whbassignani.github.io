@@ -19,8 +19,8 @@ body {
   margin-right: auto;
 }
 
-#content {
-
+.content-text {
+  max-width: $max-width-wide;
 }
 
 .container {

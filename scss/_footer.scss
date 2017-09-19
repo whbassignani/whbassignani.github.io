@@ -24,18 +24,6 @@
   }
 
   @media ($bp-when-drawer-expands) {
-    background-color: $color-background;
-    box-shadow:
-      0 0 5px rgba($color-ui-medium, 0.2),
-      0 0 50px rgba($color-ui-medium, 0.2);
-    flex: 1 1 100%;
-    margin: 0 0 0 $nav-width-sidebar;
-    max-width: $max-width-content;
-    position: relative;
-    z-index: -1;
 
-    p {
-      margin: 0;
-    }
   }
 }

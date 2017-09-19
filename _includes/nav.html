@@ -1,7 +1,6 @@
-<nav id="nav-left" class="nav">
-  <div class="nav-links">
+<nav id="Nav">
+  <div id="Nav-links" class="nav-links">
 {% for category in site.data.nav_items.links %}
-    <h2 class="nav-header">{{ category.category_name }}</h2>
   {% for item in category.children %}
     {% capture class_string %}nav-link nav-link--{{ item.class }}{% endcapture %}
 
@@ -9,16 +8,13 @@
     {% capture class_string %}{{ class_string }} is-current-page{% endcapture %}
     {% endif %}
     <a href="{{ item.url }}" class="{{ class_string }}">
-    {% if item.icon %}
-    {{ item.icon }}
+    {% if item.icon_only %}
+      <span class="nav-link-icon">{{ item.icon }}</span>
+    {% else %}
+      <span class="nav-link-text">{{ item.name }}</span>
     {% endif %}
-    <span class="nav-link-text">{{ item.name }}</span>
     </a>
   {% endfor %}
 {% endfor %}
   </div>
-
-  <a href="#" id="nav-close-btn--left" class="nav-close-btn">
-    <svg><use xlink:href="/images/icons/icon-sprite.svg#icon-close" /></svg>
-  </a>
 </nav>

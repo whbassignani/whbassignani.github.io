@@ -16,7 +16,7 @@ $color-interactive-active:    darken($color-interactive, 10%);
 $color-border:                $color-ui-light;
 $color-icon-default:          rgba($color-ui-medium, 0.6);
 
-$color-background-nav:        $color-ui-subtle;
+$color-background-header:     $white;
 
 $color-brand-github:          #6cc644;
 $color-brand-twitter:         #55acee;
@@ -75,12 +75,11 @@ $gutter-smallest:             size(-4);
 // Layout
 $border-width:                2px;
 $border-radius:               6px;
-$toolbar-height:              2.5rem;
-$toolbar-button-width:        2.7rem;
 $nav-width-drawer:            13rem;
 $nav-width-sidebar:           12rem;
-$max-width-post:              33rem;
-$max-width-content:           64rem;
+$max-width-narrow:            36rem;
+$max-width-medium:            50rem;
+$max-width-wide:              64rem;
 
 
 // Breakpoints

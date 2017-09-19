@@ -1,88 +1,60 @@
-#header {
-  @media ($bp-when-drawer-expands) {
-    // flex: 0 1 $nav-width-sidebar;
-    display: flex;
-background-color: orange;
-    align-items: baseline;
-    justify-content: space-between;
-  }
-}
-
-// The site title (Hawkeward.com) next to the hamburger icon
-#toolbar {
-  @include align-items(center);
-  @include flexbox;
-background-color: green;
-  height: $toolbar-height;
-  padding: 0;
+.header-wrapper {
   position: relative;
+}
 
-  a {
-    border: 0;
-    color: $color-ui-dark;
+#header {
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(flex-start);
+  background-color: $color-background-header;
+  box-shadow:
+    0 rem(1px) rem(4px) rgba($color-ui-medium, 0.4),
+    0 rem(4px) rem(16px) rgba($color-ui-medium, 0.2);
+  overflow-x: auto;
+  padding-bottom: size(-2);
+  padding-top: size(-2);
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 
-    &:hover {
-      color: $color-interactive-hover;
-    }
+  &::-webkit-scrollbar {
+    display: none;
   }
 
-  // When the mobile drawer nav moves to its permanent home on the left
-  //   if needed
   @media ($bp-when-drawer-expands) {
-    display: block;
-    flex: 1;
-    margin-left: 0;
-    // height: auto;
-    // margin: size(4) 0;
-    // padding-left: size(0);
+    @include justify-content(space-between);
   }
 }
 
-.toolbar-title {
-  @include order(2);
-  @include transform(translateY(1px));
-  display: block;
+.header-title {
+  @include bold-spaced-type;
+  border-bottom: 0;
+  color: $color-ui-dark;
+  display: inline-block;
   line-height: 1;
-  padding: size(-3) 0;
+  padding: size(-6) 0;
 
   h1 {
     color: inherit;
-    font-size: size(0);
-    font-weight: normal;
+    font-size: size(-2);
     margin: 0;
-  }
-  @media ($bp-when-drawer-expands) {
-    padding: size(-3);
-
-    h1 {
-      // @include bold-spaced-type;
-      font-size: size(-1);
-    }
   }
 }
 
-.nav-open-btn {
-  @include align-items(center);
-  @include flexbox;
-  @include order(1);
-  @include justify-content(center);
-  @include nav-button-hover-state;
-  border: 0;
-  height: $toolbar-height;
-  line-height: 0;
-  position: relative;
-  width: $toolbar-button-width;
-
-  svg {
-    fill: $color-interactive;
-    height: 14px;
-    transition: fill $animation-time;
-    width: 18px;
-  }
-
-  &:hover svg {
-    fill: $color-interactive-hover;
-  }
+.header-right-shadow {
+  background-image: linear-gradient(
+    to left,
+    rgba($color-ui-light, 0.4),
+    rgba($color-ui-light, 0)
+  );
+  content: '';
+  display: block;
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30%;
 
   @media ($bp-when-drawer-expands) {
     display: none;

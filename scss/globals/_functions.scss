@@ -72,7 +72,7 @@
  */
 
 @function rem($size_pixels) {
-  @return $size_pixels / $type-base-size;
+  @return ($size_pixels / $type-base-size) * 1rem;
 }
 
 

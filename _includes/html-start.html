@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,14 +46,10 @@
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/webfonts.css">
-  <!--[if lt IE 9]>
-  <link rel="stylesheet" href="/css/ie.css">
-  <![endif]-->
+
   {% if page.customcss %}
   <link rel="stylesheet" href="/css/{{ page.slug }}.css">
   {% endif %}
-
-  <script src="/js/vendor/modernizr-3.5.0.min.js"></script>
 </head>
 
 {% if page.url == "/" %}

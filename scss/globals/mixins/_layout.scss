@@ -20,7 +20,10 @@
 }
 
 @mixin spacing-standard($size: medium) {
-  @if $size == "xsmall" {
+  @if $size == "xxsmall" {
+    margin-bottom: size(-8);
+    margin-top: size(-8);
+  } @else if  $size == "xsmall" {
     margin-bottom: size(0);
     margin-top: size(0);
   } @else if  $size == "small" {

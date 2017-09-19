@@ -9,7 +9,19 @@ title: Writing
     <li class="archive-list-item">
       <article class="archive-post">
         <a href="{{ post.url }}" class="archive-link" title="{{ post.title }}">
+
+  {% assign this_image = post.banner %}
+  {% if this_image %}
+          <div class="photo archive-post-thumbnail">
+    {% include img-srcset-no-caption.html %}
+          </div>
+  {% endif %}
+
           <h1 class="archive-post-title">{{ post.title }}</h1>
+
+          <p class="archive-post-dek">
+            {{ post.dek }}
+          </p>
 
           <time class="archive-post-date" data-full="{{ post.date | date: "%A, %B %-d, %Y" }}">
             <span class="shorthand">{{ post.date | date: "%b %-d" }}</span>

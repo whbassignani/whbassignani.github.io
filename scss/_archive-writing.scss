@@ -4,9 +4,12 @@
 }
 
 .archive-list-item {
+  @include soft-box-shadow;
+  @include spacing-standard(xsmall);
+  background-color: $white;
+  display: block;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  padding: size(-1);
 }
 
 .archive-link {
@@ -18,18 +21,32 @@
   }
 }
 
+.archive-post-thumbnail {
+  box-shadow: none;
+  margin: -#{size(-1)};
+  margin-bottom: size(-1);
+}
+
 .archive-post-title {
   font-size: size(0);
   margin: 0;
   transition: color $animation-time;
 }
 
+.archive-post-dek {
+  @include spacing-standard(xxsmall);
+  color: $color-ui-medium;
+  font-size: size(-1);
+}
+
 .archive-post-date {
+  @include bold-spaced-type;
   color: $color-ui-light;
   display: block;
   font-family: $sans-serif;
-  font-size: size(-1);
+  font-size: size(-4);
   line-height: 1;
+  margin-top: size(-5);
   transition: color $animation-time;
   white-space: nowrap;
 

@@ -8,8 +8,8 @@ title: Writing
 {%for post in site.categories.writing %}
   {% assign this_image = post.banner %}
 
-    <li class="archive-list-item {% if this_image %}has-thumbnail{% endif %}">
-      <a href="{{ post.url }}" class="archive-link" title="{{ post.title }}">
+    <a href="{{ post.url }}" class="archive-link" title="{{ post.title }}">
+      <li class="archive-list-item {% if this_image %}has-thumbnail{% endif %}">
         <article class="archive-post">
 
   {% if this_image %}
@@ -28,8 +28,8 @@ title: Writing
             <span class="shorthand">{{ post.date | date: "%b %-d" }}</span>
           </time>
         </article>
-      </a>
-    </li>
+      </li>
+    </a>
 {% endfor %}
   </ul>
 </section>

@@ -9,15 +9,15 @@
   }
 }
 
-.archive-list-item {
-  @include soft-box-shadow;
-  @include spacing-standard(xsmall);
-  background-color: $white;
-  display: block;
-  list-style: none;
-  margin-top: 0;
-  padding: size(-1);
-  position: relative;
+.archive-link {
+  @include flexbox;
+  @include flex-direction(column);
+  border-bottom: 0;
+  transition: transform $animation-time;
+
+  &:hover {
+    transform: translateY(-1%);
+  }
 
   @media ($bp-s) {
     @include flex(0 1 calc(50% - #{size(-1)}));
@@ -29,15 +29,16 @@
   }
 }
 
-.archive-link {
-  border-bottom: 0;
+.archive-list-item {
+  @include soft-box-shadow;
+  @include spacing-standard(xsmall);
+  background-color: $white;
   display: block;
-  padding-bottom: size(3);
-  transition: transform $animation-time;
-
-  &:hover {
-    transform: translateY(-1%);
-  }
+  flex: 1 0 0;
+  list-style: none;
+  margin-top: 0;
+  padding: size(-1) size(-1) size(6);
+  position: relative;
 }
 
 .archive-post-thumbnail {

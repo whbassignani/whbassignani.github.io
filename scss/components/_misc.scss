@@ -1,6 +1,5 @@
 // Dividers
 hr {
-  @include container-full-width-child;
   @include divider-styles;
   @include spacing-standard(medium);
 }

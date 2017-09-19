@@ -10,6 +10,8 @@
   margin-top: 0;
 }
 
+// Pop images out of the torso column for visual interest
+.layout-post .photo:not(.photo-small, .photo-medium),
 .post-banner {
   @media ($bp-s) {
     margin-left: -#{size(3)};

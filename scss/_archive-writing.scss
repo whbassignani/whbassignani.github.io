@@ -40,13 +40,11 @@
   }
 }
 
-.archive-post {
-  @include flex(1 0 100%);
-  position: relative;
-}
-
 .archive-link {
+  @include flex(1 0 100%);
   border-bottom: 0;
+  display: block;
+  position: relative;
 
   &:hover .archive-post-title,
   &:hover .archive-post-date {
@@ -64,6 +62,12 @@
   font-size: size(0);
   margin: 0 0 size(-8);
   transition: color $animation-time;
+
+  .archive-list-item:not(.has-thumbnail) & {
+    font-size: size(2);
+    line-height: $line-height-tight;
+    width: 75%;
+  }
 }
 
 .archive-post-dek {

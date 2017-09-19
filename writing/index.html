@@ -6,11 +6,12 @@ title: Writing
   <ul class="archive-list container">
 
 {%for post in site.categories.writing %}
-    <li class="archive-list-item">
-      <article class="archive-post">
-        <a href="{{ post.url }}" class="archive-link" title="{{ post.title }}">
-
   {% assign this_image = post.banner %}
+
+    <li class="archive-list-item {% if this_image %}has-thumbnail{% endif %}">
+      <a href="{{ post.url }}" class="archive-link" title="{{ post.title }}">
+        <article class="archive-post">
+
   {% if this_image %}
           <div class="photo archive-post-thumbnail">
     {% include img-srcset-no-caption.html %}
@@ -26,8 +27,8 @@ title: Writing
           <time class="archive-post-date" data-full="{{ post.date | date: "%B %-d, %Y" }}">
             <span class="shorthand">{{ post.date | date: "%b %-d" }}</span>
           </time>
-        </a>
-      </article>
+        </article>
+      </a>
     </li>
 {% endfor %}
   </ul>

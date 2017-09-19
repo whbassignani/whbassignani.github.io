@@ -9,14 +9,14 @@
 }
 
 .archive-list-item {
-  @include flexbox;
-  @include flex-direction(column);
   @include soft-box-shadow;
   @include spacing-standard(xsmall);
   background-color: $white;
+  display: block;
   list-style: none;
   margin-top: 0;
   padding: size(-1);
+  position: relative;
 
   @media ($bp-s) {
     @include flex(0 1 calc((100% - #{size(-1)}) / 2));
@@ -41,10 +41,8 @@
 }
 
 .archive-link {
-  @include flex(1 0 100%);
   border-bottom: 0;
   display: block;
-  position: relative;
 
   &:hover .archive-post-title,
   &:hover .archive-post-date {
@@ -85,8 +83,8 @@
   line-height: 1;
   margin-top: auto;
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: size(-1);
+  left: size(-1);
   transition: color $animation-time;
   white-space: nowrap;
 

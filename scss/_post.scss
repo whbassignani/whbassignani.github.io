@@ -10,28 +10,6 @@
   margin-top: 0;
 }
 
-// Pop images out of the torso column for visual interest
-.layout-post .photo:not(.photo-small, .photo-medium),
-.post-banner {
-  @media ($bp-s) {
-    margin-left: -#{size(3)};
-    margin-right: -#{size(3)};
-  }
-
-  @media ($bp-m) {
-    margin-left: -#{size(6)};
-    margin-right: -#{size(6)};
-  }
-}
-
-.post-content {
-  // @media ($bp-s) {
-  //   & > p {
-  //     max-width: $max-width-narrow;
-  //   }
-  // }
-}
-
 .post-footer {
   border-top: $border-width solid $color-ui-subtle;
   font-family: $sans-serif;

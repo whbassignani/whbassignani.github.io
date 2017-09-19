@@ -1,44 +1,15 @@
 .nav {
-<<<<<<< HEAD:scss/_nav.scss
   @include flexbox;
   @include flex-direction(column);
   @include transform(translateX(-100%));
   height: 100vh;
-=======
-  height: 0;
-  width: 0;
-  position: fixed;
->>>>>>> reverted-nav-state:scss/nav.scss
   left: 0;
   position: fixed;
   top: 0;
-<<<<<<< HEAD:scss/_nav.scss
   width: $nav-width-drawer;
   background-color: blue;
-=======
-  z-index: 200;
-  overflow-y: auto;
->>>>>>> reverted-nav-state:scss/nav.scss
-
-  .js-nav-open--left & {
-    height: 100vh;
-    width: 100vw;
-
-    &:after {
-      @include transition(
-        opacity $animation-time-long,
-        width 0s,
-        height 0s
-      );
-
-      height: 100vh;
-      width: 100vw;
-      opacity: 0.9;
-    }
-  }
 
   @media ($bp-when-drawer-expands) {
-<<<<<<< HEAD:scss/_nav.scss
     @include flex-direction(row);
     @include transform(none);
     display: block;
@@ -71,94 +42,6 @@
     opacity $animation-time-long;
   width: 100%;
   background-color: purple;
-=======
-<<<<<<< HEAD:scss/_nav.scss
-    height: auto;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-=======
-    &,
-    .js-nav-open--left & {
-      @include transition(
-        opacity 0s,
-        width 0s,
-        height 0s
-      );
-
-      height: 100vh;
-      width: $nav-drawer-width;
-      position: fixed;
-      left: 0;
-      top: 0;
-    }
-
-    // Adds a shadow
-    &:after {
-      @include box-shadow(-5px 0 10px rgba($black, 0.5));
-
-      content: "";
-      display: block;
-      height: 100%;
-      width: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
->>>>>>> parent of cb72e53... Finished nav animations; renaming partials and Sass variables:scss/nav.scss
-  }
-}
-
-.nav-links {
-  @include transform(translateX(-100%));
-  @include transition(
-    transform $animation-time-long $easing-in-out-back,
-    width 0s,
-    height 0s
-  );
-
-  min-height: 100vh;
-  padding: $toolbar-height--small 0 $gutter-small;
-  width: $nav-drawer-width;
-  position: relative;
-  z-index: 202;
-  overflow-y: auto;
-
-  .js-nav-open--left & {
-    @include transform(translateX(0));
-  }
-
-  @media ($bp-small) {
-    padding-top: $toolbar-height--medium;
-  }
-
-  @media ($bp-when-drawer-expands) {
-    &,
-    .js-nav-open--left & {
-      @include transform(translateX(0));
-<<<<<<< HEAD:scss/_nav.scss
-      @include transition(all 0s);
-=======
-      @include transition(
-        all 0s,
-        width 0s,
-        height 0s
-      );
->>>>>>> parent of cb72e53... Finished nav animations; renaming partials and Sass variables:scss/nav.scss
-    }
-  }
-}
-
-.nav-header {
-  @include bold-spaced-type;
-
-<<<<<<< HEAD:scss/_nav.scss
-  color: color(grey, 500);
-  margin: size(2) 0 size(-2);
-  padding-left: size(-2);
-  font-size: size(-2);
->>>>>>> reverted-nav-state:scss/nav.scss
 
   @media ($bp-when-drawer-expands) {
     align-items: center;
@@ -168,12 +51,6 @@
     padding: 0;
     transition: all 0s;
   }
-=======
-  margin: $gutter-medium 0 $gutter-smallest;
-  padding-left: $gutter-smaller;
-  opacity: 0.5;
-  font-size: $type-minus-two;
->>>>>>> parent of cb72e53... Finished nav animations; renaming partials and Sass variables:scss/nav.scss
 }
 
 .nav-link,
@@ -184,7 +61,7 @@
   border-bottom: 0;
   color: $color-ui-medium;
   font-family: $sans-serif;
-  font-size: $type-base;
+  font-size: size(0);
   line-height: 1;
   transition:
     background-color $animation-time,
@@ -235,17 +112,11 @@
   display: block;
 }
 
-<<<<<<< HEAD:scss/_nav.scss
     .nav-link.nav-link--twitter {
       svg {
         fill: $color-brand-twitter;
       }
     }
-=======
-<<<<<<< HEAD:scss/_nav.scss
-    svg {
-      @include transition(fill $animation-time);
->>>>>>> reverted-nav-state:scss/nav.scss
 
     .nav-link.nav-link--github {
       svg {
@@ -299,12 +170,6 @@
     &::after {
       display: none;
     }
-=======
-  svg {
-    display: inline-block;
-    height: size(3);
-    width: size(3);
->>>>>>> parent of cb72e53... Finished nav animations; renaming partials and Sass variables:scss/nav.scss
   }
 }
 

@@ -7,9 +7,10 @@
   @include align-items(center);
   @include justify-content(flex-start);
   background-color: $color-background-header;
-  box-shadow:
-    0 rem(1px) rem(4px) rgba($color-ui-medium, 0.4),
-    0 rem(4px) rem(16px) rgba($color-ui-medium, 0.2);
+  border-bottom: $border-width solid $color-ui-subtle;
+  // box-shadow:
+  //   0 rem(1px) rem(4px) rgba($color-ui-medium, 0.4),
+  //   0 rem(4px) rem(16px) rgba($color-ui-medium, 0.2);
   overflow-x: auto;
   padding-bottom: size(-2);
   padding-top: size(-2);

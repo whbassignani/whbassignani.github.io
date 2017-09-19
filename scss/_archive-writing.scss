@@ -9,10 +9,11 @@
 }
 
 .archive-list-item {
+  @include flexbox;
+  @include flex-direction(column);
   @include soft-box-shadow;
   @include spacing-standard(xsmall);
   background-color: $white;
-  display: block;
   list-style: none;
   margin-top: 0;
   padding: size(-1);
@@ -39,6 +40,11 @@
   }
 }
 
+.archive-post {
+  @include flex(1 0 100%);
+  position: relative;
+}
+
 .archive-link {
   border-bottom: 0;
 
@@ -56,14 +62,14 @@
 
 .archive-post-title {
   font-size: size(0);
-  margin: 0;
+  margin: 0 0 size(-8);
   transition: color $animation-time;
 }
 
 .archive-post-dek {
-  @include spacing-standard(xxsmall);
   color: $color-ui-medium;
   font-size: size(-1);
+  margin: 0 0 size(3);
 }
 
 .archive-post-date {
@@ -73,7 +79,10 @@
   font-family: $sans-serif;
   font-size: size(-4);
   line-height: 1;
-  margin-top: size(-5);
+  margin-top: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   transition: color $animation-time;
   white-space: nowrap;
 

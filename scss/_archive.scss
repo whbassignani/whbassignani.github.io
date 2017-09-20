@@ -1,0 +1,130 @@
+$spacing-between-columns: size(-1);
+$spacing-between-rows: size(6);
+
+.archive {
+  @include flexbox;
+  @include flex-wrap(wrap);
+  margin: 0 -#{$spacing-between-columns} 0 0;
+  padding: 0;
+}
+
+.archive-link {
+  border-bottom: 0;
+  display: block;
+  margin: 0 $spacing-between-columns $spacing-between-rows 0;
+  position: relative;
+  transition: transform $animation-time;
+  width: 100%;
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:hover {
+    transform: translateY(-2%);
+  }
+
+  &:active {
+    opacity: $amount-fade;
+    transform: scale($amount-shrink);
+  }
+
+  @media ($bp-m) {
+    @include flex(0 1 calc(50% - #{$spacing-between-columns}));
+  }
+
+  @media ($bp-xxl) {
+    @include flex(0 1 calc(33.333333% - #{$spacing-between-columns}));
+  }
+}
+
+.archive-item-image {
+  @include soft-box-shadow(xsmall);
+  @include spacing-standard(none);
+  padding-bottom: 56.25%;
+  position:relative;
+
+  .no-archive-item-image & {
+    background-color: color(grey, 100);
+  }
+
+  img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+
+  .image-sizer {
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.archive-item-content {
+  padding: size(-1) size(8) 0 0;
+}
+
+.archive-item-title,
+.archive-item-text {
+  @include spacing-standard(xxsmall);
+}
+
+.archive-item-text {
+  color: $color-ui-medium;
+  font-size: size(-1);
+  line-height: $line-height-tight;
+}
+
+.archive-item-meta {
+  @include bold-spaced-type;
+  color: $color-ui-light;
+  display: block;
+  font-family: $sans-serif;
+  font-size: size(-4);
+  line-height: 1;
+  margin: size(-2) 0 0;
+
+  // Swaps any shorthand/abbreviated meta for a full string
+  @media ($bp-medium) {
+    &:before {
+      content: attr(data-full);
+    }
+
+    .shorthand {
+      display: none;
+    }
+  }
+}
+
+
+// Work and writing archive-specific grid styles
+#WorkArchive .archive-link {
+  @media ($bp-m) {
+    @include flex(0 1 calc(50% - #{$spacing-between-columns}));
+  }
+
+  @media ($bp-xl) {
+    @include flex(0 1 calc(33.333333% - #{$spacing-between-columns}));
+  }
+}
+
+#WritingArchive .archive-link {
+  @media ($bp-m) {
+    @include flex(0 1 calc(50% - #{$spacing-between-columns}));
+  }
+
+  @media ($bp-xl) {
+    @include flex(0 1 calc(33.333333% - #{$spacing-between-columns}));
+  }
+
+  @media ($bp-xxl) {
+    @include flex(0 1 calc(25% - #{$spacing-between-columns}));
+  }
+}

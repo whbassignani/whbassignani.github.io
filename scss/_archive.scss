@@ -4,7 +4,7 @@ $spacing-between-rows: size(6);
 .archive {
   @include flexbox;
   @include flex-wrap(wrap);
-  margin: 0 -#{$spacing-between-columns} 0 0;
+  margin: size(6) -#{$spacing-between-columns} size(6) 0;
   padding: 0;
 }
 

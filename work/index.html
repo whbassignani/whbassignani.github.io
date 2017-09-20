@@ -2,24 +2,25 @@
 title: Work
 ---
 
-<section class="archive-works">
+<section id="archive-works" class="archive">
 
 {% for work in site.categories.work %}
 
-  <div class="archive-work">
-    <a href="{{ work.url }}" class="archive-work-link">
+  <a href="{{ work.url }}" class="archive-link">
+    <div class="archive-item">
 
 {% if work.archive_image %}
   {% assign this_image = work.archive_image %}
-      <div class="photo archive-work-image">
-{% include img-srcset.html %}
+      <div class="archive-item-image">
+  {% include img-srcset.html %}
       </div>
   {% assign this_image = null %}
 {% endif %}
 
-      <h2 class="archive-work-title">{{ work.title }}</h2>
-      <span class="archive-work-role">{{ work.role }} ({{ work.type }})</span>
-    </a>
-  </div>
+      <h2 class="archive-item-title">{{ work.title }}</h2>
+      <p class="archive-item-dek">Lorem ipsum dolor sit, blah blah blah. Something something…</p>
+      <span class="archive-item-role">{{ work.role }} ({{ work.type }})</span>
+    </div>
+  </a>
 {% endfor %}
 </section>

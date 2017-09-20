@@ -1,3 +1,7 @@
+#archive-posts {
+  margin-top: size(6);
+}
+
 .archive-list {
   margin: 0;
   padding: 0;
@@ -9,7 +13,7 @@
   }
 }
 
-.archive-link {
+.archive-post-link {
   @include flexbox;
   @include flex-direction(column);
   border-bottom: 0;
@@ -58,7 +62,6 @@
 .archive-post-title {
   font-size: size(0);
   margin: 0 0 size(-8);
-  transition: color $animation-time;
 
   .archive-list-item:not(.has-thumbnail) & {
     font-size: size(2);
@@ -71,21 +74,19 @@
   color: $color-ui-medium;
   font-size: size(-1);
   margin: 0;
-  transition: color $animation-time;
 }
 
 .archive-post-date {
   @include bold-spaced-type;
+  bottom: size(-1);
   color: $color-ui-light;
   display: block;
   font-family: $sans-serif;
   font-size: size(-4);
+  left: size(-1);
   line-height: 1;
   margin-top: auto;
   position: absolute;
-  bottom: size(-1);
-  left: size(-1);
-  transition: color $animation-time;
   white-space: nowrap;
 
   // Swaps the shorthand/abbreviated date for a full string

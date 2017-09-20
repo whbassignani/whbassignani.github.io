@@ -35,6 +35,9 @@
   } @else if $size == "large" {
     margin-bottom: size(9);
     margin-top: size(9);
+  } @else if $size == "none" {
+    margin-bottom: 0;
+    margin-top: 0;
   } @else {
     @error "#{$size} is not a valid argument for @mixin spacing-standard.";
   }

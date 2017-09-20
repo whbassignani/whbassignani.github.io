@@ -1,7 +1,9 @@
 ---
-client: Blizzard Entertainment
 title: Heroes Esports (HGC)
 category: work
+dek: Lorem ipsum something something?
+
+client: Blizzard Entertainment
 type: web
 role: Design
 url: http://www.playheroes.com/esports

@@ -1,7 +1,9 @@
 ---
-client: Blizzard Entertainment
 title: Heroes of the Storm
 category: work
+dek: Lorem ipsum something something?
+
+client: Blizzard Entertainment
 type: web
 role: Design, front-end build
 url: http://www.playheroes.com/

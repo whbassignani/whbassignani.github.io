@@ -1,7 +1,9 @@
 ---
-client: Boston University
 title: Faculty Experts
 category: work
+dek: Lorem ipsum something something?
+
+client: Boston University
 type: web
 role: Design, front-end build
 url: http://www.bu.edu/experts

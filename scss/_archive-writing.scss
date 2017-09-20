@@ -25,7 +25,15 @@
   }
 
   @media ($bp-m) {
-    @include flex(0 1 calc(33% - #{size(-1)}));
+    @include flex(0 1 calc(33.333333% - #{size(-1)}));
+  }
+
+  @media ($bp-l) {
+    @include flex(0 1 calc(25% - #{size(-1)}));
+  }
+
+  @media ($bp-xl) {
+    @include flex(0 1 calc(20% - #{size(-1)}));
   }
 }
 

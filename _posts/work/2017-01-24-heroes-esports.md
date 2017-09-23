@@ -9,24 +9,24 @@ role: Design
 url: http://www.playheroes.com/esports
 
 archive_image:
-  - size: 2560
-    url: /assets/writing/placeholders/placeholder-2560x1440.png
-  - size: 1280
-    url: /assets/writing/placeholders/placeholder-1280x720.png
-  - size: 960
-    url: /assets/writing/placeholders/placeholder-960x540.png
-  - size: 640
-    url: /assets/writing/placeholders/placeholder-640x360.png
+  - size: 2400
+    url: /assets/work/2017-01-24-heroes-esports/banner-2400.jpg
+  - size: 1200
+    url: /assets/work/2017-01-24-heroes-esports/banner-1200.jpg
+  - size: 600
+    url: /assets/work/2017-01-24-heroes-esports/banner-600.jpg
+  - size: 300
+    url: /assets/work/2017-01-24-heroes-esports/banner-300.jpg
 
 banner_image:
   - size: 2400
-    url: /assets/writing/placeholders/placeholder-2400x1200.png
+    url: /assets/work/2017-01-24-heroes-esports/banner-2400.jpg
   - size: 1200
-    url: /assets/writing/placeholders/placeholder-1200x600.png
+    url: /assets/work/2017-01-24-heroes-esports/banner-1200.jpg
   - size: 600
-    url: /assets/writing/placeholders/placeholder-600x300.png
+    url: /assets/work/2017-01-24-heroes-esports/banner-600.jpg
   - size: 300
-    url: /assets/writing/placeholders/placeholder-300x150.png
+    url: /assets/work/2017-01-24-heroes-esports/banner-300.jpg
 
 work_images:
   -

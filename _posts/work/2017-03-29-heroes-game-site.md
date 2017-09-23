@@ -9,13 +9,13 @@ role: Design, front-end build
 url: http://www.playheroes.com/
 
 archive_image:
-  - size: 2560
+  - size: 2400
     url: /assets/writing/placeholders/placeholder-2560x1440.png
-  - size: 1280
+  - size: 1200
     url: /assets/writing/placeholders/placeholder-1280x720.png
-  - size: 960
+  - size: 600
     url: /assets/writing/placeholders/placeholder-960x540.png
-  - size: 640
+  - size: 300
     url: /assets/writing/placeholders/placeholder-640x360.png
 
 banner_image:

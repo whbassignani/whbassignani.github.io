@@ -1,7 +1,31 @@
+.layout-work .content-text {
+  max-width: $max-width-wide;
+}
+
 .work-banner {
+  overflow: hidden;
+
   img {
     display: block;
+    height: 100%;
     width: 100%;
+  }
+
+  @media ($bp-m) {
+    height: size(25);
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  @media ($bp-l) {
+    height: size(25);
+  }
+
+  @media ($bp-xl) {
+    height: size(28);
   }
 }
 

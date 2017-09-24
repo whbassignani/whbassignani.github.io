@@ -1,7 +1,7 @@
 ---
 title: Faculty Experts
 category: work
-dek: Lorem ipsum something something?
+dek: An online database of Boston University profs
 
 client: Boston University
 type: web

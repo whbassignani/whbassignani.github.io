@@ -1,7 +1,7 @@
 ---
 title: Bostonia
 category: work
-dek: Lorem ipsum something something?
+dek: BU’s award-winning, print and online alumni magazine
 
 client: Boston University
 type: web

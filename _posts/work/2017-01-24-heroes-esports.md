@@ -87,6 +87,8 @@ work_images:
       url: /assets/work/2017-01-24-heroes-esports/preview-image-8-600.jpg
 ---
 
-The *Heroes of the Storm* esports site, or [HGC](http://www.playheroes.com/esports/), is lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet, metus quis pharetra porta, tellus turpis consectetur mi, ut accumsan nisl felis gravida elit. Vestibulum dui risus, ultrices eget rutrum ac, ultricies a diam.
+The [HGC](http://www.playheroes.com/esports/) site is the home of *Heroes of the Storm* esports. Blizzard broadcasts professional matches every week at fixed times—just like conventional sports—and fills the intermediate days with recaps and videos.
 
-Morbi ornare, mauris aliquet cursus fermentum, est ante efficitur felis, a ultrices neque nibh et dolor. Aenean ut ipsum maximus, malesuada ante quis, lacinia dui. Praesent ac molestie neque. Etiam iaculis eros sed risus viverra congue. Sed nulla nulla, egestas eget lacinia suscipit, ullamcorper at nisi.
+HGC’s league format started with the 2017 season, and the previous website was not up to par. Together with one other designer, we revamped the entire experience around the weekly “Watch Live” experience. Now a viewer can visit at any point during the week and find content, as well as traditional, sports-like features (standings, schedules, and VODs).
+
+We also upgraded the visual design to sync with the game itself.

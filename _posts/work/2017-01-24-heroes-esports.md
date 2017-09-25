@@ -1,7 +1,7 @@
 ---
 title: Heroes Esports (HGC)
 category: work
-dek: Lorem ipsum something something?
+dek: A new home for Heroes of the Storm esports
 
 client: Blizzard Entertainment
 type: web
@@ -92,3 +92,7 @@ The [HGC](http://www.playheroes.com/esports/) site is the home of *Heroes of the
 HGC’s league format started with the 2017 season, and the previous website was not up to par. Together with one other designer, we revamped the entire experience around the weekly “Watch Live” experience. Now a viewer can visit at any point during the week and find content, as well as traditional, sports-like features (standings, schedules, and VODs).
 
 We also upgraded the visual design to sync with the game itself.
+
+
+
+SOMETHING COMPONENT BASED design

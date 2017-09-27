@@ -89,10 +89,6 @@ work_images:
 
 The [HGC](http://www.playheroes.com/esports/) site is the home of *Heroes of the Storm* esports. Blizzard broadcasts professional matches every week at fixed times—just like conventional sports—and fills the intermediate days with recaps and videos.
 
-HGC’s league format started with the 2017 season, and the previous website was not up to par. Together with one other designer, we revamped the entire experience around the weekly “Watch Live” experience. Now a viewer can visit at any point during the week and find content, as well as traditional, sports-like features (standings, schedules, and VODs).
+HGC’s league format started with the 2017 season, and the previous website was not up to par. Together with one other designer, we revamped it around the weekly “Watch Live” experience. Now a viewer can visit at any time and find content, as well as traditional, sports-like features: [standings](http://us.heroesofthestorm.com/esports/en/standings), [schedules](http://us.heroesofthestorm.com/esports/en/schedule), and VODs.
 
-We also upgraded the visual design to sync with the game itself.
-
-
-
-SOMETHING COMPONENT BASED design
+We also upgraded the visual design to sync with the game itself. This system relies on standard and flexible components, allowing the team to iterate quickly and add new features.

@@ -67,8 +67,8 @@ work_images:
       url: /assets/work/2014-07-01-bu-bostonia/campaign-320.jpg
 ---
 
-[*Bostonia*](http://www.bu.edu/bostonia) is BU’s award-winning, print and online alumni magazine. Every issue featured five to six of its most important stories, and we were tasked with reinterpreting each article’s design for the web.
+[*Bostonia*](http://www.bu.edu/bostonia) is BU’s award-winning, print and online alumni magazine. Every issue features four to six of its most important stories, and we reinterpreted the print article’s design for the web.
 
-In addition to other work at BU, my primary responsibility was designing, maintaining, and shepherding *Bostonia* Online from kick-off to launch day. I designed and maintained the site, as well as several interactive features.
+In addition to smaller projects at BU, my primary responsibility was designing, maintaining, and shepherding *Bostonia* Online from kick-off to launch day. I designed and maintained the site, as well as several interactive features.
 
-Here are some of the many stories that I worked on: [“Civil Disobedience”](http://www.bu.edu/bostonia/summer14/civil-disobedience), a three-part feature on [China](http://www.bu.edu/bostonia/winter-spring14/china) (English and [Chinese](http://www.bu.edu/bostonia/winter-spring14/china/chinese/)), [Wine](http://www.bu.edu/bostonia/fall13/wine), [High Notes](http://www.bu.edu/bostonia/high-notes), [Warming](http://www.bu.edu/bostonia/summer13/warming), and [Secret Lives](http://www.bu.edu/bostonia/summer12/secret).
+Here are some of the many stories that I worked on: [“Civil Disobedience”](http://www.bu.edu/bostonia/summer14/civil-disobedience), a three-part feature on [China](http://www.bu.edu/bostonia/winter-spring14/china) (English and [Chinese](http://www.bu.edu/bostonia/winter-spring14/china/chinese/)), [Wine](http://www.bu.edu/bostonia/fall13/wine), [High Notes](http://www.bu.edu/bostonia/high-notes), [Warming](http://www.bu.edu/bostonia/summer13/warming), [an interview](http://www.bu.edu/bostonia/summer14/journalism/) with the late David Carr, and [Secret Lives](http://www.bu.edu/bostonia/summer12/secret).

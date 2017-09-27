@@ -1,32 +1,32 @@
 ---
 title: Heroes of the Storm
 category: work
-dek: Lorem ipsum something something?
+dek: A redesigned game site for Blizzard’s MOBA
 
 client: Blizzard Entertainment
 type: web
-role: Design, front-end build
+role: Design
 url: http://www.playheroes.com/
 
 archive_image:
   - size: 2400
-    url: /assets/writing/placeholders/placeholder-2560x1440.png
+    url: /assets/work/2017-03-29-heroes-game-site/banner-2400.jpg
   - size: 1200
-    url: /assets/writing/placeholders/placeholder-1280x720.png
+    url: /assets/work/2017-03-29-heroes-game-site/banner-1200.jpg
   - size: 600
-    url: /assets/writing/placeholders/placeholder-960x540.png
+    url: /assets/work/2017-03-29-heroes-game-site/banner-600.jpg
   - size: 300
-    url: /assets/writing/placeholders/placeholder-640x360.png
+    url: /assets/work/2017-03-29-heroes-game-site/banner-300.jpg
 
 banner_image:
   - size: 2400
-    url: /assets/writing/placeholders/placeholder-2400x1200.png
+    url: /assets/work/2017-03-29-heroes-game-site/banner-2400.jpg
   - size: 1200
-    url: /assets/writing/placeholders/placeholder-1200x600.png
+    url: /assets/work/2017-03-29-heroes-game-site/banner-1200.jpg
   - size: 600
-    url: /assets/writing/placeholders/placeholder-600x300.png
+    url: /assets/work/2017-03-29-heroes-game-site/banner-600.jpg
   - size: 300
-    url: /assets/writing/placeholders/placeholder-300x150.png
+    url: /assets/work/2017-03-29-heroes-game-site/banner-300.jpg
 
 work_images:
   -
@@ -73,6 +73,8 @@ work_images:
       url: /assets/work/2017-03-29-heroes-game-site/preview-image-6-600.jpg
 ---
 
-[FitRec](http://www.bu.edu/fitrec/) is BU’s fitness center. <a href="http://www.bu.edu/interactive-design/">BU Interactive Design</a> redesigned their website and customized the WordPress-powered back-end to be highly editor-friendly. FitRec was built using Sass and mobile-first web development.
+[Heroes of the Storm](http://www.playheroes.com) is a MOBA-style game by Blizzard Entertainment. Players become legendary heroes from Blizzard’s various titles, including *Warcraft*, *StarCraft*, *Diablo*, and *Overwatch*, before battling each other online. In April 2017, the company put out “Heroes 2.0,” a large update and redesign of the game and its systems.
 
-I also contributed some design to the responsive layouts whilst building the site, adjusting any desktop-only mockups to fit multiple viewports.
+Our team laid the foundation for the game site’s redesign with a new homepage, visual design system, and promotional content. I worked on the first two of those three things, as well as the [Heroes Timeline](http://us.battle.net/heroes/en/heroes20/timeline/).
+
+As with all of Blizzard’s websites, these projects evolve and update over time. For example, I designed [another promo page](http://us.battle.net/heroes/en/game/events/summer-2017) in summer 2017. To see our latest work, visit the [live game site](http://www.playheroes.com).

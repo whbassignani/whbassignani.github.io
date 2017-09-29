@@ -3,27 +3,7 @@ title: Work
 ---
 
 <section id="WorkArchive" class="archive">
-
 {% for item in site.categories.work %}
-  <a href="{{ item.url }}" class="archive-link">
-    <div class="archive-item {% unless item.archive_image %}no-archive-item-image{% endunless %}">
-
-      <div class="archive-item-image">
-        <div class="image-sizer">
-  {% if item.archive_image %}
-    {% assign this_image = item.archive_image %}
-    {% include img-srcset-no-caption.html %}
-    {% assign this_image = null %}
-  {% endif %}
-        </div>
-      </div>
-
-      <div class="archive-item-content">
-        <h2 class="archive-item-title">{{ item.title }}</h2>
-        <p class="archive-item-text">{{ item.dek }}</p>
-        <span class="archive-item-meta">{{ item.role }} ({{ item.type }})</span>
-      </div>
-    </div>
-  </a>
+  {% include archive-item-work.html %}
 {% endfor %}
 </section>

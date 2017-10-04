@@ -73,14 +73,23 @@
     @media ($bp-m) {
       @include flex-basis(40vw);
     }
+
+    @media ($bp-l) {
+      @include flex-basis(30vw);
+    }
   }
 
-  .archive-link:last-child {
-    padding-right: size(0);
-  }
+  @media ($bp-xl) {
+    @include flex-wrap(wrap);
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    overflow: visible;
 
-  @media ($bp-l) {
-    
+    .archive-link {
+      @include flex(0 1 calc(25% - #{$spacing-between-columns}));
+    }
   }
 }
 

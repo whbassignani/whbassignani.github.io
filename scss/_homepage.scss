@@ -56,13 +56,38 @@
 
 // Archive rows
 .HomepageArchive {
-  @include flex-wrap(nowrap);
   @include container-full-width-child;
-  margin-left: auto;
-  overflow: auto;
+  @include container-padding-left-right;
+  @include flex-wrap(nowrap);
+  overflow-x: auto;
+  overflow-y: hidden;
 
   .archive-link {
     @include flex(1 0 70vw);
     margin-bottom: 0;
+
+    @media ($bp-s) {
+      @include flex-basis(60vw);
+    }
+
+    @media ($bp-m) {
+      @include flex-basis(40vw);
+    }
+  }
+
+  .archive-link:last-child {
+    padding-right: size(0);
+  }
+
+  @media ($bp-l) {
+    
+  }
+}
+
+.HomepageArchive-heading {
+  a {
+    @include bold-spaced-type;
+    font-size: size(-3);
+    margin-left: size(0);
   }
 }

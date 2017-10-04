@@ -12,18 +12,18 @@
 
 <hr>
 
-<h2 class="HomepageArchive-heading">Latest work</h2>
+<h2 class="HomepageArchive-heading">Latest work <a href="/work">See all work</a></h2>
 
 <section id="HomepageArchive--Work" class="HomepageArchive archive">
-{% for item in site.categories.work limit:3 %}
+{% for item in site.categories.work limit:4 %}
   {% include archive-item-work.html %}
 {% endfor %}
 </section>
 
-<h2 class="HomepageArchive-heading">Latest writing</h2>
+<h2 class="HomepageArchive-heading">Latest writing <a href="/writing">See all writing</a></h2>
 
 <section id="HomepageArchive--Writing" class="HomepageArchive archive">
-{% for item in site.categories.writing limit:3 %}
+{% for item in site.categories.writing limit:4 %}
   {% include archive-item-writing.html %}
 {% endfor %}
 </section>

@@ -1,21 +1,55 @@
-// @mixin container-fullWidthChild "undoes" the padding from .container
-@mixin container-full-width-child {
-  margin-left: -#{size(-3)};
-  margin-right: -#{size(-3)};
+// @mixin container-left-right-padding sets the padding from .container without using .container in markup
+@mixin container-padding-left-right {
+  padding-left: size(-3);
+  padding-right: size(-3);
 
   @media ($bp-xs) {
-    margin-left: -#{size(0)};
-    margin-right: -#{size(0)};
+    padding-left: size(0);
+    padding-right: size(0);
   }
 
   @media ($bp-s) {
-    margin-left: -#{size(3)};
-    margin-right: -#{size(3)};
+    padding-left: size(3);
+    padding-right: size(3);
   }
 
   @media ($bp-m) {
-    margin-left: -#{size(6)};
-    margin-right: -#{size(6)};
+    padding-left: size(6);
+    padding-right: size(6);
+  }
+}
+
+
+// @mixin container-fullWidthChild "undoes" the padding from .container
+@mixin container-full-width-child($sides: both) {
+  // Initialize property list (which margins)
+  $props: null;
+
+  @if $sides == "both" {
+    $props: ("margin-left", "margin-right");
+  } @else if $sides == "left" {
+    $props: ("margin-left");
+  } @else if $sides == "right" {
+    $props: ("margin-right");
+  } @else {
+    @error "#{$sides} is not a valid argument for @mixin container-full-width-child.";
+  }
+
+  // Set the margins
+  @each $prop in $props {
+    #{$prop}: -#{size(-3)};
+
+    @media ($bp-xs) {
+      #{$prop}: -#{size(0)};
+    }
+
+    @media ($bp-s) {
+      #{$prop}: -#{size(3)};
+    }
+
+    @media ($bp-m) {
+      #{$prop}: -#{size(6)};
+    }
   }
 }
 
@@ -23,10 +57,10 @@
   @if $size == "xxsmall" {
     margin-bottom: size(-8);
     margin-top: size(-8);
-  } @else if  $size == "xsmall" {
+  } @else if $size == "xsmall" {
     margin-bottom: size(0);
     margin-top: size(0);
-  } @else if  $size == "small" {
+  } @else if $size == "small" {
     margin-bottom: size(3);
     margin-top: size(3);
   } @else if $size == "medium" {

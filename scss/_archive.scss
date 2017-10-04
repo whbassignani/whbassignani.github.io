@@ -30,14 +30,21 @@ $spacing-between-rows: size(8);
     transform: scale($amount-shrink);
   }
 
-  @media ($bp-m) {
+  @media ($bp-s) {
     @include flex(0 1 calc(50% - #{$spacing-between-columns}));
   }
 
-  @media ($bp-xxl) {
+  @media ($bp-xl) {
     @include flex(0 1 calc(33.333333% - #{$spacing-between-columns}));
   }
 }
+
+  // Writing archive-specific grid styles
+  #WritingArchive .archive-link {
+    @media ($bp-xxl) {
+      @include flex(0 1 calc(25% - #{$spacing-between-columns}));
+    }
+  }
 
 .archive-item-image {
   @include soft-box-shadow(xsmall);
@@ -100,31 +107,5 @@ $spacing-between-rows: size(8);
     .shorthand {
       display: none;
     }
-  }
-}
-
-
-// Work and writing archive-specific grid styles
-#WorkArchive .archive-link {
-  @media ($bp-m) {
-    @include flex(0 1 calc(50% - #{$spacing-between-columns}));
-  }
-
-  @media ($bp-xl) {
-    @include flex(0 1 calc(33.333333% - #{$spacing-between-columns}));
-  }
-}
-
-#WritingArchive .archive-link {
-  @media ($bp-m) {
-    @include flex(0 1 calc(50% - #{$spacing-between-columns}));
-  }
-
-  @media ($bp-xl) {
-    @include flex(0 1 calc(33.333333% - #{$spacing-between-columns}));
-  }
-
-  @media ($bp-xxl) {
-    @include flex(0 1 calc(25% - #{$spacing-between-columns}));
   }
 }

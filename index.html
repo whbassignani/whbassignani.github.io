@@ -12,20 +12,18 @@
 
 <hr>
 
-<div class="HomepageArchiveWrapper">
-  <h2 class="HomepageArchive-heading">Latest work <a href="/work" class="action-link">See all</a></h2>
+<h2 class="HomepageArchive-heading">Latest work <a href="/work" class="action-link">See all</a></h2>
 
-  <section id="HomepageArchive--Work" class="HomepageArchive archive">
-  {% for item in site.categories.work limit:4 %}
-    {% include archive-item-work.html %}
-  {% endfor %}
-  </section>
+<section id="HomepageArchive--Work" class="HomepageArchive archive">
+{% for item in site.categories.work limit:4 %}
+  {% include archive-item-work.html %}
+{% endfor %}
+</section>
 
-  <h2 class="HomepageArchive-heading">Latest writing <a href="/writing" class="action-link">See all</a></h2>
+<h2 class="HomepageArchive-heading">Latest writing <a href="/writing" class="action-link">See all</a></h2>
 
-  <section id="HomepageArchive--Writing" class="HomepageArchive archive">
-  {% for item in site.categories.writing limit:4 %}
-    {% include archive-item-writing.html %}
-  {% endfor %}
-  </section>
-</div>
+<section id="HomepageArchive--Writing" class="HomepageArchive archive">
+{% for item in site.categories.writing limit:4 %}
+  {% include archive-item-writing.html %}
+{% endfor %}
+</section>

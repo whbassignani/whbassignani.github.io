@@ -4,10 +4,15 @@
 
 .HomepageIntro-text {
   margin: $gutter-small 0;
-  font-size: $type-plus-one;
+  max-width: $max-width-narrow;
+  font-size: size(1);
 
-  @media ($bp-small) {
-    font-size: $type-plus-two;
+  @media ($bp-s) {
+    font-size: size(2);
+  }
+
+  @media ($bp-l) {
+    font-size: size(3);
   }
 
   a {

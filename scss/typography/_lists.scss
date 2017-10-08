@@ -8,6 +8,7 @@ ol {
   ol {
     margin-bottom: 0;
     margin-top: size(-2);
+    padding-left: size(4);
   }
 }
 
@@ -48,7 +49,6 @@ dt {
 
 dd {
   @include spacing-standard;
-  padding-left: size(0);
 
   dt + & {
     margin-top: 0;

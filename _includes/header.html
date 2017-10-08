@@ -1,9 +1,15 @@
-{% include html-head.html %}
+{% include html-start.html %}
 
 <div id="wrapper">
 
-<header id="header">
-{% include toolbar.html %}
-</header>
+<div class="header-wrapper">
+  <header id="header" class="container">
+    <a href="/" class="header-title">
+      <h1>Hawkeward</h1>
+    </a>
 
-{% include nav-drawer.html %}
+{% include nav.html %}
+  </header>
+
+  <div class="header-right-shadow"></div>
+</div>

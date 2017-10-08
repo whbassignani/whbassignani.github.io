@@ -1,0 +1,5 @@
+// Dividers
+hr {
+  @include divider-styles;
+  @include spacing-standard(medium);
+}

@@ -1,74 +1,79 @@
 // Style guide styles
 .styleGuide-section {
-  margin: 4rem 0;
+  margin: size(4) 0;
 
-  &.intro {
-    margin-top: 2rem;
+  @media ($bp-s) {
+    margin: size(6) 0;
+  }
+
+  @media ($bp-m) {
+    margin: size(8) 0;
   }
 }
 
 .styleGuide-section-header {
-  @extend %h6;
+  @include h4;
 
-  border-bottom: 1px solid currentColor;
-  padding: 0.5rem 0;
-  margin-bottom: 1rem;
-  color: $off-white;
+  border-bottom: $border-width solid color(grey, 50);
+  margin-bottom: size(0);
+  padding: size(-4) 0;
+
+  @media($bp-s) {
+    margin-bottom: size(2);
+  }
+
+  & + h1,
+  & + h2,
+  & + h3,
+  & + h4,
+  & + h5,
+  & + h6 {
+    margin-top: 0;
+  }
 }
 
+
 // Swatches
+#swatches {
+  @include flexbox();
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+}
+
 .swatch-list {
+  margin: 0 0 size(-4);
   padding: 0;
+  width: calc((100% - #{size(-4)}) / 2);
+
+  &:nth-child(n+2) {
+    margin-bottom: 0;
+  }
+
+  @media ($bp-m) {
+    margin: 0;
+    width: calc((100% - 3 * #{size(-4)}) / 4);
+  }
 }
 
 .swatch {
-  float: left;
-  margin-bottom: $gutter-small;
-  padding: $gutter-large $gutter-small;
-  width: calc((100% - #{$gutter-small}) / 2);
+  margin: 0;
+  padding: size(-2);
+  list-style: none;
   color: $white;
   font-family: $sans-serif;
-  font-size: $type-minus-one;
+  font-size: size(-2);
   letter-spacing: 0.1em;
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
-  
-  & + & {
-    margin-left: $gutter-small;
-  }
-
-  &:nth-child(2n + 3) {
-    margin-left: 0;
-  }
-
-  @media ($bp-small) {
-    width: calc((100% - #{2 * $gutter-small}) / 3);
-    
-    & + & {
-      margin-left: $gutter-small;
-    }
-  
-    &:nth-child(3n + 1) {
-      margin-left: 0;
-    }
-  }
-
-  @media ($bp-medium) {
-    width: calc((100% - #{4 * $gutter-small}) / 5);
-    
-    & + & {
-      margin-left: $gutter-small;
-    }
-  }
-}
-
-.swatch-label--dark {
-  color: $dark-grey;
 }
 
 
 // Sample article styles
 .sampleArticle-divider {
-  margin: 4rem 0;
+  margin: size(4) 0;
+
+  @media ($bp-s) {
+    margin: size(6) 0;
+  }
 }

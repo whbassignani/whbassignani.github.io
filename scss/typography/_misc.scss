@@ -1,0 +1,19 @@
+// Code blocks
+code {
+  @include spacing-standard;
+  background-color: $white;
+  font-size: size(-1);
+  padding: size(-6);
+
+  pre & {
+    padding: 0;
+  }
+}
+
+pre {
+  @include soft-box-shadow;
+  @include spacing-standard;
+  background-color: $white;
+  padding: size(0);
+  width: auto;
+}

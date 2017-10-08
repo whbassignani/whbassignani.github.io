@@ -3,9 +3,9 @@
 
 {% include header.html %}
 
-  <main class="container">
-    <article class="page {% if page.is_narrow %}torso-narrow{% else %}torso{% endif %}">
-      <h1 class="page-title">{{ page.title }}</h1>
+  <main id="content">
+    <article class="container content-text">
+      <h1 class="content-title">{{ page.title }}</h1>
 
 {% assign this_image = page.banner %}
 

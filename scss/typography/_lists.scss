@@ -1,0 +1,60 @@
+// Unordered and ordered lists
+ul,
+ol {
+  @include spacing-standard;
+  padding-left: size(6);
+
+  ul,
+  ol {
+    margin-bottom: 0;
+    margin-top: size(-2);
+    padding-left: size(4);
+  }
+}
+
+  ul {
+    list-style: disc;
+  }
+
+  ol ul,
+  ul ul {
+    list-style: circle;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  ol ol,
+  ul ol {
+    list-style: lower-roman;
+  }
+
+li {
+  margin: size(-3) 0;
+  padding-left: size(-3);
+}
+
+
+// Definition lists
+dl {
+  @include spacing-standard;
+}
+
+dt {
+  @include heading-styles;
+  @include h4;
+  margin-top: 0;
+}
+
+dd {
+  @include spacing-standard;
+
+  dt + & {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

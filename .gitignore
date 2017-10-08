@@ -5,7 +5,7 @@
 *.psd*
 *.psb*
 
-# Ignore OS X ds_store files
+# Ignore macOS ds_store files
 .DS_Store
 
 # Ignore compiled _site

@@ -1,205 +1,106 @@
-.nav {
-  @include transition(
-    width 0s $animation-time-long,
-    height 0s $animation-time-long
-  );
-
-  height: 0;
-  width: 0;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 200;
-  overflow-y: auto;
-
-  &:after {
-    @include transition(
-      opacity $animation-time-long,
-      width 0s $animation-time-long,
-      height 0s $animation-time-long
-    );
-
-    content: "";
-    display: block;
-    height: 0;
-    width: 0;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 201;
-    background-color: darken($bright-green, 50%);
-    opacity: 0;
-
-    @media ($bp-when-drawer-expands) {
-      display: none;
-    }
-  }
-
-  .js-nav-open--left & {
-    @include transition(
-      width 0s,
-      height 0s
-    );
-
-    height: 100vh;
-    width: 100vw;
-    
-    &:after {
-      @include transition(
-        opacity $animation-time-long,
-        width 0s,
-        height 0s
-      );
-  
-      height: 100vh;
-      width: 100vw;
-      opacity: 0.9;
-    }
-  }
+#Nav {
+  padding: 0 size(2) 0 size(-6);
 
   @media ($bp-when-drawer-expands) {
-    &,
-    .js-nav-open--left & {
-      @include transition(
-        opacity 0s,
-        width 0s,
-        height 0s
-      );
-  
-      height: 100vh;
-      width: $nav-drawer-width;
-      position: fixed;
-      left: 0;
-      top: 0;
-    }
-
-    // Adds a shadow
-    &:after {
-      @include box-shadow(-5px 0 10px rgba($black, 0.5));
-
-      content: "";
-      display: block;
-      height: 100%;
-      width: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
+    margin-right: -#{size(-3)};
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
-.nav-drawer {
-  @include transform(translateX(-100%));
-  @include transition(
-    all $animation-time-long,
-    width 0s,
-    height 0s
-  );
-  @include css-gradient-horizontal(
-    $bright-green,
-    mix($bright-green, $bright-blue, 80%));
-
-  min-height: 100vh;
-  padding: $toolbar-height--small 0 $gutter-small;
-  width: $nav-drawer-width;
+.nav-links {
+  @include flexbox;
+  @include align-items(center);
+  @include flex-wrap(nowrap);
   position: relative;
-  z-index: 202;
-  overflow-y: auto;
-
-  .js-nav-open--left & {
-    @include transform(translateX(0));
-  }
-
-  @media ($bp-small) {
-    padding-top: $toolbar-height--medium;
-  }
-
-  @media ($bp-when-drawer-expands) {
-    &,
-    .js-nav-open--left & {
-      @include transform(translateX(0));
-      @include transition(
-        all 0s,
-        width 0s,
-        height 0s
-      );
-    }
-  }
-}
-
-.nav-header {
-  @include bold-spaced-type;
-
-  margin: $gutter-medium 0 $gutter-smallest;
-  padding-left: $gutter-smaller;
-  opacity: 0.5;
-  font-size: $type-minus-two;
+  width: 100%;
 }
 
 .nav-link,
 .nav-link:visited {
-  @include transition(background-color $animation-time);
-
-  display: block;
-  padding: ($gutter-smaller + rem(1px)) $gutter-smaller ($gutter-smaller - rem(1px));
+  @include bold-spaced-type;
   border-bottom: 0;
-  color: $inverted-neutral-link-color;
-  font-family: $sans-serif;
-  font-size: $type-base;
+  border-radius: $border-radius;
+  color: $color-interactive;
+  display: inline-block;
+  font-size: size(-3);
   line-height: 1;
+  margin-left: size(-10);
+  padding: size(-6);
+  transition:
+    background-color $animation-time,
+    color $animation-time;
 
-  &.is-current-page {
-    background-color: rgba($link-hover-color, 0.5);
+  &:hover {
+    background-color: rgba($color-interactive-hover, 0.05);
+    color: $color-interactive-hover;
 
-    &:after {
-      content: "←";
-      padding-left: $gutter-smallest;
-      opacity: 0.5;
+    svg {
+      fill: $color-interactive-hover;
     }
   }
 
-  &:hover {
-    background-color: $link-hover-color;
-    color: $inverted-neutral-link-color;
+  &:active {
+    color: $color-interactive-active;
+
+    svg {
+      fill: $color-interactive-active;
+    }
   }
 }
 
-.nav-close-btn {
-  @include flexbox;
-  @include align-items(center);
-  @include justify-content(center);
-  @include transition(background-color $animation-time);
-
-  height: $toolbar-height--small;
-  width: $toolbar-height--small;
-  position: absolute;
-  left: 0;
-  top: 0;
-  border: 0;
+.nav-link-icon {
+  display: inline-block;
+  height: size(3);
+  transition: fill $animation-time;
+  width: size(3);
 
   svg {
-    @include transition(fill $animation-time);
-
-    display: block;
-    height: 18px;
-    width: 18px;
-    fill: $inverted-link-color;
+    fill: $color-interactive;
+    height: 100%;
+    width: 100%;
   }
+}
 
-  &:hover {
-    background-color: rgba($dark-grey, 0.15);
+.nav-link-text {
+  display: inline-block;
+  transform: translateY(rem(0.5px));
 
-    svg {
-      fill: $white;
+  @media ($bp-m) {
+    transform: none;
+  }
+}
+
+.nav-link--home,
+.nav-link--twitter,
+.nav-link--github {
+  @include flexbox;
+  @include align-items(center);
+  height: rem(34px);
+}
+
+  .nav-link.nav-link--home {
+    .nav-link-icon {
+      height: size(0);
+      transform: translateY(-1px);
+      width: size(0);
     }
   }
 
-  @media ($bp-small) {
-    height: $toolbar-height--medium;
-    width: $toolbar-height--medium;
+  .nav-link.nav-link--twitter svg {
+    fill: $color-brand-twitter;
   }
 
-  @media ($bp-when-drawer-expands) {
-    display: none;
+  .nav-link.nav-link--github svg {
+    fill: $color-brand-github;
+  }
+
+.nav-link.is-current-page,
+.nav-link.is-current-page:visited {
+  background-color: rgba($color-interactive-hover, 0.1);
+  color: $color-interactive;
+
+  &:hover {
+    color: $color-interactive-hover;
   }
 }

@@ -1,0 +1,106 @@
+// @mixin container-left-right-padding sets the padding from .container without using .container in markup
+@mixin container-padding-left-right {
+  padding-left: size(-3);
+  padding-right: size(-3);
+
+  @media ($bp-xs) {
+    padding-left: size(0);
+    padding-right: size(0);
+  }
+
+  @media ($bp-s) {
+    padding-left: size(3);
+    padding-right: size(3);
+  }
+
+  @media ($bp-m) {
+    padding-left: size(6);
+    padding-right: size(6);
+  }
+}
+
+
+// @mixin container-fullWidthChild "undoes" the padding from .container
+@mixin container-full-width-child($sides: both) {
+  // Initialize property list (which margins)
+  $props: null;
+
+  @if $sides == "both" {
+    $props: ("margin-left", "margin-right");
+  } @else if $sides == "left" {
+    $props: ("margin-left");
+  } @else if $sides == "right" {
+    $props: ("margin-right");
+  } @else {
+    @error "#{$sides} is not a valid argument for @mixin container-full-width-child.";
+  }
+
+  // Set the margins
+  @each $prop in $props {
+    #{$prop}: -#{size(-3)};
+
+    @media ($bp-xs) {
+      #{$prop}: -#{size(0)};
+    }
+
+    @media ($bp-s) {
+      #{$prop}: -#{size(3)};
+    }
+
+    @media ($bp-m) {
+      #{$prop}: -#{size(6)};
+    }
+  }
+}
+
+@mixin spacing-standard($size: medium) {
+  @if $size == "xxsmall" {
+    margin-bottom: size(-8);
+    margin-top: size(-8);
+  } @else if $size == "xsmall" {
+    margin-bottom: size(0);
+    margin-top: size(0);
+  } @else if $size == "small" {
+    margin-bottom: size(3);
+    margin-top: size(3);
+  } @else if $size == "medium" {
+    margin-bottom: size(6);
+    margin-top: size(6);
+  } @else if $size == "large" {
+    margin-bottom: size(9);
+    margin-top: size(9);
+  } @else if $size == "xlarge" {
+    margin-bottom: size(12);
+    margin-top: size(12);
+  } @else if $size == "xxlarge" {
+    margin-bottom: size(15);
+    margin-top: size(15);
+  } @else if $size == "none" {
+    margin-bottom: 0;
+    margin-top: 0;
+  } @else {
+    @error "#{$size} is not a valid argument for @mixin spacing-standard.";
+  }
+}
+
+// Navigation drawer open and close button, hover state
+@mixin nav-button-hover-state {
+  &:after {
+    @include transform(translateX(-50%) translateY(-50%));
+    background-color: rgba($color-interactive-hover, 0.2);
+    border-radius: $border-radius;
+    content: '';
+    display: block;
+    height: 80%;
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transition: opacity $animation-time;
+    width: 80%;
+  }
+
+  &:hover:after {
+    opacity: 1;
+  }
+}

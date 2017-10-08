@@ -3,27 +3,43 @@
 
 
 // Setup
-@import "normalize";
+@import "globals/normalize";
+@import "globals/functions";
+@import "globals/colors";
+@import "globals/variables";
+@import "globals/mixins/index";
+@import "globals/flexbox";
 
-@import "functions";
-@import "variables";
-@import "mixins";
-@import "flexbox";
 
-// UI
-@import "base";
+// Toolkit: typography
+@import "typography/basics";
+@import "typography/headings";
+@import "typography/lists";
+@import "typography/quotes";
+@import "typography/misc";
+
+
+// Toolkit: components
+@import "components/buttons";
+@import "components/tables";
+@import "components/images";
+@import "components/misc";
+
+
+// Site-wide elements
+@import "layout";
 @import "header";
 @import "nav";
-@import "content";
-@import "image";
-@import "post";
-@import "archive";
 @import "footer";
 
+
+// Layouts and includes
+@import "post";
+@import "archive";
+
+
 // Page-specific
+@import "about";
 @import "homepage";
 @import "styleguide";
 @import "work";
-
-// Vendor/plugin-specific
-@import "fluidbox";

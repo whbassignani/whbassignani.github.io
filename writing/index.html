@@ -2,34 +2,8 @@
 title: Writing
 ---
 
-<section id="archive-posts" class="archive">
-  {%for post in site.categories.writing %}
-    {% unless post.next %}
-  <h2>{{ post.date | date: '%Y' }}</h2>
-  
-  <ul class="archive-list">
-    {% else %}
-      {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-      {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-      {% if year != nyear %}
-  </ul>
-  
-  <h2>{{ post.date | date: '%Y' }}</h2>
-  
-  <ul class="archive-list">
-      {% endif %}
-    {% endunless %}
-    <li>
-      <article class="archive-post">
-        <a href="{{ post.url }}" class="archive-link" title="{{ post.title }}">
-          <h1 class="archive-post-title">{{ post.title }}</h1>
-<div class="archive-dots"></div>
-          <time class="archive-post-date" data-full="{{ post.date | date: "%A, %B %-d, %Y" }}">
-            <span class="shorthand">{{ post.date | date: "%b %-d" }}</span>
-          </time>
-        </a>
-      </article>
-    </li>
-  {% endfor %}
-  </ul>
+<section id="WritingArchive" class="archive">
+{% for item in site.categories.writing %}
+  {% include archive-item-writing.html %}
+{% endfor %}
 </section>

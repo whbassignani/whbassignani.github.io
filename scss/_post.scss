@@ -1,75 +1,49 @@
-.post-meta {
-  margin-bottom: $gutter-smallest;
-  color: $light-grey;
-  font-family: $sans-serif;
-  font-size: $type-minus-two;
-  text-transform: uppercase;
+.layout-post .content-text {
+  max-width: $max-width-narrow;
+}
 
-  @media ($bp-small) {
-    font-size: $type-minus-one;
-  }
+.post-meta {
+  @include meta;
 }
 
 .post-meta + .post-title {
   margin-top: 0;
 }
 
-.lede {
-  font-family: $sans-serif;
-  font-size: $type-plus-one;
-
-  @media ($bp-small) {
-    font-size: $type-plus-two;
-  }
-}
-
 .post-footer {
-  padding-top: $gutter-small;
-  border-top: 1px solid $light-grey;
+  border-top: $border-width solid $color-ui-subtle;
   font-family: $sans-serif;
-  font-size: $type-minus-one;
+  font-size: size(-1);
+  margin-top: size(6);
+  padding-top: size(6);
+
+  & > *:first-child {
+    margin-top: 0;
+  }
 
   & > *:last-child {
     margin-bottom: 0;
   }
 
-  @media ($bp-small) {
-    margin-top: $gutter-large;
-    padding-top: $gutter-medium;
-    font-size: $type-base;
-  }
-
-  @media ($bp-large) {
-    margin-top: $gutter-larger;
-  }
-  
   .hashtag {
-    color: $off-white;
+    color: $color-ui-light;
   }
 }
 
 .footnotes {
-  margin: $gutter-medium 0 $gutter-large;
-  font-size: $type-minus-one;
-  
-  p {
+  @include spacing-standard;
+  font-size: size(-1);
+  margin-bottom: 0;
+
+  ol {
     margin: 0;
   }
 
   &:before {
     content: "Footnotes:";
     display: block;
-    margin-bottom: $gutter-smaller;
+    margin-bottom: size(-2);
     font-family: $sans-serif;
     font-weight: bold;
-  }
-
-  @media ($bp-small) {
-    margin: $gutter-large 0 $gutter-larger;
-    font-size: $type-base;
-
-    &:before {
-      margin-bottom: $gutter-small;
-    }
   }
 }

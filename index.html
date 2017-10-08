@@ -1,36 +1,29 @@
 ---
-layout: blank
 ---
+<section id="HomepageIntro">
+  <p class="HomepageIntro-text">
+    <strong class="HomepageIntro-name">Hawke Bassignani</strong>
 
-  <main>
-    <article id="homepage-intro" class="container">
-      <div class="homepage-torso">
-        <p class="homepage-intro-text">
-          <strong class="homepage-intro-name">Hawke Bassignani</strong>
+    is a <a href="http://www.blizzard.com" class="HomepageIntro-link blizzard">designer at <span class="no-break">Blizzard Entertainment</span></a> <a href="http://www.playheroes.com" class="HomepageIntro-link heroes">who works on <cite>Heroes of the Storm</cite></a> <a href="http://www.playheroes.com/esports" class="HomepageIntro-link esports">and esports.</a>
 
-          is a <a href="http://www.blizzard.com" class="homepage-intro-link blizzard">designer at <span class="no-break">Blizzard Entertainment</span></a> <a href="http://www.playheroes.com" class="homepage-intro-link heroes">who works on <cite>Heroes of the Storm</cite></a> <a href="http://www.playheroes.com/esports" class="homepage-intro-link esports">and esports.</a> 
+    <a href="/writing" class="HomepageIntro-link writing">Read his writing</a> <a href="/work" class="HomepageIntro-link work">see his work</a> <a href="http://www.twitter.com/hawkeward" class="HomepageIntro-link twitter">and follow him on Twitter.</a>
+  </p>
+</section>
 
-          <a href="/writing" class="homepage-intro-link writing">Read his writing</a> <a href="/work" class="homepage-intro-link work">see his work</a> <a href="http://www.twitter.com/hawkeward" class="homepage-intro-link twitter">and follow him on Twitter.</a>
-        </p>
-      </div>
-    </article>
-    <section id="homepage-writing" class="container">
-      <div class="homepage-torso">
-        <h1 class="section-title">Latest writing</h1>
+<hr>
 
-        <ul id="homepage-posts">
-  {%for post in site.categories.writing limit:4 %}
-          <li class="homepage-post">
-            <a href="{{ post.url }}" title="{{ post.title }}">
-              <time class="homepage-post-date" data-full="{{ post.date | date: "%A, %B %-d, %Y" }}">{{ post.date | date: "%b %-d" }}</time>
-              <h1 class="homepage-post-title">{{ post.title }}</h1>
-              <p class="homepage-post-dek">{{ post.dek }}</p>
-            </a>
-          </li>
-  {% endfor %}
-        </ul>
+<h2 class="HomepageArchive-heading">Latest work <a href="/work" class="action-link">See all</a></h2>
 
-        <p class="homepage-all-link"><a href="/writing" class="action-link">See all writing</a></p>
-      </div>
-    </section>
-  </main>
+<section id="HomepageArchive--Work" class="HomepageArchive archive">
+{% for item in site.categories.work limit:4 %}
+  {% include archive-item-work.html %}
+{% endfor %}
+</section>
+
+<h2 class="HomepageArchive-heading">Latest writing <a href="/writing" class="action-link">See all</a></h2>
+
+<section id="HomepageArchive--Writing" class="HomepageArchive archive">
+{% for item in site.categories.writing limit:4 %}
+  {% include archive-item-writing.html %}
+{% endfor %}
+</section>

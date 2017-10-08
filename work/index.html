@@ -2,45 +2,8 @@
 title: Work
 ---
 
-<section class="archive-works">
-{% for work in site.categories.work %}
-
-  <div class="archive-work">
-    <h2>{{ work.title }}</h2>
-
-    <ul class="archive-work-details">
-      <li>
-        <dl>
-          <dt>Client/Company</dt>
-          <dd>{{ work.client }}</dd>
-        </dl>
-      </li>
-      <li>
-        <dl>
-          <dt>Role</dt>
-          <dd>{{ work.role }}</dd>
-        </dl>
-      </li>
-    </ul>
-
-    <div class="archive-work-description">
-{{ work.content }}
-    </div>
-
-{% if work.work_images %}
-
-  {% for work_image in work.work_images %}
-    {% if work_image %}
-      {% assign this_image = work_image %}
-    <div class="archive-work-image photo">
-{% include img-srcset.html %}
-    </div>
-      {% assign this_image = null %}
-    {% endif %}
-  {% endfor %}
-
-{% endif %}
-
-  </div>
+<section id="WorkArchive" class="archive">
+{% for item in site.categories.work %}
+  {% include archive-item-work.html %}
 {% endfor %}
 </section>

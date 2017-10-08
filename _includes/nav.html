@@ -1,0 +1,20 @@
+<nav id="Nav">
+  <div id="Nav-links" class="nav-links">
+{% for category in site.data.nav_items.links %}
+  {% for item in category.children %}
+    {% capture class_string %}nav-link nav-link--{{ item.class }}{% endcapture %}
+
+    {% if item.class contains active_nav_item %}
+    {% capture class_string %}{{ class_string }} is-current-page{% endcapture %}
+    {% endif %}
+    <a href="{{ item.url }}" class="{{ class_string }}">
+    {% if item.icon_only %}
+      <span class="nav-link-icon">{{ item.icon }}</span>
+    {% else %}
+      <span class="nav-link-text">{{ item.name }}</span>
+    {% endif %}
+    </a>
+  {% endfor %}
+{% endfor %}
+  </div>
+</nav>

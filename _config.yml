@@ -21,5 +21,11 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  -
+    scope:
+      path: "_posts/work"
+      type: "posts"
+    values:
+      layout: "work"
 
 exclude: [_psd]

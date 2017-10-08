@@ -1,140 +1,142 @@
-.homepage-torso {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: $max-width-wide;
+.home .content-text {
+  padding-top: 0;
 }
 
-#homepage-intro {
-  border-bottom: 1px solid $off-white;
+.home .content-title {
+  display: none;
 }
 
-.homepage-intro-text {
-  margin: $gutter-small 0;
+#HomepageIntro {
+  @include spacing-standard(medium);
+
+  @media ($bp-m) {
+    @include spacing-standard(xlarge);
+  }
+}
+
+.HomepageIntro-text {
+  @include spacing-standard(none);
   max-width: $max-width-narrow;
-  font-size: $type-plus-one;
-  
-  @media ($bp-small) {
-//     margin: 0;
-    font-size: $type-plus-two;
+  font-size: size(1);
+
+  @media ($bp-s) {
+    font-size: size(2);
+  }
+
+  @media ($bp-l) {
+    font-size: size(3);
   }
 
   a {
-    @include transition(color $animation-time, background-color $animation-time, border-color $animation-time);
-  
+    background-color: rgba(color(green, 500), 0.1);
     padding-left: $gutter-smallest / 2;
     padding-right: $gutter-smallest / 2;
-    background-color: rgba($bright-green, 0.1);
-    
+    transition:
+      color $animation-time,
+      background-color $animation-time,
+      border-color $animation-time;
+
     &:hover {
-      background-color: rgba($bright-green, 0.8);
+      background-color: rgba(color(green, 500), 0.8);
       color: $white;
     }
   }
 }
 
-.homepage-intro-name {
+.HomepageIntro-name {
   font-family: $sans-serif;
 }
 
-.homepage-intro-link {
-	$colors: (
-  	blizzard: #1590ce,
-  	heroes: #330099,
-  	esports: #cc0022,
-  	writing: #bba00c,
-  	work: #4ac32d,
-	  twitter: #1da1f2
-	 );
+.HomepageIntro-link {
+  $colors: (
+    blizzard: #1590ce,
+    heroes: #330099,
+    esports: #cc0022,
+    writing: #bba00c,
+    work: #4ac32d,
+    twitter: #1da1f2
+   );
 
-	@each $key, $color in $colors {
-		&.#{$key} {
+  @each $key, $color in $colors {
+    &.#{$key} {
       background-color: rgba($color, 0.1);
       border-color: rgba($color, 0.2);
       color: mix($color, $black, 80%);
-      
+
       &:hover {
         background-color: rgba($color, 0.8);
       }
-		}
-	}
-}
-
-#homepage-writing {
-  .section-title {
-    @include h3;
-
-    margin-top: $gutter-small;
+    }
   }
 }
 
-#homepage-posts {
-  @include flexbox;
-  @include flex-wrap(wrap);
 
-  list-style: none;
-  margin: 0 #{-$gutter-small};
-  padding: 0;
-}
+// Archive rows
+.HomepageArchive {
+  @include container-full-width-child;
+  @include container-padding-left-right;
+  @include flex-wrap(nowrap);
+  @include spacing-standard(xsmall);
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: size(0);
 
-.homepage-post {
-  @include flex(1 0 100%);  
-  @include flexbox;
+  // Fixes inertial scrolling
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 
-  margin: 0;
-  padding: 0;
+  .archive-link {
+    @include flex(1 0 70vw);
+    margin-bottom: 0;
 
-  @media ($bp-small) {
-    @include flex-basis(50%);
-  }
-
-  a {
-    @include transition(background-color $animation-time);
-
-    padding: $gutter-small;
-    width: 100%;
-    border-bottom: 0;
-    color: inherit;
-    
-    &:hover {
-      background-color: rgba($off-white, 0.5);
+    // Adds a gap at the far-right of the scrollable row
+    &:last-child {
+      box-sizing: content-box;
+      border-right: size(-1) solid transparent;
     }
 
-    @media ($bp-small) {
-      padding: $gutter-small $gutter-small $gutter-large;
+    @media ($bp-s) {
+      @include flex-basis(60vw);
+    }
+
+    @media ($bp-m) {
+      @include flex-basis(40vw);
+    }
+
+    @media ($bp-l) {
+      @include flex-basis(30vw);
     }
   }
 
-  .homepage-post-date {
-    color: $bright-green;
-    font-family: $sans-serif;
-    font-size: $type-minus-one;
-    font-weight: 400;
-    white-space: nowrap;
-    
-    @media ($bp-small) {
-      font-size: $type-base;
-    }
-  }
-  
-  .homepage-post-title {
-    @include h2;
-    
-    margin: 0 0 $gutter-smallest;
-
-    @media ($bp-small) {
-      margin-bottom: $gutter-smaller;
-    }
-  }
-  
-  .homepage-post-dek {
+  &:last-child {
     margin-bottom: 0;
   }
+
+  @media ($bp-xl) {
+    margin-left: 0;
+    margin-right: -#{size(-1)};
+    padding-left: 0;
+    padding-right: 0;
+    overflow: visible;
+
+    .archive-link {
+      @include flex(0 1 calc(25% - #{$spacing-between-columns}));
+    }
+
+    .archive-link:last-child {
+      border-right: 0;
+    }
+  }
 }
 
-.homepage-all-link {
-  margin-top: $gutter-small;
-  
-  @media ($bp-small) {
-    margin-top: $gutter-medium;
+.HomepageArchive-heading {
+  a {
+    @include bold-spaced-type;
+    font-size: size(-3);
+    margin-left: size(0);
   }
+}
+
+.HomepageArchive-spacer {
+  width: 100px;
 }

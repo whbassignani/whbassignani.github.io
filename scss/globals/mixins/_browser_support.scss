@@ -1,0 +1,18 @@
+// Mixins for cross-browser prefix
+@mixin transform($transform...) {
+  // Vendor prefixes
+  $prefixes:      ("-webkit-", "");
+
+  @each $prefix in $prefixes {
+    #{$prefix}transform: $transform;
+  }
+}
+
+@mixin transform-origin($transform-origin...) {
+  // Vendor prefixes
+  $prefixes:      ("-webkit-", "");
+
+  @each $prefix in $prefixes {
+    #{$prefix}transform-origin: $transform-origin;
+  }
+}

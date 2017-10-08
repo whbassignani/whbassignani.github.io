@@ -1,128 +1,63 @@
-#toolbar {
-  @include flexbox;
-  @include align-items(center);
-
-  height: $toolbar-height--small;
-  padding: 0 0 0 $toolbar-height--small;
+.header-wrapper {
   position: relative;
-  border-bottom: 1px solid $off-white;
-
-  @media ($bp-small) {
-    height: $toolbar-height--medium;
-    padding-left: $toolbar-height--medium;
-  }
-
-  @media ($bp-when-drawer-expands) {
-    height: auto;
-    padding-left: 0;
-    width: $nav-drawer-width;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 204;
-    border-bottom: 0;
-  }
 }
 
-.toolbar-links {
-  @include transform(translateY(1px));
-
-  font-family: $sans-serif;
-  font-size: 0;
-  letter-spacing: $letter-spacing / 4;
-  line-height: 1;
-  
-  @media ($bp-when-drawer-expands) {
-    @include transform(translateY(0));
-
-    width: 100%;
-  }
-}
-
-.toolbar-link,
-.toolbar-link:visited {
-  @include transition(color $animation-time);
-
-  display: inline-block;
-  border-bottom: 0;
-  padding: $gutter-smaller 0;
-  color: $neutral-link-color;
-  font-size: $type-base;
-
-  &:hover {
-    color: $link-hover-color;
-  }
-  
-  & + & {
-    &:before {
-      content: "→";
-      padding: 0 $gutter-smallest;
-      color: mix($bright-green, $background-color, 50%);
-      font-weight: normal;
-    }
-  }
-
-  @media ($bp-when-drawer-expands) {
-    @include transition(
-      color $animation-time,
-      background-color $animation-time
-    );
-    
-    padding: $gutter-small $gutter-small;
-    width: 100%;
-    background-color: $link-color;
-    color: $inverted-neutral-link-color;
-
-    &:hover {
-      background-color: $link-hover-color;
-      color: $inverted-neutral-link-color;
-    }
-  }
-}
-
-  .toolbar-link--category {
-    display: none;
-    
-    @media ($bp-smaller) {
-      display: inline-block;
-    }
-
-    @media ($bp-when-drawer-expands) {
-      display: none;
-    }
-  }
-
-.nav-open-btn {
+#header {
   @include flexbox;
   @include align-items(center);
-  @include justify-content(center);
-  
-  height: $toolbar-height--small;
-  width: $toolbar-height--small;
+  @include justify-content(flex-start);
+  background-color: $color-background-header;
+  border-bottom: $border-width solid $color-ui-subtle;
+  // box-shadow:
+  //   0 rem(1px) rem(4px) rgba($color-ui-medium, 0.4),
+  //   0 rem(4px) rem(16px) rgba($color-ui-medium, 0.2);
+  overflow-x: auto;
+  padding-bottom: size(-2);
+  padding-top: size(-2);
+  width: 100%;
+
+  // Fixes inertial scrolling
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media ($bp-when-drawer-expands) {
+    @include justify-content(space-between);
+  }
+}
+
+.header-title {
+  @include bold-spaced-type;
+  border-bottom: 0;
+  color: $color-ui-dark;
+  display: inline-block;
+  line-height: 1;
+  padding: size(-6) 0;
+
+  h1 {
+    color: inherit;
+    font-size: size(-2);
+    margin: 0;
+  }
+}
+
+.header-right-shadow {
+  background-image: linear-gradient(
+    to left,
+    rgba($color-ui-light, 0.4),
+    rgba($color-ui-light, 0)
+  );
+  content: '';
+  display: block;
+  height: 100%;
+  pointer-events: none;
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
-  border: 0;
-  line-height: 0;
-  
-  svg {
-    @include transition(fill $animation-time);
-
-    height: 14px;
-    width: 18px;
-    fill: $link-color;
-  }
-
-  &:hover {
-    svg {
-      fill: $link-hover-color;
-    }
-  }
-
-  @media ($bp-small) {
-    height: $toolbar-height--medium;
-    width: $toolbar-height--medium;
-  }
+  width: 30%;
 
   @media ($bp-when-drawer-expands) {
     display: none;

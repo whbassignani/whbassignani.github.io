@@ -3,31 +3,32 @@
 
 {% include header.html %}
 
-  <main class="container">
-    <header class="post-header torso-narrow">
-      <time class="post-meta">{{ page.date | date: "%B %-d, %Y" }}</time>
-      <h1 class="post-title">{{ page.title }}</h1>
-    </header>
+  <main id="content">
+    <article class="container content-text">
+      <header class="post-header">
+        <time class="post-meta">{{ page.date | date: "%B %-d, %Y" }}</time>
+        <h1 class="content-title post-title">{{ page.title }}</h1>
+      </header>
 
-    <article class="post torso-narrow">
 {% assign this_image = page.banner %}
-
 {% if this_image %}
-      <div class="post-banner photo">
-{% include img-srcset.html %}
+      <div class="photo post-banner">
+  {% include img-srcset.html %}
       </div>
 {% endif %}
 
+      <div class="post-content">
 {{ content }}
-    </article>
+      </div>
 
-{% unless page.hide_author_description == false %}
-    <footer class="post-footer torso-narrow">
-      <p class="author"><strong>Hawke</strong> is a designer at <a href="http://www.blizzard.com">Blizzard Entertainment</a>. Interests: typography, web development, indoor rock climbing, video games, coffee, and European history. Want to learn more? <a href="/about">Of course you&nbsp;do.</a></p>
-      
-      <p>Read his not-overly-hashtagged tweets on <a href="http://www.twitter.com/hawkeward">Twitter (@hawkeward)</a>. <span class="hashtag">#doit</span></p>
-    </footer>
+{% unless page.hide_author %}
+      <footer class="post-footer">
+        <p><strong>Hawke</strong> is a designer at <a href="http://www.blizzard.com">Blizzard Entertainment</a>. Interests: typography, web development, indoor rock climbing, video games, coffee, and European history. Want to learn more? <a href="/about">Of course you&nbsp;do.</a></p>
+
+        <p>Read his not-overly-hashtagged tweets on <a href="http://www.twitter.com/hawkeward">Twitter (@hawkeward)</a>. <span class="hashtag">#doit</span></p>
+      </footer>
 {% endunless %}
+    </article>
   </main>
 
 {% include footer.html %}

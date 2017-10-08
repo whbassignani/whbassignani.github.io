@@ -1,9 +1,21 @@
+.home .content-text {
+  padding-top: 0;
+}
+
+.home .content-title {
+  display: none;
+}
+
 #HomepageIntro {
-  border-bottom: 1px solid color(grey, 50);
+  @include spacing-standard(medium);
+
+  @media ($bp-m) {
+    @include spacing-standard(xlarge);
+  }
 }
 
 .HomepageIntro-text {
-  margin: $gutter-small 0;
+  @include spacing-standard(none);
   max-width: $max-width-narrow;
   font-size: size(1);
 

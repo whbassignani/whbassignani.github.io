@@ -69,6 +69,12 @@
   } @else if $size == "large" {
     margin-bottom: size(9);
     margin-top: size(9);
+  } @else if $size == "xlarge" {
+    margin-bottom: size(12);
+    margin-top: size(12);
+  } @else if $size == "xxlarge" {
+    margin-bottom: size(15);
+    margin-top: size(15);
   } @else if $size == "none" {
     margin-bottom: 0;
     margin-top: 0;

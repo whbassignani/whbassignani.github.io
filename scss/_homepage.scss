@@ -81,9 +81,19 @@
   overflow-y: hidden;
   padding-bottom: size(0);
 
+  // Fixes inertial scrolling
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+
   .archive-link {
     @include flex(1 0 70vw);
     margin-bottom: 0;
+
+    // Adds a gap at the far-right of the scrollable row
+    &:last-child {
+      box-sizing: content-box;
+      border-right: size(-1) solid transparent;
+    }
 
     @media ($bp-s) {
       @include flex-basis(60vw);
@@ -103,15 +113,18 @@
   }
 
   @media ($bp-xl) {
-    @include flex-wrap(wrap);
     margin-left: 0;
-    margin-right: 0;
+    margin-right: -#{size(-1)};
     padding-left: 0;
     padding-right: 0;
     overflow: visible;
 
     .archive-link {
       @include flex(0 1 calc(25% - #{$spacing-between-columns}));
+    }
+
+    .archive-link:last-child {
+      border-right: 0;
     }
   }
 }
@@ -122,4 +135,8 @@
     font-size: size(-3);
     margin-left: size(0);
   }
+}
+
+.HomepageArchive-spacer {
+  width: 100px;
 }

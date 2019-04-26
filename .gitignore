@@ -7,9 +7,3 @@
 
 # Ignore macOS ds_store files
 .DS_Store
-
-# Ignore compiled _site
-_site/**
-
-# Ignore Jekyll meta data
-.jekyll-metadatawebfonts/

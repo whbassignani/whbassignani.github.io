@@ -1,198 +1,65 @@
-/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+/* Globals & layout */
 
-html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
+* {
+  box-sizing: border-box;
 }
 
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+html,
+body {
+  background-color: #3d3d4d;
+  color: #3d3d4d;
+  font-family: serif;
+  font-size: 20px;
+  line-height: 1;
 }
 
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+main {
+  background-color: #f2f2f2;
+  margin: 0 auto;
+  max-width: 1600px;
 }
 
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+/* Utility classes */
+
+.centered-box {
+  margin: 0 auto;
 }
 
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
+.width-medium {
+  max-width: 1400px;
 }
 
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+.width-full {
+  /* TODO: is this class still needed? */
 }
 
-textarea {
-    resize: vertical;
+/* Page header */
+
+.PageHeader {
+  padding: 120px;
+  background-color: darkgrey;
 }
 
-.browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+/* Media rows */
+
+.MediaDual {
+  display: flex;
 }
 
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-
+.MediaDual-asset {
+  flex-shrink: 1;
+  flex-basis: calc(50% - 20px);
 }
 
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-
+.MediaDual-asset img {
+  display: block;
+  width: 100%;
 }
 
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
+.MediaDual-asset--left {
+  margin-right: 20px;
 }
 
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-.invisible {
-    visibility: hidden;
-}
-
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-.clearfix {
-    *zoom: 1;
-}
-
-/* ==========================================================================
-   Print styles
-   ========================================================================== */
-
-@media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+.MediaDual-asset--right {
+  margin-left: 20px;
 }

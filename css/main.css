@@ -16,7 +16,7 @@ body {
 main {
   background-color: #f2f2f2;
   margin: 0 auto;
-  max-width: 1600px;
+  max-width: 2000px;
 }
 
 /* Utility classes */
@@ -42,24 +42,25 @@ main {
 
 /* Media rows */
 
-.MediaDual {
-  display: flex;
+.Content {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr;
 }
 
-.MediaDual-asset {
-  flex-shrink: 1;
-  flex-basis: calc(50% - 20px);
+.Content-inner {
+  
 }
 
-.MediaDual-asset img {
+.Content-inner img {
   display: block;
   width: 100%;
 }
 
-.MediaDual-asset--left {
-  margin-right: 20px;
+.Content-inner--left {
+  
 }
 
-.MediaDual-asset--right {
-  margin-left: 20px;
+.Content-inner--right {
+  
 }

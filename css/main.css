@@ -21,9 +21,9 @@ main {
 
 /* Utility classes */
 
-.centered-box {
+/* .centered-box {
   margin: 0 auto;
-}
+} */
 
 .width-medium {
   max-width: 1400px;
@@ -40,16 +40,29 @@ main {
   background-color: darkgrey;
 }
 
-/* Media rows */
+/* Content rows */
 
 .Content {
   display: grid;
   grid-gap: 30px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: [content-left] 1fr [content-middle] 1fr [content-right];
+}
+
+.Content-header {
+  grid-column: left-content / center-content;
+  display: none;
 }
 
 .Content-inner {
   
+}
+
+.Content-inner-left {
+  grid-column: left-content / center-content;
+}
+
+.Content-inner-right {
+  grid-column: center-content / right-content;
 }
 
 .Content-inner img {

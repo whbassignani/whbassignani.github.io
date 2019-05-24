@@ -30,7 +30,7 @@ main {
   max-width: 1400px;
 }
 
-.width-full {
+.u-widthFull {
   /* TODO: is this class still needed? */
 }
 
@@ -43,38 +43,25 @@ main {
 
 /* Content rows */
 
-.Content {
+.Content-header {
+  
+}
+
+.ContentRow {
   display: grid;
   grid-gap: 30px;
   grid-template-columns: [content-left] 1fr [content-middle] 1fr [content-right];
 }
 
-.Content-header {
-  grid-column: left-content / center-content;
-  display: none;
-}
-
-.Content-inner {
+.ContentRow-column {
   
 }
 
-.Content-inner-left {
-  grid-column: left-content / center-content;
-}
-
-.Content-inner-right {
-  grid-column: center-content / right-content;
-}
-
-.Content-inner img {
+.ContentRow-column img {
   display: block;
   width: 100%;
 }
 
-.Content-inner--left {
-  
-}
-
-.Content-inner--right {
-  
+.ContentRow--singleColumn .Content-column {
+  grid-column: content-left / content-right;
 }

@@ -21,11 +21,12 @@ main {
 
 /* Utility classes */
 
-/* .centered-box {
-  margin: 0 auto;
-} */
+.u-centeredBox {
+  margin-left: auto;
+  margin-right: auto;
+}
 
-.width-medium {
+.u-widthMedium {
   max-width: 1400px;
 }
 

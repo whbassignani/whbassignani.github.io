@@ -123,18 +123,6 @@ main {
   color: var(--color-yellow-500);
 }
 
-@media (max-width: 639px) {
-  .u-hideUntil640 {
-    display: none;
-  }
-}
-
-@media (max-width: 959px) {
-  .u-hideUntil960 {
-    display: none;
-  }
-}
-
 .u-offsetDownSmall {
   --offset: var(--spacing-3);
 
@@ -159,6 +147,10 @@ main {
   list-style: none;
 }
 
+.u-noWrap {
+  white-space: nowrap;
+}
+
 .u-widthMedium {
   max-width: 1400px;
 }
@@ -167,10 +159,23 @@ main {
   /* TODO: is this class still needed? */
 }
 
+@media (max-width: 639px) {
+  .u-hideUntil640 {
+    display: none;
+  }
+}
+
+@media (max-width: 959px) {
+  .u-hideUntil960 {
+    display: none;
+  }
+}
+
 /* Typography */
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-sans);
+  font-weight: 400;
   line-height: 1.2;
   text-transform: uppercase;
 }
@@ -201,7 +206,8 @@ h4, h5, h6 {
   font-size: var(--font-size-5);
 }
 
-a {
+a:link,
+a:visited {
   border-bottom: 1px solid currentColor;
   color: var(--color-yellow-700);
   text-decoration: none;
@@ -241,10 +247,12 @@ p.is-lede {
 }
 
 .Nav-heading {
+  background-color: var(--color-neutral-800);
   color: var(--color-neutral-200);
   font-family: var(--font-family-serif);
   font-size: var(--font-size-4);
-  margin: 0;
+  margin: -2px 0 0 -8px;
+  padding: 2px 6px 2px 8px;
   text-transform: none;
 }
 
@@ -277,6 +285,15 @@ p.is-lede {
   }
 }
 
+.PageHeader a:link,
+.PageHeader a:visited {
+  color: var(--color-yellow-500)
+}
+
+.PageHeader strong {
+  color: var(--color-neutral-50);
+}
+
 .PageHeader-heading {
   color: var(--color-yellow-500);
   /* font-size: var(--font-size-8);
@@ -287,19 +304,11 @@ p.is-lede {
 }
 
 .PageHeader-heading strong {
-  color: var(--color-neutral-200);
   display: block;
-  /* font-size: var(--font-size-9);
-  font-weight: 700;
-  letter-spacing: var(--font-letter-spacing); */
 }
 
 .PageHeader-description {
   max-width: 640px;
-}
-
-.PageHeader .ContentRow-item strong {
-  color: var(--color-neutral-50);
 }
 
 @media (min-width: 960px) {
@@ -317,16 +326,17 @@ p.is-lede {
 
 .PageHeader-skillsList {
   line-height: 1.8;
-  padding-top: 0.3em;
 }
 
 .PageHeader-link {
+  color: var(--color-yellow-500);
   line-height: 1;
   margin-left: calc(var(--size-icon) + var(--spacing-2) / 2);
   position: relative;
 }
 
-.PageHeader-link--twitter {
+.PageHeader .PageHeader-link--twitter:link,
+.PageHeader .PageHeader-link--twitter:visited {
   color: var(--color-twitterBlue-500);
 }
 
@@ -344,6 +354,10 @@ p.is-lede {
 /* Work wrapper */
 
 .Work {}
+
+.Work strong {
+  color: var(--color-neutral-800);
+}
 
 .Work-heading {
   color: var(--color-neutral-800);
@@ -368,6 +382,7 @@ p.is-lede {
   font-family: var(--font-family-sans);
   font-size: var(--font-size-2);
   letter-spacing: var(--font-letter-spacing);
+  padding-top: 0.5em;
   text-transform: uppercase;
 }
 
@@ -391,9 +406,6 @@ p.is-lede {
 /* Content rows */
 
 .ContentRow {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   margin-bottom: var(--spacing-5);
   margin-top: var(--spacing-5);
   width: 100%;
@@ -402,7 +414,6 @@ p.is-lede {
 }
 
 .ContentRow-item {
-  flex: 1 1 50%;
   /* background-color: rgba(0, 0, 255, 0.1); */
   /* TODO: remove the above? */
 }
@@ -416,7 +427,7 @@ p.is-lede {
 }
 
 .ContentRow-item + .ContentRow-item {
-  margin-left: var(--spacing-gap-center);
+  margin-top: var(--spacing-gap-center);
 }
 
 .ContentRow-item--halfWidth {
@@ -425,6 +436,7 @@ p.is-lede {
 
 .ContentRow-itemImage {
   display: block;
+  height: auto;
   transition: opacity var(--transition-slow);
   width: 100%;
 }
@@ -440,14 +452,22 @@ p.is-lede {
 
 .ContentRow-item p {
   line-height: 1.5;
+  margin: var(--spacing-1) 0;
 }
 
-.ContentRow-item strong {
-  color: var(--color-neutral-800);
-}
-
-@media (min-width: 640px) {
+@media (min-width: 960px) {
   .ContentRow {
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .ContentRow-item {
+    flex: 1 1 50%;
+  }
+
+  .ContentRow-item + .ContentRow-item {
+    margin-left: var(--spacing-gap-center);
+    margin-top: 0;
   }
 }

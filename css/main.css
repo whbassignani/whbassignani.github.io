@@ -74,6 +74,16 @@
 @media (min-width: 960px) {
   :root {
     --spacing-1: 20px;
+    --spacing-2: 35px;
+    --spacing-3: 50px;
+    --spacing-4: 75px;
+    --spacing-5: 100px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --spacing-1: 20px;
     --spacing-2: 40px;
     --spacing-3: 60px;
     --spacing-4: 90px;
@@ -123,20 +133,6 @@ main {
   color: var(--color-yellow-500);
 }
 
-.u-offsetDownSmall {
-  --offset: var(--spacing-3);
-
-  margin-bottom: calc(-1 * var(--offset));
-  margin-top: var(--offset);
-}
-
-.u-offsetDownLarge {
-  --offset: var(--spacing-5);
-  
-  margin-bottom: calc(-1 * var(--offset));
-  margin-top: var(--offset);
-}
-
 .u-sidePadding {
   padding-left: var(--spacing-side-padding);
   padding-right: var(--spacing-side-padding);
@@ -168,6 +164,22 @@ main {
 @media (max-width: 959px) {
   .u-hideUntil960 {
     display: none;
+  }
+}
+
+@media (min-width: 960px) {
+  .u-960-offsetDownSmall {
+    --offset: var(--spacing-3);
+  
+    margin-bottom: calc(-1 * var(--offset));
+    margin-top: var(--offset);
+  }
+  
+  .u-960-offsetDownLarge {
+    --offset: var(--spacing-5);
+    
+    margin-bottom: calc(-1 * var(--offset));
+    margin-top: var(--offset);
   }
 }
 
@@ -247,12 +259,10 @@ p.is-lede {
 }
 
 .Nav-heading {
-  background-color: var(--color-neutral-800);
   color: var(--color-neutral-200);
   font-family: var(--font-family-serif);
   font-size: var(--font-size-4);
-  margin: -2px 0 0 -8px;
-  padding: 2px 6px 2px 8px;
+  margin: 0;
   text-transform: none;
 }
 
@@ -430,19 +440,18 @@ p.is-lede {
   margin-top: var(--spacing-gap-center);
 }
 
-.ContentRow-item--halfWidth {
-  flex: 0 1 calc(50% - var(--spacing-gap-center) / 2);
-}
-
 .ContentRow-itemImage {
   display: block;
-  height: auto;
   transition: opacity var(--transition-slow);
   width: 100%;
 }
 
 .ContentRow-itemImage.is-notLoaded {
   opacity: 0.1;
+}
+
+.ContentRow-itemImage:not(.is-notLoaded) {
+  height: auto;
 }
 
 /* WHY: If no JavaScript, this prevents the placeholder image from displaying alongside the <noscript> one */
@@ -466,8 +475,29 @@ p.is-lede {
     flex: 1 1 50%;
   }
 
+  .ContentRow-item--halfWidth {
+    flex: 0 1 calc(50% - var(--spacing-gap-center) / 2);
+  }
+
   .ContentRow-item + .ContentRow-item {
+    flex-basis: 33%;
     margin-left: var(--spacing-gap-center);
     margin-top: 0;
+  }
+
+  .ContentRow-item + .u-960-offsetDownSmall,
+  .ContentRow-item + .u-960-offsetDownLarge {
+    margin-top: auto;
+  }
+}
+
+@media (min-width: 1280px) {
+  .ContentRow-item {
+    flex: 1 1 50%;
+  }
+
+  .ContentRow-item + .ContentRow-item {
+    /* flex-basis: 50%; */
+    /* TODO: remove the above? */
   }
 }

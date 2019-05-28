@@ -21,16 +21,16 @@
   --font-family-sans: "Concourse", system-ui, sans-serif;
   --font-family-serif: "Source Serif Pro", serif;
 
-  /* URL: https://www.modularscale.com/?18&px&1.2 */
-  --font-size-1: 11px;
-  --font-size-2: 13px;
-  --font-size-3: 15px;
+  /* URL: https://www.modularscale.com/?18&px&1.15 */
+  --font-size-1: 12px;
+  --font-size-2: 14px;
+  --font-size-3: 16px;
   --font-size-4: 18px;
-  --font-size-5: 22px;
-  --font-size-6: 26px;
-  --font-size-7: 31px;
-  --font-size-8: 37px;
-  --font-size-9: 45px;
+  --font-size-5: 21px;
+  --font-size-6: 24px;
+  --font-size-7: 27px;
+  --font-size-8: 31px;
+  --font-size-9: 36px;
 
   --filter-brightness-hover: brightness(1.2);
   --filter-brightness-active: brightness(0.8);
@@ -119,6 +119,18 @@ main {
   color: var(--color-yellow-500);
 }
 
+@media (max-width: 639px) {
+  .u-hideUntil640 {
+    display: none;
+  }
+}
+
+@media (max-width: 959px) {
+  .u-hideUntil960 {
+    display: none;
+  }
+}
+
 .u-offsetDownSmall {
   --offset: var(--spacing-3);
 
@@ -191,7 +203,8 @@ p.is-lede {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: var(--spacing-2) 0;
+  padding-bottom: var(--spacing-2);
+  padding-top: var(--spacing-2);
 }
 
 .Nav-heading {
@@ -217,12 +230,18 @@ p.is-lede {
   color: var(--color-neutral-200);
   display: flex;
   flex-direction: column;
-  height: 90vh;
-  line-height: 1;
   justify-content: center;
-  min-height: 850px;
-  max-height: 1000px;
-  padding: calc(var(--spacing-4) * 3) var(--spacing-1) var(--spacing-5);
+  line-height: 1;
+  padding: calc(var(--spacing-2) * 3) 0 0;
+}
+
+@media (min-width: 960px) {
+  .PageHeader {
+    height: 90vh;
+    min-height: 850px;
+    max-height: 1000px;
+    padding: calc(var(--spacing-4) * 3) 0 var(--spacing-5);
+  }
 }
 
 .PageHeader strong {
@@ -244,6 +263,16 @@ p.is-lede {
   font-size: var(--font-size-9);
   font-weight: 700;
   letter-spacing: 0.04em;
+}
+
+.PageHeader-description {
+  max-width: 640px;
+}
+
+@media (min-width: 960px) {
+  .PageHeader-description {
+    max-width: none;
+  }
 }
 
 .PageHeader-subheading {
@@ -321,6 +350,7 @@ p.is-lede {
 
 .ContentRow {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   margin-bottom: var(--spacing-5);
   margin-top: var(--spacing-5);
@@ -372,6 +402,6 @@ p.is-lede {
 
 @media (min-width: 640px) {
   .ContentRow {
-    flex-direction: column;
+    flex-direction: row;
   }
 }

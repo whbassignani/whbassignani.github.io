@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="">
+<html lang="en" class="no-js">
 
 <head>
   <meta charset="utf-8">
@@ -8,8 +8,11 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <script>document.documentElement.classList.remove("no-js");</script>
+
   <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="fonts/concourse.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -36,7 +39,7 @@
           <p>I manage a small group of designers within <a href="https://www.battle.net">Battle.net</a> across multiple product teams. <strong>Say hi!</strong></p>
 
           <p><a
-              href="https://www.twitter.com/hawkeward" class="PageHeader-link PageHeader-link--twitter"><img src="https://via.placeholder.com/48" class="PageHeader-linkIcon"> Follow me on Twitter.</a></p>
+              href="https://www.twitter.com/hawkeward" class="PageHeader-link PageHeader-link--twitter"><img src="https://via.placeholder.com/48/22B1F8/fff" class="PageHeader-linkIcon"> Follow me on Twitter.</a></p>
         </div>
 
         <div class="ContentRow-item">
@@ -44,8 +47,8 @@
           <ul class="PageHeader-skillsList u-unstyledList">
             <li>Platform design</li>
             <li>Internal & external tools</li>
-            <li>Design systems</li>
-            <li>Marketing sites</li>
+            <li>Design systems <span class="u-colorYellow">&</span> libraries</li>
+            <li>Marketing <span class="u-colorYellow">&</span> esports sites</li>
           </ul>
         </div>
       </div>
@@ -79,11 +82,21 @@
 
       <section class="ContentRow u-centeredBox">
         <div class="ContentRow-item">
-          <img src="https://via.placeholder.com/960x540/333/111" class="ContentRow-itemImage">
+          <img src="https://via.placeholder.com/960x540/333/111" width="960" height="540" class="ContentRow-itemImage">
         </div>
 
         <div class="ContentRow-item u-offsetDownSmall">
-          <img src="https://via.placeholder.com/960x540/111/333" class="ContentRow-itemImage">
+          <img src="https://via.placeholder.com/960x540/111/333" width="960" height="540" class="ContentRow-itemImage">
+        </div>
+      </section>
+
+      <section class="ContentRow u-centeredBox">
+        <div class="ContentRow-item">
+          <img src="img/placeholder.gif" width="960" height="540" class="ContentRow-itemImage is-notLoaded">
+        </div>
+
+        <div class="ContentRow-item u-offsetDownSmall">
+          <img src="img/placeholder.gif" width="960" height="540" class="ContentRow-itemImage is-notLoaded">
         </div>
       </section>
     </article>
@@ -189,5 +202,7 @@
     </article>
   </main>
 </body>
+
+<script src="js/main.js"></script>
 
 </html>

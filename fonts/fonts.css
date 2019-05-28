@@ -1,44 +1,4 @@
 @font-face {
-  font-family: "Source Sans Pro";
-  src: local("Source Sans Pro Semibold"),
-       local("Source Sans Pro Semibold"),
-       url("SourceSansPro-Semibold.otf.woff2") format("woff2"),
-       url("SourceSansPro-Semibold.otf.woff") format("woff");
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Source Sans Pro";
-  src: local("Source Sans Pro Semibold Italic"),
-       local("Source Sans Pro Semibold Italic"),
-       url("SourceSansPro-SemiboldIt.otf.woff2") format("woff2"),
-       url("SourceSansPro-SemiboldIt.otf.woff") format("woff");
-  font-style: italic;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Source Sans Pro";
-  src: local("Source Sans Pro Black"),
-       local("Source Sans Pro Black"),
-       url("SourceSansPro-Black.otf.woff2") format("woff2"),
-       url("SourceSansPro-Black.otf.woff") format("woff");
-  font-style: normal;
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "Source Sans Pro";
-  src: local("Source Sans Pro Black Italic"),
-       local("Source Sans Pro Black Italic"),
-       url("SourceSansPro-BlackIt.otf.woff2") format("woff2"),
-       url("SourceSansPro-BlackIt.otf.woff") format("woff");
-  font-style: italic;
-  font-weight: 700;
-}
-
-@font-face {
   font-family: "Source Serif Pro";
   src: local("Source Serif Pro Semibold"),
        local("Source Serif Pro Semibold"),

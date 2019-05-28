@@ -18,7 +18,7 @@
 
 <body>
   <main>
-    <nav class="Nav">
+    <nav class="Nav u-sidePadding">
       <div class="Nav-inner u-widthMedium u-centeredBox">
         <h1 class="Nav-heading">Hawkeward<span class="u-colorYellow">.</span></h1>
 
@@ -26,7 +26,7 @@
       </div>
     </nav>
 
-    <header class="PageHeader">
+    <header class="PageHeader u-sidePadding">
       <h1 class="PageHeader-heading u-widthMedium u-centeredBox"><strong>My Name is Hawke.</strong> I'm a front-end
         designer.</h1>
 
@@ -55,11 +55,11 @@
     </header>
 
     <article class="Work">
-      <section class="ContentRow u-widthMedium u-centeredBox">
+      <section class="ContentRow u-widthMedium u-centeredBox u-sidePadding">
         <h2 class="Work-heading"><strong>Blizzard Battle.net</strong> Leading <em>Platform Design</em> Teams</h2>
       </section>
 
-      <section class="ContentRow u-widthMedium u-centeredBox">
+      <section class="ContentRow u-widthMedium u-centeredBox u-sidePadding">
         <div class="ContentRow-item">
 
           <p class="is-lede">Battle.net is Blizzard’s <strong>online gaming service</strong>, combining multiplayer connectivity, purchases, account management, social features, and more into a single package.</p>
@@ -79,24 +79,36 @@
           </dl>
         </aside>
       </section>
-
+      
       <section class="ContentRow u-centeredBox">
-        <div class="ContentRow-item">
-          <img src="https://via.placeholder.com/960x540/333/111" width="960" height="540" class="ContentRow-itemImage">
+        <div class="ContentRow-item u-backgroundGrey">
+          <img src="img/placeholder.gif"
+               data-src="https://via.placeholder.com/960x540/f00/0f0"
+               width="960" height="540"
+               alt="TODO: write a real alt tag!"
+               class="ContentRow-itemImage is-notLoaded">
+
+          <noscript>
+            <img src="https://bnetcmsus-a.akamaihd.net/cms/template_resource/Y65QYY5LPYD61551144310736.jpg"
+                 width="960" height="540"
+                 alt="TODO: write a real alt tag!"
+                 class="ContentRow-itemImage">
+          </noscript>
         </div>
 
-        <div class="ContentRow-item u-offsetDownSmall">
-          <img src="https://via.placeholder.com/960x540/111/333" width="960" height="540" class="ContentRow-itemImage">
-        </div>
-      </section>
+        <div class="ContentRow-item u-backgroundGrey u-offsetDownSmall">
+          <img src="img/placeholder.gif"
+               data-src="https://via.placeholder.com/960x540/f00/0f0"
+               width="960" height="540"
+               alt="TODO: write a real alt tag!"
+               class="ContentRow-itemImage is-notLoaded">
 
-      <section class="ContentRow u-centeredBox">
-        <div class="ContentRow-item">
-          <img src="img/placeholder.gif" width="960" height="540" class="ContentRow-itemImage is-notLoaded">
-        </div>
-
-        <div class="ContentRow-item u-offsetDownSmall">
-          <img src="img/placeholder.gif" width="960" height="540" class="ContentRow-itemImage is-notLoaded">
+          <noscript>
+            <img src="https://bnetcmsus-a.akamaihd.net/cms/template_resource/Y65QYY5LPYD61551144310736.jpg"
+                 width="960" height="540"
+                 alt="TODO: write a real alt tag!"
+                 class="ContentRow-itemImage">
+          </noscript>
         </div>
       </section>
     </article>

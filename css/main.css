@@ -1,6 +1,7 @@
 /* Variables */
 
 :root {
+  --spacing-0: 10px;
   --spacing-1: 15px;
   --spacing-2: 20px;
   --spacing-3: 30px;
@@ -9,12 +10,14 @@
   --spacing-gap-center: var(--spacing-2);
   --spacing-side-padding: var(--spacing-1);
 
+  --border-radius: 4px;
   --size-icon: 24px;
 
   --color-neutral-50: #f5f5f1;
   --color-neutral-100: #ecebe8;
   --color-neutral-200: #E1DAD2;
   --color-neutral-300: #88837f;
+  --color-neutral-400: #615b57;
   --color-neutral-800: #121215;
   --color-twitterBlue-500: #22B1F8;
   --color-yellow-500: #f8ac22;
@@ -225,6 +228,7 @@ a:visited {
   text-decoration: none;
   transition:
     filter var(--transition-fast),
+    opacity var(--transition-fast),
     transform var(--transition-fast);
 }
 
@@ -245,7 +249,7 @@ p.is-lede {
 
 .Nav {
   left: 0;
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 0;
 }
@@ -269,6 +273,7 @@ p.is-lede {
 .Nav-dropdownLink {
   border-bottom: 0;
   color: var(--color-neutral-300);
+  display: inline-block;
   font-family: var(--font-family-sans);
   font-size: var(--font-size-2);
 }
@@ -364,6 +369,29 @@ p.is-lede {
 /* Work wrapper */
 
 .Work {}
+
+.Work-stickyNav {
+  margin-bottom: var(--spacing-2);
+  margin-top: var(--spacing-2);
+  pointer-events: none;
+  position: -webkit-sticky;
+  position: sticky;
+  top: var(--spacing-1);
+}
+
+.Work-projectsLink:link,
+.Work-projectsLink:visited {
+  background-color: var(--color-neutral-100);
+  border-bottom: 0;
+  border-radius: var(--border-radius);
+  color: var(--color-neutral-300);
+  display: inline-block;
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-2);
+  opacity: 0.9;
+  padding: var(--spacing-0) var(--spacing-1);
+  pointer-events: auto;
+}
 
 .Work strong {
   color: var(--color-neutral-800);

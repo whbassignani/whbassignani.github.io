@@ -10,7 +10,7 @@
   --spacing-gap-center: var(--spacing-2);
   --spacing-side-padding: var(--spacing-1);
   --max-width-text: 640px;
-  --max-width-content-row: 1280px;
+  --max-width-content-row: 1160px;
 
   --border-radius: 4px;
   --size-icon: 24px;
@@ -572,7 +572,7 @@ p.is-lede {
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1280px) {
   /* .ContentRow-item {
     flex: 1 1 50%;
   } */

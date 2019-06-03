@@ -9,6 +9,8 @@
   --spacing-5: 50px;
   --spacing-gap-center: var(--spacing-2);
   --spacing-side-padding: var(--spacing-1);
+  --max-width-text: 640px;
+  --max-width-content-row: 1400px;
 
   --border-radius: 4px;
   --size-icon: 24px;
@@ -325,7 +327,7 @@ p.is-lede {
 }
 
 .PageHeader-description {
-  max-width: 640px;
+  max-width: var(--max-width-text);
 }
 
 @media (min-width: 960px) {
@@ -498,6 +500,7 @@ p.is-lede {
 .ContentRow-item p {
   line-height: 1.5;
   margin: var(--spacing-1) 0;
+  max-width: var(--max-width-text);
 }
 
 @media (min-width: 960px) {
@@ -511,10 +514,6 @@ p.is-lede {
     flex: 2 1 67%;
   }
 
-  .ContentRow-item--halfWidth {
-    flex: 0 1 calc(50% - var(--spacing-gap-center) / 2);
-  }
-
   .ContentRow-item + .ContentRow-item {
     flex: 1 1 33%;
     margin-left: var(--spacing-gap-center);
@@ -526,15 +525,74 @@ p.is-lede {
   .ContentRow-item + .u-960-offsetDownLarge {
     margin-top: auto;
   }
+
+  @supports (display: grid) {
+    .ContentRow {
+      display: grid;
+      grid-column-gap: var(--spacing-gap-center);
+      grid-template-columns: [window-left] 0 [content-left] 2fr [content-middle] 1fr [content-right] 0 [window-right];
+    }
+
+    /* WHY: need to undo utility classes when grid is supported (for gaps and widths) */
+    .ContentRow.u-centeredBox {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .ContentRow.u-sidePadding {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    
+    .ContentRow.u-widthMedium {
+      max-width: none;
+    }
+
+    .ContentRow-item {
+      grid-column: content-left / content-middle;
+      /* max-width: calc(var(--max-width-content-row) * 2 / 3); */
+    }
+
+    .ContentRow-item + .ContentRow-item {
+      grid-column: content-middle / content-right;
+      margin-left: 0;
+      /* max-width: calc(var(--max-width-content-row) / 3); */
+    }
+
+    .ContentRow-item--full {
+      grid-column: content-left / content-right;
+    }
+  }
 }
 
-@media (min-width: 1280px) {
-  .ContentRow-item {
+@media (min-width: 1400px) {
+  /* .ContentRow-item {
     flex: 1 1 50%;
-  }
+  } */
 
   .ContentRow-item + .ContentRow-item {
     /* flex-basis: 50%; */
     /* TODO: remove the above? */
+  }
+ 
+  @supports (display: grid) {
+    .ContentRow {
+      grid-template-columns: [window-left] minmax(auto, 300px) [content-left] fit-content(60%) [content-middle] fit-content(30%) [content-right] minmax(auto, 300px) [window-right];
+      justify-content: center;
+    }
+
+    .ContentRow-item:first-child::before {
+      background-color: red;
+      content: 'qwerty';
+      display: block;
+      grid-column: [window-left] / [content-left];
+    }
+
+    .ContentRow-item + .ContentRow-item::after {
+      background-color: red;
+      content: 'asdfgh';
+      display: block;
+      grid-column: [content-right] / [window-right];
+    }
   }
 }

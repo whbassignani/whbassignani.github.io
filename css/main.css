@@ -434,6 +434,12 @@ p.is-lede {
   margin: 0 0 var(--spacing-1) 0;
 }
 
+@media (min-width: 960px) {
+  .Work-meta .Work-meta--liveSite {
+    margin-top: var(--spacing-2);
+  }
+}
+
 .Work-metaIcon {
   display: inline-block;
   height: var(--size-icon);

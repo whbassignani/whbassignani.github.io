@@ -10,7 +10,7 @@
   --spacing-gap-center: var(--spacing-2);
   --spacing-side-padding: var(--spacing-1);
   --max-width-text: 640px;
-  --max-width-content-row: 1400px;
+  --max-width-content-row: 1280px;
 
   --border-radius: 4px;
   --size-icon: 24px;
@@ -457,12 +457,12 @@ p.is-lede {
   margin-bottom: var(--spacing-5);
   margin-top: var(--spacing-5);
   width: 100%;
-  background-color: rgba(0, 255, 0, 0.1);
+  /* background-color: rgba(0, 255, 0, 0.1); */
   /* TODO: remove the above? */
 }
 
 .ContentRow-item {
-  background-color: rgba(0, 0, 255, 0.1);
+  /* background-color: rgba(0, 0, 255, 0.1); */
   /* TODO: remove the above? */
 }
 
@@ -479,6 +479,7 @@ p.is-lede {
 }
 
 .ContentRow-itemImage {
+  background-color: var(--color-neutral-700);
   display: block;
   transition: opacity var(--transition-slow);
   width: 100%;
@@ -550,17 +551,23 @@ p.is-lede {
 
     .ContentRow-item {
       grid-column: content-left / content-middle;
-      /* max-width: calc(var(--max-width-content-row) * 2 / 3); */
     }
 
     .ContentRow-item + .ContentRow-item {
       grid-column: content-middle / content-right;
       margin-left: 0;
-      /* max-width: calc(var(--max-width-content-row) / 3); */
     }
 
     .ContentRow-item--full {
       grid-column: content-left / content-right;
+    }
+
+    .ContentRow--full .ContentRow-item {
+      grid-column: window-left / content-middle;
+    }
+
+    .ContentRow--full .ContentRow-item + .ContentRow-item {
+      grid-column: content-middle / window-right;
     }
   }
 }
@@ -577,22 +584,7 @@ p.is-lede {
  
   @supports (display: grid) {
     .ContentRow {
-      grid-template-columns: [window-left] minmax(auto, 300px) [content-left] fit-content(60%) [content-middle] fit-content(30%) [content-right] minmax(auto, 300px) [window-right];
-      justify-content: center;
-    }
-
-    .ContentRow-item:first-child::before {
-      background-color: red;
-      content: 'qwerty';
-      display: block;
-      grid-column: [window-left] / [content-left];
-    }
-
-    .ContentRow-item + .ContentRow-item::after {
-      background-color: red;
-      content: 'asdfgh';
-      display: block;
-      grid-column: [content-right] / [window-right];
+      grid-template-columns: [window-left] 1fr [content-left] calc(var(--max-width-content-row) * 2 / 3) [content-middle] calc(var(--max-width-content-row) / 3) [content-right] 1fr [window-right];
     }
   }
 }

@@ -81,3 +81,33 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("orientationchange", lazyLoad);  
   }
 });
+
+let projectDropdownTrigger = document.getElementsByClassName("Work-projectsLink")[0];
+let projectDropdownList = document.getElementsByClassName("Work-projectsList")[0];
+let projectDropdownListLinks = document.getElementsByClassName("")
+
+let projectDropdownClickHandler = function(e) {
+  e.preventDefault();
+
+  projectDropdownTrigger.classList.toggle("is-active");
+  toggleProjectDropdown();
+}
+
+let toggleProjectDropdown = function() {
+  if (projectDropdownTrigger.classList.contains("is-active")) {
+    projectDropdownList.classList.add("is-visible");
+    projectDropdownList.classList.add("is-faded-in");
+  } else {
+    projectDropdownList.classList.remove("is-faded-in");
+    projectDropdownList.classList.remove("is-visible");
+  }
+}
+
+let projectDropdownTouchHandler = function(e) {
+  e.preventDefault();
+
+  projectDropdownClickHandler();
+}
+
+projectDropdownTrigger.addEventListener('click', projectDropdownClickHandler);
+projectDropdownTrigger.addEventListener('touchstart', projectDropdownTouchHandler);

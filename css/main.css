@@ -422,8 +422,8 @@ p.is-lede {
   top: var(--spacing-1);
 }
 
-.Work-projectsLink:link,
-.Work-projectsLink:visited {
+.Work-projectsTrigger:link,
+.Work-projectsTrigger:visited {
   background-color: var(--color-neutral-100);
   border-bottom: 0;
   border-radius: var(--border-radius);
@@ -435,23 +435,24 @@ p.is-lede {
   padding: var(--spacing-1) var(--spacing-2);
   pointer-events: auto;
   position: relative;
+  touch-action: manipulation;
 }
 
 @media (min-width: 960px) {
-  .Work-projectsLink:link,
-  .Work-projectsLink:visited {
+  .Work-projectsTrigger:link,
+  .Work-projectsTrigger:visited {
     padding: var(--spacing-0) var(--spacing-1);
   }
 }
 
-.Work-projectsLink.is-active:link,
-.Work-projectsLink.is-active:visited {
+.Work-projectsTrigger.is-active:link,
+.Work-projectsTrigger.is-active:visited {
   background-color: var(--color-neutral-700);
   box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
   color: var(--color-neutral-100);
 }
 
-.Work-projectsLinkIcon {
+.Work-projectsTriggerIcon {
   display: inline-block;
   margin-left: calc(var(--spacing-0) );
   position: relative;
@@ -462,7 +463,7 @@ p.is-lede {
   transition: transform var(--transition-average);
 }
 
-.Work-projectsLink.is-active .Work-projectsLinkIcon {
+.Work-projectsTrigger.is-active .Work-projectsTriggerIcon {
   transform:
     translateY(-10%)
     rotate(0);
@@ -501,24 +502,25 @@ p.is-lede {
   transform: scale(1);
 }
 
-.Work-projectsList a:link,
-.Work-projectsList a:visited {
+.Work-projectsLink:link,
+.Work-projectsLink:visited {
   border-bottom: 0;
   display: block;
   color: var(--color-neutral-400);
   font-family: var(--font-family-sans);
   font-size: var(--font-size-2);
   padding: var(--spacing-1);
+  touch-action: manipulation;
 }
 
 @media (min-width: 960px) {
-  .Work-projectsList a:link,
-  .Work-projectsList a:visited {
+  .Work-projectsLink:link,
+  .Work-projectsLink:visited {
     padding: calc(var(--spacing-1) / 2) var(--spacing-1);
   }
 }
 
-.Work-projectsList a:hover {
+.Work-projectsLink:hover {
   background-color: var(--color-neutral-200);
 }
 

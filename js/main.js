@@ -82,16 +82,9 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
-let projectDropdownTrigger = document.getElementsByClassName("Work-projectsLink")[0];
+let projectDropdownTrigger = document.getElementsByClassName("Work-projectsTrigger")[0];
 let projectDropdownList = document.getElementsByClassName("Work-projectsList")[0];
-let projectDropdownListLinks = document.getElementsByClassName("")
-
-let projectDropdownClickHandler = function(e) {
-  e.preventDefault();
-
-  projectDropdownTrigger.classList.toggle("is-active");
-  toggleProjectDropdown();
-}
+let projectDropdownListLinks = document.getElementsByClassName("Work-projectsLink");
 
 let toggleProjectDropdown = function() {
   if (projectDropdownTrigger.classList.contains("is-active")) {
@@ -103,11 +96,17 @@ let toggleProjectDropdown = function() {
   }
 }
 
-let projectDropdownTouchHandler = function(e) {
-  e.preventDefault();
+projectDropdownTrigger.addEventListener('click', function(event) {
+  event.preventDefault();
+  console.log("click triggered");
 
-  projectDropdownClickHandler();
-}
+  projectDropdownTrigger.classList.toggle("is-active");
+  toggleProjectDropdown();
+});
 
-projectDropdownTrigger.addEventListener('click', projectDropdownClickHandler);
-projectDropdownTrigger.addEventListener('touchstart', projectDropdownTouchHandler);
+Array.prototype.forEach.call(projectDropdownListLinks, function(link) {
+  link.addEventListener('click', function() {
+    projectDropdownTrigger.classList.remove("is-active");
+    toggleProjectDropdown();
+  });
+});

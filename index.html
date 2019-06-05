@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  <main>
+  <div class="PageWrapper">
     <nav class="Nav">
       <div class="Nav-inner u-widthMedium u-centeredBox u-sidePadding">
         <h1 class="Nav-heading">Hawkeward<span class="u-colorYellow">.</span></h1>
@@ -107,12 +107,16 @@
         <div class="ContentRow-item">
           <img src="img/placeholder.gif"
                data-src="https://via.placeholder.com/960x540/f00/0f0"
+               data-srcset="https://via.placeholder.com/960x540/f00/0f0 960w, https://via.placeholder.com/1920x1080/f00/0f0 1920w"
+               sizes="(min-width: 960px) 960px, 100vw"
                width="960" height="540"
                alt="TODO: write a real alt tag!"
                class="ContentRow-itemImage is-notLoaded">
 
           <noscript>
             <img src="https://via.placeholder.com/960x540/f00/0f0"
+                 srcset="https://via.placeholder.com/960x540/f00/0f0 960w, https://via.placeholder.com/1920x1080/f00/0f0 1920w"
+                 sizes="(min-width: 960px) 960px, 100vw"
                  width="960" height="540"
                  alt="TODO: write a real alt tag!"
                  class="ContentRow-itemImage">
@@ -121,14 +125,18 @@
 
         <div class="ContentRow-item">
           <img src="img/placeholder.gif"
-               data-src="https://via.placeholder.com/540x400/f00/0f0"
-               width="540" height="400"
+               data-src="https://via.placeholder.com/540/f00/0f0"
+               data-srcset="https://via.placeholder.com/540/f00/0f0 540w, https://via.placeholder.com/1080/f00/0f0 1080w"
+               sizes="(min-width: 960px) 540px, 100vw"
+               width="540" height="540"
                alt="TODO: write a real alt tag!"
                class="ContentRow-itemImage is-notLoaded">
 
           <noscript>
-            <img src="https://via.placeholder.com/540x400/f00/0f0"
-                 width="540" height="400"
+            <img src="https://via.placeholder.com/540/f00/0f0"
+                 srcset="https://via.placeholder.com/540/f00/0f0 540w, https://via.placeholder.com/1080/f00/0f0 1080w"
+                 sizes="(min-width: 960px) 540px, 100vw"
+                 width="540" height="540"
                  alt="TODO: write a real alt tag!"
                  class="ContentRow-itemImage">
           </noscript>
@@ -143,11 +151,11 @@
 
       <section class="ContentRow u-widthMedium u-centeredBox u-sidePadding">
         <div class="ContentRow-item">
-          <p class="is-lede">Phasellus mollis massa sem, sed bibendum augue elementum eu. Duis eu est vitae ipsum suscipit pharetra. Nulla eget malesuada mauris.</p>
+          <p class="is-lede">The <em>Diablo</em> series features multiple “hack-and-slash” dungeon-crawler games. The latest entrant, <em>Diablo Immortal</em> is Blizzard Entertainment’s first mobile-first title.</p>
 
-          <p>Nunc vel orci justo. Aliquam feugiat blandit augue nec porta. Aliquam posuere malesuada blandit. Nam dictum sed ipsum sed elementum. Donec sit amet sollicitudin diam. Nullam a tempor diam, nec dapibus purus.</p>
-
-          <p>Donec malesuada molestie nibh et ultrices. Vestibulum vitae tellus leo. Nulla facilisi. Donec in tellus semper, porttitor sem at, consectetur justo. Praesent lobortis vestibulum orci quis porttitor. Cras lobortis nulla eu viverra sodales. Sed accumsan fermentum pretium.</p> 
+          <p>In 2018, our team designed and shipped two announcement websites as “test pilots” for our next-gen web tech platform.</p>
+            
+          <p>Using an internally-built design tool and a React-based system, we were able to ship these Blizzard-quality sites in half of the time… and with fewer contributors.</p>
         </div>
 
         <aside class="ContentRow-item">
@@ -164,80 +172,51 @@
         </aside>
       </section>
 
-      <section class="ContentRow u-widthMedium u-centeredBox u-sidePadding">
+      <section class="ContentRow is-centered is-full-width u-centeredBox">
         <div class="ContentRow-item">
-          <p>Phasellus mollis massa sem, sed bibendum augue elementum eu. Duis eu est vitae ipsum suscipit pharetra. Nulla eget malesuada mauris.</p>
+          <img src="img/placeholder.gif"
+               data-src="https://via.placeholder.com/960x720/f00/0f0"
+               data-srcset="https://via.placeholder.com/960x720/f00/0f0 960w, https://via.placeholder.com/1920x1440/f00/0f0 1920w"
+               sizes="(min-width: 960px) 960px, 100vw"
+               width="960" height="720"
+               alt="TODO: write a real alt tag!"
+               class="ContentRow-itemImage is-notLoaded">
 
-          <p>Nunc vel orci justo. Aliquam feugiat blandit augue nec porta. Aliquam posuere malesuada blandit. Nam dictum sed ipsum sed elementum. Donec sit amet sollicitudin diam. Nullam a tempor diam, nec dapibus purus.</p>
-
-          <p>Donec malesuada molestie nibh et ultrices. Vestibulum vitae tellus leo. Nulla facilisi. Donec in tellus semper, porttitor sem at, consectetur justo. Praesent lobortis vestibulum orci quis porttitor. Cras lobortis nulla eu viverra sodales. Sed accumsan fermentum pretium.</p>
-        </div>
-      </section>
-
-      <section class="ContentRow u-widthMedium u-centeredBox u-sidePadding">
-        <div class="ContentRow-item">
-          <p>Phasellus mollis massa sem, sed bibendum augue elementum eu. Duis eu est vitae ipsum suscipit pharetra. Nulla eget malesuada mauris.</p>
-
-          <p>Nunc vel orci justo. Aliquam feugiat blandit augue nec porta. Aliquam posuere malesuada blandit. Nam dictum sed ipsum sed elementum. Donec sit amet sollicitudin diam. Nullam a tempor diam, nec dapibus purus.</p>
-
-          <p>Donec malesuada molestie nibh et ultrices. Vestibulum vitae tellus leo. Nulla facilisi. Donec in tellus semper, porttitor sem at, consectetur justo. Praesent lobortis vestibulum orci quis porttitor. Cras lobortis nulla eu viverra sodales. Sed accumsan fermentum pretium.</p>
-        </div>
-      </section>
-
-
-
-      <!-- <section class="ContentRow u-centeredBox">
-        <div class="ContentRow-item">
-          <img src="https://via.placeholder.com/1080x1440/333/111" class="ContentRow-itemImage">
+          <noscript>
+            <img src="https://via.placeholder.com/960x720/f00/0f0"
+                 srcset="https://via.placeholder.com/960x720/f00/0f0 960w, https://via.placeholder.com/1920x1440/f00/0f0 1920w"
+                 sizes="(min-width: 960px) 960px, 100vw"
+                 width="960" height="720"
+                 alt="TODO: write a real alt tag!"
+                 class="ContentRow-itemImage">
+          </noscript>
         </div>
 
         <div class="ContentRow-item">
-          <img src="https://via.placeholder.com/1080x1440/111/333" class="ContentRow-itemImage">
-        </div>
-      </section>
+          <img src="img/placeholder.gif"
+               data-src="https://via.placeholder.com/960x1280/f00/0f0"
+               data-srcset="https://via.placeholder.com/960x1280/f00/0f0 960w, https://via.placeholder.com/1920x2560/f00/0f0 1920w"
+               sizes="(min-width: 960px) 960px, 100vw"
+               width="960" height="1280"
+               alt="TODO: write a real alt tag!"
+               class="ContentRow-itemImage is-notLoaded">
 
-      <section class="u-widthMedium u-centeredBox">
-        <div class="ContentRow-item">
-          <img src="https://via.placeholder.com/1440x1080/333/111" class="ContentRow-itemImage">
-        </div>
-      </section>
-
-      <section class="u-centeredBox">
-        <div class="ContentRow-item">
-          <img src="https://via.placeholder.com/2000x960/333/111" class="ContentRow-itemImage">
-        </div>
-      </section> -->
-
-      <section class="u-widthMedium u-centeredBox">
-        <h3><span>Diablo Immortal</span> Announcement Site</h3>
-
-        <div>
-          <dl>
-            <dt>Work date</dt>
-            <dd>January 1, 1970</dd>
-
-            <dt>Tags</dt>
-            <dd>design, front-end dev</dd>
-
-            <dt>Live site</dt>
-            <dd><a href="#">Visit the live site</a></dd>
-          </dl>
-        </div>
-
-        <div>
-          <p>Phasellus mollis massa sem, sed bibendum augue elementum eu. Duis eu est vitae ipsum suscipit pharetra.
-            Nulla eget malesuada mauris.</p>
-
-          <p>Nunc vel orci justo. Aliquam feugiat blandit augue nec porta. Aliquam posuere malesuada blandit. Nam dictum
-            sed ipsum sed elementum. Donec sit amet sollicitudin diam. Nullam a tempor diam, nec dapibus purus.</p>
-
-          <p>Donec malesuada molestie nibh et ultrices. Vestibulum vitae tellus leo. Nulla facilisi. Donec in tellus
-            semper, porttitor sem at, consectetur justo. Praesent lobortis vestibulum orci quis porttitor. Cras lobortis
-            nulla eu viverra sodales. Sed accumsan fermentum pretium.</p>
+          <noscript>
+            <img src="https://via.placeholder.com/960x1280/f00/0f0"
+                 srcset="https://via.placeholder.com/960x1280/f00/0f0 960w, https://via.placeholder.com/1920x2560/f00/0f0 1920w"
+                 sizes="(min-width: 960px) 960px, 100vw"
+                 width="960" height="1280"
+                 alt="TODO: write a real alt tag!"
+                 class="ContentRow-itemImage">
+          </noscript>
         </div>
       </section>
     </article>
-  </main>
+
+    <footer class="Footer">
+      <p>This is where the footer will go!</p>
+    </footer>
+  </div>
 </body>
 
 <script src="js/main.js"></script>

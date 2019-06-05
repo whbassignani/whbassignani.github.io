@@ -27,8 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (entry.isIntersecting) {
           let lazyImage = entry.target;
           lazyImage.src = lazyImage.dataset.src;
-          // TODO: add next line back in once srcset added
-          // lazyImage.srcset = lazyImage.dataset.srcset;
+          lazyImage.srcset = lazyImage.dataset.srcset;
           
           /* WHY: once image finishes loading, takes off the .is-notLoaded class, which creates the fade-in animation */
           var newImage = new Image();

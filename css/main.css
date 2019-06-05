@@ -113,7 +113,7 @@ html, body {
   scroll-behavior: smooth;
 }
 
-main {
+.PageWrapper {
   background-color: var(--color-neutral-50);
   box-shadow: 0 0 2px rgba(255, 255, 255, 0.1);
   margin: 0 auto;
@@ -405,7 +405,7 @@ p.is-lede {
 /* Work wrapper */
 
 .Work {
-  margin-top: calc(var(--spacing-5) * -1);
+  /* margin-top: calc(var(--spacing-5) * -1); */
   padding-top: var(--spacing-5);
 }
 
@@ -414,7 +414,7 @@ p.is-lede {
 }
 
 .Work-stickyNav {
-  margin-bottom: var(--spacing-5);
+  /* margin-bottom: var(--spacing-5); */
   margin-top: var(--spacing-2);
   pointer-events: none;
   position: -webkit-sticky;
@@ -656,3 +656,17 @@ p.is-lede {
   .ContentRow.is-full-width .ContentRow-item + .ContentRow-item {
     margin-left: calc(var(--spacing-gap-center) / 2);
   }
+}
+
+/* Footer */
+.Footer {
+  background-color: orange;
+  margin: 0;
+  padding: 100px;
+}
+
+.Footer * {
+  margin: 0;
+  padding: 0;
+  /* TODO: above is temporary; to troubleshoot */
+}

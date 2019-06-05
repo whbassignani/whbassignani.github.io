@@ -23,6 +23,7 @@
   --color-neutral-700: #38383f;
   --color-neutral-800: #25252b;
   --color-neutral-900: #080808;
+  --color-blue-500: #228DF8;
   --color-twitterBlue-500: #22B1F8;
   --color-yellow-500: #f8ac22;
   --color-yellow-700: #eb9019;
@@ -156,6 +157,71 @@ html, body {
   white-space: nowrap;
 }
 
+.u-spacingNone {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.u-spacingBottomNone {
+  margin-bottom: 0;
+}
+
+.u-spacingTopNone {
+  margin-top: 0;
+}
+
+.u-spacingExtraSmall {
+  margin-bottom: var(--spacing-1);
+  margin-top: var(--spacing-1);
+}
+
+.u-spacingBottomExtraSmall {
+  margin-bottom: var(--spacing-1);
+}
+
+.u-spacingTopExtraSmall {
+  margin-top: var(--spacing-1);
+}
+
+.u-spacingSmall {
+  margin-bottom: var(--spacing-2);
+  margin-top: var(--spacing-2);
+}
+
+.u-spacingBottomSmall {
+  margin-bottom: var(--spacing-2);
+}
+
+.u-spacingTopSmall {
+  margin-top: var(--spacing-2);
+}
+
+.u-spacingMedium {
+  margin-bottom: var(--spacing-3);
+  margin-top: var(--spacing-3);
+}
+
+.u-spacingBottomMedium {
+  margin-bottom: var(--spacing-3);
+}
+
+.u-spacingTopMedium {
+  margin-top: var(--spacing-3);
+}
+
+.u-spacingLarge {
+  margin-bottom: var(--spacing-5);
+  margin-top: var(--spacing-5);
+}
+
+.u-spacingBottomLarge {
+  margin-bottom: var(--spacing-5);
+}
+
+.u-spacingTopLarge {
+  margin-top: var(--spacing-5);
+}
+
 .u-widthMedium {
   max-width: var(--max-width-content-row);
 }
@@ -189,6 +255,13 @@ html, body {
     
     position: relative;
     top: var(--offset);
+  }
+}
+
+@media (min-width: 1280px) {
+  .u-1280-outset-sides {
+    margin-left: calc(var(--spacing-side-padding) * -1);
+    margin-right: calc(var(--spacing-side-padding) * -1);
   }
 }
 
@@ -298,7 +371,7 @@ p.is-lede {
   flex-direction: column;
   justify-content: center;
   line-height: 1;
-  padding: calc(var(--spacing-2) * 3) 0 0;
+  padding: var(--spacing-5) 0 var(--spacing-2);
 }
 
 @media
@@ -325,10 +398,7 @@ p.is-lede {
 
 @media (min-width: 960px) {
   .PageHeader {
-    height: 90vh;
-    min-height: 850px;
-    max-height: 1000px;
-    padding: calc(var(--spacing-4) * 3) 0 var(--spacing-5);
+    padding: var(--spacing-4) 0 var(--spacing-1);
   }
 }
 
@@ -358,9 +428,9 @@ p.is-lede {
   max-width: var(--max-width-text);
 }
 
-.PageHeader .ContentRow + .ContentRow {
+/* .PageHeader .ContentRow + .ContentRow {
   margin-top: 0;
-}
+} */
 
 @media (min-width: 960px) {
   .PageHeader-description {
@@ -530,15 +600,23 @@ p.is-lede {
 
 .Work-heading {
   color: var(--color-neutral-900);
-  font-size: var(--font-size-7);
-  margin: 0 0 calc(-1 * var(--spacing-3));
+  /* font-size: var(--font-size-7); */
+  margin: 0;
+  /* margin: 0 0 calc(-1 * var(--spacing-3)); */
   /* margin: var(--spacing-4) 0 var(--spacing-2); */
   /* TODO: remove the above? */
 }
 
+.Work-heading span,
 .Work-heading strong {
   display: block;
-  font-size: var(--font-size-8);
+  /* font-size: var(--font-size-8); */
+}
+
+.Work-heading .subheading {
+  font-size: var(--font-size-3);
+  font-weight: bold;
+  line-height: 1.5;
 }
 
 .Work-heading em {
@@ -581,8 +659,6 @@ p.is-lede {
 /* Content rows */
 
 .ContentRow {
-  margin-bottom: var(--spacing-5);
-  margin-top: var(--spacing-5);
   width: 100%;
   /* background-color: rgba(0, 255, 0, 0.1); */
   /* TODO: remove the above? */
@@ -591,6 +667,16 @@ p.is-lede {
 .ContentRow-item {
   /* background-color: rgba(0, 0, 255, 0.1); */
   /* TODO: remove the above? */
+}
+
+.ContentRow-item--full {
+  width: 100%;
+}
+
+@media (min-width: 1280px) {
+  .ContentRow-item--full.u-1280-outset-sides {
+    width: calc(100% + var(--spacing-side-padding) * 2);
+  }
 }
 
 .ContentRow-item > *:first-child {
@@ -638,7 +724,7 @@ p.is-lede {
     justify-content: space-between;
   }
 
-  .ContentRow.is-centered {
+  .ContentRow.is-center-aligned {
     align-items: center;
   }
   
@@ -653,9 +739,26 @@ p.is-lede {
     /* max-width: 710px; */
   }
 
-  .ContentRow.is-full-width .ContentRow-item + .ContentRow-item {
+  .ContentRow.is-full-width .ContentRow-item + .ContentRow-item,
+  .ContentRow-item--half + .ContentRow-item--half {
     margin-left: calc(var(--spacing-gap-center) / 2);
   }
+
+  .ContentRow-item--half,
+  .ContentRow-item--half + .ContentRow-item--half {
+    flex: 1 1 50%;
+  }
+}
+
+/* Side Note */
+.SideNote {
+  /* TODO: do I still need this? */
+  font-size: var(--font-size-3);
+}
+
+.SideNote-heading {
+  font-size: var(--font-size-2);
+  letter-spacing: 0;
 }
 
 /* Footer */

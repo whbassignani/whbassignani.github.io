@@ -649,8 +649,9 @@ p.is-lede {
 
 .Work-metaIcon {
   display: inline-block;
+  flex: 0 0 var(--size-icon);
   height: var(--size-icon);
-  margin-right: calc(var(--spacing-2) / 2);
+  margin-right: var(--spacing-1);
   width: var(--size-icon);
 }
 

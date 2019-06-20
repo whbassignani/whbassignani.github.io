@@ -96,11 +96,8 @@
           <dl class="Work-meta">
             <dt>Work date</dt>
             <dd>
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="Work-metaIcon">
-                <rect x="5" y="5.5" width="14" height="13.5" rx="2" stroke="#99999F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M15.1111 4V7" stroke="#99999F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M8.88889 4V7" stroke="#99999F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M5 10H19" stroke="#99999F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <svg class="Work-metaIcon">
+                <use xlink:href="#icon-calendar"></use>
               </svg>
               
               February 2018&#x200a;–&#x200a;present
@@ -108,8 +105,8 @@
 
             <dt>Tags</dt>
             <dd>
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="Work-metaIcon">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.013 13.987L13.994 19.006C13.7314 19.2689 13.3751 19.4166 13.0035 19.4166C12.6319 19.4166 12.2756 19.2689 12.013 19.006L6 13V6H13L19.013 12.013C19.5558 12.5591 19.5558 13.4409 19.013 13.987Z" stroke="#99999F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <svg class="Work-metaIcon">
+                <use xlink:href="#icon-tag"></use>
               </svg>                  
 
               product leadership, people management
@@ -157,15 +154,44 @@
         <aside class="ContentRow-item">
           <dl class="Work-meta">
             <dt>Work date</dt>
-            <dd><img src="https://via.placeholder.com/48" class="Work-metaIcon"> August, November 2018</dd>
+            <dd>
+              <svg class="Work-metaIcon">
+                <use xlink:href="#icon-calendar"></use>
+              </svg>
+
+              August, November 2018
+            </dd>
 
             <dt>Tags</dt>
-            <dd><img src="https://via.placeholder.com/48" class="Work-metaIcon"> design, front-end dev</dd>
+            <dd>
+              <svg class="Work-metaIcon">
+                <use xlink:href="#icon-tag"></use>
+              </svg>
 
-            <dt>Live sites</dt>
-            <dd class="Work-meta--liveSite"><img src="https://via.placeholder.com/48" class="Work-metaIcon"> <a href="#">Visit Diablo Immortal</a></dd>
+              design, front-end dev
+            </dd>
 
-            <dd class="Work-meta--liveSite"><img src="https://via.placeholder.com/48" class="Work-metaIcon"> <a href="#">Visit D3 Switch</a></dd>
+            <dt>Live site 1</dt>
+            <dd class="Work-meta--liveSite">
+              <a href="https://www.diablo3.com/switch" class="Work-metaLink">
+                <svg class="Work-metaIcon">
+                  <use xlink:href="#icon-link"></use>
+                </svg>
+
+                <span>Visit Diablo Immortal</span>
+              </a>
+            </dd>
+
+            <dt>Live site 2</dt>
+            <dd class="Work-meta--liveSite">
+              <a href="https://www.diabloimmortal.com" class="Work-metaLink">
+                <svg class="Work-metaIcon">
+                  <use xlink:href="#icon-link"></use>
+                </svg>
+
+                <span>Visit D3 Switch</span>
+              </a>
+            </dd>
           </dl>
         </aside>
       </section>
@@ -346,16 +372,44 @@
           <aside class="ContentRow-item">
             <dl class="Work-meta">
               <dt>Work date</dt>
-              <dd><img src="https://via.placeholder.com/48" class="Work-metaIcon"> November 2017</dd>
-  
-              <dt>Tags</dt>
-              <dd><img src="https://via.placeholder.com/48" class="Work-metaIcon"> design, front-end dev</dd>
-  
-              <dt>Live site</dt>
-              <dd class="Work-meta--liveSite"><img src="https://via.placeholder.com/48" class="Work-metaIcon"> <a href="#">Visit StarCraft II</a></dd>
+              <dd>
+                <svg class="Work-metaIcon">
+                  <use xlink:href="#icon-calendar"></use>
+                </svg>
 
-              <dt>Live site</dt>
-              <dd class="Work-meta--liveSite"><img src="https://via.placeholder.com/48" class="Work-metaIcon"> <a href="#">Visit Heroes of the Storm</a></dd>
+                November 2017
+              </dd>
+
+              <dt>Tags</dt>
+              <dd>
+                <svg class="Work-metaIcon">
+                  <use xlink:href="#icon-tag"></use>
+                </svg>
+
+                design, front-end dev
+              </dd>
+
+              <dt>Live site 1</dt>
+              <dd class="Work-meta--liveSite">
+                <a href="https://www.starcraft2.com" class="Work-metaLink">
+                  <svg class="Work-metaIcon">
+                    <use xlink:href="#icon-link"></use>
+                  </svg>
+
+                  <span>Visit StarCraft II</span>
+                </a>
+              </dd>
+
+              <dt>Live site 2</dt>
+              <dd class="Work-meta--liveSite">
+                <a href="https://www.heroesofthestorm.com" class="Work-metaLink">
+                  <svg class="Work-metaIcon">
+                    <use xlink:href="#icon-link"></use>
+                  </svg>
+
+                  <span>Visit Heroes of the Storm</span>
+                </a>
+              </dd>
             </dl>
           </aside>
         </section>
@@ -700,6 +754,26 @@
       </div>
     </footer>
   </div>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="SVGSprite">
+    <defs>
+      <symbol id="icon-calendar" viewBox="0 0 24 24" fill="none">
+        <rect x="5" y="5.5" width="14" height="13.5" rx="2" stroke="#99999F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15.1111 4V7" stroke="#99999F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8.88889 4V7" stroke="#99999F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M5 10H19" stroke="#99999F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+
+      <symbol id="icon-tag" viewBox="0 0 24 24" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.013 13.987L13.994 19.006C13.7314 19.2689 13.3751 19.4166 13.0035 19.4166C12.6319 19.4166 12.2756 19.2689 12.013 19.006L6 13V6H13L19.013 12.013C19.5558 12.5591 19.5558 13.4409 19.013 13.987Z" stroke="#99999F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+
+      <symbol id="icon-link" viewBox="0 0 24 24" fill="none">
+        <path d="M11 12.25C11.6517 13.1212 12.6497 13.6665 13.735 13.7442C14.8203 13.8219 15.8858 13.4245 16.655 12.655L18.905 10.405C20.3261 8.93355 20.3058 6.59466 18.8593 5.14816C17.4128 3.70165 15.0739 3.68133 13.6025 5.10247L12.3125 6.38497" stroke="#eb9019" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M14 10.7501C13.3483 9.87879 12.3503 9.33353 11.265 9.25581C10.1798 9.17808 9.11425 9.57555 8.34503 10.3451L6.09503 12.5951C4.67388 14.0665 4.69421 16.4054 6.14071 17.8519C7.58721 19.2984 9.92611 19.3187 11.3975 17.8976L12.68 16.6151" stroke="#eb9019" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+    </defs>
+  </svg>
 </body>
 
 <script src="js/main.js"></script>

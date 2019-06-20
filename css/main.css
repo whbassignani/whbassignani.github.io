@@ -28,6 +28,8 @@
   --color-yellow-500: #f8ac22;
   --color-yellow-700: #eb9019;
 
+  --color-yellow-700-transparent: rgba(235, 144, 25, 0.25);
+
   --font-family-sans: "Concourse", system-ui, sans-serif;
   --font-family-serif: "Source Serif Pro", serif;
 
@@ -306,7 +308,7 @@ h4, h5, h6 {
 
 a:link,
 a:visited {
-  border-bottom: 1px solid currentColor;
+  border-bottom: 2px solid var(--color-yellow-700-transparent);
   color: var(--color-yellow-700);
   text-decoration: none;
   transition:
@@ -317,7 +319,6 @@ a:visited {
 }
 
 a:hover {
-  border-bottom-width: 2px;
   filter: var(--filter-brightness-hover);
 }
 
@@ -653,6 +654,18 @@ p.is-lede {
   height: var(--size-icon);
   margin-right: var(--spacing-1);
   width: var(--size-icon);
+}
+
+.Work-metaLink:link,
+.Work-metaLink:visited {
+  align-items: center;
+  border-bottom: 0;
+  display: flex;
+  line-height: 1.5;
+}
+
+.Work-metaLink span {
+  border-bottom: 2px solid var(--color-yellow-700-transparent);
 }
 
 /* Content rows */

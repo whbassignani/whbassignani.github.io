@@ -629,6 +629,7 @@ p.is-lede {
 .Work-meta dd {
   align-items: center;
   display: flex;
+  line-height: 1.25;
   margin: 0 0 var(--spacing-1) 0;
 }
 
@@ -645,7 +646,6 @@ p.is-lede {
   align-items: center;
   border-bottom: 0;
   display: flex;
-  line-height: 1.5;
 }
 
 .Work-metaLink span {
